@@ -1,0 +1,31 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.hero {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.disclaimer {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 0.9em;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ccc;
+    border-radius: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
