@@ -5,6 +5,10 @@ body, html {
   height: 100%;
   color: white;
   background-color: #000;
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow-x: hidden;
 }
 
