@@ -59,9 +59,13 @@ section.dark {
 }
 
 .content-section {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.4);
     border-top: 1px solid gold;
     padding: 2rem;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+}
 }
 
 footer {
