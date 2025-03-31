@@ -2,116 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MyCryptoHub</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="default-bg">
   <div id="loader">Loading page...</div>
-
   <nav class="navbar">
     <a href="#affiliate">Affiliate Links</a>
     <a href="#wallets">Wallets</a>
     <a href="#exchanges">Exchanges</a>
+    <a href="#donate">Donate</a>
   </nav>
 
   <section class="hero">
     <h1>Welcome to MyCryptoHub</h1>
-    <p>This site provides information about crypto wallets, exchanges, and projects.</p>
-    <select>
-      <option>English</option>
-      <option>Suomi</option>
-    </select>
+    <p>This site provides wallet and exchange reviews with affiliate links and donation options.</p>
   </section>
 
-  <section id="affiliate" class="content-section">
+  <section id="affiliate" class="content-section affiliate-bg">
     <h2>Affiliate Links</h2>
     <ul>
       <li>Bybit: <a href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Register with code EQ69EL</a></li>
-      <li>Binance: <a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" target="_blank">Register with code GRO_14352_A3YU5</a></li>
-      <li>Crypto.com: <a href="https://crypto.com/app/nrmm4uzm29" target="_blank">Register with code nrmm4uzm29</a></li>
-      <li>Coinmotion: <a href="https://app.coinmotion.com/fi/register/signup?referral_code=DAWL3TJGXHKJPUK9KPWP" target="_blank">Register with code DAWL3TJGXHKJPUK9KPWP</a></li>
+      <li>Binance: <a href="https://accounts.binance.com/en/register?ref=GRO_14352_A3YU5" target="_blank">Register with code GRO_14352_A3YU5</a></li>
+      <li>Crypto.com: <a href="https://crypto.com/exch/nrmm4uzm29" target="_blank">Register with code nrmm4uzm29</a></li>
+      <li>Coinmotion: <a href="https://coinmotion.com/DAWL3TJGXHKJPUK9KPWP" target="_blank">Register with code DAWL3TJGXHKJPUK9KPWP</a></li>
     </ul>
   </section>
 
-  <section id="wallets" class="content-section">
-    <h2>Wallets</h2>
-
-    <div class="wallet-box">
-      <h3>MetaMask</h3>
-      <p><strong>Description:</strong> Ethereum-compatible browser and mobile wallet.</p>
-      <ul><li><strong>Pros:</strong> Wide support, dApp integration</li><li><strong>Cons:</strong> No Solana or BTC support</li></ul>
-      <p><a href="https://metamask.io" target="_blank">Official Site</a></p>
-      <p><a href="https://www.youtube.com/watch?v=6Gf_kRE4MJU" target="_blank">YouTube Tutorial</a></p>
-    </div>
-
-    <div class="wallet-box">
-      <h3>Rabby Wallet</h3>
-      <p><strong>Description:</strong> Open-source wallet tailored for DeFi users.</p>
-      <ul><li><strong>Pros:</strong> Automatic network switching, safe signing</li><li><strong>Cons:</strong> No mobile version</li></ul>
-      <p><a href="https://rabby.io" target="_blank">Official Site</a></p>
-      <p><a href="https://www.youtube.com/watch?v=0B6XvmZDnDM" target="_blank">YouTube Tutorial</a></p>
-    </div>
-
-    <div class="wallet-box">
-      <h3>Ledger (Hardware)</h3>
-      <p><strong>Description:</strong> Leading hardware wallet for cold storage.</p>
-      <ul><li><strong>Pros:</strong> Very secure, Ledger Live app</li><li><strong>Cons:</strong> Requires physical device</li></ul>
-      <p><a href="https://www.ledger.com/?r=OMA_AFFILINKKI" target="_blank">Buy with affiliate</a></p>
-      <p><a href="https://www.youtube.com/watch?v=fq0CzWbNsXA" target="_blank">YouTube Tutorial</a></p>
-    </div>
-
-    <div class="wallet-box">
-      <h3>Jupiter Mobile Wallet</h3>
-      <p><strong>Description:</strong> Solana-native DeFi wallet with swap aggregator.</p>
-      <ul><li><strong>Pros:</strong> Best swap rates, invite rewards</li><li><strong>Cons:</strong> Mobile only</li></ul>
-      <p><a href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Get 0.05 SOL Gift</a></p>
-      <p><a href="https://www.youtube.com/watch?v=lRmdxEZUYiU" target="_blank">YouTube Intro</a></p>
-    </div>
+  <section id="wallets" class="content-section wallets-bg">
+    <h2>Hot Wallets</h2>
+    <div class="wallet-box"><h3>MetaMask</h3><p>A browser and mobile wallet supporting Ethereum and other EVM chains.</p></div>
+    <div class="wallet-box"><h3>Phantom</h3><p>Popular wallet for Solana with a clean UI and NFT support.</p></div>
+    <div class="wallet-box"><h3>Rabby Wallet</h3><p>DeFi browser wallet with advanced features like pre-transaction simulation.</p></div>
+    <div class="wallet-box"><h3>Solflare</h3><p>Full-featured Solana wallet with staking and Ledger integration.</p></div>
+    <div class="wallet-box"><h3>Jupiter Mobile Wallet</h3><p>New Solana wallet integrated with Jupiter DEX aggregator.</p></div>
+    <div class="wallet-box"><h3>Sui Wallet</h3><p>Official browser wallet for Sui blockchain with simple interface and dApp support.</p></div>
+    <h2>Gold Wallets</h2>
+    <div class="wallet-box"><h3>Ledger</h3><p>Hardware wallet offering top-tier security and Ledger Live app.</p></div>
+    <div class="wallet-box"><h3>Trezor</h3><p>Trusted hardware wallet supporting wide range of cryptocurrencies.</p></div>
   </section>
 
-  <section id="exchanges" class="content-section">
+  <section id="exchanges" class="content-section exchanges-bg">
     <h2>Exchanges</h2>
+    <div class="exchange-box"><h3>Bybit</h3><p>Crypto derivatives and spot exchange with competitive fees.</p></div>
+    <div class="exchange-box"><h3>Binance</h3><p>The world's largest crypto exchange offering a full range of services.</p></div>
+    <div class="exchange-box"><h3>Crypto.com</h3><p>Exchange and app for trading, staking and DeFi tools.</p></div>
+    <div class="exchange-box"><h3>Coinmotion</h3><p>Finnish crypto broker regulated in the EU, ideal for local users.</p></div>
+  </section>
 
-    <div class="wallet-box">
-      <h3>Bybit</h3>
-      <p><strong>Description:</strong> Advanced derivatives platform for pro users.</p>
-      <ul><li><strong>Pros:</strong> Leverage trading, low fees</li><li><strong>Cons:</strong> Complex UI for beginners</li></ul>
-      <p><a href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Register with code EQ69EL</a></p>
-      <p><a href="https://www.youtube.com/watch?v=oyZcBAzdqZk" target="_blank">Tutorial Video</a></p>
+  <section id="donate" class="content-section">
+    <h2>Donate Crypto</h2>
+    <div class="donate-box">
+      <img src="btc-icon.png" class="crypto-icon" alt="Bitcoin Icon" />
+      <p><strong>Bitcoin:</strong> bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</p>
+      <img src="btc-qr.png" class="qr-code" alt="BTC QR" />
     </div>
-
-    <div class="wallet-box">
-      <h3>Binance</h3>
-      <p><strong>Description:</strong> World's largest crypto exchange.</p>
-      <ul><li><strong>Pros:</strong> Tons of coins, staking, margin</li><li><strong>Cons:</strong> Can be overwhelming</li></ul>
-      <p><a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" target="_blank">Register now</a></p>
+    <div class="donate-box">
+      <img src="eth-icon.png" class="crypto-icon" alt="Ethereum Icon" />
+      <p><strong>Ethereum:</strong> 0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</p>
+      <img src="eth-qr.png" class="qr-code" alt="ETH QR" />
     </div>
-
-    <div class="wallet-box">
-      <h3>Crypto.com</h3>
-      <p><strong>Description:</strong> Exchange and Visa crypto card provider.</p>
-      <ul><li><strong>Pros:</strong> Mobile friendly, card cashback</li><li><strong>Cons:</strong> Fewer pro trading tools</li></ul>
-      <p><a href="https://crypto.com/app/nrmm4uzm29" target="_blank">Join with code nrmm4uzm29</a></p>
-    </div>
-
-    <div class="wallet-box">
-      <h3>Coinmotion</h3>
-      <p><strong>Description:</strong> Finnish regulated crypto broker.</p>
-      <ul><li><strong>Pros:</strong> Local support, beginner-friendly</li><li><strong>Cons:</strong> Smaller coin selection</li></ul>
-      <p><a href="https://app.coinmotion.com/fi/register/signup?referral_code=DAWL3TJGXHKJPUK9KPWP" target="_blank">Register with Finnish partner code</a></p>
+    <div class="donate-box">
+      <img src="sol-icon.png" class="crypto-icon" alt="Solana Icon" />
+      <p><strong>Solana:</strong> J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</p>
+      <img src="sol-qr.png" class="qr-code" alt="SOL QR" />
     </div>
   </section>
 
   <footer>
-    &copy; 2024 MyCryptoHub
+    &copy; 2025 MyCryptoHub | Built with passion for the crypto community
   </footer>
-
-  <script src="script.js"></script>
-  <script>
-    window.addEventListener('load', () => {
-      document.body.classList.add('loaded');
-    });
-  </script>
 </body>
 </html>
