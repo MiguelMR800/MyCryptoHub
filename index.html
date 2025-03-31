@@ -1,38 +1,61 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kryptosivusto</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kryptosivusto</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="particles-js"></div>
-
-  <nav class="navbar">
-    <a href="#affiliates">Affiliate-linkit</a>
-    <a href="#wallets">Lompakot</a>
-    <a href="#exchanges">Pörssit</a>
-  </nav>
-
-  <div class="content">
-    <h2 id="title">Tervetuloa kryptosivustolle!</h2>
-
-    <select id="language-selector">
-      <option value="fi">Suomi</option>
-      <option value="en">English</option>
-      <option value="es">Español</option>
-      <option value="ru">Русский</option>
-      <option value="et">Eesti</option>
-      <option value="pt">Português</option>
-      <option value="zh">中文</option>
-    </select>
-
-    <section id="affiliates">
-      <h3>Affiliate-linkit</h3>
-      <p id="bybit-link">Bybit: <a href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Rekisteröidy tästä</a></p>
-      <p id="binance-link">Binance: <a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" target="_blank">Rekisteröidy tästä</a></p>
-      <p id="crypto-link">Crypto.com: <a href="https://crypto.com/app/nrmm4uzm29" target="_blank">Rekisteröidy tästä</a></p>
-      <p id="coinmotion-link">Coinmotion: <a href="https://app.coinmotion.com/fi/register/signup?referral_code=DA
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script src="script.js"></script>
+    <div id="particles-js"></div>
+    <nav class="navbar">
+        <a href="#affiliates">Affiliate-linkit</a>
+        <a href="#wallets">Lompakot</a>
+        <a href="#exchanges">Pörssit</a>
+    </nav>
+    <section class="hero">
+        <h1>Welcome to My Crypto Page</h1>
+        <p>Tämä sivusto tarjoaa tietoa kryptoprojekteista, lompakoista ja pörsseistä.</p>
+        <select id="language-selector">
+            <option value="fi">Suomi</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="ru">Русский</option>
+            <option value="et">Eesti</option>
+            <option value="pt">Português</option>
+            <option value="zh">中文</option>
+        </select>
+    </section>
+    <section id="affiliates" class="content-section">
+        <h2>Affiliate-linkit</h2>
+        <ul>
+            <li>Bybit: <a href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Rekisteröidy tästä</a></li>
+            <li>Binance: <a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" target="_blank">Rekisteröidy tästä</a></li>
+            <li>Crypto.com: <a href="https://crypto.com/app/nrmm4uzm29" target="_blank">Rekisteröidy tästä</a></li>
+            <li>Coinmotion: <a href="https://app.coinmotion.com/fi/register/signup?referral_code=DAWL3TJGXHKJPUK9KPWP" target="_blank">Rekisteröidy tästä</a></li>
+        </ul>
+    </section>
+    <section id="wallets" class="content-section dark">
+        <h2>Lompakot</h2>
+        <ul>
+            <li>Phantom Wallet: <a href="https://phantom.app" target="_blank">phantom.app</a></li>
+            <li>Solflare, Rabby, Metamask, SUI, Jupiter Mobile</li>
+            <li>Offline: Ledger, Trezor</li>
+        </ul>
+    </section>
+    <section id="exchanges" class="content-section">
+        <h2>Pörssit</h2>
+        <ul>
+            <li>Binance</li>
+            <li>Bybit</li>
+            <li>Crypto.com</li>
+            <li>Suomalainen: Coinmotion</li>
+        </ul>
+    </section>
+    <footer>
+        <p>Vastuuvapaus: Tämä ei ole sijoitusneuvo. Tee aina oma tutkimus ennen sijoittamista.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
