@@ -1,10 +1,13 @@
-
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    background: url('background.png') no-repeat center center fixed;
-    background-size: cover;
+    background: black;
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: contain;
     color: white;
     scroll-behavior: smooth;
 }
@@ -52,6 +55,7 @@ section.dark {
 .hero h1 {
     font-size: 1.6rem;
     color: gold;
+    text-align: center;
 }
 
 .content-section {
