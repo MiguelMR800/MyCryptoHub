@@ -50,10 +50,13 @@ section {
   justify-content: center;
 }
 
-.hero-section h1 {
-  font-size: 2rem;
-  color: gold;
-  text-align: center;
+.hero h1 {
+    font-size: 1.8rem;
+    color: gold;
+    text-align: center;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 2px 2px 4px black;
+}
 }
 
 .content-section {
