@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,38 +7,61 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="default-bg">
+  <div id="loader">Loading site...</div>
+
   <nav class="navbar">
-    <a href="#affiliate">Affiliate-linkit</a>
-    <a href="#wallets">Lompakot</a>
-    <a href="#exchanges">Pörssit</a>
+    <a href="#affiliate" data-i18n="nav_affiliate">Affiliate Links</a>
+    <a href="#wallets" data-i18n="nav_wallets">Wallets</a>
+    <a href="#exchanges" data-i18n="nav_exchanges">Exchanges</a>
   </nav>
 
   <section class="hero">
-    <h1>Welcome to My Crypto Page</h1>
-    <p>Tämä sivusto tarjoaa tietoa kryptoprojekteista, lompakoista ja pörsseistä.</p>
-    <select>
-      <option>Suomi</option>
+    <h1 data-i18n="welcome">Welcome to My Crypto Page</h1>
+    <p data-i18n="description">This site provides information about cryptocurrencies, wallets, and exchanges.</p>
+    <select id="language-select">
+      <option value="en">English</option>
+      <option value="fi">Suomi</option>
     </select>
   </section>
 
   <section id="affiliate" class="content-section">
-    <h2>Affiliate-linkit</h2>
+    <h2 data-i18n="affiliate_links">Affiliate Links</h2>
     <ul>
-      <li>Bybit: <a href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Rekisteröidy tästä</a></li>
-      <li>Binance: <a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" target="_blank">Rekisteröidy tästä</a></li>
-      <li>Crypto.com: <a href="https://crypto.com/app/nrmm4uzm29" target="_blank">Rekisteröidy tästä</a></li>
-      <li>Coinmotion: <a href="https://app.coinmotion.com/fi/register/signup?referral_code=DAWL3TJGXHKJPUK9KPWP" target="_blank">Rekisteröidy tästä</a></li>
+      <li>Bybit: <a href="#">Register here</a></li>
+      <li>Binance: <a href="#">Register here</a></li>
+      <li>Crypto.com: <a href="#">Register here</a></li>
+      <li>Coinmotion: <a href="#">Register here</a></li>
     </ul>
   </section>
 
   <section id="wallets" class="content-section">
-    <h2>Lompakot</h2>
-    <!-- Tänne lisätään analyysilohkot myöhemmin -->
+    <h2 data-i18n="wallets">Wallets</h2>
+    <div class="wallet-box">
+      <h3>MetaMask</h3>
+      <p data-i18n="mm_desc">MetaMask is a popular browser and mobile wallet supporting Ethereum and EVM chains.</p>
+      <ul>
+        <li data-i18n="mm_pros"><strong>Pros:</strong> Wide compatibility, dApp support, easy to use</li>
+        <li data-i18n="mm_cons"><strong>Cons:</strong> Doesn’t support Bitcoin or Solana</li>
+      </ul>
+      <p><a href="https://metamask.io" target="_blank">MetaMask site</a></p>
+    </div>
+
+    <div class="wallet-box">
+      <h3>Ledger</h3>
+      <p data-i18n="ledger_desc">Ledger is a secure hardware wallet for long-term crypto storage.</p>
+      <ul>
+        <li data-i18n="ledger_pros"><strong>Pros:</strong> Offline security, wide crypto support</li>
+        <li data-i18n="ledger_cons"><strong>Cons:</strong> Requires physical device, learning curve</li>
+      </ul>
+      <p><a href="https://www.ledger.com/?r=OMA_AFFILINKKI" target="_blank">Buy Ledger (affiliate)</a></p>
+    </div>
+    <h2 data-i18n="wallets">Wallets</h2>
+    <p>Phantom, Metamask, Ledger, Trezor etc.</p>
   </section>
 
   <section id="exchanges" class="content-section">
-    <h2>Pörssit</h2>
-    <!-- Tänne lisätään analyysilohkot myöhemmin -->
+    <h2 data-i18n="exchanges">Exchanges</h2>
+    <p>Bybit, Binance, Crypto.com, Coinmotion etc.</p>
   </section>
 
   <footer>
@@ -46,5 +69,45 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const translations = {
+      en: {
+        welcome: "Welcome to My Crypto Page",
+        description: "This site provides information about cryptocurrencies, wallets, and exchanges.",
+        nav_affiliate: "Affiliate Links",
+        nav_wallets: "Wallets",
+        nav_exchanges: "Exchanges",
+        affiliate_links: "Affiliate Links",
+        wallets: "Wallets",
+        exchanges: "Exchanges"
+      },
+      fi: {
+        welcome: "Tervetuloa kryptosivulleni",
+        description: "Tämä sivusto tarjoaa tietoa kryptoprojekteista, lompakoista ja pörssistä.",
+        nav_affiliate: "Affiliate-linkit",
+        nav_wallets: "Lompakot",
+        nav_exchanges: "Pörssit",
+        affiliate_links: "Affiliate-linkit",
+        wallets: "Lompakot",
+        exchanges: "Pörssit"
+      }
+    };
+
+    function updateLanguage(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    document.getElementById('language-select').addEventListener('change', (e) => {
+      updateLanguage(e.target.value);
+    });
+
+    // Initialize default language
+    updateLanguage('en');
+  </script>
 </body>
 </html>
