@@ -105,3 +105,25 @@ a:hover {
     background-size: cover;
   }
 }
+.wallet-box {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid gold;
+  border-radius: 8px;
+}
+
+.wallet-box h3 {
+  color: gold;
+  margin-top: 0;
+}
+
+.wallet-box a {
+  color: #ffd700;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.wallet-box a:hover {
+  color: white;
+}
