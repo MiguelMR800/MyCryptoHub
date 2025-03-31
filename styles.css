@@ -68,4 +68,22 @@ footer {
   background: #111;
   font-size: 0.8rem;
   color: gray;
+  footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+/* Linkkityylit */
+a {
+  color: #ffd700; /* kirkas kulta */
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ffffff; /* valkoinen hover-efekti */
+}
 }
