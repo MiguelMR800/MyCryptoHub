@@ -1,56 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kryptosivusto</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="default-bg">
+
   <nav class="navbar">
-    <a href="#affiliates">Affiliate-linkit</a>
+    <a href="#affiliate">Affiliate-linkit</a>
     <a href="#wallets">Lompakot</a>
     <a href="#exchanges">Pörssit</a>
   </nav>
 
-  <section id="hero" class="hero-section">
+  <section class="hero">
     <h1>Welcome to My Crypto Page</h1>
     <p>Tämä sivusto tarjoaa tietoa kryptoprojekteista, lompakoista ja pörsseistä.</p>
-    <select id="language-selector">
-      <option value="fi">Suomi</option>
-      <option value="en">English</option>
+    <select>
+      <option>Suomi</option>
     </select>
   </section>
 
-  <section id="affiliates" class="content-section">
+  <section id="affiliate" class="content-section">
     <h2>Affiliate-linkit</h2>
     <ul>
-      <li>Bybit: <a href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Rekisteröidy tästä</a></li>
+      <li>Bybit: <a href="#">Rekisteröidy tästä</a></li>
       <li>Binance: <a href="#">Rekisteröidy tästä</a></li>
       <li>Crypto.com: <a href="#">Rekisteröidy tästä</a></li>
       <li>Coinmotion: <a href="#">Rekisteröidy tästä</a></li>
     </ul>
   </section>
 
+  <section id="wallets" class="content-section">
+    <h2>Lompakot</h2>
+    <p>Phantom, Metamask, Ledger, Trezor jne.</p>
+  </section>
+
   <section id="exchanges" class="content-section">
     <h2>Pörssit</h2>
-    <section class="exchange-card">
-      <h2>Bybit</h2>
-      <img src="https://cryptologos.cc/logos/bybit-bybit-logo.png" alt="Bybit logo" class="exchange-logo">
-      <p>Bybit on suosittu kryptopörssi, joka tarjoaa laajan valikoiman työkaluja treidaajille ja sijoittajille. Nopeat talletukset ja nostot sekä kilpailukykyiset kampanjat uusille käyttäjille.</p>
-      <a href="https://www.bybit.com/invite?ref=EQ69EL" class="cta-button" target="_blank">
-        Rekisteröidy Bybit-palveluun ja lunasta bonukset
-      </a>
-      <div class="video-wrapper">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/oyZcBAzdqZk" 
-        title="Bybit tutoriaali" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </section>
+    <p>Bybit, Binance, Crypto.com, Coinmotion jne.</p>
   </section>
 
   <footer>
-    <p>© 2025 Kryptosivusto – Tämä ei ole sijoitusneuvo. Tee oma tutkimus ennen sijoittamista.</p>
+    &copy; 2024 Kryptosivusto
   </footer>
 
   <script src="script.js"></script>
