@@ -127,3 +127,13 @@ a:hover {
 .wallet-box a:hover {
   color: white;
 }
+<div class="wallet-box">
+  <h3>MetaMask</h3>
+  <p><strong>Kuvaus:</strong> MetaMask on suosittu selain- ja mobiililompakko, joka tukee Ethereumia ja useita muita EVM-yhteensopivia lohkoketjuja.</p>
+  <ul>
+    <li><strong>Plussat:</strong> Laaja yhteensopivuus, dApp-tuki, helppo asennus, custom-verkot</li>
+    <li><strong>Miinukset:</strong> Ei tue Bitcoinia tai Solanaa, hieman tekninen aloittelijalle</li>
+  </ul>
+  <p><a href="https://metamask.io" target="_blank">Siirry MetaMaskin viralliselle sivulle</a></p>
+  <p><a href="https://www.youtube.com/watch?v=6Gf_kRE4MJU" target="_blank">Katso YouTube-opas</a></p>
+</div>
