@@ -1,258 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kryptosivusto</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body class="default-bg">
-  <div id="loader">Loading site...</div>
+body {
+  background: url('background_new.png') no-repeat center center fixed;
+  background-size: cover;
+  transition: background-color 1s ease;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
 
-  <nav class="navbar">
-    <a href="#affiliate" data-i18n="nav_affiliate">Affiliate Links</a>
-    <a href="#wallets" data-i18n="nav_wallets">Wallets</a>
-    <a href="#exchanges" data-i18n="nav_exchanges">Exchanges</a>
-  </nav>
+body.affiliate-bg {
+  background-color: rgba(17, 17, 17, 0.8);
+}
 
-  <section class="hero">
-    <h1 data-i18n="welcome">Welcome to My Crypto Page</h1>
-    <p data-i18n="description">This site provides information about cryptocurrencies, wallets, and exchanges.</p>
-    <select id="language-select">
-      <option value="en">English</option>
-      <option value="fi">Suomi</option>
-    </select>
-  </section>
+body.wallets-bg {
+  background-color: rgba(10, 25, 47, 0.8);
+}
 
-  <section id="affiliate" class="content-section">
-    <h2 data-i18n="affiliate_links">Affiliate Links</h2>
-    <ul>
-      <li>Bybit: <a href="#">Register here</a></li>
-      <li>Binance: <a href="#">Register here</a></li>
-      <li>Crypto.com: <a href="#">Register here</a></li>
-      <li>Coinmotion: <a href="#">Register here</a></li>
-    </ul>
-  </section>
+body.exchanges-bg {
+  background-color: rgba(30, 30, 47, 0.8);
+}
 
-  <section id="wallets" class="content-section">
-    <h2 data-i18n="wallets">Wallets</h2>
-    <div class="wallet-box">
-  <h3>MetaMask</h3>
-  <p data-i18n="mm_desc">MetaMask is a popular browser and mobile wallet supporting Ethereum and EVM chains.</p>
-  <ul>
-    <li data-i18n="mm_pros"><strong>Pros:</strong> Wide compatibility, dApp support, easy to use</li>
-    <li data-i18n="mm_cons"><strong>Cons:</strong> Doesn’t support Bitcoin or Solana</li>
-  </ul>
-  <p><a href="https://metamask.io" target="_blank">Visit MetaMask</a></p>
-  <p><a href="https://www.youtube.com/watch?v=6Gf_kRE4MJU" target="_blank">Watch YouTube tutorial</a></p>
-</div>
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    <div class="wallet-box">
-  <h3>Ledger</h3>
-  <p data-i18n="ledger_desc">Ledger is a secure hardware wallet for long-term crypto storage.</p>
-  <ul>
-    <li data-i18n="ledger_pros"><strong>Pros:</strong> Offline security, wide crypto support</li>
-    <li data-i18n="ledger_cons"><strong>Cons:</strong> Requires physical device, learning curve</li>
-  </ul>
-  <p><a href="https://www.ledger.com/?r=OMA_AFFILINKKI" target="_blank">Buy Ledger (affiliate)</a></p>
-</div>
+.navbar a {
+  color: #ffd700;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
 
-<div class="wallet-box">
-  <h3>Phantom</h3>
-  <p data-i18n="phantom_desc">Phantom is a Solana wallet with support for NFTs, staking, and dApps.</p>
-  <ul>
-    <li data-i18n="phantom_pros"><strong>Pros:</strong> Fast Solana support, browser/mobile versions</li>
-    <li data-i18n="phantom_cons"><strong>Cons:</strong> Solana-only, no hardware wallet support</li>
-  </ul>
-  <p><a href="https://phantom.app" target="_blank">Visit Phantom</a></p>
-</div>
+section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-<div class="wallet-box">
-  <h3>Rabby</h3>
-  <p data-i18n="rabby_desc">Rabby is an open-source wallet focused on DeFi with automatic network switching.</p>
-  <ul>
-    <li data-i18n="rabby_pros"><strong>Pros:</strong> Auto network detection, secure UI</li>
-    <li data-i18n="rabby_cons"><strong>Cons:</strong> No mobile app, lesser-known</li>
-  </ul>
-  <p><a href="https://rabby.io" target="_blank">Visit Rabby</a></p>
-</div>
+.hero h1 {
+  font-size: 2.4rem;
+  color: gold;
+  text-align: center;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 2px 2px 4px black;
+  margin-bottom: 1rem;
+}
 
-<div class="wallet-box">
-  <h3>Solflare</h3>
-  <p data-i18n="solflare_desc">Solflare is a feature-rich Solana wallet with support for staking and NFTs.</p>
-  <ul>
-    <li data-i18n="solflare_pros"><strong>Pros:</strong> Solana staking, Ledger support, browser/mobile</li>
-    <li data-i18n="solflare_cons"><strong>Cons:</strong> Only Solana supported</li>
-  </ul>
-  <p><a href="https://solflare.com" target="_blank">Visit Solflare</a></p>
-</div>
+.hero p {
+  text-align: center;
+  font-size: 1.2rem;
+}
 
-<div class="wallet-box">
-  <h3>Jupiter</h3>
-  <p data-i18n="jupiter_desc">Jupiter Wallet integrates with Jupiter DEX and offers swap and Solana support.</p>
-  <ul>
-    <li data-i18n="jupiter_pros"><strong>Pros:</strong> Solana swaps, DeFi integrated, mobile app</li>
-    <li data-i18n="jupiter_cons"><strong>Cons:</strong> New platform, no desktop version</li>
-  </ul>
-  <p><a href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Claim bonus & install Jupiter</a></p>
-</div>
+.content-section {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 1000px;
+}
 
-<div class="wallet-box">
-  <h3>Sui Wallet</h3>
-  <p data-i18n="sui_desc">Sui Wallet is the official wallet for Sui blockchain, offering NFT and dApp access.</p>
-  <ul>
-    <li data-i18n="sui_pros"><strong>Pros:</strong> Lightweight, official, NFT support</li>
-    <li data-i18n="sui_cons"><strong>Cons:</strong> Only Sui network, no mobile app</li>
-  </ul>
-  <p><a href="https://wallet.sui.io" target="_blank">Visit Sui Wallet</a></p>
-</div>
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  font-size: 0.9rem;
+  color: gray;
+}
 
-<div class="wallet-box">
-  <h3>Trezor</h3>
-  <p data-i18n="trezor_desc">Trezor is a hardware wallet offering secure offline crypto storage.</p>
-  <ul>
-    <li data-i18n="trezor_pros"><strong>Pros:</strong> Open-source, wide crypto support</li>
-    <li data-i18n="trezor_cons"><strong>Cons:</strong> Requires device, technical setup</li>
-  </ul>
-  <p><a href="https://trezor.io" target="_blank">Visit Trezor</a></p>
-</div>
-    <h2 data-i18n="wallets">Wallets</h2>
-    <p>Phantom, Metamask, Ledger, Trezor etc.</p>
-  </section>
+/* Linkit */
+a {
+  color: #ffd700;
+  font-weight: bold;
+  text-decoration: underline;
+}
 
-  <section id="exchanges" class="content-section">
-    <h2 data-i18n="exchanges">Exchanges</h2>
-    <div class="wallet-box">
-  <h3>Bybit</h3>
-  <p data-i18n="bybit_desc">Bybit is a popular crypto derivatives exchange known for low fees and advanced trading tools.</p>
-  <ul>
-    <li data-i18n="bybit_pros"><strong>Pros:</strong> Low fees, leverage trading, user rewards</li>
-    <li data-i18n="bybit_cons"><strong>Cons:</strong> May not suit beginners, limited fiat options</li>
-  </ul>
-  <p><a href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Register with Bybit (affiliate)</a></p>
-  <p><a href="https://www.youtube.com/watch?v=oyZcBAzdqZk" target="_blank">Watch YouTube tutorial</a></p>
-</div>
+a:hover {
+  color: #ffffff;
+}
 
-    <div class="wallet-box">
-      <h3>Binance</h3>
-      <p data-i18n="binance_desc">Binance is the world's largest exchange with a wide variety of coins and trading pairs.</p>
-      <ul>
-        <li data-i18n="binance_pros"><strong>Pros:</strong> Huge selection, staking, advanced tools</li>
-        <li data-i18n="binance_cons"><strong>Cons:</strong> Regulatory scrutiny, complex for beginners</li>
-      </ul>
-      <p><a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" target="_blank">Register with Binance (affiliate)</a></p>
-    </div>
+/* Wallet Box ja Exchange Box */
+.wallet-box {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid gold;
+  border-radius: 8px;
+}
 
-    <div class="wallet-box">
-      <h3>Crypto.com</h3>
-      <p data-i18n="cdc_desc">Crypto.com offers a mobile-first crypto platform with Visa card integration and NFT support.</p>
-      <ul>
-        <li data-i18n="cdc_pros"><strong>Pros:</strong> Crypto Visa card, mobile-friendly, earn features</li>
-        <li data-i18n="cdc_cons"><strong>Cons:</strong> Limited advanced tools, mixed support reviews</li>
-      </ul>
-      <p><a href="https://crypto.com/app/nrmm4uzm29" target="_blank">Register with Crypto.com (affiliate)</a></p>
-    </div>
+.wallet-box h3 {
+  color: gold;
+  margin-top: 0;
+}
 
-    <div class="wallet-box">
-      <h3>Coinmotion</h3>
-      <p data-i18n="coinmotion_desc">Coinmotion is a Finnish crypto broker offering euro deposits, safe storage, and Finnish support.</p>
-      <ul>
-        <li data-i18n="coinmotion_pros"><strong>Pros:</strong> Finnish support, regulated, euro transfers</li>
-        <li data-i18n="coinmotion_cons"><strong>Cons:</strong> Limited coins, basic UI</li>
-      </ul>
-      <p><a href="https://app.coinmotion.com/fi/register/signup?referral_code=DAWL3TJGXHKJPUK9KPWP" target="_blank">Register with Coinmotion (affiliate)</a></p>
-    </div>
-    <h2 data-i18n="exchanges">Exchanges</h2>
-    <p>Bybit, Binance, Crypto.com, Coinmotion etc.</p>
-  </section>
+.wallet-box a {
+  color: #ffd700;
+  text-decoration: underline;
+  font-weight: bold;
+}
 
-  <footer>
-    &copy; 2024 Kryptosivusto
-  </footer>
+.wallet-box a:hover {
+  color: white;
+}
 
-  <script src="script.js"></script>
-  <script>
-    const translations = {
-      en: {
-        welcome: "Welcome to My Crypto Page",
-        description: "This site provides information about cryptocurrencies, wallets, and exchanges.",
-        nav_affiliate: "Affiliate Links",
-        nav_wallets: "Wallets",
-        nav_exchanges: "Exchanges",
-        affiliate_links: "Affiliate Links",
-        wallets: "Wallets",
-        exchanges: "Exchanges"
-      },
-      fi: {
-        welcome: "Tervetuloa kryptosivulleni",
-        description: "Tämä sivusto tarjoaa tietoa kryptoprojekteista, lompakoista ja pörssistä.",
-        nav_affiliate: "Affiliate-linkit",
-        nav_wallets: "Lompakot",
-        nav_exchanges: "Pörssit",
-        affiliate_links: "Affiliate-linkit",
-        wallets: "Lompakot",
-        exchanges: "Pörssit"
-      }
-    };
+/* Mobiilituki */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
 
-    function updateLanguage(lang) {
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
-      });
-    }
+  .hero p {
+    font-size: 1rem;
+  }
 
-    document.getElementById('language-select').addEventListener('change', (e) => {
-      updateLanguage(e.target.value);
-    });
+  section {
+    padding: 2rem 1rem;
+  }
 
-    // Initialize default language
-    updateLanguage('en');
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-    translations.fi = {
-      welcome: "Tervetuloa kryptosivulleni",
-      description: "Tämä sivusto tarjoaa tietoa kryptoprojekteista, lompakoista ja pörsseistä.",
-      nav_affiliate: "Affiliate-linkit",
-      nav_wallets: "Lompakot",
-      nav_exchanges: "Pörssit",
-      affiliate_links: "Affiliate-linkit",
-      wallets: "Lompakot",
-      exchanges: "Pörssit",
+  .content-section {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
 
-      mm_desc: "MetaMask on suosittu selain- ja mobiililompakko, joka tukee Ethereumia ja EVM-ketjuja.",
-      mm_pros: "Plussat: Laaja yhteensopivuus, dApp-tuki, helppo käyttää",
-      mm_cons: "Miinukset: Ei tue Bitcoinia tai Solanaa",
-
-      ledger_desc: "Ledger on turvallinen laitteistolompakko pitkäaikaiseen krypton säilytykseen.",
-      ledger_pros: "Plussat: Offline-turva, laaja kryptotuki",
-      ledger_cons: "Miinukset: Tarvitsee fyysisen laitteen, opettelukäyrä",
-
-      phantom_desc: "Phantom on Solana-lompakko, joka tukee NFT:itä, stakingia ja dApp-sovelluksia.",
-      phantom_pros: "Plussat: Nopea Solana-tuki, selain- ja mobiiliversio",
-      phantom_cons: "Miinukset: Vain Solana-tuki, ei laitetukea",
-
-      rabby_desc: "Rabby on avoimen lähdekoodin lompakko, joka keskittyy DeFi-käyttöön ja verkon automaattiseen vaihtoon.",
-      rabby_pros: "Plussat: Automaattinen verkontunnistus, turvallinen käyttöliittymä",
-      rabby_cons: "Miinukset: Ei mobiilisovellusta, vähemmän tunnettu",
-
-      solflare_desc: "Solflare on monipuolinen Solana-lompakko, joka tukee stakingia ja NFT:itä.",
-      solflare_pros: "Plussat: Solana-staking, Ledger-tuki, selain ja mobiili",
-      solflare_cons: "Miinukset: Vain Solana-tuki",
-
-      jupiter_desc: "Jupiter Wallet on integroitu Jupiter DEXiin ja tukee Solana-vaihtoja ja DeFiä.",
-      jupiter_pros: "Plussat: Solana-swapit, DeFi-integraatio, mobiilisovellus",
-      jupiter_cons: "Miinukset: Uusi alusta, ei työpöytäsovellusta",
-
-      sui_desc: "Sui Wallet on virallinen lompakko Sui-lohkoketjulle, ja se tukee NFT:tä ja dApp-käyttöä.",
-      sui_pros: "Plussat: Kevyt, virallinen, NFT-tuki",
-      sui_cons: "Miinukset: Tukee vain Sui-verkkoa, ei mobiilisovellusta",
-
-      trezor_desc: "Trezor on laitteistolompakko, joka tarjoaa turvallista offline-säilytystä kryptovaluutoille.",
-      trezor_pros: "Plussat: Avoimen lähdekoodin ratkaisu, laaja kryptotuki",
-      trezor_cons: "Miinukset: Tarvitsee laitteen, tekninen käyttöönotto"
-    };
-  </script>
-</body>
-</html>
+  body {
+    background-position: center top;
+  }
+}
