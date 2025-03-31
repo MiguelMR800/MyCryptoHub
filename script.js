@@ -1,19 +1,21 @@
-particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.json', function() {
-  console.log('particles.js loaded - callback');
-});
 
-document.querySelectorAll('.content-section').forEach((section, i) => {
-  section.style.opacity = 0;
-  section.style.transform = 'translateY(40px)';
-  section.style.transition = 'all 0.6s ease-out';
-});
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+  const body = document.body;
 
-window.addEventListener('scroll', () => {
-  document.querySelectorAll('.content-section').forEach(section => {
-    const top = section.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      section.style.opacity = 1;
-      section.style.transform = 'translateY(0)';
-    }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        body.className = '';
+        if (entry.target.id === "affiliates") body.classList.add("affiliates-bg");
+        else if (entry.target.id === "wallets") body.classList.add("wallets-bg");
+        else if (entry.target.id === "exchanges") body.classList.add("exchanges-bg");
+        else body.classList.add("default-bg");
+      }
+    });
+  }, { threshold: 0.6 });
+
+  sections.forEach(section => {
+    observer.observe(section);
   });
 });
