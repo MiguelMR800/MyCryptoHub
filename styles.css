@@ -1,27 +1,25 @@
-html, body {
+
+body {
+  background: url('background.png') no-repeat center center fixed;
+  background-size: cover;
+  transition: background-color 1s ease;
+  color: white;
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  color: white;
   scroll-behavior: smooth;
-  transition: background 1s ease;
-}
-
-body.default-bg {
-  background: url('background.png') no-repeat center center fixed;
-  background-size: cover;
 }
 
 body.affiliates-bg {
-  background-color: #111;
+  background-color: rgba(17, 17, 17, 0.8);
 }
 
 body.wallets-bg {
-  background-color: #0a192f;
+  background-color: rgba(10, 25, 47, 0.8);
 }
 
 body.exchanges-bg {
-  background-color: #1e1e2f;
+  background-color: rgba(30, 30, 47, 0.8);
 }
 
 .navbar {
