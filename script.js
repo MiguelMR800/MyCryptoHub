@@ -8,8 +8,8 @@ window.addEventListener('scroll', () => {
     const id = section.id;
 
     if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-      body.className = ''; // Poistaa vanhat luokat
-      body.classList.add(`${id}-bg`); // Lisää uuden luokan esim. 'wallets-bg'
+      body.className = '';
+      body.classList.add(`${id}-bg`);
     }
   });
 });
