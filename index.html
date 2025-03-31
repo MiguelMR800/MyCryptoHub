@@ -47,14 +47,74 @@
     </div>
 
     <div class="wallet-box">
-      <h3>Ledger</h3>
-      <p data-i18n="ledger_desc">Ledger is a secure hardware wallet for long-term crypto storage.</p>
-      <ul>
-        <li data-i18n="ledger_pros"><strong>Pros:</strong> Offline security, wide crypto support</li>
-        <li data-i18n="ledger_cons"><strong>Cons:</strong> Requires physical device, learning curve</li>
-      </ul>
-      <p><a href="https://www.ledger.com/?r=OMA_AFFILINKKI" target="_blank">Buy Ledger (affiliate)</a></p>
-    </div>
+  <h3>Ledger</h3>
+  <p data-i18n="ledger_desc">Ledger is a secure hardware wallet for long-term crypto storage.</p>
+  <ul>
+    <li data-i18n="ledger_pros"><strong>Pros:</strong> Offline security, wide crypto support</li>
+    <li data-i18n="ledger_cons"><strong>Cons:</strong> Requires physical device, learning curve</li>
+  </ul>
+  <p><a href="https://www.ledger.com/?r=OMA_AFFILINKKI" target="_blank">Buy Ledger (affiliate)</a></p>
+</div>
+
+<div class="wallet-box">
+  <h3>Phantom</h3>
+  <p data-i18n="phantom_desc">Phantom is a Solana wallet with support for NFTs, staking, and dApps.</p>
+  <ul>
+    <li data-i18n="phantom_pros"><strong>Pros:</strong> Fast Solana support, browser/mobile versions</li>
+    <li data-i18n="phantom_cons"><strong>Cons:</strong> Solana-only, no hardware wallet support</li>
+  </ul>
+  <p><a href="https://phantom.app" target="_blank">Visit Phantom</a></p>
+</div>
+
+<div class="wallet-box">
+  <h3>Rabby</h3>
+  <p data-i18n="rabby_desc">Rabby is an open-source wallet focused on DeFi with automatic network switching.</p>
+  <ul>
+    <li data-i18n="rabby_pros"><strong>Pros:</strong> Auto network detection, secure UI</li>
+    <li data-i18n="rabby_cons"><strong>Cons:</strong> No mobile app, lesser-known</li>
+  </ul>
+  <p><a href="https://rabby.io" target="_blank">Visit Rabby</a></p>
+</div>
+
+<div class="wallet-box">
+  <h3>Solflare</h3>
+  <p data-i18n="solflare_desc">Solflare is a feature-rich Solana wallet with support for staking and NFTs.</p>
+  <ul>
+    <li data-i18n="solflare_pros"><strong>Pros:</strong> Solana staking, Ledger support, browser/mobile</li>
+    <li data-i18n="solflare_cons"><strong>Cons:</strong> Only Solana supported</li>
+  </ul>
+  <p><a href="https://solflare.com" target="_blank">Visit Solflare</a></p>
+</div>
+
+<div class="wallet-box">
+  <h3>Jupiter</h3>
+  <p data-i18n="jupiter_desc">Jupiter Wallet integrates with Jupiter DEX and offers swap and Solana support.</p>
+  <ul>
+    <li data-i18n="jupiter_pros"><strong>Pros:</strong> Solana swaps, DeFi integrated, mobile app</li>
+    <li data-i18n="jupiter_cons"><strong>Cons:</strong> New platform, no desktop version</li>
+  </ul>
+  <p><a href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Claim bonus & install Jupiter</a></p>
+</div>
+
+<div class="wallet-box">
+  <h3>Sui Wallet</h3>
+  <p data-i18n="sui_desc">Sui Wallet is the official wallet for Sui blockchain, offering NFT and dApp access.</p>
+  <ul>
+    <li data-i18n="sui_pros"><strong>Pros:</strong> Lightweight, official, NFT support</li>
+    <li data-i18n="sui_cons"><strong>Cons:</strong> Only Sui network, no mobile app</li>
+  </ul>
+  <p><a href="https://wallet.sui.io" target="_blank">Visit Sui Wallet</a></p>
+</div>
+
+<div class="wallet-box">
+  <h3>Trezor</h3>
+  <p data-i18n="trezor_desc">Trezor is a hardware wallet offering secure offline crypto storage.</p>
+  <ul>
+    <li data-i18n="trezor_pros"><strong>Pros:</strong> Open-source, wide crypto support</li>
+    <li data-i18n="trezor_cons"><strong>Cons:</strong> Requires device, technical setup</li>
+  </ul>
+  <p><a href="https://trezor.io" target="_blank">Visit Trezor</a></p>
+</div>
     <h2 data-i18n="wallets">Wallets</h2>
     <p>Phantom, Metamask, Ledger, Trezor etc.</p>
   </section>
@@ -108,6 +168,49 @@
 
     // Initialize default language
     updateLanguage('en');
+
+    translations.fi = {
+      welcome: "Tervetuloa kryptosivulleni",
+      description: "Tämä sivusto tarjoaa tietoa kryptoprojekteista, lompakoista ja pörsseistä.",
+      nav_affiliate: "Affiliate-linkit",
+      nav_wallets: "Lompakot",
+      nav_exchanges: "Pörssit",
+      affiliate_links: "Affiliate-linkit",
+      wallets: "Lompakot",
+      exchanges: "Pörssit",
+
+      mm_desc: "MetaMask on suosittu selain- ja mobiililompakko, joka tukee Ethereumia ja EVM-ketjuja.",
+      mm_pros: "Plussat: Laaja yhteensopivuus, dApp-tuki, helppo käyttää",
+      mm_cons: "Miinukset: Ei tue Bitcoinia tai Solanaa",
+
+      ledger_desc: "Ledger on turvallinen laitteistolompakko pitkäaikaiseen krypton säilytykseen.",
+      ledger_pros: "Plussat: Offline-turva, laaja kryptotuki",
+      ledger_cons: "Miinukset: Tarvitsee fyysisen laitteen, opettelukäyrä",
+
+      phantom_desc: "Phantom on Solana-lompakko, joka tukee NFT:itä, stakingia ja dApp-sovelluksia.",
+      phantom_pros: "Plussat: Nopea Solana-tuki, selain- ja mobiiliversio",
+      phantom_cons: "Miinukset: Vain Solana-tuki, ei laitetukea",
+
+      rabby_desc: "Rabby on avoimen lähdekoodin lompakko, joka keskittyy DeFi-käyttöön ja verkon automaattiseen vaihtoon.",
+      rabby_pros: "Plussat: Automaattinen verkontunnistus, turvallinen käyttöliittymä",
+      rabby_cons: "Miinukset: Ei mobiilisovellusta, vähemmän tunnettu",
+
+      solflare_desc: "Solflare on monipuolinen Solana-lompakko, joka tukee stakingia ja NFT:itä.",
+      solflare_pros: "Plussat: Solana-staking, Ledger-tuki, selain ja mobiili",
+      solflare_cons: "Miinukset: Vain Solana-tuki",
+
+      jupiter_desc: "Jupiter Wallet on integroitu Jupiter DEXiin ja tukee Solana-vaihtoja ja DeFiä.",
+      jupiter_pros: "Plussat: Solana-swapit, DeFi-integraatio, mobiilisovellus",
+      jupiter_cons: "Miinukset: Uusi alusta, ei työpöytäsovellusta",
+
+      sui_desc: "Sui Wallet on virallinen lompakko Sui-lohkoketjulle, ja se tukee NFT:tä ja dApp-käyttöä.",
+      sui_pros: "Plussat: Kevyt, virallinen, NFT-tuki",
+      sui_cons: "Miinukset: Tukee vain Sui-verkkoa, ei mobiilisovellusta",
+
+      trezor_desc: "Trezor on laitteistolompakko, joka tarjoaa turvallista offline-säilytystä kryptovaluutoille.",
+      trezor_pros: "Plussat: Avoimen lähdekoodin ratkaisu, laaja kryptotuki",
+      trezor_cons: "Miinukset: Tarvitsee laitteen, tekninen käyttöönotto"
+    };
   </script>
 </body>
 </html>
