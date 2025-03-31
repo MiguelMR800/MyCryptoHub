@@ -1,18 +1,15 @@
-document.addEventListener('scroll', () => {
+window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
   const body = document.body;
 
-  const affiliate = document.getElementById('affiliate');
-  const wallets = document.getElementById('wallets');
-  const exchanges = document.getElementById('exchanges');
+  const sections = document.querySelectorAll('section');
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    const id = section.id;
 
-  body.className = 'default-bg';
-
-  if (scrollY >= exchanges.offsetTop - 100) {
-    body.className = 'exchanges-bg';
-  } else if (scrollY >= wallets.offsetTop - 100) {
-    body.className = 'wallets-bg';
-  } else if (scrollY >= affiliate.offsetTop - 100) {
-    body.className = 'affiliates-bg';
-  }
+    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+      body.className = ''; // Poistaa vanhat luokat
+      body.classList.add(`${id}-bg`); // Lisää uuden luokan esim. 'wallets-bg'
+    }
+  });
 });
