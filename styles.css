@@ -1,134 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MyCryptoHub</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    .live-button {
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: gold;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
-    }
-
-    .live-button:hover {
-      background-color: #00ffff;
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
-    }
-  </style>
-<style>
-  .language-selector {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1100;
-  }
-
-  .language-selector select {
-    padding: 0.4rem 0.6rem;
-    border-radius: 6px;
-    border: none;
-    font-weight: bold;
-    background: #000;
-    color: #00ffff;
-    border: 1px solid #00ffff;
-  }
-</style>
-</head>
-<body class="default-bg">
-  <div class="language-selector">
-    <select id="language" onchange="changeLanguage(this.value)">
-      <option value="en">English</option>
-      <option value="fi">Suomi</option>
-      <option value="es">Español</option>
-      <option value="et">Eesti</option>
-      <option value="pt">Português</option>
-      <option value="ru">Русский</option>
-      <option value="zh">中文</option>
-    </select>
-  </div>
-  <div id="loader">Loading...</div>
-
-  <nav class="navbar">
-    <a href="#affiliate">Affiliate Links</a>
-    <a href="#wallets">Wallets</a>
-    <a href="#exchanges">Exchanges</a>
-  </nav>
-
-  <section class="hero">
-    <h1>Welcome to MyCryptoHub</h1>
-    <p>This site provides trusted information on crypto wallets, exchanges, and affiliate offers.</p>
-    <select>
-      <option>English</option>
-      <option>Suomi</option>
-    </select>
-    <button onclick="window.open('https://miguelmr800.github.io/MyCryptoHub/', '_blank')" class="live-button" data-i18n="visit_button">Visit Live Site</button>
-  </section>
-
-  <section id="affiliate" class="content-section">
-    <h2>Affiliate Links</h2>
-    <ul>
-      <li>Bybit: <a href="https://partner.bybit.com/b/eq69el" target="_blank">Register with code EQ69EL</a></li>
-      <li>Binance: <a href="https://accounts.binance.com/register?ref=GRO_14352_A3YU5" target="_blank">Register with code GRO_14352_A3YU5</a></li>
-      <li>Crypto.com: <a href="https://crypto.com/app/nrmm4uzm29" target="_blank">Register with code nrmm4uzm29</a></li>
-      <li>Coinmotion: <a href="https://coinmotion.com/fi/referral/DAWL3TJGXHKJPUK9KPWP" target="_blank">Register with code DAWL3TJGXHKJPUK9KPWP</a></li>
-    </ul>
-  </section>
-
-  <!-- Wallets and Exchanges sections remain unchanged -->
-
-  <footer>
-  <p>&copy; 2025 MyCryptoHub</p>
-  <button onclick="window.open('https://miguelmr800.github.io/MyCryptoHub/', '_blank')" class="live-button">
-    Visit Live Site
-  </button>
-</footer>
-
-  <script src="script.js">function changeLanguage(lang) {
-  const translations = {
-    en: {
-      hero_title: "Welcome to MyCryptoHub",
-      hero_subtext: "This site provides trusted information on crypto wallets, exchanges, and affiliate offers.",
-      visit_button: "Visit Live Site"
-    },
-    fi: {
-      hero_title: "Tervetuloa MyCryptoHubiin",
-      hero_subtext: "Tämä sivusto tarjoaa luotettavaa tietoa kryptolompakoista, pörsseistä ja affiliate-linkeistä.",
-      visit_button: "Siirry sivustolle"
-    },
-    es: {
-      hero_title: "Bienvenido a MyCryptoHub",
-      hero_subtext: "Este sitio proporciona información confiable sobre monederos, exchanges y enlaces de afiliados.",
-      visit_button: "Visitar el sitio"
-    },
-    ru: {
-      hero_title: "Добро пожаловать в MyCryptoHub",
-      hero_subtext: "Этот сайт предоставляет достоверную информацию о криптокошельках, биржах и партнёрских ссылках.",
-      visit_button: "Перейти на сайт"
-    }
-  };
-
-  const elements = document.querySelectorAll('[data-i18n]');
-  elements.forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
-  });
+body {
+  background: url('background_new.png') no-repeat center center fixed;
+  background-size: cover;
+  transition: background-color 1s ease;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  scroll-behavior: smooth;
 }
-</script>
-  <script>
-    window.addEventListener('load', () => {
-      document.body.classList.add('loaded');
-    });
-  </script>
-</body>
-</html>
+
+body.affiliate-bg {
+  background-color: rgba(17, 17, 17, 0.8);
+}
+
+body.wallets-bg {
+  background-color: rgba(10, 25, 47, 0.8);
+}
+
+body.exchanges-bg {
+  background-color: rgba(30, 30, 47, 0.8);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #00ffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  color: gold;
+  text-align: center;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 2px 2px 4px black;
+}
+
+.content-section {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+a {
+  color: #00ffff;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+.wallet-box, .exchange-box, .donate-box {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid #00ffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.wallet-box h3, .exchange-box h3, .donate-box h3 {
+  color: #00ffff;
+  margin-top: 0;
+}
+
+.crypto-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.qr-code {
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .content-section {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  body {
+    background-position: center top;
+    background-size: cover;
+  }
+}
