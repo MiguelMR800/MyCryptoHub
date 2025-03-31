@@ -71,11 +71,37 @@ footer {
 
 /* Linkkityylit */
 a {
-  color: #ffd700; /* kirkas kulta */
+  color: #ffd700;
   font-weight: bold;
   text-decoration: underline;
 }
 
 a:hover {
-  color: #ffffff; /* valkoinen hover-efekti */
+  color: #ffffff;
+}
+
+/* Mobiiliresponsiivisuus */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.2rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .content-section {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  body {
+    background-position: center top;
+    background-size: cover;
+  }
 }
