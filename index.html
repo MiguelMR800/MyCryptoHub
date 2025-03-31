@@ -1,143 +1,53 @@
-body {
-  background: url('background_new.png') no-repeat center center fixed;
-  background-size: cover;
-  transition: background-color 1s ease;
-  color: white;
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
-  scroll-behavior: smooth;
-  font-size: 18px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyCryptoHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="default-bg">
+  <div id="loader">Loading page...</div>
 
-body.affiliate-bg {
-  background-color: rgba(17, 17, 17, 0.8);
-}
+  <nav class="navbar">
+    <a href="#affiliate">Affiliate Links</a>
+    <a href="#wallets">Wallets</a>
+    <a href="#exchanges">Exchanges</a>
+  </nav>
 
-body.wallets-bg {
-  background-color: rgba(10, 25, 47, 0.8);
-}
+  <section class="hero">
+    <h1>Welcome to MyCryptoHub</h1>
+    <p>This site provides information about crypto projects, wallets, and exchanges.</p>
+    <select>
+      <option>English</option>
+      <option>Suomi</option>
+    </select>
+  </section>
 
-body.exchanges-bg {
-  background-color: rgba(30, 30, 47, 0.8);
-}
+  <section id="affiliate" class="content-section">
+    <h2>Affiliate Links</h2>
+    <!-- Affiliate content will be inserted here -->
+  </section>
 
-.navbar {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.8);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+  <section id="wallets" class="content-section">
+    <h2>Wallets</h2>
+    <!-- Wallet content will be inserted here -->
+  </section>
 
-.navbar a {
-  color: #ffd700;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
+  <section id="exchanges" class="content-section">
+    <h2>Exchanges</h2>
+    <!-- Exchange content will be inserted here -->
+  </section>
 
-section {
-  min-height: 100vh;
-  padding: 4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  <footer>
+    &copy; 2024 MyCryptoHub
+  </footer>
 
-.hero h1 {
-  font-size: 2.4rem;
-  color: gold;
-  text-align: center;
-  -webkit-text-stroke: 1px black;
-  text-shadow: 2px 2px 4px black;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.content-section {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  padding: 2rem;
-  margin: 1rem auto;
-  max-width: 1000px;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #111;
-  font-size: 0.9rem;
-  color: gray;
-}
-
-/* Linkit */
-a {
-  color: #ffd700;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #ffffff;
-}
-
-/* Wallet Box ja Exchange Box */
-.wallet-box {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 1.5rem;
-  margin: 1rem 0;
-  border: 1px solid gold;
-  border-radius: 8px;
-}
-
-.wallet-box h3 {
-  color: gold;
-  margin-top: 0;
-}
-
-.wallet-box a {
-  color: #ffd700;
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-.wallet-box a:hover {
-  color: white;
-}
-
-/* Mobiilituki */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  section {
-    padding: 2rem 1rem;
-  }
-
-  .navbar {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .content-section {
-    margin: 0.5rem;
-    padding: 1rem;
-  }
-
-  body {
-    background-position: center top;
-  }
-}
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
+  </script>
+</body>
+</html>
