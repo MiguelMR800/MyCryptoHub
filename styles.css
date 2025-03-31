@@ -1,14 +1,13 @@
-
 body {
-  background: url('lataus.jpg') no-repeat center center fixed;
+  background: url('background_new.png') no-repeat center center fixed;
   background-size: cover;
   transition: background-color 1s ease;
   color: white;
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
   scroll-behavior: smooth;
-  font-size: 1.2rem;
 }
 
 body.affiliate-bg {
@@ -35,7 +34,7 @@ body.exchanges-bg {
 }
 
 .navbar a {
-  color: gold;
+  color: #00ffff; /* turkoosi */
   font-weight: bold;
   text-decoration: none;
 }
@@ -49,19 +48,11 @@ section {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: gold;
   text-align: center;
   -webkit-text-stroke: 1px black;
   text-shadow: 2px 2px 4px black;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-p, li {
-  font-size: 1.1rem;
 }
 
 .content-section {
@@ -75,29 +66,41 @@ footer {
   text-align: center;
   padding: 1rem;
   background: #111;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: gray;
 }
 
 /* Linkkityylit */
 a {
-  color: #ffd700;
+  color: #00ffff; /* turkoosi */
   font-weight: bold;
   text-decoration: underline;
+  margin-bottom: 1rem;
+  display: inline-block;
 }
 
 a:hover {
   color: #ffffff;
 }
 
+/* Wallet- ja exchange-boksien tyylit */
+.wallet-box, .exchange-box {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid #00ffff;
+  border-radius: 8px;
+}
+
+.wallet-box h3, .exchange-box h3 {
+  color: #00ffff;
+  margin-top: 0;
+}
+
 /* Mobiiliresponsiivisuus */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   section {
@@ -116,33 +119,6 @@ a:hover {
 
   body {
     background-position: center top;
-    font-size: 1rem;
+    background-size: cover;
   }
-
-  p, li {
-    font-size: 1rem;
-  }
-}
-
-.wallet-box {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 1.5rem;
-  margin: 1rem 0;
-  border: 1px solid gold;
-  border-radius: 8px;
-}
-
-.wallet-box h3 {
-  color: gold;
-  margin-top: 0;
-}
-
-.wallet-box a {
-  color: #ffd700;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.wallet-box a:hover {
-  color: white;
 }
