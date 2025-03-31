@@ -1,21 +1,18 @@
-
-document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll("section");
+document.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
   const body = document.body;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        body.className = '';
-        if (entry.target.id === "affiliates") body.classList.add("affiliates-bg");
-        else if (entry.target.id === "wallets") body.classList.add("wallets-bg");
-        else if (entry.target.id === "exchanges") body.classList.add("exchanges-bg");
-        else body.classList.add("default-bg");
-      }
-    });
-  }, { threshold: 0.6 });
+  const affiliate = document.getElementById('affiliate');
+  const wallets = document.getElementById('wallets');
+  const exchanges = document.getElementById('exchanges');
 
-  sections.forEach(section => {
-    observer.observe(section);
-  });
+  body.className = 'default-bg';
+
+  if (scrollY >= exchanges.offsetTop - 100) {
+    body.className = 'exchanges-bg';
+  } else if (scrollY >= wallets.offsetTop - 100) {
+    body.className = 'wallets-bg';
+  } else if (scrollY >= affiliate.offsetTop - 100) {
+    body.className = 'affiliates-bg';
+  }
 });
