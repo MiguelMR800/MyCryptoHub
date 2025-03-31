@@ -1,5 +1,6 @@
+
 body {
-  background: url('background.png') no-repeat center center fixed;
+  background: url('lataus.jpg') no-repeat center center fixed;
   background-size: cover;
   transition: background-color 1s ease;
   color: white;
@@ -7,14 +8,17 @@ body {
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   scroll-behavior: smooth;
+  font-size: 1.2rem;
 }
 
 body.affiliate-bg {
   background-color: rgba(17, 17, 17, 0.8);
 }
+
 body.wallets-bg {
   background-color: rgba(10, 25, 47, 0.8);
 }
+
 body.exchanges-bg {
   background-color: rgba(30, 30, 47, 0.8);
 }
@@ -29,6 +33,7 @@ body.exchanges-bg {
   top: 0;
   z-index: 1000;
 }
+
 .navbar a {
   color: gold;
   font-weight: bold;
@@ -44,11 +49,19 @@ section {
 }
 
 .hero h1 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   color: gold;
   text-align: center;
   -webkit-text-stroke: 1px black;
   text-shadow: 2px 2px 4px black;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p, li {
+  font-size: 1.1rem;
 }
 
 .content-section {
@@ -66,33 +79,48 @@ footer {
   color: gray;
 }
 
+/* Linkkityylit */
 a {
   color: #ffd700;
   font-weight: bold;
   text-decoration: underline;
 }
+
 a:hover {
   color: #ffffff;
 }
 
+/* Mobiiliresponsiivisuus */
 @media (max-width: 768px) {
   .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
     font-size: 1.2rem;
   }
+
   section {
     padding: 2rem 1rem;
   }
+
   .navbar {
     flex-direction: column;
     gap: 1rem;
   }
+
   .content-section {
     margin: 0.5rem;
     padding: 1rem;
   }
+
   body {
     background-position: center top;
-    background-size: cover;
+    font-size: 1rem;
+  }
+
+  p, li {
+    font-size: 1rem;
   }
 }
 
@@ -103,15 +131,18 @@ a:hover {
   border: 1px solid gold;
   border-radius: 8px;
 }
+
 .wallet-box h3 {
   color: gold;
   margin-top: 0;
 }
+
 .wallet-box a {
   color: #ffd700;
   font-weight: bold;
   text-decoration: underline;
 }
+
 .wallet-box a:hover {
   color: white;
 }
