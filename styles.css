@@ -1,6 +1,5 @@
-
 body {
-  background: url('background_new.png') no-repeat center center fixed;
+  background: url('background.png') no-repeat center center fixed;
   background-size: cover;
   transition: background-color 1s ease;
   color: white;
@@ -137,10 +136,23 @@ a:hover {
   .crypto-icon {
     width: 32px;
     height: 32px;
+    vertical-align: middle;
+    margin-right: 10px;
   }
 
   .qr-code {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+
+  .donate-box {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border: 1px solid #00ffff;
+    border-radius: 10px;
+    text-align: center;
   }
 }
