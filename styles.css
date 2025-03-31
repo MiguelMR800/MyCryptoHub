@@ -12,11 +12,9 @@ body {
 body.affiliate-bg {
   background-color: rgba(17, 17, 17, 0.8);
 }
-
 body.wallets-bg {
   background-color: rgba(10, 25, 47, 0.8);
 }
-
 body.exchanges-bg {
   background-color: rgba(30, 30, 47, 0.8);
 }
@@ -31,7 +29,6 @@ body.exchanges-bg {
   top: 0;
   z-index: 1000;
 }
-
 .navbar a {
   color: gold;
   font-weight: bold;
@@ -69,42 +66,36 @@ footer {
   color: gray;
 }
 
-/* Linkkityylit */
 a {
   color: #ffd700;
   font-weight: bold;
   text-decoration: underline;
 }
-
 a:hover {
   color: #ffffff;
 }
 
-/* Mobiiliresponsiivisuus */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 1.2rem;
   }
-
   section {
     padding: 2rem 1rem;
   }
-
   .navbar {
     flex-direction: column;
     gap: 1rem;
   }
-
   .content-section {
     margin: 0.5rem;
     padding: 1rem;
   }
-
   body {
     background-position: center top;
     background-size: cover;
   }
 }
+
 .wallet-box {
   background: rgba(0, 0, 0, 0.6);
   padding: 1.5rem;
@@ -112,90 +103,15 @@ a:hover {
   border: 1px solid gold;
   border-radius: 8px;
 }
-
 .wallet-box h3 {
   color: gold;
   margin-top: 0;
 }
-
 .wallet-box a {
   color: #ffd700;
   font-weight: bold;
   text-decoration: underline;
 }
-
 .wallet-box a:hover {
   color: white;
 }
-<div class="wallet-box">
-  <h3>MetaMask</h3>
-  <p><strong>Kuvaus:</strong> MetaMask on suosittu selain- ja mobiililompakko, joka tukee Ethereumia ja useita muita EVM-yhteensopivia lohkoketjuja.</p>
-  <ul>
-    <li><strong>Plussat:</strong> Laaja yhteensopivuus, dApp-tuki, helppo asennus, custom-verkot</li>
-    <li><strong>Miinukset:</strong> Ei tue Bitcoinia tai Solanaa, hieman tekninen aloittelijalle</li>
-  </ul>
-  <p><a href="https://metamask.io" target="_blank">Siirry MetaMaskin viralliselle sivulle</a></p>
-  <p><a href="https://www.youtube.com/watch?v=6Gf_kRE4MJU" target="_blank">Katso YouTube-opas</a></p>
-</div>
-<div class="wallet-box">
-  <h3>Rabby Wallet</h3>
-  <p><strong>Kuvaus:</strong> Rabby Wallet on avoimen lähdekoodin selainlompakko DeFi-käyttäjille. Se tarjoaa automaattisen verkonvaihdon ja ennakkonäytön transaktioista.</p>
-  <ul>
-    <li><strong>Plussat:</strong> Automaattinen verkon tunnistus, turvallinen, selkeä transaktiovahvistus</li>
-    <li><strong>Miinukset:</strong> Ei mobiilisovellusta, vähemmän tunnettu</li>
-  </ul>
-  <p><a href="https://rabby.io" target="_blank">Siirry Rabby Walletin sivulle</a></p>
-  <p><a href="https://www.youtube.com/watch?v=0B6XvmZDnDM" target="_blank">Katso YouTube-opas</a></p>
-</div>
-<div class="wallet-box">
-  <h3>Ledger (Offline Wallet)</h3>
-  <p><strong>Kuvaus:</strong> Ledger on markkinoiden johtava laitteistolompakko, joka säilyttää kryptosi turvallisesti offline-tilassa. Soveltuu pitkäaikaiseen säilytykseen.</p>
-  <ul>
-    <li><strong>Plussat:</strong> Erittäin turvallinen, laaja tuki kryptovaluutoille, Ledger Live -sovellus</li>
-    <li><strong>Miinukset:</strong> Fyysinen laite tarvitaan, hieman tekninen aloittelijoille</li>
-  </ul>
-  <p><a href="https://www.ledger.com/?r=OMA_AFFILINKKI" target="_blank">Tilaa Ledger turvallisesti (affiliate)</a></p>
-  <p><a href="https://www.youtube.com/watch?v=fq0CzWbNsXA" target="_blank">Katso YouTube-opas</a></p>
-</div>
-<div class="wallet-box">
-  <h3>Solflare Wallet</h3>
-  <p><strong>Kuvaus:</strong> Solflare on Solana-verkkoon rakennettu monipuolinen lompakko, joka tukee stakingia, NFT:tä ja toimii sekä mobiilissa että selaimessa.</p>
-  <ul>
-    <li><strong>Plussat:</strong> Solana-tuki, Ledger-integraatio, staking, NFT-näyttö</li>
-    <li><strong>Miinukset:</strong> Vain Solana-verkko, rajoitettu tunnettuus, ei suomenkielinen</li>
-  </ul>
-  <p><a href="https://solflare.com" target="_blank">Siirry Solflare Walletin sivustolle</a></p>
-  <p><a href="https://www.youtube.com/watch?v=TdLdrfb_0nM" target="_blank">Katso YouTube-opas</a></p>
-</div>
-<div class="wallet-box">
-  <h3>Jupiter Mobile Wallet</h3>
-  <p><strong>Kuvaus:</strong> Jupiter Mobile Wallet on Solana-ekosysteemin uusi mobiililompakko, integroitu suoraan Jupiter DEX-aggregaattoriin. Se sopii erityisesti DeFi-käyttäjille ja swap-toimintoihin.</p>
-  <ul>
-    <li><strong>Plussat:</strong> DeFi-ominaisuudet, Solana-natiivi, paras hinnanhaku swapissa</li>
-    <li><strong>Miinukset:</strong> Ei selainversiota, uusi palvelu, vain Solana-tuki</li>
-  </ul>
-  <p><strong>Lataa Jupiter Wallet nyt ja saat <span style="color:gold;">0,05 SOL lahjaksi!</span></strong></p>
-  <p><a href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Klikkaa tästä lunastaaksesi lahjasi ja ladataksesi sovelluksen</a></p>
-  <p>Voit myös syöttää koodin <strong>BRvVHduEhaiG</strong> suoraan sovelluksessa.</p>
-  <p><a href="https://www.youtube.com/watch?v=lRmdxEZUYiU" target="_blank">Katso YouTube-esittely</a></p>
-</div>
-<div class="wallet-box">
-  <h3>Sui Wallet</h3>
-  <p><strong>Kuvaus:</strong> Sui Wallet on virallinen selainlompakko Sui-lohkoketjulle. Se tarjoaa nopean ja yksinkertaisen tavan hallita SUI-tokenia, NFT:tä ja käyttää Sui-sovelluksia.</p>
-  <ul>
-    <li><strong>Plussat:</strong> Kevyt, virallinen Sui-lompakko, dApp- ja NFT-tuki</li>
-    <li><strong>Miinukset:</strong> Tukee vain Sui-verkkoa, ei mobiilisovellusta</li>
-  </ul>
-  <p><a href="https://wallet.sui.io" target="_blank">Siirry Sui Walletin viralliselle sivulle</a></p>
-  <p><a href="https://www.youtube.com/watch?v=Y1wVbaF8FCk" target="_blank">Katso YouTube-opas</a></p>
-</div>
-<div class="wallet-box">
-  <h3>Trezor (Offline Wallet)</h3>
-  <p><strong>Kuvaus:</strong> Trezor on laitteistolompakko, joka säilyttää kryptosi turvallisesti offline-tilassa. Erinomainen vaihtoehto pitkäaikaiseen säilytykseen ja sijoittajille, jotka haluavat maksimaalista turvallisuutta.</p>
-  <ul>
-    <li><strong>Plussat:</strong> Offline-turva, avoin lähdekoodi, laaja kryptotuki</li>
-    <li><strong>Miinukset:</strong> Laite vaatii ostamisen, aloittelijalle tekninen</li>
-  </ul>
-  <p><a href="https://trezor.io" target="_blank">Siirry Trezorin viralliselle sivulle</a></p>
-  <p><a href="https://www.youtube.com/watch?v=VtPJJ8YzC4o" target="_blank">Katso YouTube-opas</a></p>
-</div>
