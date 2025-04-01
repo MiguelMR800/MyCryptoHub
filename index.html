@@ -1,22 +1,84 @@
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  const body = document.body;
-  const sections = document.querySelectorAll('section');
 
-  sections.forEach(section => {
-    const rect = section.getBoundingClientRect();
-    const id = section.id;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyCryptoHub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="default-bg">
+  <div id="loader">Loading page...</div>
+  <nav class="navbar">
+    <a href="#affiliate">Affiliate Links</a>
+    <a href="#wallets">Wallets</a>
+    <a href="#exchanges">Exchanges</a>
+    <select id="languageSwitcher" onchange="switchLanguage(this.value)">
+      <option value="en">English</option>
+      <option value="fi">Suomi</option>
+      <option value="es">Español</option>
+      <option value="ru">Русский</option>
+    </select>
+  </nav>
 
-    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-      body.className = ''; // Poista vanhat luokat
-      body.classList.add(`${id}-bg`); // Lisää uuden taustaluokan
-    }
-  });
-});
+  <section class="hero">
+    <h1>Welcome to MyCryptoHub</h1>
+    <p>This site provides trusted crypto resources, exchanges, and wallets.</p>
+  </section>
 
-window.addEventListener('load', () => {
-  const firstSection = document.querySelector('section');
-  if (firstSection) {
-    document.body.classList.add(`${firstSection.id}-bg`);
-  }
-});
+  <section id="affiliate" class="content-section">
+    <h2>Affiliate Links</h2>
+    <ul>
+      <li>Bybit: <a href="https://partner.bybit.com/b/EQ69EL" target="_blank">Register with code EQ69EL</a></li>
+      <li>Binance: <a href="https://accounts.binance.com/en/register?ref=GRO_14352_A3YU5" target="_blank">Register with code GRO_14352_A3YU5</a></li>
+      <li>Crypto.com: <a href="https://crypto.com/exch/nrmm4uzm29" target="_blank">Register with code nrmm4uzm29</a></li>
+      <li>Coinmotion: <a href="https://coinmotion.com/fi?ref=DAWL3TJGXHKJPUK9KPWP" target="_blank">Register with code DAWL3TJGXHKJPUK9KPWP</a></li>
+      <li>Ledger: <a href="https://shop.ledger.com/?r=c97ab0683c61" target="_blank">Ledger Affiliate Store</a></li>
+    </ul>
+  </section>
+
+  <section id="wallets" class="content-section">
+    <h2>Wallets</h2>
+    <div class="wallet-box">
+      <h3>MetaMask</h3>
+      <p>Hot wallet - <a href="https://metamask.io/" target="_blank">Visit Site</a></p>
+      <iframe width="300" height="169" src="https://www.youtube.com/embed/YVgfHZMFFFQ" allowfullscreen></iframe>
+    </div>
+    <div class="wallet-box">
+      <h3>Trust Wallet</h3>
+      <p>Hot wallet - <a href="https://trustwallet.com/" target="_blank">Visit Site</a></p>
+      <iframe width="300" height="169" src="https://www.youtube.com/embed/6ZfwGikpL7w" allowfullscreen></iframe>
+    </div>
+    <div class="wallet-box">
+      <h3>Ledger</h3>
+      <p>Gold wallet - <a href="https://shop.ledger.com/?r=c97ab0683c61" target="_blank">Buy Ledger</a></p>
+      <iframe width="300" height="169" src="https://www.youtube.com/embed/NM9A3J1UQxk" allowfullscreen></iframe>
+    </div>
+    <div class="wallet-box">
+      <h3>Trezor</h3>
+      <p>Gold wallet - <a href="https://trezor.io/" target="_blank">Visit Site</a></p>
+      <iframe width="300" height="169" src="https://www.youtube.com/embed/6ewX3vd0vF8" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section id="exchanges" class="content-section">
+    <h2>Exchanges</h2>
+    <div class="exchange-box">
+      <h3>Binance</h3>
+      <p>Leading exchange - <a href="https://binance.com/" target="_blank">Visit Binance</a></p>
+      <iframe width="300" height="169" src="https://www.youtube.com/embed/TPbcWD4MiVs" allowfullscreen></iframe>
+    </div>
+    <div class="exchange-box">
+      <h3>Bybit</h3>
+      <p>Derivatives and Spot - <a href="https://www.bybit.com/" target="_blank">Visit Bybit</a></p>
+      <iframe width="300" height="169" src="https://www.youtube.com/embed/HDO1g0CLXTU" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 MyCryptoHub. Built with HTML, CSS & JS. Donate with crypto!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
