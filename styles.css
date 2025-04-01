@@ -1,1 +1,78 @@
-body { background-color: #0b1d35; color: white; font-family: sans-serif; } .crypto-icon { height: 50px; }
+
+body.default-bg {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: cyan;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.language-selector select {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.25rem;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+}
+
+.content-section {
+  margin-bottom: 4rem;
+}
+
+.exchange-box,
+.wallet-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #111;
+  border: 1px solid cyan;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00ffff66;
+}
+
+.crypto-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+a {
+  color: #00f0ff;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  margin-top: 3rem;
+}
