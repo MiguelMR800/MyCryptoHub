@@ -1,109 +1,73 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MyCryptoHub</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="default-bg">
   <nav class="navbar">
-    <a href="#affiliate">Affiliate-linkit</a>
-    <a href="#wallets">Lompakot</a>
-    <a href="#exchanges">Pörssit</a>
+    <div class="language-selector">
+      <select>
+        <option selected>English</option>
+        <option>Español</option>
+        <option>Русский</option>
+      </select>
+    </div>
+    <a href="#exchanges">Exchanges</a>
+    <a href="#hotwallets">Hot Wallets</a>
+    <a href="#coldwallets">Cold Wallets</a>
   </nav>
 
-  <section id="affiliate" class="content-section">
-    <h2>Affiliate-linkit</h2>
-    <p>Käytä linkkejä alla rekisteröityäksesi turvallisesti suosittuihin pörsseihin ja palveluihin.</p>
-  </section>
+  <main>
+    <section id="exchanges" class="content-section">
+      <h2>Exchanges</h2>
+      <div class="exchange-box">
+        <img src="bybit.png" alt="Bybit" class="crypto-icon"/>
+        <div>
+          <h3>Bybit</h3>
+          <p>Popular crypto exchange with derivatives and spot trading.</p>
+          <a href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Sign up (Affiliate)</a>
+          <a href="https://www.youtube.com/watch?v=Mgztdm5d6tM" target="_blank">Watch tutorial</a>
+        </div>
+      </div>
+      <div class="exchange-box">
+        <img src="binance.png" alt="Binance" class="crypto-icon"/>
+        <div>
+          <h3>Binance</h3>
+          <p>World's largest exchange with broad crypto support.</p>
+          <a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" target="_blank">Sign up (Affiliate)</a>
+          <a href="https://www.youtube.com/watch?v=2tqHWS1jZg4" target="_blank">Watch tutorial</a>
+        </div>
+      </div>
+    </section>
 
-  <section id="wallets" class="content-section">
-    <h2>Lompakot</h2>
-    <div class="wallet-box">
-      <h3>MetaMask</h3>
-      <p><strong>Kuvaus:</strong> MetaMask on selain- ja mobiililompakko, joka tukee Ethereumia ja muita EVM-ketjuja.</p>
-      <ul>
-        <li><strong>Plussat:</strong> Helppo käyttää, laaja yhteensopivuus, dApp-tuki</li>
-        <li><strong>Miinukset:</strong> Ei tue Bitcoinia</li>
-      </ul>
-      <p><a href="https://metamask.io" target="_blank">Virallinen sivu</a></p>
-      <p><a href="https://www.youtube.com/watch?v=6Gf_kRE4MJU" target="_blank">YouTube-opas</a></p>
-    </div>
-
-    <div class="wallet-box">
-      <h3>Rabby Wallet</h3>
-      <p><strong>Kuvaus:</strong> Avointa lähdekoodia oleva selainlompakko, joka keskittyy DeFi-käyttöön.</p>
-      <ul>
-        <li><strong>Plussat:</strong> Automaattinen verkon tunnistus, turvallinen</li>
-        <li><strong>Miinukset:</strong> Ei mobiiliversiota</li>
-      </ul>
-      <p><a href="https://rabby.io" target="_blank">Virallinen sivu</a></p>
-      <p><a href="https://www.youtube.com/watch?v=0B6XvmZDnDM" target="_blank">YouTube-opas</a></p>
-    </div>
-
-    <div class="wallet-box">
-      <h3>Ledger</h3>
-      <p><strong>Kuvaus:</strong> Laitteistolompakko, joka säilyttää kryptosi offline-tilassa.</p>
-      <ul>
-        <li><strong>Plussat:</strong> Turvallinen, Ledger Live -sovellus</li>
-        <li><strong>Miinukset:</strong> Vaatii laitteen, hieman tekninen</li>
-      </ul>
-      <p><a href="https://www.ledger.com" target="_blank">Virallinen sivu</a></p>
-      <p><a href="https://www.youtube.com/watch?v=fq0CzWbNsXA" target="_blank">YouTube-opas</a></p>
-    </div>
-  </section>
-
-  <section id="exchanges" class="content-section">
-    <h2>Pörssit</h2>
-
-    <div class="exchange-box">
-      <h3>Bybit</h3>
-      <p><strong>Kuvaus:</strong> Bybit on yksi suosituimmista kryptopörsseistä aktiivisille treidaajille. Se tarjoaa johdannaisia, spottikauppaa ja copy trading -ominaisuuden.</p>
-      <ul>
-        <li><strong>Plussat:</strong> Käyttöliittymä, alhaiset kulut, kampanjat</li>
-        <li><strong>Miinukset:</strong> Ei saatavilla Yhdysvalloissa</li>
-      </ul>
-      <p><a href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Rekisteröidy Bybitin affiliate-linkillä</a></p>
-      <p><a href="https://www.youtube.com/watch?v=oyZcBAzdqZk" target="_blank">Katso Bybit-opas YouTubessa</a></p>
-    </div>
-
-    <div class="exchange-box">
-      <h3>Binance</h3>
-      <p><strong>Kuvaus:</strong> Binance on maailman suurin kryptopörssi volyymin perusteella. Se tarjoaa laajan valikoiman kolikoita, spot- ja futuurikauppaa sekä NFT-markkinapaikan.</p>
-      <ul>
-        <li><strong>Plussat:</strong> Erittäin laaja valikoima, matalat kulut, luotettavuus</li>
-        <li><strong>Miinukset:</strong> Monimutkainen aloittelijoille</li>
-      </ul>
-      <p><a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" target="_blank">Rekisteröidy Binancen affiliate-linkillä</a></p>
-      <p><a href="https://www.youtube.com/watch?v=6mr37xq4_PY" target="_blank">Katso Binance-opas YouTubessa</a></p>
-    </div>
-
-    <div class="exchange-box">
-      <h3>Crypto.com</h3>
-      <p><strong>Kuvaus:</strong> Crypto.com on pörssi, jolla on myös suosittu mobiilisovellus, Visa-kortti ja DeFi-lompakko. Sopii aloittelijoille ja maksamiseen kryptolla.</p>
-      <ul>
-        <li><strong>Plussat:</strong> Cashback Visa-kortti, sovellus, kampanjat</li>
-        <li><strong>Miinukset:</strong> Korkeat kulut joissain toiminnoissa</li>
-      </ul>
-      <p><a href="https://crypto.com/app/nrmm4uzm29" target="_blank">Liity Crypto.comiin affiliate-linkillä</a></p>
-      <p><a href="https://www.youtube.com/watch?v=HLpV0Spc-60" target="_blank">Katso Crypto.com-opas YouTubessa</a></p>
-    </div>
-
-    <div class="exchange-box">
-      <h3>Coinmotion</h3>
-      <p><strong>Kuvaus:</strong> Coinmotion on suomalainen kryptopörssi ja -palvelu, joka tarjoaa eurotalletukset, kryptojen säilytyksen ja sijoituspalveluita.</p>
-      <ul>
-        <li><strong>Plussat:</strong> Suomalainen toimija, suomenkielinen palvelu, helppo käyttö</li>
-        <li><strong>Miinukset:</strong> Rajoitetumpi valikoima kolikoita</li>
-      </ul>
-      <p><a href="https://app.coinmotion.com/fi/register/signup?referral_code=DAWL3TJGXHKJPUK9KPWP" target="_blank">Liity Coinmotioniin affiliate-linkillä</a></p>
-      <p><a href="https://www.youtube.com/watch?v=Scnb__Uya8k" target="_blank">Katso Coinmotion-opas YouTubessa</a></p>
-    </div>
-  </section>
+    <section id="hotwallets" class="content-section">
+      <h2>Hot Wallets</h2>
+      <div class="wallet-box">
+        <img src="metamask.png" alt="MetaMask" class="crypto-icon"/>
+        <div>
+          <h3>MetaMask</h3>
+          <p>Browser and mobile wallet supporting Ethereum and EVM chains.</p>
+          <a href="https://metamask.io" target="_blank">Visit MetaMask</a>
+          <a href="https://www.youtube.com/watch?v=6Gf_kRE4MJU" target="_blank">Watch tutorial</a>
+        </div>
+      </div>
+      <div class="wallet-box">
+        <img src="phantom.png" alt="Phantom" class="crypto-icon"/>
+        <div>
+          <h3>Phantom</h3>
+          <p>Solana-based wallet with staking, NFT, and app support.</p>
+          <a href="https://phantom.app" target="_blank">Visit Phantom</a>
+          <a href="https://www.youtube.com/watch?v=TdLdrfb_0nM" target="_blank">Watch tutorial</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 MyCryptoHub – Kaikki oikeudet pidätetään.
+    &copy; 2025 MyCryptoHub
   </footer>
 </body>
 </html>
