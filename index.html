@@ -1,77 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MyCryptoHub</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body class="default-bg">
-  <div id="loader">Loading page...</div>
-  <nav class="navbar">
-    <a href="#affiliate">Affiliate Links</a>
-    <a href="#wallets">Wallets</a>
-    <a href="#exchanges">Exchanges</a>
-    <a href="#donate">Donate</a>
-  </nav>
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const body = document.body;
+  const sections = document.querySelectorAll('section');
 
-  <section class="hero">
-    <h1>Welcome to MyCryptoHub</h1>
-    <p>This site provides wallet and exchange reviews with affiliate links and donation options.</p>
-  </section>
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    const id = section.id;
 
-  <section id="affiliate" class="content-section affiliate-bg">
-    <h2>Affiliate Links</h2>
-    <ul>
-      <li>Bybit: <a href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Register with code EQ69EL</a></li>
-      <li>Binance: <a href="https://accounts.binance.com/en/register?ref=GRO_14352_A3YU5" target="_blank">Register with code GRO_14352_A3YU5</a></li>
-      <li>Crypto.com: <a href="https://crypto.com/exch/nrmm4uzm29" target="_blank">Register with code nrmm4uzm29</a></li>
-      <li>Coinmotion: <a href="https://coinmotion.com/DAWL3TJGXHKJPUK9KPWP" target="_blank">Register with code DAWL3TJGXHKJPUK9KPWP</a></li>
-    </ul>
-  </section>
+    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+      body.className = ''; // Poista vanhat luokat
+      body.classList.add(`${id}-bg`); // Lisää uuden taustaluokan
+    }
+  });
+});
 
-  <section id="wallets" class="content-section wallets-bg">
-    <h2>Hot Wallets</h2>
-    <div class="wallet-box"><h3>MetaMask</h3><p>A browser and mobile wallet supporting Ethereum and other EVM chains.</p></div>
-    <div class="wallet-box"><h3>Phantom</h3><p>Popular wallet for Solana with a clean UI and NFT support.</p></div>
-    <div class="wallet-box"><h3>Rabby Wallet</h3><p>DeFi browser wallet with advanced features like pre-transaction simulation.</p></div>
-    <div class="wallet-box"><h3>Solflare</h3><p>Full-featured Solana wallet with staking and Ledger integration.</p></div>
-    <div class="wallet-box"><h3>Jupiter Mobile Wallet</h3><p>New Solana wallet integrated with Jupiter DEX aggregator.</p></div>
-    <div class="wallet-box"><h3>Sui Wallet</h3><p>Official browser wallet for Sui blockchain with simple interface and dApp support.</p></div>
-    <h2>Gold Wallets</h2>
-    <div class="wallet-box"><h3>Ledger</h3><p>Hardware wallet offering top-tier security and Ledger Live app.</p></div>
-    <div class="wallet-box"><h3>Trezor</h3><p>Trusted hardware wallet supporting wide range of cryptocurrencies.</p></div>
-  </section>
-
-  <section id="exchanges" class="content-section exchanges-bg">
-    <h2>Exchanges</h2>
-    <div class="exchange-box"><h3>Bybit</h3><p>Crypto derivatives and spot exchange with competitive fees.</p></div>
-    <div class="exchange-box"><h3>Binance</h3><p>The world's largest crypto exchange offering a full range of services.</p></div>
-    <div class="exchange-box"><h3>Crypto.com</h3><p>Exchange and app for trading, staking and DeFi tools.</p></div>
-    <div class="exchange-box"><h3>Coinmotion</h3><p>Finnish crypto broker regulated in the EU, ideal for local users.</p></div>
-  </section>
-
-  <section id="donate" class="content-section">
-    <h2>Donate Crypto</h2>
-    <div class="donate-box">
-      <img src="btc-icon.png" class="crypto-icon" alt="Bitcoin Icon" />
-      <p><strong>Bitcoin:</strong> bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</p>
-      <img src="btc-qr.png" class="qr-code" alt="BTC QR" />
-    </div>
-    <div class="donate-box">
-      <img src="eth-icon.png" class="crypto-icon" alt="Ethereum Icon" />
-      <p><strong>Ethereum:</strong> 0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</p>
-      <img src="eth-qr.png" class="qr-code" alt="ETH QR" />
-    </div>
-    <div class="donate-box">
-      <img src="sol-icon.png" class="crypto-icon" alt="Solana Icon" />
-      <p><strong>Solana:</strong> J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</p>
-      <img src="sol-qr.png" class="qr-code" alt="SOL QR" />
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 MyCryptoHub | Built with passion for the crypto community
-  </footer>
-</body>
-</html>
+window.addEventListener('load', () => {
+  const firstSection = document.querySelector('section');
+  if (firstSection) {
+    document.body.classList.add(`${firstSection.id}-bg`);
+  }
+});
