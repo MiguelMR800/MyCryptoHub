@@ -1,3 +1,4 @@
+
 body.default-bg {
   margin: 0;
   padding: 0;
@@ -47,7 +48,7 @@ main {
 .exchange-box,
 .wallet-box {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   background-color: #111;
   border: 1px solid cyan;
@@ -55,7 +56,6 @@ main {
   margin-bottom: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 0 10px #00ffff66;
-  flex-wrap: wrap;
 }
 
 .crypto-icon {
@@ -63,13 +63,6 @@ main {
   height: 64px;
   object-fit: contain;
   border-radius: 8px;
-  background-color: white;
-  padding: 5px;
-}
-
-.exchange-box div,
-.wallet-box div {
-  flex: 1 1 300px;
 }
 
 a {
@@ -77,31 +70,9 @@ a {
   font-weight: bold;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 footer {
   text-align: center;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.85);
   margin-top: 3rem;
-  font-size: 0.9rem;
-  color: #ccc;
-}
-
-@media (max-width: 768px) {
-  .exchange-box,
-  .wallet-box {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .crypto-icon {
-    width: 48px;
-    height: 48px;
-  }
-  main {
-    padding: 1rem;
-  }
 }
