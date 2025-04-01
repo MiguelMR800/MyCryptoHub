@@ -48,3 +48,21 @@ footer {
   background: #111;
   color: gray;
 }
+@media (max-width: 768px) {
+  .wallet-box, .exchange-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .crypto-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .language-selector {
+    position: static;
+    margin-top: 1rem;
+  }
+}
