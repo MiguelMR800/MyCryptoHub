@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyCryptoHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: url("background.jpg") no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+    }
+    .lang-switch {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+    }
+    .lang-switch select {
+      padding: 0.4rem;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: rgba(10, 10, 30, 0.85);
+      border-radius: 16px;
+      display: none;
+    }
+    .container.active {
+      display: block;
+    }
+    .card {
+      background: #1a1a2e;
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 1rem 0;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+    .card img {
+      height: 40px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .link {
+      color: #ffd700;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="lang-switch">
+  <select onchange="switchLang(this.value)">
+    <option value="en" selected>English</option>
+    <option value="fi">Suomi</option>
+    <option value="es">Español</option>
+    <option value="ru">Русский</option>
+  </select>
+</div>
+
+<!-- ENGLISH VERSION -->
+<div class="container lang-en active">
+  <h1>The Future of Cryptocurrencies and Tokenization</h1>
+  <p>Bitcoin changed how we think about money. It started a revolution that enabled Ethereum, NFTs, DeFi, and more.</p>
+
+  <div class="card"><img src="bybit.png" alt="Bybit"><strong>Bybit</strong><br>Fast crypto trading platform.<br><a href="https://www.bybit.com/invite?ref=EQ69EL" class="link" target="_blank">Join Bybit →</a></div>
+  <div class="card"><img src="binance.png" alt="Binance"><strong>Binance</strong><br>Largest crypto exchange by volume.<br><a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" class="link" target="_blank">Join Binance →</a></div>
+  <div class="card"><img src="coinmotion.png" alt="Coinmotion"><strong>Coinmotion</strong><br>Finnish secure crypto service.<br><a href="https://app.coinmotion.com/fi/register/signup?referral_code=DAWL3TJGXHKJPUK9KPWP" class="link" target="_blank">Join Coinmotion →</a></div>
+  <div class="card"><img src="crypto.png" alt="Crypto.com"><strong>Crypto.com</strong><br>All-in-one crypto app and wallet.<br><a href="https://crypto.com/app/nrmm4uzm29" class="link" target="_blank">Join Crypto.com →</a></div>
+  <div class="card"><img src="jupiter.png" alt="Jupiter"><strong>Jupiter Wallet</strong><br>DeFi wallet with rewards.<br><a href="https://jup.ag/invite/BRvVHduEhaiG" class="link" target="_blank">Try Jupiter Wallet →</a></div>
+  <div class="card"><img src="ledger.png" alt="Ledger"><strong>Ledger</strong><br>Cold wallet for safe storage.<br><a href="https://shop.ledger.com/?r=c97ab0683c61" class="link" target="_blank">Buy Ledger →</a></div>
+
+  <h2>Donate</h2>
+  <p><strong>Bitcoin:</strong> bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd<br><img src="btc_qr.png" width="120"/></p>
+  <p><strong>Ethereum:</strong> 0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f<br><img src="eth_qr.png" width="120"/></p>
+  <p><strong>Solana:</strong> J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL<br><img src="sol_qr.png" width="120"/></p>
+</div>
+
+<!-- MORE LANGUAGES WOULD BE INSERTED HERE -->
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.container').forEach(el => el.classList.remove('active'));
+  document.querySelector('.lang-' + lang).classList.add('active');
+}
+</script>
+</body>
+</html>
