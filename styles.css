@@ -1,83 +1,39 @@
 
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: #0b0c2a;
     color: white;
-}
-
-header {
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 2em;
 }
 
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 12px;
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2em;
+    border-radius: 1em;
 }
 
-.card {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+.wallet {
+    margin-bottom: 2em;
 }
 
-.card:hover {
-    transform: scale(1.03);
-}
-
-.card img {
-    max-width: 100px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-a {
-    color: #ffd700;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.qr-section {
+.address-box {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-top: 10px;
+    background: #1a1b3c;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin-top: 0.3em;
+    word-break: break-all;
 }
 
-.qr-section img {
-    max-width: 120px;
-    height: auto;
-}
-
-.address {
-    background-color: #222;
-    padding: 10px;
-    border-radius: 6px;
-    font-family: monospace;
-    overflow-wrap: break-word;
-}
-
-.copy-btn {
-    background-color: #ffd700;
-    color: black;
+button {
+    margin-left: 1em;
+    background: #ffd700;
     border: none;
-    padding: 5px 10px;
-    margin-left: 10px;
-    border-radius: 4px;
+    padding: 0.5em;
+    border-radius: 5px;
     cursor: pointer;
 }
