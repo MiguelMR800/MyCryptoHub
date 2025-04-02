@@ -1,36 +1,112 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MyCryptoHub</title>
-  <link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8">
+    <title>MyCryptoHub</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <a href="#hot-wallets">Hot Wallets</a>
-      <a href="#cold-wallets">Cold Wallets</a>
-      <a href="#exchanges">Exchanges</a>
+    <div id="language-selector">
+        <select>
+            <option value="en">EN</option>
+            <option value="fi">FI</option>
+        </select>
     </div>
-    <div class="language-selector">
-      <button onclick="setLanguage('en')">EN</button>
-      <button onclick="setLanguage('fi')">FI</button>
-    </div>
-  </header>
 
-  <section class="section" id="hot-wallets">
-    <h2 data-en="Hot Wallets" data-fi="Kuumat Lompakot">Hot Wallets</h2>
-  </section>
+    <header>
+        <h1>Welcome to MyCryptoHub</h1>
+        <p>Your gateway to secure wallets and top exchanges</p>
+    </header>
 
-  <section class="section" id="cold-wallets">
-    <h2 data-en="Cold Wallets" data-fi="Kylmät Lompakot">Cold Wallets</h2>
-  </section>
+    <section id="exchanges">
+        <h2>Exchanges</h2>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="images/binance.png" alt="Binance">
+            <h3>Binance</h3>
+            <div class="content">
+                <p>Binance is one of the largest crypto exchanges in the world.</p>
+                <a href="https://www.binance.com/en?ref=YOUR_REF" target="_blank">Sign up with Binance</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="images/bybit.png" alt="Bybit">
+            <h3>Bybit</h3>
+            <div class="content">
+                <p>Bybit offers advanced trading tools and a clean interface.</p>
+                <a href="https://partner.bybit.com/b/YOUR_REF" target="_blank">Join Bybit</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="images/coinmotion.png" alt="Coinmotion">
+            <h3>Coinmotion</h3>
+            <div class="content">
+                <p>Coinmotion is a regulated Finnish exchange.</p>
+                <a href="https://coinmotion.com/?ref=YOUR_REF" target="_blank">Visit Coinmotion</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="images/crypto.png" alt="Crypto.com">
+            <h3>Crypto.com</h3>
+            <div class="content">
+                <p>Crypto.com offers a comprehensive app and Visa card integration.</p>
+                <a href="https://crypto.com/app/YOUR_REF" target="_blank">Get Crypto.com</a>
+            </div>
+        </div>
+    </section>
 
-  <section class="section" id="exchanges">
-    <h2 data-en="Crypto Exchanges" data-fi="Kryptopörssit">Crypto Exchanges</h2>
-  </section>
+    <section id="wallets">
+        <h2>Wallets</h2>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="images/phantom.png" alt="Phantom">
+            <h3>Phantom Wallet</h3>
+            <div class="content">
+                <p>Phantom is a user-friendly Solana wallet.</p>
+                <a href="https://phantom.app/" target="_blank">Download Phantom</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="images/safepal.png" alt="SafePal">
+            <h3>SafePal</h3>
+            <div class="content">
+                <p>SafePal offers both hot and cold wallet solutions.</p>
+                <a href="https://www.safepal.com/download" target="_blank">Try SafePal</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="images/metamask.png" alt="MetaMask">
+            <h3>MetaMask</h3>
+            <div class="content">
+                <p>MetaMask is the most popular browser wallet for Ethereum.</p>
+                <a href="https://metamask.io/" target="_blank">Install MetaMask</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="images/jupiter.png" alt="Jupiter Wallet">
+            <h3>Jupiter Wallet</h3>
+            <div class="content">
+                <p>Jupiter Wallet is optimized for Solana swaps.</p>
+                <a href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Get Jupiter Wallet</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="images/ledger.png" alt="Ledger">
+            <h3>Ledger</h3>
+            <div class="content">
+                <p>Ledger is a leading hardware wallet with high security.</p>
+                <a href="https://www.ledger.com/" target="_blank">Visit Ledger</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="images/trezor.png" alt="Trezor">
+            <h3>Trezor</h3>
+            <div class="content">
+                <p>Trezor offers secure cold wallet storage for your crypto.</p>
+                <a href="https://trezor.io/" target="_blank">Check Trezor</a>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
