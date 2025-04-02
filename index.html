@@ -1,90 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MyCryptoHub</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MyCryptoHub</title>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
+<body>
+    <section id="hot-wallets" class="section">
+        <h2>Hot Wallets</h2>
+        <div class="wallet-container">
+            <div class="wallet-box" onclick="toggleInfo(this)">
+                <img src="phantom.png" alt="Phantom Logo"/>
+                <h3>Phantom</h3>
+                <p>Solana-yhteensopiva lompakko selain- ja mobiilikäyttöön.</p>
+                <a href="https://phantom.app/" target="_blank">Visit Phantom</a>
+                <div class="wallet-info">
+                    <p>Phantom toimii erityisesti Solana-ekosysteemissä. Lataa selainlaajennus tai mobiilisovellus ja yhdistä Solana DApp:eihin turvallisesti.</p>
+                </div>
+            </div>
 
-<body class="default-bg">
-  <nav class="navbar">
-    <div class="language-selector">
-      <select onchange="changeLanguage(this.value)">
-        <option value="en">English</option>
-        <option value="fi">Suomi</option>
-      </select>
-    </div>
-    <a href="#exchanges">Exchanges</a>
-    <a href="#hot-wallets">Hot Wallets</a>
-    <a href="#cold-wallets">Cold Wallets</a>
-  </nav>
+            <div class="wallet-box" onclick="toggleInfo(this)">
+                <img src="metamask.png" alt="MetaMask Logo"/>
+                <h3>MetaMask</h3>
+                <p>Suosituin Ethereum-lompakko selaimessa ja mobiilissa.</p>
+                <a href="https://metamask.io/" target="_blank">Visit MetaMask</a>
+                <div class="wallet-info">
+                    <p>MetaMask tukee Ethereumia ja EVM-yhteensopivia ketjuja kuten Polygon ja BNB. Helppo käyttää NFT-kauppaan ja DeFi-sovelluksiin.</p>
+                </div>
+            </div>
 
-  <main>
-    <section class="content-section" id="hot-wallets">
-      <h2>Hot Wallets</h2>
+            <div class="wallet-box" onclick="toggleInfo(this)">
+                <img src="crypto.png" alt="Crypto.com Logo"/>
+                <h3>Crypto.com Wallet</h3>
+                <p>Virallinen non-custodial-lompakko Crypto.comilta.</p>
+                <a href="https://crypto.com/defi-wallet" target="_blank">Visit Crypto.com Wallet</a>
+                <div class="wallet-info">
+                    <p>Defi Wallet antaa täyden hallinnan varoihisi ja toimii yhdessä Crypto.com-sovelluksen kanssa. Sisältää myös NFT- ja DeFi-toiminnot.</p>
+                </div>
+            </div>
 
-      <div class="wallet-box">
-        <img src="metamask.png" alt="MetaMask Logo" class="crypto-icon" />
-        <div>
-          <h3>MetaMask</h3>
-          <p>Browser and mobile wallet supporting Ethereum and many EVM chains. Popular among dApp users.</p>
-          <a href="https://metamask.io/">Visit MetaMask</a>
+            <div class="wallet-box" onclick="toggleInfo(this)">
+                <img src="jupiter.png" alt="Jupiter Wallet Logo"/>
+                <h3>Jupiter Wallet</h3>
+                <p>Nopea ja yksinkertainen Solana-lompakko – käytä lahjoituslinkkiä.</p>
+                <a href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Visit Jupiter Wallet</a>
+                <div class="wallet-info">
+                    <p>Jupiter Wallet on kevyt, nopea ja helppokäyttöinen Solana-lompakko. Lataa mobiilisovellus ja käytä tätä linkkiä tukeaksesi kehitystä: <br><a href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">https://jup.ag/invite/BRvVHduEhaiG</a></p>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="wallet-box">
-        <img src="phantom.png" alt="Phantom Logo" class="crypto-icon" />
-        <div>
-          <h3>Phantom</h3>
-          <p>Solana-native wallet for NFTs, staking and tokens. Simple interface with great performance.</p>
-          <a href="https://phantom.app/">Visit Phantom</a>
-        </div>
-      </div>
     </section>
 
-    <section class="content-section" id="cold-wallets">
-      <h2>Cold Wallets</h2>
-
-      <div class="wallet-box">
-        <img src="ledger.png" alt="Ledger Logo" class="crypto-icon" />
-        <div>
-          <h3>Ledger</h3>
-          <p>Hardware wallet trusted by millions for long-term secure storage of private keys and assets.</p>
-          <a href="https://shop.ledger.com/pages/ledger-nano-x" target="_blank">Visit Ledger (Affiliate)</a>
-        </div>
-      </div>
-
-      <div class="wallet-box">
-        <img src="trezor.png" alt="Trezor Logo" class="crypto-icon" />
-        <div>
-          <h3>Trezor</h3>
-          <p>Open-source hardware wallet for secure crypto storage, compatible with multiple wallets and coins.</p>
-          <a href="https://trezor.io/">Visit Trezor</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section" id="exchanges">
-      <h2>Exchanges</h2>
-
-      <div class="exchange-box">
-        <img src="crypto.png" alt="Crypto.com Logo" class="crypto-icon" />
-        <div>
-          <h3>Crypto.com</h3>
-          <p>Mobile-friendly exchange with Visa card rewards, DeFi features and beginner-friendly design.</p>
-          <a href="https://crypto.com">Sign up (Affiliate)</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 MyCryptoHub</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
