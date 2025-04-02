@@ -1,53 +1,24 @@
 
 body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     font-family: Arial, sans-serif;
-    background-color: #0a0f3c;
-    color: #fff;
-    margin: 0;
-    padding: 0;
+    color: white;
 }
-.section {
-    padding: 40px 20px;
-    text-align: center;
+.language-selector {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
 }
-.wallet-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-.wallet-box {
-    background-color: #111c44;
-    border: 2px solid #1e2a5a;
-    padding: 20px;
-    width: 280px;
-    border-radius: 10px;
+.language-selector button {
+    background-color: #1e2a5a;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin-right: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-.wallet-box img {
-    max-width: 80px;
-    margin-bottom: 10px;
-}
-.wallet-box h3 {
-    margin: 10px 0 5px;
-}
-.wallet-box p {
-    font-size: 14px;
-    margin: 5px 0;
-}
-.wallet-box a {
-    display: inline-block;
-    margin-top: 8px;
-    color: #4da6ff;
-    text-decoration: none;
-}
-.wallet-box .wallet-info {
-    display: none;
-    margin-top: 10px;
-    font-size: 13px;
-    color: #ccc;
-}
-.wallet-box.open .wallet-info {
-    display: block;
 }
