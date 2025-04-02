@@ -1,75 +1,83 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000022;
-    color: #ffffff;
-    overflow-x: hidden;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background: url('background.jpg') no-repeat center center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
-    z-index: -1;
-    opacity: 1;
+    color: white;
 }
 
-header, section {
-    padding: 2em;
-    background-color: rgba(0, 0, 50, 0.7);
-    margin: 2em;
-    border-radius: 16px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+header {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
 }
 
-h1, h2, h3 {
-    margin: 0.5em 0;
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 1.5em;
-    margin: 1.5em 0;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.3s ease;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    transform: scale(1.01);
+    transform: scale(1.03);
 }
 
 .card img {
+    max-width: 100px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #ffd700;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.qr-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.qr-section img {
     max-width: 120px;
     height: auto;
-    display: block;
-    margin-bottom: 0.75em;
 }
 
-.card .content {
-    display: none;
-    margin-top: 0.5em;
-    font-size: 1rem;
-    line-height: 1.6em;
+.address {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 6px;
+    font-family: monospace;
+    overflow-wrap: break-word;
 }
 
-#language-selector {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
-}
-
-#language-selector select {
-    padding: 6px;
-    font-size: 1em;
+.copy-btn {
+    background-color: #ffd700;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
     border-radius: 4px;
+    cursor: pointer;
 }
