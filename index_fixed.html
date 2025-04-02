@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyCryptoHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="language-selector">
+        <select>
+            <option value="en">EN</option>
+            <option value="fi">FI</option>
+        </select>
+    </div>
+
+    <header>
+        <h1>Welcome to MyCryptoHub</h1>
+        <p>Your gateway to secure wallets and top exchanges</p>
+    </header>
+
+    <section id="exchanges">
+        <h2>Exchanges</h2>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="binance.png" alt="Binance">
+            <h3>Binance</h3>
+            <div class="content">
+                <p>Binance is one of the largest and most liquid exchanges globally. It offers spot, futures, staking, launchpad and more.</p>
+                <a href="https://www.binance.com/en?ref=YOUR_REF" target="_blank">Sign up with Binance</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="bybit.png" alt="Bybit">
+            <h3>Bybit</h3>
+            <div class="content">
+                <p>Bybit offers advanced trading tools, copy trading, leverage and crypto rewards. It’s a strong alternative to Binance.</p>
+                <a href="https://partner.bybit.com/b/YOUR_REF" target="_blank">Join Bybit</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="coinmotion.png" alt="Coinmotion">
+            <h3>Coinmotion</h3>
+            <div class="content">
+                <p>Coinmotion is a Finnish regulated exchange for secure crypto buying and saving, ideal for EU users.</p>
+                <a href="https://coinmotion.com/?ref=YOUR_REF" target="_blank">Visit Coinmotion</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="crypto.png" alt="Crypto.com">
+            <h3>Crypto.com</h3>
+            <div class="content">
+                <p>Crypto.com provides an all-in-one app for buying, earning, and spending crypto via Visa card.</p>
+                <a href="https://crypto.com/app/YOUR_REF" target="_blank">Get Crypto.com</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="wallets">
+        <h2>Wallets</h2>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="phantom.png" alt="Phantom">
+            <h3>Phantom Wallet</h3>
+            <div class="content">
+                <p>Phantom is the most popular wallet for Solana, with mobile and browser support and simple NFT tools.</p>
+                <a href="https://phantom.app/" target="_blank">Download Phantom</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="safepal.png" alt="SafePal">
+            <h3>SafePal</h3>
+            <div class="content">
+                <p>SafePal offers both hot and cold wallet solutions for users who value security and ease of use.</p>
+                <a href="https://www.safepal.com/download" target="_blank">Try SafePal</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="metamask.png" alt="MetaMask">
+            <h3>MetaMask</h3>
+            <div class="content">
+                <p>MetaMask is the most popular browser wallet for Ethereum with Web3 integration.</p>
+                <a href="https://metamask.io/" target="_blank">Install MetaMask</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="jupiter.png" alt="Jupiter Wallet">
+            <h3>Jupiter Wallet</h3>
+            <div class="content">
+                <p>Jupiter Wallet is optimized for fast Solana swaps and decentralized trading experiences.</p>
+                <a href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Get Jupiter Wallet</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="ledger.png" alt="Ledger">
+            <h3>Ledger</h3>
+            <div class="content">
+                <p>Ledger is a secure cold wallet for offline crypto storage. Great for long-term holding.</p>
+                <a href="https://www.ledger.com/" target="_blank">Visit Ledger</a>
+            </div>
+        </div>
+        <div class="card" onclick="toggleContent(this)">
+            <img src="trezor.png" alt="Trezor">
+            <h3>Trezor</h3>
+            <div class="content">
+                <p>Trezor is another leading cold wallet brand, known for open-source firmware and safety.</p>
+                <a href="https://trezor.io/" target="_blank">Check Trezor</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
