@@ -1,43 +1,56 @@
 
 body {
-  background-image: url('background.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  font-family: Arial, sans-serif;
-  color: white;
-  margin: 0;
-  scroll-behavior: smooth;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
 }
-.section {
-  padding: 100px 20px;
-  text-align: center;
-  min-height: 100vh;
+
+header, section {
+    padding: 2em;
+    background-color: rgba(0, 0, 50, 0.7);
+    margin: 1em;
+    border-radius: 10px;
 }
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
-  z-index: 9999;
+
+h1, h2, h3 {
+    margin: 0.5em 0;
 }
-.nav a {
-  margin-right: 15px;
-  color: cyan;
-  text-decoration: none;
-  font-weight: bold;
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1em 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
-.language-selector button {
-  background-color: #1e2a5a;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  margin-left: 5px;
-  border-radius: 4px;
-  cursor: pointer;
+
+.card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.card img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.card .content {
+    display: none;
+    margin-top: 0.5em;
+}
+
+#language-selector {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+#language-selector select {
+    padding: 5px;
+    font-size: 1em;
 }
