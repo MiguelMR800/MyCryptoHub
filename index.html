@@ -14,155 +14,95 @@
       background-size: cover;
       color: #fff;
     }
+    .lang-switch {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+    }
+    .lang-switch select {
+      padding: 0.4rem;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
     .container {
       max-width: 1000px;
       margin: 2rem auto;
       padding: 2rem;
       background-color: rgba(10, 10, 30, 0.85);
       border-radius: 16px;
+      display: none;
     }
-    .card {
-      background: #1a1a2e;
-      border-radius: 12px;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-    }
-    .card img {
-      height: 40px;
-      vertical-align: middle;
-    }
-    .title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    .desc {
-      font-size: 0.95rem;
-      margin-bottom: 0.5rem;
-    }
-    .link {
-      color: #ffd700;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .wallet-section {
-      margin-top: 2rem;
-    }
-    .wallet {
-      background: #1a1a2e;
-      padding: 1rem;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-    }
-    .address {
-      background: #2b2b44;
-      padding: 0.5rem;
-      border-radius: 6px;
-      overflow-wrap: break-word;
-      margin-top: 0.5rem;
-    }
-    .copy {
-      background: #ffd700;
-      color: black;
-      border: none;
-      border-radius: 4px;
-      margin-left: 8px;
-      cursor: pointer;
+    .container.active {
+      display: block;
     }
   </style>
 </head>
 <body>
 
-<div class="container">
+<div class="lang-switch">
+  <select onchange="switchLang(this.value)">
+    <option value="en" selected>English</option>
+    <option value="fi">Suomi</option>
+    <option value="es">Español</option>
+    <option value="ru">Русский</option>
+  </select>
+</div>
+
+<div class="container lang-en active">
   <h1>The Future of Cryptocurrencies and Tokenization</h1>
-  <p>
-    The revolution in cryptocurrencies and tokenization is reshaping the financial landscape, with its roots deeply embedded in the success of Bitcoin.
-    Introduced in 2009, Bitcoin transformed our understanding of money and digital assets, pioneering a decentralized financial system.
-  </p>
+  <p>Bitcoin changed how we think about money. It started a revolution that enabled Ethereum, NFTs, DeFi, and more.</p>
 </div>
 
-<div class="container">
-  <h1>Kryptojen ja Tokenisaation Tulevaisuus</h1>
-  <p>
-    Kryptovaluuttojen ja tokenisaation vallankumous on käynnissä, ja sen juuret ulottuvat syvälle Bitcoinin menestystarinaan.
-    Vuonna 2009 esitelty Bitcoin mullisti käsityksemme rahasta ja digitaalisista omaisuuseristä.
-  </p>
+<div class="container lang-fi">
+  <h1>Kryptojen ja tokenisaation tulevaisuus</h1>
+  <p>Bitcoin muutti käsityksemme rahasta. Se käynnisti vallankumouksen, joka mahdollisti Ethereumin, NFT:t, DeFin ja paljon muuta.</p>
 </div>
 
-<div class="container">
-  <h1>MyCryptoHub</h1>
-
-  <div class="card">
-    <img src="bybit.png" alt="Bybit" />
-    <div class="title">Bybit</div>
-    <div class="desc">Fast-growing crypto exchange with derivatives & spot trading.</div>
-    <a href="https://www.bybit.com/invite?ref=EQ69EL" class="link" target="_blank">Join Bybit →</a>
-  </div>
-
-  <div class="card">
-    <img src="binance.png" alt="Binance" />
-    <div class="title">Binance</div>
-    <div class="desc">World's largest crypto exchange by volume.</div>
-    <a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" class="link" target="_blank">Join Binance →</a>
-  </div>
-
-  <div class="card">
-    <img src="coinmotion.png" alt="Coinmotion" />
-    <div class="title">Coinmotion</div>
-    <div class="desc">Finnish crypto platform with bank-level regulation.</div>
-    <a href="https://app.coinmotion.com/fi/register/signup?referral_code=DAWL3TJGXHKJPUK9KPWP" class="link" target="_blank">Join Coinmotion →</a>
-  </div>
-
-  <div class="card">
-    <img src="crypto.png" alt="Crypto.com" />
-    <div class="title">Crypto.com Wallet</div>
-    <div class="desc">Non-custodial wallet with DeFi access.</div>
-    <a href="https://crypto.com/app/nrmm4uzm29" class="link" target="_blank">Get Crypto.com Wallet →</a>
-  </div>
-
-  <div class="card">
-    <img src="metamask.png" alt="MetaMask" />
-    <div class="title">MetaMask</div>
-    <div class="desc">Popular Ethereum wallet for DeFi & NFTs.</div>
-    <a href="https://metamask.io/" class="link" target="_blank">Get MetaMask →</a>
-  </div>
-
-  <div class="card">
-    <img src="phantom.png" alt="Phantom" />
-    <div class="title">Phantom Wallet</div>
-    <div class="desc">Easy-to-use Solana wallet with staking & NFTs.</div>
-    <a href="https://phantom.app/" class="link" target="_blank">Get Phantom →</a>
-  </div>
-
-  <div class="card">
-    <img src="jupiter.png" alt="Jupiter Wallet" />
-    <div class="title">Jupiter Wallet</div>
-    <div class="desc">Multi-chain wallet powered by Jupiter DEX aggregator.</div>
-    <a href="https://jup.ag/invite/BRvVHduEhaiG" class="link" target="_blank">Get Jupiter →</a>
-  </div>
-
-  <div class="card">
-    <img src="ledger.png" alt="Ledger" />
-    <div class="title">Ledger</div>
-    <div class="desc">Secure hardware wallet for crypto assets.</div>
-    <a href="https://shop.ledger.com/?r=c97ab0683c61" class="link" target="_blank">Buy Ledger →</a>
-  </div>
-
-  <div class="card">
-    <img src="trezor.png" alt="Trezor" />
-    <div class="title">Trezor</div>
-    <div class="desc">Open-source cold wallet for advanced users.</div>
-    <a href="https://trezor.io/?a=mchub" class="link" target="_blank">Buy Trezor →</a>
-  </div>
-
-  <div class="wallet-section">
-    <h2>Wallets</h2>
-    <div class="wallet"><strong>Bitcoin</strong><br>Address:<div class="address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</div></div>
-    <div class="wallet"><strong>Ethereum</strong><br>Address:<div class="address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</div></div>
-    <div class="wallet"><strong>Solana</strong><br>Address:<div class="address">J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</div></div>
-  </div>
-
+<div class="container lang-es">
+  <h1>El futuro de las criptomonedas y la tokenización</h1>
+  <p>Bitcoin cambió nuestra forma de ver el dinero. Inició una revolución que dio lugar a Ethereum, los NFT, DeFi y más.</p>
 </div>
+
+<div class="container lang-ru">
+  <h1>Будущее криптовалют и токенизации</h1>
+  <p>Биткойн изменил наше представление о деньгах. Он запустил революцию, благодаря которой появились Ethereum, NFT, DeFi и многое другое.</p>
+</div>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.container').forEach(div => div.classList.remove('active'));
+    document.querySelector('.lang-' + lang).classList.add('active');
+  }
+</script>
+
+<div class="container lang-en">
+  <h2>Donate</h2>
+  <div><strong>Bitcoin:</strong> bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd<br><img src="btc_qr.png" width="120"/></div>
+  <div><strong>Ethereum:</strong> 0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f<br><img src="eth_qr.png" width="120"/></div>
+  <div><strong>Solana:</strong> J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL<br><img src="sol_qr.png" width="120"/></div>
+</div>
+
+<div class="container lang-fi">
+  <h2>Lahjoita</h2>
+  <div><strong>Bitcoin:</strong> bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd<br><img src="btc_qr.png" width="120"/></div>
+  <div><strong>Ethereum:</strong> 0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f<br><img src="eth_qr.png" width="120"/></div>
+  <div><strong>Solana:</strong> J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL<br><img src="sol_qr.png" width="120"/></div>
+</div>
+
+<div class="container lang-es">
+  <h2>Donar</h2>
+  <div><strong>Bitcoin:</strong> bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd<br><img src="btc_qr.png" width="120"/></div>
+  <div><strong>Ethereum:</strong> 0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f<br><img src="eth_qr.png" width="120"/></div>
+  <div><strong>Solana:</strong> J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL<br><img src="sol_qr.png" width="120"/></div>
+</div>
+
+<div class="container lang-ru">
+  <h2>Пожертвование</h2>
+  <div><strong>Bitcoin:</strong> bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd<br><img src="btc_qr.png" width="120"/></div>
+  <div><strong>Ethereum:</strong> 0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f<br><img src="eth_qr.png" width="120"/></div>
+  <div><strong>Solana:</strong> J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL<br><img src="sol_qr.png" width="120"/></div>
+</div>
+
 </body>
 </html>
