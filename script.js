@@ -1,10 +1,7 @@
-// Updated manually
 
-function toggleContent(element) {
-    var content = element.querySelector(".content");
-    if (content.style.display === "block") {
-        content.style.display = "none";
-    } else {
-        content.style.display = "block";
-    }
+function copyToClipboard(id) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Copied: " + text);
+    });
 }
