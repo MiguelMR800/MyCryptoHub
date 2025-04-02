@@ -6,6 +6,7 @@ body {
     background-position: center;
     font-family: Arial, sans-serif;
     color: white;
+    margin: 0;
 }
 .language-selector {
     position: fixed;
