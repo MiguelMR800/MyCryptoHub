@@ -7,174 +7,38 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="language-selector">
-        <select>
-            <option value="en">EN</option>
-            <option value="fi">FI</option>
-        </select>
+    <div class="container">
+        <h1>MyCryptoHub</h1>
+
+        <section class="wallets">
+            <h2>Wallets</h2>
+            <div class="wallet">
+                <h3>Bitcoin</h3>
+                <p>Address:</p>
+                <div class="address-box">
+                    <span id="btc-address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</span>
+                    <button onclick="copyToClipboard('btc-address')">📋</button>
+                </div>
+            </div>
+            <div class="wallet">
+                <h3>Ethereum</h3>
+                <p>Address:</p>
+                <div class="address-box">
+                    <span id="eth-address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</span>
+                    <button onclick="copyToClipboard('eth-address')">📋</button>
+                </div>
+            </div>
+            <div class="wallet">
+                <h3>Solana</h3>
+                <p>Address:</p>
+                <div class="address-box">
+                    <span id="sol-address">J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</span>
+                    <button onclick="copyToClipboard('sol-address')">📋</button>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <header>
-        <h1>Welcome to MyCryptoHub</h1>
-        <p>Your gateway to secure wallets and top exchanges</p>
-    </header>
-
-    <section id="exchanges">
-        <h2>Exchanges</h2>
-        <div class="card" onclick="toggleContent(this)">
-            <img src="binance.png" alt="Binance">
-            <h3>Binance</h3>
-            <div class="content">
-                <p>Binance is one of the largest and most liquid exchanges globally.</p>
-                <a href="https://www.binance.com/en?ref=YOUR_REF" target="_blank">Sign up with Binance</a>
-            </div>
-        </div>
-        <div class="card" onclick="toggleContent(this)">
-            <img src="bybit.png" alt="Bybit">
-            <h3>Bybit</h3>
-            <div class="content">
-                <p>Bybit offers advanced trading tools and leverage trading.</p>
-                <a href="https://partner.bybit.com/b/YOUR_REF" target="_blank">Join Bybit</a>
-            </div>
-        </div>
-        <div class="card" onclick="toggleContent(this)">
-            <img src="coinmotion.png" alt="Coinmotion">
-            <h3>Coinmotion</h3>
-            <div class="content">
-                <p>Coinmotion is a Finnish regulated exchange for secure crypto access.</p>
-                <a href="https://coinmotion.com/?ref=YOUR_REF" target="_blank">Visit Coinmotion</a>
-            </div>
-        </div>
-        <div class="card" onclick="toggleContent(this)">
-            <img src="crypto.png" alt="Crypto.com">
-            <h3>Crypto.com</h3>
-            <div class="content">
-                <p>Crypto.com offers an app, Visa card, DeFi and more.</p>
-                <a href="https://crypto.com/app/YOUR_REF" target="_blank">Get Crypto.com</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="wallets">
-        <h2>Wallets</h2>
-        <div class="card" onclick="toggleContent(this)">
-            <img src="ledger.png" alt="Ledger">
-            <h3>Ledger</h3>
-            <div class="content">
-                <p>Ledger is a leading cold wallet for secure crypto storage.</p>
-                <a href="https://www.ledger.com/" target="_blank">Visit Ledger</a>
-            </div>
-        </div>
-        <div class="card" onclick="toggleContent(this)">
-            <img src="trezor.png" alt="Trezor">
-            <h3>Trezor</h3>
-            <div class="content">
-                <p>Trezor offers open-source cold wallets for safe crypto handling.</p>
-                <a href="https://trezor.io/" target="_blank">Check Trezor</a>
-            </div>
-        </div>
-        <div class="card" onclick="toggleContent(this)">
-            <img src="metamask.png" alt="MetaMask">
-            <h3>MetaMask</h3>
-            <div class="content">
-                <p>MetaMask is a browser wallet for Ethereum and EVM-compatible chains.</p>
-                <a href="https://metamask.io/" target="_blank">Install MetaMask</a>
-            </div>
-        </div>
-        <div class="card" onclick="toggleContent(this)">
-            <img src="phantom.png" alt="Phantom">
-            <h3>Phantom Wallet</h3>
-            <div class="content">
-                <p>Phantom is the most popular wallet for Solana.</p>
-                <a href="https://phantom.app/" target="_blank">Download Phantom</a>
-            </div>
-        </div>
-        <div class="card" onclick="toggleContent(this)">
-            <img src="jupiter.png" alt="Jupiter">
-            <h3>Jupiter Wallet</h3>
-            <div class="content">
-                <p>Jupiter is a Solana swap aggregator and wallet experience.</p>
-                <a href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Get Jupiter</a>
-            </div>
-        </div>
-        <div class="card" onclick="toggleContent(this)">
-            <img src="solflare.png" alt="Solflare">
-            <h3>Solflare</h3>
-            <div class="content">
-                <p>Solflare is a powerful wallet for the Solana blockchain.</p>
-                <a href="https://solflare.com/" target="_blank">Download Solflare</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="donations">
-        <h2>Donate Crypto</h2>
-        <p>You can support this project by sending crypto to the following addresses:</p>
-
-        <div class="card">
-            <h3>Bitcoin (BTC)</h3>
-            <img src="btc-qr.png" alt="BTC QR" style="max-width: 150px;">
-            <div class="copy-container">
-                <span id="btc-address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</span>
-                <button onclick="copyToClipboard('btc-address')" title="Copy"><strong>📋</strong></button>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>Ethereum (ETH)</h3>
-            <img src="eth-qr.png" alt="ETH QR" style="max-width: 150px;">
-            <div class="copy-container">
-                <span id="eth-address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</span>
-                <button onclick="copyToClipboard('eth-address')" title="Copy"><strong>📋</strong></button>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>Solana (SOL)</h3>
-            <img src="sol-qr.png" alt="SOL QR" style="max-width: 150px;">
-            <div class="copy-container">
-                <span id="sol-address">J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</span>
-                <button onclick="copyToClipboard('sol-address')" title="Copy"><strong>📋</strong></button>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        function toggleContent(element) {
-            var content = element.querySelector(".content");
-            content.style.display = (content.style.display === "block") ? "none" : "block";
-        }
-
-        function copyToClipboard(elementId) {
-            const address = document.getElementById(elementId).innerText;
-            navigator.clipboard.writeText(address).then(function() {
-                alert("Copied!");
-            }, function(err) {
-                alert("Failed to copy: " + err);
-            });
-        }
-    </script>
-
-    <style>
-        .copy-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 10px;
-            word-break: break-word;
-        }
-        .copy-container button {
-            background-color: #ffffff22;
-            border: none;
-            color: white;
-            cursor: pointer;
-            padding: 5px 10px;
-            font-size: 1.2em;
-            border-radius: 5px;
-        }
-        .copy-container button:hover {
-            background-color: #ffffff44;
-        }
-    </style>
+    <script src="script.js"></script>
 </body>
 </html>
