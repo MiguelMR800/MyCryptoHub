@@ -10,8 +10,7 @@
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: url("background.jpg") center center no-repeat fixed;
-      background-size: contain;
-      background-attachment: fixed;
+      background-size: cover;
       color: #fff;
     }
     .lang-switch {
@@ -26,109 +25,94 @@
       font-size: 1rem;
     }
     .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background-color: rgba(10, 10, 30, 0.6);
+      max-width: 960px;
+      margin: 80px auto;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.6);
       border-radius: 16px;
-      display: none;
-    }
-    .container.active {
-      display: block;
     }
     .card {
-      background: rgba(26, 26, 46, 0.75);
+      display: flex;
+      align-items: center;
+      background: rgba(20, 20, 40, 0.7);
       border-radius: 12px;
       padding: 1rem;
       margin: 1rem 0;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      flex-wrap: wrap;
     }
     .card img {
-      height: 40px;
-      vertical-align: middle;
-      margin-right: 10px;
+      height: 50px;
+      margin-right: 1rem;
+    }
+    .card-content {
+      flex: 1;
+      min-width: 200px;
     }
     .link {
       color: #ffd700;
       font-weight: bold;
       text-decoration: none;
+      display: inline-block;
+      margin-top: 0.4rem;
+    }
+    .wallets {
+      margin-top: 2rem;
+    }
+    .wallets img {
+      height: 100px;
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 600px) {
+      .card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .card img {
+        margin-bottom: 0.5rem;
+      }
     }
   </style>
 </head>
 <body>
 <div class="lang-switch">
   <select onchange="switchLang(this.value)">
-    <option value="en" selected>English</option>
+    <option value="en">English</option>
     <option value="fi">Suomi</option>
     <option value="es">Español</option>
     <option value="ru">Русский</option>
   </select>
 </div>
 
-<div class="container lang-en active">
-<h1>The Future of Cryptocurrencies and Tokenization</h1>
-<p>Bitcoin changed how we think about money. It started a revolution that enabled Ethereum, NFTs, DeFi, and more.</p>
-<div class="card"><img src="bybit.png" alt="Bybit"><strong>Bybit</strong><br>Fast crypto trading platform.<br><a href="https://www.bybit.com/invite?ref=EQ69EL" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="binance.png" alt="Binance"><strong>Binance</strong><br>Largest crypto exchange by volume.<br><a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="coinmotion.png" alt="Coinmotion"><strong>Coinmotion</strong><br>Finnish secure crypto service.<br><a href="https://app.coinmotion.com/fi/register/signup?referral_code=DAWL3TJGXHKJPUK9KPWP" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="crypto.png" alt="Crypto.com"><strong>Crypto.com</strong><br>All-in-one crypto app and wallet.<br><a href="https://crypto.com/app/nrmm4uzm29" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="jupiter.png" alt="Jupiter Wallet"><strong>Jupiter Wallet</strong><br>DeFi wallet with rewards.<br><a href="https://jup.ag/invite/BRvVHduEhaiG" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="ledger.png" alt="Ledger"><strong>Ledger</strong><br>Cold wallet for safe storage.<br><a href="https://shop.ledger.com/?r=c97ab0683c61" class="link" target="_blank">Visit →</a></div>
-<h2>Donate</h2>
-<p><strong>Bitcoin:</strong> bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd<br><img src="btc_qr.png" width="120"/></p>
-<p><strong>Ethereum:</strong> 0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f<br><img src="eth_qr.png" width="120"/></p>
-<p><strong>Solana:</strong> J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL<br><img src="sol_qr.png" width="120"/></p>
-</div>
+<div class="container lang-en">
+  <h1>The Future of Cryptocurrencies and Tokenization</h1>
+  <p>Bitcoin changed how we think about money. It started a revolution that enabled Ethereum, NFTs, DeFi, and more.</p>
 
-<div class="container lang-fi">
-<h1>Kryptojen ja tokenisaation tulevaisuus</h1>
-<p>Bitcoin muutti käsityksemme rahasta. Se käynnisti vallankumouksen, joka mahdollisti Ethereumin, NFT:t, DeFin ja paljon muuta.</p>
-<div class="card"><img src="bybit.png" alt="Bybit"><strong>Bybit</strong><br>Nopea kaupankäyntialusta kryptoille.<br><a href="https://www.bybit.com/invite?ref=EQ69EL" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="binance.png" alt="Binance"><strong>Binance</strong><br>Maailman suurin kryptopörssi.<br><a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="coinmotion.png" alt="Coinmotion"><strong>Coinmotion</strong><br>Suomalainen kryptopalvelu.<br><a href="https://app.coinmotion.com/fi/register/signup?referral_code=DAWL3TJGXHKJPUK9KPWP" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="crypto.png" alt="Crypto.com"><strong>Crypto.com</strong><br>Monipuolinen kryptoapp ja lompakko.<br><a href="https://crypto.com/app/nrmm4uzm29" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="jupiter.png" alt="Jupiter Wallet"><strong>Jupiter Wallet</strong><br>Palkitseva DeFi-lompakko.<br><a href="https://jup.ag/invite/BRvVHduEhaiG" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="ledger.png" alt="Ledger"><strong>Ledger</strong><br>Turvallinen laitelompakko.<br><a href="https://shop.ledger.com/?r=c97ab0683c61" class="link" target="_blank">Visit →</a></div>
-<h2>Lahjoita</h2>
-<p><strong>Bitcoin:</strong> bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd<br><img src="btc_qr.png" width="120"/></p>
-<p><strong>Ethereum:</strong> 0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f<br><img src="eth_qr.png" width="120"/></p>
-<p><strong>Solana:</strong> J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL<br><img src="sol_qr.png" width="120"/></p>
-</div>
+  <!-- Exchange & Wallet Cards with Logos -->
+  <div class="card"><img src="bybit.png"><div class="card-content"><strong>Bybit</strong><br>Fast-growing crypto exchange.<br><a href="https://www.bybit.com/invite?ref=EQ69EL" class="link" target="_blank">Join Bybit →</a></div></div>
+  <div class="card"><img src="binance.png"><div class="card-content"><strong>Binance</strong><br>Largest crypto exchange by volume.<br><a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" class="link" target="_blank">Join Binance →</a></div></div>
+  <div class="card"><img src="coinmotion.png"><div class="card-content"><strong>Coinmotion</strong><br>Finnish secure crypto platform.<br><a href="https://app.coinmotion.com/fi/register/signup?referral_code=DAWL3TJGXHKJPUK9KPWP" class="link" target="_blank">Join Coinmotion →</a></div></div>
+  <div class="card"><img src="crypto.png"><div class="card-content"><strong>Crypto.com</strong><br>All-in-one crypto app.<br><a href="https://crypto.com/app/nrmm4uzm29" class="link" target="_blank">Join Crypto.com →</a></div></div>
+  <div class="card"><img src="jupiter.png"><div class="card-content"><strong>Jupiter Wallet</strong><br>DeFi wallet with rewards.<br><a href="https://jup.ag/invite/BRvVHduEhaiG" class="link" target="_blank">Get Jupiter →</a></div></div>
+  <div class="card"><img src="ledger.png"><div class="card-content"><strong>Ledger</strong><br>Secure cold wallet.<br><a href="https://shop.ledger.com/?r=c97ab0683c61" class="link" target="_blank">Buy Ledger →</a></div></div>
+  <div class="card"><img src="trezor.png"><div class="card-content"><strong>Trezor</strong><br>Open-source hardware wallet.<br><a href="https://trezor.io/?a=mchub" class="link" target="_blank">Buy Trezor →</a></div></div>
+  <div class="card"><img src="phantom.png"><div class="card-content"><strong>Phantom</strong><br>Popular Solana wallet.<br><a href="https://phantom.app/" class="link" target="_blank">Get Phantom →</a></div></div>
+  <div class="card"><img src="metamask.png"><div class="card-content"><strong>MetaMask</strong><br>Ethereum wallet for DeFi.<br><a href="https://metamask.io/" class="link" target="_blank">Get MetaMask →</a></div></div>
+  <div class="card"><img src="solflare.png"><div class="card-content"><strong>Solflare</strong><br>Solana wallet with staking.<br><a href="https://solflare.com/" class="link" target="_blank">Get Solflare →</a></div></div>
 
-<div class="container lang-es">
-<h1>El futuro de las criptomonedas y la tokenización</h1>
-<p>Bitcoin cambió nuestra forma de ver el dinero. Inició una revolución que dio lugar a Ethereum, los NFT, DeFi y más.</p>
-<div class="card"><img src="bybit.png" alt="Bybit"><strong>Bybit</strong><br>Plataforma rápida de comercio cripto.<br><a href="https://www.bybit.com/invite?ref=EQ69EL" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="binance.png" alt="Binance"><strong>Binance</strong><br>Mayor exchange de criptos por volumen.<br><a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="coinmotion.png" alt="Coinmotion"><strong>Coinmotion</strong><br>Servicio de criptos desde Finlandia.<br><a href="https://app.coinmotion.com/fi/register/signup?referral_code=DAWL3TJGXHKJPUK9KPWP" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="crypto.png" alt="Crypto.com"><strong>Crypto.com</strong><br>App todo en uno para criptomonedas.<br><a href="https://crypto.com/app/nrmm4uzm29" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="jupiter.png" alt="Jupiter Wallet"><strong>Jupiter Wallet</strong><br>Monedero DeFi con recompensas.<br><a href="https://jup.ag/invite/BRvVHduEhaiG" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="ledger.png" alt="Ledger"><strong>Ledger</strong><br>Monedero físico para almacenamiento seguro.<br><a href="https://shop.ledger.com/?r=c97ab0683c61" class="link" target="_blank">Visit →</a></div>
-<h2>Donar</h2>
-<p><strong>Bitcoin:</strong> bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd<br><img src="btc_qr.png" width="120"/></p>
-<p><strong>Ethereum:</strong> 0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f<br><img src="eth_qr.png" width="120"/></p>
-<p><strong>Solana:</strong> J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL<br><img src="sol_qr.png" width="120"/></p>
-</div>
-
-<div class="container lang-ru">
-<h1>Будущее криптовалют и токенизации</h1>
-<p>Биткойн изменил наше представление о деньгах. Он запустил революцию, благодаря которой появились Ethereum, NFT, DeFi и многое другое.</p>
-<div class="card"><img src="bybit.png" alt="Bybit"><strong>Bybit</strong><br>Быстрая платформа для торговли крипто.<br><a href="https://www.bybit.com/invite?ref=EQ69EL" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="binance.png" alt="Binance"><strong>Binance</strong><br>Крупнейшая криптобиржа по объему.<br><a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="coinmotion.png" alt="Coinmotion"><strong>Coinmotion</strong><br>Финская криптоплатформа.<br><a href="https://app.coinmotion.com/fi/register/signup?referral_code=DAWL3TJGXHKJPUK9KPWP" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="crypto.png" alt="Crypto.com"><strong>Crypto.com</strong><br>Мультифункциональное криптоприложение.<br><a href="https://crypto.com/app/nrmm4uzm29" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="jupiter.png" alt="Jupiter Wallet"><strong>Jupiter Wallet</strong><br>DeFi кошелек с наградами.<br><a href="https://jup.ag/invite/BRvVHduEhaiG" class="link" target="_blank">Visit →</a></div>
-<div class="card"><img src="ledger.png" alt="Ledger"><strong>Ledger</strong><br>Холодный кошелек для хранения крипто.<br><a href="https://shop.ledger.com/?r=c97ab0683c61" class="link" target="_blank">Visit →</a></div>
-<h2>Пожертвование</h2>
-<p><strong>Биткойн:</strong> bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd<br><img src="btc_qr.png" width="120"/></p>
-<p><strong>Эфириум:</strong> 0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f<br><img src="eth_qr.png" width="120"/></p>
-<p><strong>Солана:</strong> J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL<br><img src="sol_qr.png" width="120"/></p>
+  <!-- Donations -->
+  <div class="wallets">
+    <h2>Donate</h2>
+    <p><strong>Bitcoin:</strong><br>bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd<br><img src="btc_qr.png"></p>
+    <p><strong>Ethereum:</strong><br>0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f<br><img src="eth_qr.png"></p>
+    <p><strong>Solana:</strong><br>J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL<br><img src="sol_qr.png"></p>
+  </div>
 </div>
 
 <script>
 function switchLang(lang) {
-  document.querySelectorAll('.container').forEach(el => el.classList.remove('active'));
-  document.querySelector('.lang-' + lang).classList.add('active');
+  document.querySelectorAll(".container").forEach(c => c.style.display = "none");
+  const active = document.querySelector(".lang-" + lang);
+  if (active) active.style.display = "block";
 }
 </script>
 </body>
