@@ -1,77 +1,53 @@
-body.default-bg {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-image: url("background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: #fff;
-}
 
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0f3c;
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
-
-.navbar a {
-  color: cyan;
-  text-decoration: none;
-  font-weight: bold;
+.section {
+    padding: 40px 20px;
+    text-align: center;
 }
-
-.language-selector select {
-  background-color: black;
-  color: white;
-  border: none;
-  padding: 0.25rem;
+.wallet-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
-
-main {
-  max-width: 1000px;
-  margin: auto;
-  padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 16px;
-}
-
-.content-section {
-  margin-bottom: 4rem;
-}
-
-.exchange-box,
 .wallet-box {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background-color: #111;
-  border: 1px solid cyan;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 10px #00ffff66;
+    background-color: #111c44;
+    border: 2px solid #1e2a5a;
+    padding: 20px;
+    width: 280px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-
-.crypto-icon {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  border-radius: 8px;
+.wallet-box img {
+    max-width: 80px;
+    margin-bottom: 10px;
 }
-
-a {
-  color: #00f0ff;
-  font-weight: bold;
+.wallet-box h3 {
+    margin: 10px 0 5px;
 }
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.85);
-  margin-top: 3rem;
+.wallet-box p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+.wallet-box a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #4da6ff;
+    text-decoration: none;
+}
+.wallet-box .wallet-info {
+    display: none;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #ccc;
+}
+.wallet-box.open .wallet-info {
+    display: block;
 }
