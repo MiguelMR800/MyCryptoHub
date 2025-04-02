@@ -1,25 +1,43 @@
 
 body {
-    background-image: url('background.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    font-family: Arial, sans-serif;
-    color: white;
-    margin: 0;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+  scroll-behavior: smooth;
 }
-.language-selector {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
+.section {
+  padding: 100px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  z-index: 9999;
+}
+.nav a {
+  margin-right: 15px;
+  color: cyan;
+  text-decoration: none;
+  font-weight: bold;
 }
 .language-selector button {
-    background-color: #1e2a5a;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    margin-right: 5px;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #1e2a5a;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 5px;
+  border-radius: 4px;
+  cursor: pointer;
 }
