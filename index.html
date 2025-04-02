@@ -1,44 +1,187 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>MyCryptoHub</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyCryptoHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: rgba(10, 10, 30, 0.85);
+      border-radius: 16px;
+      margin-top: 4rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .card {
+      background: #1a1a2e;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+    .card img {
+      height: 40px;
+      vertical-align: middle;
+    }
+    .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .desc {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    .link {
+      color: #ffd700;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .wallet-section {
+      margin-top: 2rem;
+    }
+    .wallet {
+      background: #1a1a2e;
+      padding: 1rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .address {
+      background: #2b2b44;
+      padding: 0.5rem;
+      border-radius: 6px;
+      overflow-wrap: break-word;
+      margin-top: 0.5rem;
+    }
+    .copy {
+      background: #ffd700;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>MyCryptoHub</h1>
+  <div class="container">
+    <h1>MyCryptoHub</h1>
 
-        <section class="wallets">
-            <h2>Wallets</h2>
-            <div class="wallet">
-                <h3>Bitcoin</h3>
-                <p>Address:</p>
-                <div class="address-box">
-                    <span id="btc-address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</span>
-                    <button onclick="copyToClipboard('btc-address')">📋</button>
-                </div>
-            </div>
-            <div class="wallet">
-                <h3>Ethereum</h3>
-                <p>Address:</p>
-                <div class="address-box">
-                    <span id="eth-address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</span>
-                    <button onclick="copyToClipboard('eth-address')">📋</button>
-                </div>
-            </div>
-            <div class="wallet">
-                <h3>Solana</h3>
-                <p>Address:</p>
-                <div class="address-box">
-                    <span id="sol-address">J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</span>
-                    <button onclick="copyToClipboard('sol-address')">📋</button>
-                </div>
-            </div>
-        </section>
+    <!-- Exchanges -->
+    <div class="card">
+      <img src="bybit.png" alt="Bybit" />
+      <div class="title">Bybit</div>
+      <div class="desc">Fast-growing crypto exchange with derivatives & spot trading.</div>
+      <a href="https://partner.bybit.com/b/mchub" class="link" target="_blank">Join Bybit →</a>
     </div>
 
-    <script src="script.js"></script>
+    <div class="card">
+      <img src="binance.png" alt="Binance" />
+      <div class="title">Binance</div>
+      <div class="desc">World's largest crypto exchange by volume.</div>
+      <a href="https://accounts.binance.com/en/register?ref=MCHUB2024" class="link" target="_blank">Join Binance →</a>
+    </div>
+
+    <div class="card">
+      <img src="coinmotion.png" alt="Coinmotion" />
+      <div class="title">Coinmotion</div>
+      <div class="desc">Finnish crypto platform with bank-level regulation.</div>
+      <a href="https://coinmotion.com/?ref=MCHUB" class="link" target="_blank">Join Coinmotion →</a>
+    </div>
+
+    <!-- Wallets -->
+    <div class="card">
+      <img src="metamask.png" alt="MetaMask" />
+      <div class="title">MetaMask</div>
+      <div class="desc">Popular Ethereum wallet for DeFi & NFTs.</div>
+      <a href="https://metamask.io/" class="link" target="_blank">Get MetaMask →</a>
+    </div>
+
+    <div class="card">
+      <img src="phantom.png" alt="Phantom" />
+      <div class="title">Phantom Wallet</div>
+      <div class="desc">Easy-to-use Solana wallet with staking & NFTs.</div>
+      <a href="https://phantom.app/" class="link" target="_blank">Get Phantom →</a>
+    </div>
+
+    <div class="card">
+      <img src="jupiter.png" alt="Jupiter Wallet" />
+      <div class="title">Jupiter Wallet</div>
+      <div class="desc">Multi-chain wallet powered by Jupiter DEX aggregator.</div>
+      <a href="https://jup.ag/invite/BRvVHduEhaiG" class="link" target="_blank">Get Jupiter →</a>
+    </div>
+
+    <!-- Cold Wallets -->
+    <div class="card">
+      <img src="ledger.png" alt="Ledger" />
+      <div class="title">Ledger</div>
+      <div class="desc">Hardware wallet for secure crypto storage.</div>
+      <a href="https://shop.ledger.com/pages/ledger-nano-x?r=mchub" class="link" target="_blank">Buy Ledger →</a>
+    </div>
+
+    <div class="card">
+      <img src="trezor.png" alt="Trezor" />
+      <div class="title">Trezor</div>
+      <div class="desc">Open-source cold wallet for advanced users.</div>
+      <a href="https://trezor.io/?a=mchub" class="link" target="_blank">Buy Trezor →</a>
+    </div>
+
+    <!-- Donation Wallets -->
+    <div class="wallet-section">
+      <h2>Wallets</h2>
+
+      <div class="wallet">
+        <strong>Bitcoin</strong><br />
+        Address:
+        <div class="address">
+          bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd
+          <button class="copy" onclick="copyText('btc')">📋</button>
+        </div>
+      </div>
+
+      <div class="wallet">
+        <strong>Ethereum</strong><br />
+        Address:
+        <div class="address">
+          0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f
+          <button class="copy" onclick="copyText('eth')">📋</button>
+        </div>
+      </div>
+
+      <div class="wallet">
+        <strong>Solana</strong><br />
+        Address:
+        <div class="address">
+          J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL
+          <button class="copy" onclick="copyText('sol')">📋</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function copyText(wallet) {
+      let addresses = {
+        btc: 'bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd',
+        eth: '0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f',
+        sol: 'J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL'
+      };
+      navigator.clipboard.writeText(addresses[wallet]);
+      alert(wallet.toUpperCase() + ' address copied!');
+    }
+  </script>
 </body>
 </html>
