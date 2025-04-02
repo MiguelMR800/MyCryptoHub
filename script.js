@@ -1,6 +1,9 @@
 
-function setLanguage(lang) {
-  document.querySelectorAll('[data-en]').forEach(el => {
-    el.innerText = el.getAttribute('data-' + lang);
-  });
+function toggleContent(element) {
+    var content = element.querySelector(".content");
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    } else {
+        content.style.display = "block";
+    }
 }
