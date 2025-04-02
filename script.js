@@ -1,3 +1,4 @@
+// Updated manually
 
 function toggleContent(element) {
     var content = element.querySelector(".content");
