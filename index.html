@@ -1,1 +1,36 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MyCryptoHub</title><link rel="stylesheet" href="styles.css"></head><body><div class="language-selector"><button onclick="setLanguage('en')">EN</button><button onclick="setLanguage('fi')">FI</button></div><section class="section"><h2 data-en="Hot Wallets" data-fi="Kuumat Lompakot">Hot Wallets</h2></section><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyCryptoHub</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <a href="#hot-wallets">Hot Wallets</a>
+      <a href="#cold-wallets">Cold Wallets</a>
+      <a href="#exchanges">Exchanges</a>
+    </div>
+    <div class="language-selector">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('fi')">FI</button>
+    </div>
+  </header>
+
+  <section class="section" id="hot-wallets">
+    <h2 data-en="Hot Wallets" data-fi="Kuumat Lompakot">Hot Wallets</h2>
+  </section>
+
+  <section class="section" id="cold-wallets">
+    <h2 data-en="Cold Wallets" data-fi="Kylmät Lompakot">Cold Wallets</h2>
+  </section>
+
+  <section class="section" id="exchanges">
+    <h2 data-en="Crypto Exchanges" data-fi="Kryptopörssit">Crypto Exchanges</h2>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
