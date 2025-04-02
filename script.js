@@ -1,1 +1,4 @@
-console.log('MyCryptoHub script loaded.');
+
+function toggleInfo(element) {
+    element.classList.toggle("open");
+}
