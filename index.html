@@ -203,6 +203,33 @@ html, body {
   max-width: 100%;
 }
 
+
+/* QR-koodit valkoisessa laatikossa, isompina */
+.qr-container {
+  background: white;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin-top: 10px;
+}
+.qr {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* Logojen yhtenäinen koko ja tyyli */
+.card img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  background: white;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
 </style>
 </head>
 <body>
@@ -265,7 +292,7 @@ html, body {
     <div class="address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</div>
     <button onclick="copyToClipboard('bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd', this)" class="copy-btn">Copy</button>
   </div>
-  <img src="btc_qr_square.png" class="qr" alt="Bitcoin QR" />
+  <div class="qr-container"><img src="btc_qr_square.png" class="qr" alt="Bitcoin QR" />
 </div>
 
       
@@ -275,7 +302,7 @@ html, body {
     <div class="address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</div>
     <button onclick="copyToClipboard('0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f', this)" class="copy-btn">Copy</button>
   </div>
-  <img src="eth_qr_square.png" class="qr" alt="Ethereum QR" />
+  <div class="qr-container"><img src="eth_qr_square.png" class="qr" alt="Ethereum QR" />
 </div>
 
       
@@ -285,7 +312,7 @@ html, body {
     <div class="address">J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</div>
     <button onclick="copyToClipboard('J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL', this)" class="copy-btn">Copy</button>
   </div>
-  <img src="sol_qr_square.png" class="qr" alt="Solana QR" />
+  <div class="qr-container"><img src="sol_qr_square.png" class="qr" alt="Solana QR" />
 </div>
 
     </div>
