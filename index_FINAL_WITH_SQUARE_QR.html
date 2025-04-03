@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyCryptoHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url("background.jpg") no-repeat center center;
+      background-size: contain;
+      background-color: black;
+      z-index: -1;
+    }
+    .container {
+      max-width: 960px;
+      margin: 80px auto;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 16px;
+      color: white;
+    }
+    .lang-select {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 2;
+    }
+    select {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 6px;
+    }
+    .section {
+      margin-top: 2rem;
+    }
+    .card {
+      background: #1a1a2e;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .card img {
+      height: 40px;
+      vertical-align: middle;
+    }
+    .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .desc {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    .link {
+      color: #ffd700;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .address {
+      background: #2b2b44;
+      padding: 0.5rem;
+      border-radius: 6px;
+      overflow-wrap: break-word;
+      margin-top: 0.5rem;
+    }
+    .qr {
+      width: 100px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="lang-select">
+    <select onchange="changeLang(this.value)">
+      <option value="en">English</option>
+      <option value="fi">Suomi</option>
+      <option value="es">Español</option>
+      <option value="ru">Русский</option>
+    </select>
+  </div>
+  <div class="container">
+    <h1 id="main-title">The Future of Cryptocurrencies and Tokenization</h1>
+    <p id="main-text">Bitcoin changed how we think about money. It started a revolution that enabled Ethereum, NFTs, DeFi, and more.</p>
+    <div class="container">
+
+    <div class="section">
+      <h2>Exchanges</h2>
+      <div class="card">
+        <img src="binance.png" alt="Binance" />
+        <div class="title">Binance</div>
+        <div class="desc">World's largest crypto exchange by volume.</div>
+        <a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" class="link" target="_blank">Join Binance →</a>
+      </div>
+      <div class="card">
+        <img src="bybit.png" alt="Bybit" />
+        <div class="title">Bybit</div>
+        <div class="desc">Fast-growing crypto exchange with derivatives & spot trading.</div>
+        <a href="https://www.bybit.com/invite?ref=EQ69EL" class="link" target="_blank">Join Bybit →</a>
+      </div>
+      <div class="card">
+        <img src="coinmotion.png" alt="Coinmotion" />
+        <div class="title">Coinmotion</div>
+        <div class="desc">Finnish crypto platform with bank-level regulation.</div>
+        <a href="https://app.coinmotion.com/fi/register/signup?referral_code=DAWL3TJGXHKJPUK9KPWP" class="link" target="_blank">Join Coinmotion →</a>
+      </div>
+      <div class="card">
+        <img src="crypto.png" alt="Crypto.com" />
+        <div class="title">Crypto.com</div>
+        <div class="desc">Popular exchange and Visa card for crypto spending.</div>
+        <a href="https://crypto.com/app/nrmm4uzm29" class="link" target="_blank">Join Crypto.com →</a>
+      </div>
+      <div class="card">
+        <img src="jupiter.png" alt="Jupiter Wallet" />
+        <div class="title">Jupiter Wallet</div>
+        <div class="desc">Multi-chain wallet powered by Jupiter DEX aggregator.</div>
+        <a href="https://jup.ag/invite/BRvVHduEhaiG" class="link" target="_blank">Get Jupiter →</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Wallets</h2>
+      <div class="card">
+        <img src="ledger.png" alt="Ledger" />
+        <div class="title">Ledger</div>
+        <div class="desc">Hardware wallet for secure crypto storage.</div>
+        <a href="https://shop.ledger.com/?r=c97ab0683c61" class="link" target="_blank">Buy Ledger →</a>
+      </div>
+      <div class="card">
+        <img src="trezor.png" alt="Trezor" />
+        <div class="title">Trezor</div>
+        <div class="desc">Open-source cold wallet for advanced users.</div>
+        <a href="https://trezor.io/?a=mchub" class="link" target="_blank">Buy Trezor →</a>
+      </div>
+      <div class="card">
+        <img src="metamask.png" alt="MetaMask" />
+        <div class="title">MetaMask</div>
+        <div class="desc">Popular Ethereum wallet for DeFi & NFTs.</div>
+        <a href="https://metamask.io/" class="link" target="_blank">Get MetaMask →</a>
+      </div>
+      <div class="card">
+        <img src="phantom.png" alt="Phantom" />
+        <div class="title">Phantom Wallet</div>
+        <div class="desc">Easy-to-use Solana wallet with staking & NFTs.</div>
+        <a href="https://phantom.app/" class="link" target="_blank">Get Phantom →</a>
+      </div>
+      <div class="card">
+        <img src="solflare.png" alt="Solflare" />
+        <div class="title">Solflare Wallet</div>
+        <div class="desc">Secure Solana wallet with mobile and browser extension.</div>
+        <a href="https://solflare.com/" class="link" target="_blank">Get Solflare →</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Donations</h2>
+      <div class="card">
+        <div class="title">Bitcoin</div>
+        <div class="address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</div>
+        <img src="btc_qr_square.png" class="qr" alt="BTC QR" />
+      </div>
+      <div class="card">
+        <div class="title">Ethereum</div>
+        <div class="address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</div>
+        <img src="eth_qr_square.png" class="qr" alt="ETH QR" />
+      </div>
+      <div class="card">
+        <div class="title">Solana</div>
+        <div class="address">J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</div>
+        <img src="sol_qr_square.png" class="qr" alt="SOL QR" />
+      </div>
+    </div>
+  </div>
+</div>  <script>
+    const translations = {
+      en: {
+        title: "The Future of Cryptocurrencies and Tokenization",
+        text: "Bitcoin changed how we think about money. It started a revolution that enabled Ethereum, NFTs, DeFi, and more."
+      },
+      fi: {
+        title: "Kryptovaluuttojen ja Tokenisaation Tulevaisuus",
+        text: "Bitcoin muutti käsityksemme rahasta. Se aloitti vallankumouksen, joka mahdollisti Ethereumin, NFT:t, DeFin ja paljon muuta."
+      },
+      es: {
+        title: "El Futuro de las Criptomonedas y la Tokenización",
+        text: "Bitcoin cambió nuestra forma de pensar sobre el dinero. Inició una revolución que permitió Ethereum, NFTs, DeFi y más."
+      },
+      ru: {
+        title: "Будущее Криптовалют и Токенизации",
+        text: "Биткойн изменил наше представление о деньгах. Он начал революцию, которая привела к созданию Ethereum, NFT, DeFi и многого другого."
+      }
+    };
+    function changeLang(lang) {
+      document.getElementById("main-title").innerText = translations[lang].title;
+      document.getElementById("main-text").innerText = translations[lang].text;
+    }
+  </script>
+</body>
+</html>
