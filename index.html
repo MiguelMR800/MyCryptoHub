@@ -186,9 +186,32 @@ html {
   text-decoration: underline;
 }
 
+
+.news-ticker-top {
+  background-color: #0d0d1a;
+  color: #ffd700;
+  font-weight: bold;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.95rem;
+  border-bottom: 2px solid #222;
+}
+#news-ticker-text a {
+  color: #ffd700;
+  text-decoration: none;
+}
+#news-ticker-text a:hover {
+  text-decoration: underline;
+}
+
 </style>
 </head>
 <body>
+
+<div class="news-ticker-top">
+  <div id="news-ticker-text">Loading latest news...</div>
+</div>
+
 
 <div class="crypto-ticker">
   <div class="ticker-content">
@@ -335,18 +358,7 @@ const setDescriptions = (lang) => {
 
 </script>
 
-<div class="section">
-  <h2>Latest Crypto News</h2>
-  <label for="news-filter" style="color: white;">Show only:</label>
-  <select id="news-filter" onchange="filterNews()" style="margin-left: 0.5rem; padding: 0.3rem; border-radius: 5px;">
-    <option value="all">All</option>
-    <option value="bitcoin">Bitcoin</option>
-    <option value="ethereum">Ethereum</option>
-    <option value="ai">AI</option>
-  </select>
-  <div class="news-cards" id="news-feed">
-    <p>Loading latest news...</p>
-  </div>
+
 </div>
 
 
@@ -391,6 +403,30 @@ const setDescriptions = (lang) => {
       const filtered = allNewsItems.filter(item => item.title.toLowerCase().includes(value));
       renderNews(filtered);
     }
+  }
+</script>
+
+
+<script>
+  let newsIndex = 0;
+  let newsHeadlines = [];
+
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.coingecko.com/en/news.rss")
+      .then(response => response.json())
+      .then(data => {
+        newsHeadlines = data.items.slice(0, 10).map(item => ({ title: item.title, link: item.link }));
+        updateTicker();
+        setInterval(updateTicker, 3500);
+      });
+  });
+
+  function updateTicker() {
+    const ticker = document.getElementById("news-ticker-text");
+    if (!newsHeadlines.length) return;
+    const { title, link } = newsHeadlines[newsIndex];
+    ticker.innerHTML = `<a href="${link}" target="_blank">${title}</a>`;
+    newsIndex = (newsIndex + 1) % newsHeadlines.length;
   }
 </script>
 
