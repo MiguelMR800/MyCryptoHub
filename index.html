@@ -165,79 +165,9 @@ html {
   100% { transform: translateX(-100%); }
 }
 
-
-.news-ticker-top {
-  background-color: #0d0d1a;
-  color: #ffd700;
-  font-weight: bold;
-  padding: 0.8rem;
-  text-align: center;
-  font-size: 0.95rem;
-  border-bottom: 2px solid #222;
-}
-#news-ticker-text a {
-  color: #ffd700;
-  text-decoration: none;
-}
-#news-ticker-text a:hover {
-  text-decoration: underline;
-}
-
-
-html, body {
-  overflow-x: hidden;
-}
-.container {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-.qr {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  object-fit: contain;
-  max-width: 100%;
-}
-.card, .address {
-  overflow-wrap: break-word;
-  max-width: 100%;
-}
-
-
-/* QR-koodit valkoisessa laatikossa, isompina */
-.qr-container {
-  background: white;
-  padding: 10px;
-  display: inline-block;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  margin-top: 10px;
-}
-.qr {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-}
-
-/* Logojen yhtenäinen koko ja tyyli */
-.card img {
-  height: 50px;
-  width: 50px;
-  object-fit: contain;
-  background: white;
-  border-radius: 10px;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-
 </style>
 </head>
 <body>
-
-<div class="news-ticker-top">
-  <div id="news-ticker-text">Loading latest news...</div>
-</div>
-
 
 <div class="crypto-ticker">
   <div class="ticker-content">
@@ -254,7 +184,14 @@ html, body {
   </div>
 </div>
 
-  
+  <div class="lang-select">
+    <select onchange="changeLang(this.value)">
+      <option value="en">English</option>
+      <option value="fi">Suomi</option>
+      <option value="es">Español</option>
+      <option value="ru">Русский</option>
+    </select>
+  </div>
   <div class="container">
     
 <p id="intro-text" style="font-size:1.05rem; margin-bottom: 1rem;">
@@ -292,7 +229,7 @@ html, body {
     <div class="address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</div>
     <button onclick="copyToClipboard('bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd', this)" class="copy-btn">Copy</button>
   </div>
-  <div class="qr-container"><img src="btc_qr_square.png" class="qr" alt="Bitcoin QR" />
+  <img src="btc_qr_square.png" class="qr" alt="Bitcoin QR" />
 </div>
 
       
@@ -302,7 +239,7 @@ html, body {
     <div class="address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</div>
     <button onclick="copyToClipboard('0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f', this)" class="copy-btn">Copy</button>
   </div>
-  <div class="qr-container"><img src="eth_qr_square.png" class="qr" alt="Ethereum QR" />
+  <img src="eth_qr_square.png" class="qr" alt="Ethereum QR" />
 </div>
 
       
@@ -312,7 +249,7 @@ html, body {
     <div class="address">J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</div>
     <button onclick="copyToClipboard('J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL', this)" class="copy-btn">Copy</button>
   </div>
-  <div class="qr-container"><img src="sol_qr_square.png" class="qr" alt="Solana QR" />
+  <img src="sol_qr_square.png" class="qr" alt="Solana QR" />
 </div>
 
     </div>
@@ -320,7 +257,98 @@ html, body {
   </div>
 </div>
 <script>
+  const translations = {
+    en: {
+intro: {
+  en: "The digital revolution began with Bitcoin. It introduced decentralized money, inspired powerful blockchain platforms like Ethereum and Solana, and paved the way for the rise of AI-powered finance.",
+  fi: "Digitaalinen vallankumous alkoi Bitcoinista. Se toi hajautetun rahan, synnytti tehokkaita lohkoketjualustoja kuten Ethereum ja Solana, ja avasi tien tekoälypohjaiselle taloudelle.",
+  es: "La revolución digital comenzó con Bitcoin. Introdujo el dinero descentralizado, inspiró plataformas blockchain como Ethereum y Solana, y allanó el camino hacia las finanzas potenciadas por IA.",
+  ru: "Цифровая революция началась с Биткойна. Он ввел децентрализованные деньги, вдохновил создание блокчейнов как Ethereum и Solana, и открыл путь для финансов на базе ИИ."
+},
+      title: "The Future of Cryptocurrencies and Tokenization",
+      text: "Bitcoin changed how we think about money. It started a revolution that enabled Ethereum, NFTs, DeFi, and more."
+    },exchanges: {
+  binance: {
+    en: "<span id="desc-binance">World's largest crypto exchange by volume.</span>",
+    fi: "Maailman suurin kryptopörssi volyymilla mitattuna.",
+    es: "El mayor exchange de criptomonedas por volumen.",
+    ru: "Крупнейшая криптобиржа по объему торгов."
+  },
+  bybit: {
+    en: "<span id="desc-bybit">Fast-growing crypto exchange with derivatives & spot trading.</span>",
+    fi: "Nopeasti kasvava kryptopörssi johdannaisilla ja spot-kaupalla.",
+    es: "Exchange en rápido crecimiento con derivados y spot.",
+    ru: "Быстрорастущая биржа с деривативами и спотом."
+  },
+  coinmotion: {
+    en: "<span id="desc-coinmotion">Finnish crypto platform with bank-level regulation.</span>",
+    fi: "Suomalainen kryptopalvelu pankkitason sääntelyllä.",
+    es: "Plataforma finlandesa con regulación bancaria.",
+    ru: "Финская криптоплатформа с банковским регулированием."
+  },
+  crypto: {
+    en: "<span id="desc-crypto">Popular exchange and Visa card for crypto spending.</span>",
+    fi: "Suosittu pörssi ja Visa-kortti krypto-ostoihin.",
+    es: "Exchange popular con tarjeta Visa para gastar cripto.",
+    ru: "Популярная биржа и Visa-карта для трат в крипте."
+  },
+  jupiter: {
+    en: "<span id="desc-jupiter">Multi-chain wallet powered by Jupiter DEX aggregator.</span>",
+    fi: "Moniketjuinen lompakko Jupiter DEX -aggregaatilla.",
+    es: "Wallet multichain con el agregador Jupiter DEX.",
+    ru: "Мультисетевой кошелек с агрегатором Jupiter DEX."
+  }
+},
+wallets: {
+  ledger: {
+    en: "<span id="desc-ledger">Hardware wallet for secure crypto storage.</span>",
+    fi: "Laitelompakko turvalliseen säilytykseen.",
+    es: "Wallet físico para almacenar cripto de forma segura.",
+    ru: "Аппаратный кошелек для безопасного хранения."
+  },
+  trezor: {
+    en: "<span id="desc-trezor">Open-source cold wallet for advanced users.</span>",
+    fi: "Avoimen lähdekoodin kylmälompakko edistyneille.",
+    es: "Wallet fría de código abierto para usuarios avanzados.",
+    ru: "Холодный кошелек с открытым кодом для продвинутых."
+  },
+  metamask: {
+    en: "<span id="desc-metamask">Popular Ethereum wallet for DeFi & NFTs.</span>",
+    fi: "Suosittu Ethereum-lompakko DeFi:lle ja NFT:lle.",
+    es: "Wallet popular de Ethereum para DeFi y NFTs.",
+    ru: "Популярный кошелек Ethereum для DeFi и NFT."
+  },
+  phantom: {
+    en: "<span id="desc-phantom">Easy-to-use Solana wallet with staking & NFTs.</span>",
+    fi: "Helppokäyttöinen Solana-lompakko stakingiin ja NFT:ihin.",
+    es: "Wallet Solana fácil de usar con staking y NFTs.",
+    ru: "Удобный кошелек Solana с NFT и стейкингом."
+  },
+  solflare: {
+    en: "<span id="desc-solflare">Secure Solana wallet with mobile and browser extension.</span>",
+    fi: "Turvallinen Solana-lompakko mobiiliin ja selaimeen.",
+    es: "Wallet Solana segura con móvil y extensión web.",
+    ru: "Безопасный Solana-кошелек для браузера и мобильного."
+  }
+},
+    fi: {
+      title: "Kryptovaluuttojen ja Tokenisaation Tulevaisuus",
+      text: "Bitcoin muutti käsityksemme rahasta. Se aloitti vallankumouksen, joka mahdollisti Ethereumin, NFT:t, DeFin ja paljon muuta."
+    },
+    es: {
+      title: "El Futuro de las Criptomonedas y la Tokenización",
+      text: "Bitcoin cambió nuestra forma de pensar sobre el dinero. Inició una revolución que permitió Ethereum, NFTs, DeFi y más."
+    },
+    ru: {
+      title: "Будущее Криптовалют и Токенизации",
+      text: "Биткойн изменил наше представление о деньгах. Он начал революцию, которая привела к созданию Ethereum, NFT, DeFi и многого другого."
+    }
+  };
   
+function changeLang(lang) {
+  document.getElementById("main-title").innerText = translations[lang].title;
+  document.getElementById("main-text").innerText = translations[lang].text;
+  setDescriptions(lang);
   localStorage.setItem("lang", lang);
 
   document.getElementById("intro-text").innerText = translations.intro[lang];
@@ -342,7 +370,12 @@ const setDescriptions = (lang) => {
 };
 
 
-);
+document.addEventListener("DOMContentLoaded", () => {
+  let savedLang = localStorage.getItem("lang") || navigator.language.slice(0, 2);
+  if (!["en", "fi", "es", "ru"].includes(savedLang)) savedLang = "en";
+  document.querySelector(".lang-select select").value = savedLang;
+  changeLang(savedLang);
+});
 
 </script>
 <script>
@@ -370,7 +403,12 @@ const setDescriptions = (lang) => {
 };
 
 
-);
+document.addEventListener("DOMContentLoaded", () => {
+  let savedLang = localStorage.getItem("lang") || navigator.language.slice(0, 2);
+  if (!["en", "fi", "es", "ru"].includes(savedLang)) savedLang = "en";
+  document.querySelector(".lang-select select").value = savedLang;
+  changeLang(savedLang);
+});
 
 </script>
 
@@ -384,32 +422,13 @@ const setDescriptions = (lang) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-);
+document.addEventListener("DOMContentLoaded", () => {
+  let savedLang = localStorage.getItem("lang") || navigator.language.slice(0, 2);
+  if (!["en", "fi", "es", "ru"].includes(savedLang)) savedLang = "en";
+  document.querySelector(".lang-select select").value = savedLang;
+  changeLang(savedLang);
+});
 
 </script>
-
-<script>
-  let newsIndex = 0;
-  let newsHeadlines = [];
-
-  document.addEventListener("DOMContentLoaded", () => {
-    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss")
-      .then(response => response.json())
-      .then(data => {
-        newsHeadlines = data.items.slice(0, 10).map(item => ({ title: item.title, link: item.link }));
-        updateTicker();
-        setInterval(updateTicker, 5000);
-      });
-  });
-
-  function updateTicker() {
-    const ticker = document.getElementById("news-ticker-text");
-    if (!newsHeadlines.length) return;
-    const { title, link } = newsHeadlines[newsIndex];
-    ticker.innerHTML = `<a href="${link}" target="_blank">${title}</a>`;
-    newsIndex = (newsIndex + 1) % newsHeadlines.length;
-  }
-</script>
-
 </body>
 </html>
