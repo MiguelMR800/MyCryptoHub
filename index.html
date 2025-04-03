@@ -165,6 +165,27 @@ html {
   100% { transform: translateX(-100%); }
 }
 
+
+.news-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.news-card {
+  background-color: #1a1a2e;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.news-card a {
+  color: #ffd700;
+  font-weight: 600;
+  text-decoration: none;
+}
+.news-card a:hover {
+  text-decoration: underline;
+}
+
 </style>
 </head>
 <body>
@@ -430,5 +451,65 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 </script>
+
+<div class="section">
+  <h2>Latest Crypto News</h2>
+  <label for="news-filter" style="color: white;">Show only:</label>
+  <select id="news-filter" onchange="filterNews()" style="margin-left: 0.5rem; padding: 0.3rem; border-radius: 5px;">
+    <option value="all">All</option>
+    <option value="bitcoin">Bitcoin</option>
+    <option value="ethereum">Ethereum</option>
+    <option value="ai">AI</option>
+  </select>
+  <div class="news-cards" id="news-feed">
+    <p>Loading latest news...</p>
+  </div>
+</div>
+
+
+<script>
+  let allNewsItems = [];
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const feedUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://www.coingecko.com/en/news.rss";
+    fetch(feedUrl)
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("news-feed");
+        container.innerHTML = "";
+        allNewsItems = data.items.slice(0, 10);
+        renderNews(allNewsItems);
+      })
+      .catch(err => {
+        document.getElementById("news-feed").innerHTML = "<p>Failed to load news.</p>";
+      });
+  });
+
+  function renderNews(items) {
+    const container = document.getElementById("news-feed");
+    container.innerHTML = "";
+    items.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "news-card";
+      const a = document.createElement("a");
+      a.href = item.link;
+      a.target = "_blank";
+      a.textContent = item.title;
+      card.appendChild(a);
+      container.appendChild(card);
+    });
+  }
+
+  function filterNews() {
+    const value = document.getElementById("news-filter").value.toLowerCase();
+    if (value === "all") {
+      renderNews(allNewsItems);
+    } else {
+      const filtered = allNewsItems.filter(item => item.title.toLowerCase().includes(value));
+      renderNews(filtered);
+    }
+  }
+</script>
+
 </body>
 </html>
