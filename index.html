@@ -70,7 +70,28 @@
       font-weight: bold;
       text-decoration: none;
     }
-    .address {
+    
+.address-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+.copy-btn {
+  padding: 5px 10px;
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.copy-btn:hover {
+  background-color: #ffcc00;
+}
+
+.address {
       background: #2b2b44;
       padding: 0.5rem;
       border-radius: 6px;
@@ -129,22 +150,38 @@
 
     <div class="section">
       <h2>Donations</h2>
-      <div class="card">
-        <div class="title">Bitcoin</div>
-        <div class="address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</div>
-        <img src="btc_qr_square.png" class="qr" alt="BTC QR" />
-      </div>
-      <div class="card">
-        <div class="title">Ethereum</div>
-        <div class="address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</div>
-        <img src="eth_qr_square.png" class="qr" alt="ETH QR" />
-      </div>
-      <div class="card">
-        <div class="title">Solana</div>
-        <div class="address">J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</div>
-        <img src="sol_qr_square.png" class="qr" alt="SOL QR" />
-      </div>
+      
+<div class="card">
+  <div class="title">Bitcoin</div>
+  <div class="address-container">
+    <div class="address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</div>
+    <button onclick="copyToClipboard('bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd', this)" class="copy-btn">Copy</button>
+  </div>
+  <img src="btc_qr_square.png" class="qr" alt="Bitcoin QR" />
+</div>
+
+      
+<div class="card">
+  <div class="title">Ethereum</div>
+  <div class="address-container">
+    <div class="address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</div>
+    <button onclick="copyToClipboard('0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f', this)" class="copy-btn">Copy</button>
+  </div>
+  <img src="eth_qr_square.png" class="qr" alt="Ethereum QR" />
+</div>
+
+      
+<div class="card">
+  <div class="title">Solana</div>
+  <div class="address-container">
+    <div class="address">J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</div>
+    <button onclick="copyToClipboard('J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL', this)" class="copy-btn">Copy</button>
+  </div>
+  <img src="sol_qr_square.png" class="qr" alt="Solana QR" />
+</div>
+
     </div>
+  </div>
   </div>
 </div>
 <script>
@@ -170,6 +207,16 @@
     document.getElementById("main-title").innerText = translations[lang].title;
     document.getElementById("main-text").innerText = translations[lang].text;
   }
+</script>
+<script>
+function copyToClipboard(text, button) {
+  navigator.clipboard.writeText(text).then(() => {
+    button.innerText = 'Copied!';
+    setTimeout(() => {
+      button.innerText = 'Copy';
+    }, 1500);
+  });
+}
 </script>
 </body>
 </html>
