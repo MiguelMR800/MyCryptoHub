@@ -101,17 +101,18 @@
 .qr {
   width: 120px;
   height: 120px;
-  margin-top: 10px;
-  border-radius: 8px;
   background: white;
-  padding: 8px;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
-  display: block;
+  padding: 10px;
+  border-radius: 12px;
   object-fit: contain;
 }
 .card img.qr {
-  margin: 10px auto 0;
-  display: block;
+  width: 120px;
+  height: 120px;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  object-fit: contain;
 }
 
   
@@ -191,11 +192,12 @@ html, body {
   overflow-x: hidden;
 }
 .qr {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
+  width: 120px;
+  height: 120px;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
   object-fit: contain;
-  max-width: 100%;
 }
 .card, .address {
   overflow-wrap: break-word;
@@ -204,21 +206,26 @@ html, body {
 
 
 
+
 .qr-container {
   background: white;
-  padding: 0;
   display: inline-block;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   margin-top: 10px;
-  width: 140px;
-  height: 140px;
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
 }
 .qr {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+  width: 120px;
+  height: 120px;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  object-fit: contain;
 }
+
 .address {
   font-weight: 600;
 }
@@ -238,6 +245,9 @@ html, body {
 </style>
 </head>
 <body>
+
+
+
 
 <div class="news-ticker-top">
   <div id="news-ticker-text">Loading latest news...</div>
@@ -414,6 +424,62 @@ const setDescriptions = (lang) => {
     ticker.innerHTML = `<a href="${link}" target="_blank">${title}</a>`;
     newsIndex = (newsIndex + 1) % newsHeadlines.length;
   }
+</script>
+
+
+<!-- Simple Chatbot -->
+<div id="chatbot-container" style="position:fixed;bottom:20px;right:20px;z-index:9999;">
+  <button onclick="toggleChat()" style="background:#ffd700;border:none;padding:10px 16px;border-radius:20px;font-weight:600;">Chat</button>
+  <div id="chatbox" style="display:none;background:white;color:black;width:260px;height:320px;padding:10px;border-radius:10px;margin-top:10px;">
+    <b>Ask me:</b><br>
+    <ul style="padding-left:20px;">
+      <li>What is Bitcoin?</li>
+      <li>How do I store crypto?</li>
+      <li>Best wallet?</li>
+    </ul>
+    <input id="chatInput" type="text" placeholder="Type here..." style="width:100%;padding:8px;margin-top:10px;border-radius:6px;border:1px solid #ccc;">
+    <div id="chatReply" style="font-size:14px;margin-top:10px;"></div>
+  </div>
+</div>
+<script>
+function toggleChat() {
+  const box = document.getElementById('chatbox');
+  box.style.display = box.style.display === 'none' ? 'block' : 'none';
+}
+document.getElementById("chatInput").addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    const input = e.target.value.toLowerCase();
+    let reply = "Sorry, I don't understand.";
+    if (input.includes("bitcoin")) reply = "Bitcoin is the first decentralized digital currency.";
+    if (input.includes("wallet")) reply = "Ledger and MetaMask are popular wallets.";
+    if (input.includes("store")) reply = "Use a cold wallet like Ledger or Trezor.";
+    document.getElementById("chatReply").innerText = reply;
+  }
+});
+</script>
+
+
+<!-- Chatbot -->
+<script>
+  const chatBtn = document.createElement("button");
+  chatBtn.innerText = "Chat";
+  chatBtn.style.position = "fixed";
+  chatBtn.style.bottom = "20px";
+  chatBtn.style.right = "20px";
+  chatBtn.style.zIndex = "999";
+  chatBtn.style.padding = "10px 20px";
+  chatBtn.style.background = "#ffd700";
+  chatBtn.style.color = "black";
+  chatBtn.style.border = "none";
+  chatBtn.style.borderRadius = "8px";
+  chatBtn.style.fontWeight = "bold";
+  document.body.appendChild(chatBtn);
+
+  chatBtn.onclick = () => {
+    const msg = prompt("Ask me something about crypto:");
+    if (!msg) return;
+    alert("This is a simple demo. I recommend visiting CoinMarketCap or CoinGecko for live data.");
+  };
 </script>
 
 </body>
