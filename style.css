@@ -5,3 +5,20 @@ body {
   margin: 0;
   padding: 20px;
 }
+.qr-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  text-align: center;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.qr-box img {
+  width: 160px;
+  height: 160px;
+}

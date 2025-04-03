@@ -1,3 +1,4 @@
+
 async function askChatGPT(question) {
   const response = await fetch("https://my-crypto-hub.vercel.app/api/chat", {
     method: "POST",
@@ -11,6 +12,13 @@ async function askChatGPT(question) {
 function toggleChat() {
   const box = document.getElementById('chatbox');
   box.style.display = box.style.display === 'none' ? 'block' : 'none';
+}
+
+function copyToClipboard(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    alert("Copied: " + text);
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
