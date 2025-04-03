@@ -205,14 +205,7 @@ html {
   </div>
 </div>
 
-  <div class="lang-select">
-    <select onchange="changeLang(this.value)">
-      <option value="en">English</option>
-      <option value="fi">Suomi</option>
-      <option value="es">Español</option>
-      <option value="ru">Русский</option>
-    </select>
-  </div>
+  
   <div class="container">
     
 <p id="intro-text" style="font-size:1.05rem; margin-bottom: 1rem;">
@@ -278,102 +271,7 @@ html {
   </div>
 </div>
 <script>
-  const translations = {
-    en: {
-intro: {
-  en: "The digital revolution began with Bitcoin. It introduced decentralized money, inspired powerful blockchain platforms like Ethereum and Solana, and paved the way for the rise of AI-powered finance.",
-  fi: "Digitaalinen vallankumous alkoi Bitcoinista. Se toi hajautetun rahan, synnytti tehokkaita lohkoketjualustoja kuten Ethereum ja Solana, ja avasi tien tekoälypohjaiselle taloudelle.",
-  es: "La revolución digital comenzó con Bitcoin. Introdujo el dinero descentralizado, inspiró plataformas blockchain como Ethereum y Solana, y allanó el camino hacia las finanzas potenciadas por IA.",
-  ru: "Цифровая революция началась с Биткойна. Он ввел децентрализованные деньги, вдохновил создание блокчейнов как Ethereum и Solana, и открыл путь для финансов на базе ИИ."
-},
-      title: "The Future of Cryptocurrencies and Tokenization",
-      text: "Bitcoin changed how we think about money. It started a revolution that enabled Ethereum, NFTs, DeFi, and more."
-    },exchanges: {
-  binance: {
-    en: "<span id="desc-binance">World's largest crypto exchange by volume.</span>",
-    fi: "Maailman suurin kryptopörssi volyymilla mitattuna.",
-    es: "El mayor exchange de criptomonedas por volumen.",
-    ru: "Крупнейшая криптобиржа по объему торгов."
-  },
-  bybit: {
-    en: "<span id="desc-bybit">Fast-growing crypto exchange with derivatives & spot trading.</span>",
-    fi: "Nopeasti kasvava kryptopörssi johdannaisilla ja spot-kaupalla.",
-    es: "Exchange en rápido crecimiento con derivados y spot.",
-    ru: "Быстрорастущая биржа с деривативами и спотом."
-  },
-  coinmotion: {
-    en: "<span id="desc-coinmotion">Finnish crypto platform with bank-level regulation.</span>",
-    fi: "Suomalainen kryptopalvelu pankkitason sääntelyllä.",
-    es: "Plataforma finlandesa con regulación bancaria.",
-    ru: "Финская криптоплатформа с банковским регулированием."
-  },
-  crypto: {
-    en: "<span id="desc-crypto">Popular exchange and Visa card for crypto spending.</span>",
-    fi: "Suosittu pörssi ja Visa-kortti krypto-ostoihin.",
-    es: "Exchange popular con tarjeta Visa para gastar cripto.",
-    ru: "Популярная биржа и Visa-карта для трат в крипте."
-  },
-  jupiter: {
-    en: "<span id="desc-jupiter">Multi-chain wallet powered by Jupiter DEX aggregator.</span>",
-    fi: "Moniketjuinen lompakko Jupiter DEX -aggregaatilla.",
-    es: "Wallet multichain con el agregador Jupiter DEX.",
-    ru: "Мультисетевой кошелек с агрегатором Jupiter DEX."
-  }
-},
-wallets: {
-  ledger: {
-    en: "<span id="desc-ledger">Hardware wallet for secure crypto storage.</span>",
-    fi: "Laitelompakko turvalliseen säilytykseen.",
-    es: "Wallet físico para almacenar cripto de forma segura.",
-    ru: "Аппаратный кошелек для безопасного хранения."
-  },
-  trezor: {
-    en: "<span id="desc-trezor">Open-source cold wallet for advanced users.</span>",
-    fi: "Avoimen lähdekoodin kylmälompakko edistyneille.",
-    es: "Wallet fría de código abierto para usuarios avanzados.",
-    ru: "Холодный кошелек с открытым кодом для продвинутых."
-  },
-  metamask: {
-    en: "<span id="desc-metamask">Popular Ethereum wallet for DeFi & NFTs.</span>",
-    fi: "Suosittu Ethereum-lompakko DeFi:lle ja NFT:lle.",
-    es: "Wallet popular de Ethereum para DeFi y NFTs.",
-    ru: "Популярный кошелек Ethereum для DeFi и NFT."
-  },
-  phantom: {
-    en: "<span id="desc-phantom">Easy-to-use Solana wallet with staking & NFTs.</span>",
-    fi: "Helppokäyttöinen Solana-lompakko stakingiin ja NFT:ihin.",
-    es: "Wallet Solana fácil de usar con staking y NFTs.",
-    ru: "Удобный кошелек Solana с NFT и стейкингом."
-  },
-  solflare: {
-    en: "<span id="desc-solflare">Secure Solana wallet with mobile and browser extension.</span>",
-    fi: "Turvallinen Solana-lompakko mobiiliin ja selaimeen.",
-    es: "Wallet Solana segura con móvil y extensión web.",
-    ru: "Безопасный Solana-кошелек для браузера и мобильного."
-  }
-},
-    fi: {
-      title: "Kryptovaluuttojen ja Tokenisaation Tulevaisuus",
-      text: "Bitcoin muutti käsityksemme rahasta. Se aloitti vallankumouksen, joka mahdollisti Ethereumin, NFT:t, DeFin ja paljon muuta."
-    },
-    es: {
-      title: "El Futuro de las Criptomonedas y la Tokenización",
-      text: "Bitcoin cambió nuestra forma de pensar sobre el dinero. Inició una revolución que permitió Ethereum, NFTs, DeFi y más."
-    },
-    ru: {
-      title: "Будущее Криптовалют и Токенизации",
-      text: "Биткойн изменил наше представление о деньгах. Он начал революцию, которая привела к созданию Ethereum, NFT, DeFi и многого другого."
-    }
-  };
   
-function changeLang(lang) {
-  document.getElementById("main-title").innerText = translations[lang].title;
-  document.getElementById("main-text").innerText = translations[lang].text;
-  setDescriptions(lang);
-  localStorage.setItem("lang", lang);
-
-  document.getElementById("intro-text").innerText = translations.intro[lang];
-}
 
 
 const setDescriptions = (lang) => {
@@ -391,12 +289,7 @@ const setDescriptions = (lang) => {
 };
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  let savedLang = localStorage.getItem("lang") || navigator.language.slice(0, 2);
-  if (!["en", "fi", "es", "ru"].includes(savedLang)) savedLang = "en";
-  document.querySelector(".lang-select select").value = savedLang;
-  changeLang(savedLang);
-});
+
 
 </script>
 <script>
@@ -424,12 +317,7 @@ const setDescriptions = (lang) => {
 };
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  let savedLang = localStorage.getItem("lang") || navigator.language.slice(0, 2);
-  if (!["en", "fi", "es", "ru"].includes(savedLang)) savedLang = "en";
-  document.querySelector(".lang-select select").value = savedLang;
-  changeLang(savedLang);
-});
+
 
 </script>
 
@@ -443,12 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-document.addEventListener("DOMContentLoaded", () => {
-  let savedLang = localStorage.getItem("lang") || navigator.language.slice(0, 2);
-  if (!["en", "fi", "es", "ru"].includes(savedLang)) savedLang = "en";
-  document.querySelector(".lang-select select").value = savedLang;
-  changeLang(savedLang);
-});
+
 
 </script>
 
