@@ -246,6 +246,15 @@ html, body {
 </style>
 </head>
 <body>
+<select id="languageSelect" style="position:fixed;top:20px;right:20px;padding:6px 10px;border-radius:6px;background:rgba(0,0,0,0.4);color:white;font-weight:600;z-index:10000;border:1px solid #fff;">
+<option value="en">English</option>
+<option value="fi">Suomi</option>
+<option value="sv">Svenska</option>
+<option value="es">Español</option>
+<option value="ru">Русский</option>
+<option value="de">Deutsch</option>
+<option value="et">Eesti</option>
+</select>
 <div class="news-ticker-top">
 <div id="news-ticker-text">Loading latest news...</div>
 </div>
@@ -287,33 +296,29 @@ html, body {
 <div class="card"><img alt="Solflare" src="solflare.png"/><div class="title">Solflare Wallet</div><div class="desc"><span id="desc-solflare">Secure Solana wallet with mobile and browser extension.</span></div><a class="link" href="https://solflare.com/" target="_blank">Get Solflare →</a></div>
 </div>
 <div class="section">
-<h2>Donations</h2>
-<p style="text-align: center;">
-        You can support the project by donating cryptocurrency to the addresses below. Every donation helps keep the site ad-free and independent!
-      </p>
-
-
+<h2>Donations</h2><p id="donation-desc" style="font-size: 0.95rem; font-weight: 400; margin-top: 0.5rem; margin-bottom: 1.5rem;">You can support this project by donating cryptocurrency to the addresses below. Every donation helps keep this site ad-free and independent!</p>
 <div class="card">
 <div class="title">Bitcoin</div>
-<div class="address-container" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:0.5rem;">
-<div class="address" style="background:#2b2b44;padding:0.5rem;border-radius:6px;overflow-wrap:break-word;font-weight:600;">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</div>
-<a href="#" onclick="copyToClipboard('bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd', this)" style="padding:6px 10px;background-color:#ffd700;color:#000;border-radius:6px;font-weight:bold;text-decoration:none;">Copy</a>
+<div class="address-container" style="margin-top:0.5rem;">
+<a class="address" href="#" onclick="copyToClipboard('bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd', this)" style="background:#2b2b44;padding:0.5rem;border-radius:6px;overflow-wrap:break-word;font-weight:600;display:inline-block;text-decoration:none;color:white;">
+      bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd
+    </a>
 </div>
 </div>
-
 <div class="card">
 <div class="title">Ethereum</div>
-<div class="address-container" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:0.5rem;">
-<div class="address" style="background:#2b2b44;padding:0.5rem;border-radius:6px;overflow-wrap:break-word;font-weight:600;">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</div>
-<a href="#" onclick="copyToClipboard('0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f', this)" style="padding:6px 10px;background-color:#ffd700;color:#000;border-radius:6px;font-weight:bold;text-decoration:none;">Copy</a>
+<div class="address-container" style="margin-top:0.5rem;">
+<a class="address" href="#" onclick="copyToClipboard('0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f', this)" style="background:#2b2b44;padding:0.5rem;border-radius:6px;overflow-wrap:break-word;font-weight:600;display:inline-block;text-decoration:none;color:white;">
+      0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f
+    </a>
 </div>
 </div>
-
 <div class="card">
 <div class="title">Solana</div>
-<div class="address-container" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:0.5rem;">
-<div class="address" style="background:#2b2b44;padding:0.5rem;border-radius:6px;overflow-wrap:break-word;font-weight:600;">J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</div>
-<a href="#" onclick="copyToClipboard('J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL', this)" style="padding:6px 10px;background-color:#ffd700;color:#000;border-radius:6px;font-weight:bold;text-decoration:none;">Copy</a>
+<div class="address-container" style="margin-top:0.5rem;">
+<a class="address" href="#" onclick="copyToClipboard('J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL', this)" style="background:#2b2b44;padding:0.5rem;border-radius:6px;overflow-wrap:break-word;font-weight:600;display:inline-block;text-decoration:none;color:white;">
+      J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL
+    </a>
 </div>
 </div>
 </div>
@@ -436,9 +441,65 @@ document.getElementById("chatInput").addEventListener("keypress", function(e) {
   }
 });
 </script>
-<footer style="text-align:center; padding: 2rem 1rem 1rem; font-size: 0.85rem; opacity: 0.8;">
-<p>This site may contain affiliate links. If you use them, we may receive a commission at no extra cost to you.</p>
-<p>The information provided on this website is for informational purposes only and does not constitute financial advice.</p>
-</footer>
-</div></body>
+<footer id="footer-text" style="text-align:center; padding: 2rem 1rem 1rem; font-size: 0.85rem; opacity: 0.8;">This site may contain affiliate links. If you use them, we may receive a commission at no extra cost to you. The information on this website is for informational purposes only and does not constitute financial advice.</footer>
+</div><script>
+function copyToClipboard(text, element) {
+  navigator.clipboard.writeText(text).then(() => {
+    const original = element.innerText;
+    element.innerText = 'Copied!';
+    setTimeout(() => {
+      element.innerText = original;
+    }, 1200);
+  });
+}
+</script><script>
+document.getElementById("languageSelect").addEventListener("change", function() {
+  alert("Language switching will be implemented here.");
+});
+</script><script>
+const translations = {
+  en: {
+    donations: "Donations",
+    donationDesc: "You can support this project by donating cryptocurrency to the addresses below. Every donation helps keep this site ad-free and independent!",
+    footer: "This site may contain affiliate links. If you use them, we may receive a commission at no extra cost to you. The information on this website is for informational purposes only and does not constitute financial advice."
+  },
+  fi: {
+    donations: "Lahjoitukset",
+    donationDesc: "Voit tukea projektia lahjoittamalla kryptovaluuttaa alla oleviin osoitteisiin. Jokainen lahjoitus auttaa pitämään sivuston mainoksettomana ja itsenäisenä!",
+    footer: "Tämä sivusto voi sisältää kumppanuuslinkkejä. Jos käytät niitä, saatamme saada komission ilman lisäkustannuksia sinulle. Sivuston tiedot eivät ole taloudellista neuvontaa."
+  },
+  sv: {
+    donations: "Donationer",
+    donationDesc: "Du kan stödja projektet genom att donera kryptovaluta till adresserna nedan. Varje donation hjälper till att hålla sidan annonsfri och oberoende!",
+    footer: "Denna webbplats kan innehålla affiliate-länkar. Om du använder dem kan vi få provision utan extra kostnad för dig. Informationen är inte finansiell rådgivning."
+  },
+  es: {
+    donations: "Donaciones",
+    donationDesc: "Puedes apoyar este proyecto donando criptomonedas a las direcciones de abajo. ¡Cada donación ayuda a mantener este sitio sin anuncios e independiente!",
+    footer: "Este sitio puede contener enlaces de afiliados. Si los usas, podemos recibir una comisión sin costo adicional para ti. La información es solo informativa, no asesoramiento financiero."
+  },
+  ru: {
+    donations: "Пожертвования",
+    donationDesc: "Вы можете поддержать проект, отправив криптовалюту на указанные ниже адреса. Каждое пожертвование помогает сохранить сайт без рекламы и независимым!",
+    footer: "Этот сайт может содержать партнерские ссылки. Используя их, мы можем получить комиссию без дополнительных затрат для вас. Информация не является финансовой консультацией."
+  },
+  de: {
+    donations: "Spenden",
+    donationDesc: "Sie können dieses Projekt unterstützen, indem Sie Kryptowährungen an die untenstehenden Adressen spenden. Jede Spende hilft, die Seite werbefrei und unabhängig zu halten!",
+    footer: "Diese Website kann Affiliate-Links enthalten. Wenn Sie diese nutzen, erhalten wir möglicherweise eine Provision – ohne zusätzliche Kosten für Sie. Die Informationen stellen keine Finanzberatung dar."
+  },
+  et: {
+    donations: "Annetused",
+    donationDesc: "Saad seda projekti toetada annetades krüptoraha allolevatele aadressidele. Iga annetus aitab hoida saidi reklaamivabana ja iseseisvana!",
+    footer: "See veebisait võib sisaldada partnerluslinke. Kui kasutad neid, võime saada vahendustasu ilma lisakuludeta. Teave on ainult informatiivne, mitte finantsnõuanne."
+  }
+};
+
+document.getElementById("languageSelect").addEventListener("change", function() {
+  const lang = this.value;
+  document.querySelector("h2").innerText = translations[lang].donations;
+  document.getElementById("donation-desc").innerText = translations[lang].donationDesc;
+  document.getElementById("footer-text").innerText = translations[lang].footer;
+});
+</script></body>
 </html>
