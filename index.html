@@ -1,365 +1,197 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MyCryptoHub</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    html, body {
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      height: 100%;
-      font-family: 'Inter', sans-serif;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: url("background.jpg") no-repeat center center;
+      background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
-      background-color: black;
-      z-index: -1;
+      color: white;
     }
     .container {
       max-width: 960px;
-      margin: 80px auto;
+      margin: 2rem auto;
       padding: 1rem;
-      background-color: rgba(0, 0, 0, 0.6);
-      border-radius: 16px;
-      color: white;
-    }
-    .lang-select {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      z-index: 2;
-    }
-    select {
-      padding: 0.5rem;
-      font-size: 1rem;
-      border-radius: 6px;
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 12px;
     }
     .section {
-      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
     .card {
       border-radius: 12px;
       padding: 1rem;
-      margin-bottom: 1.5rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      margin-bottom: 1rem;
     }
     .card img {
       height: 40px;
-      vertical-align: middle;
+      margin-bottom: 8px;
+      display: block;
     }
     .title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: bold;
     }
     .desc {
       font-size: 0.95rem;
-      margin-bottom: 0.5rem;
+      margin: 0.5rem 0;
     }
     .link {
       color: #ffd700;
       font-weight: bold;
       text-decoration: none;
     }
-    
-.address-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 0.5rem;
-}
-.copy-btn {
-  padding: 5px 10px;
-  background-color: #ffd700;
-  color: #000;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.copy-btn:hover {
-  background-color: #ffcc00;
-}
-
-.address {
+    .qr {
+      width: 160px;
+      height: 160px;
+      background: white;
+      padding: 10px;
+      border-radius: 12px;
+    }
+    .qr-container {
+      background: white;
+      display: inline-block;
+      border-radius: 10px;
+      margin-top: 10px;
+      width: 170px;
+      height: 170px;
+      padding: 5px;
+    }
+    .address-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+    .copy-btn {
+      padding: 5px 10px;
+      background-color: #ffd700;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .address {
       background: #2b2b44;
       padding: 0.5rem;
       border-radius: 6px;
       overflow-wrap: break-word;
-      margin-top: 0.5rem;
+      font-weight: 600;
     }
-    
-.qr {
-  width: 120px;
-  height: 120px;
-  background: white;
-  padding: 10px;
-  border-radius: 12px;
-  object-fit: contain;
-}
-.card img.qr {
-  width: 120px;
-  height: 120px;
-  background: white;
-  padding: 10px;
-  border-radius: 12px;
-  object-fit: contain;
-}
-
-  
-html {
-  scroll-behavior: smooth;
-}
-#back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #ffd700;
-  color: #000;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  display: none;
-  z-index: 100;
-}
-#back-to-top:hover {
-  background: #ffcc00;
-}
-
-.crypto-ticker {
-  width: 100%;
-  background-color: #0d0d1a;
-  overflow: hidden;
-  white-space: nowrap;
-  border-bottom: 2px solid #111;
-  padding: 0.5rem 0;
-}
-.ticker-content {
-  display: inline-block;
-  padding-left: 100%;
-  animation: ticker-scroll 30s linear infinite;
-}
-.ticker-content span {
-  display: inline-block;
-  margin: 0 2rem;
-  color: #fff;
-  font-weight: 600;
-}
-.ticker-content span:before {
-  content: "•";
-  margin-right: 0.5rem;
-  color: #ffd700;
-}
-@keyframes ticker-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-
-
-.news-ticker-top {
-  background-color: #0d0d1a;
-  color: #ffd700;
-  font-weight: bold;
-  padding: 0.8rem;
-  text-align: center;
-  font-size: 0.95rem;
-  border-bottom: 2px solid #222;
-}
-#news-ticker-text a {
-  color: #ffd700;
-  text-decoration: none;
-}
-#news-ticker-text a:hover {
-  text-decoration: underline;
-}
-
-
-html, body {
-  overflow-x: hidden;
-}
-.container {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-.qr {
-  width: 120px;
-  height: 120px;
-  background: white;
-  padding: 10px;
-  border-radius: 12px;
-  object-fit: contain;
-}
-.card, .address {
-  overflow-wrap: break-word;
-  max-width: 100%;
-}
-
-
-
-
-.qr-container {
-  background: white;
-  display: inline-block;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  margin-top: 10px;
-  width: 130px;
-  height: 130px;
-  overflow: hidden;
-}
-.qr {
-  width: 120px;
-  height: 120px;
-  background: white;
-  padding: 10px;
-  border-radius: 12px;
-  object-fit: contain;
-}
-
-.address {
-  font-weight: 600;
-}
-
-
-/* Logojen yhtenäinen koko ja tyyli */
-.card img {
-  height: 50px;
-  width: 50px;
-  object-fit: contain;
-  background: white;
-  border-radius: 10px;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-
-</style>
+    input[type="text"] {
+      padding: 10px;
+      width: 80%;
+      max-width: 400px;
+      margin: 1rem auto;
+      display: block;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    #chatbox {
+      background: rgba(0, 0, 0, 0.85);
+      border-radius: 16px;
+      padding: 10px;
+      width: 280px;
+      height: 360px;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      color: white;
+      margin-top: 10px;
+    }
+    #chatReply {
+      background: #ffd700;
+      color: #000;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-size: 14px;
+      max-width: 90%;
+      align-self: flex-start;
+    }
+  </style>
 </head>
 <body>
 
+<div class="container">
 
+  <h1>Welcome to MyCryptoHub</h1>
+  <p>The digital revolution began with Bitcoin. It introduced decentralized money, inspired powerful blockchain platforms like Ethereum and Solana, and paved the way for the rise of AI-powered finance.</p>
 
+  <!-- Hakukenttä -->
+  <input type="text" id="searchInput" placeholder="Search wallets, exchanges...">
 
-<div class="news-ticker-top">
-  <div id="news-ticker-text">Loading latest news...</div>
-</div>
-
-
-<div class="crypto-ticker">
-  <div class="ticker-content">
-    <span>BTC: +2.34%</span>
-    <span>ETH: -1.12%</span>
-    <span>SOL: +5.01%</span>
-    <span>BNB: -0.45%</span>
-    <span>XRP: +1.87%</span>
-    <span>ADA: +0.76%</span>
-    <span>AVAX: +4.20%</span>
-    <span>DOT: -0.98%</span>
-    <span>DOGE: +3.12%</span>
-    <span>LINK: +1.50%</span>
+  <div class="section">
+    <h2>Exchanges</h2>
+    <div class="card"><img src="binance.png" alt="Binance" /><div class="title">Binance</div><div class="desc">World's largest crypto exchange by volume.</div><a href="#" class="link">Join Binance →</a></div>
+    <div class="card"><img src="bybit.png" alt="Bybit" /><div class="title">Bybit</div><div class="desc">Fast-growing crypto exchange with derivatives & spot trading.</div><a href="#" class="link">Join Bybit →</a></div>
+    <div class="card"><img src="coinmotion.png" alt="Coinmotion" /><div class="title">Coinmotion</div><div class="desc">Finnish crypto platform with bank-level regulation.</div><a href="#" class="link">Join Coinmotion →</a></div>
   </div>
-</div>
 
-  
-  <div class="container">
-    
-<p id="intro-text" style="font-size:1.05rem; margin-bottom: 1rem;">
-  The digital revolution began with Bitcoin.<br>
-  It introduced decentralized money, inspired powerful blockchain platforms like Ethereum and Solana, and paved the way for the rise of AI-powered finance.
-</p>
+  <div class="section">
+    <h2>Wallets</h2>
+    <div class="card"><img src="ledger.png" alt="Ledger" /><div class="title">Ledger</div><div class="desc">Hardware wallet for secure crypto storage.</div><a href="#" class="link">Buy Ledger →</a></div>
+    <div class="card"><img src="trezor.png" alt="Trezor" /><div class="title">Trezor</div><div class="desc">Open-source cold wallet for advanced users.</div><a href="#" class="link">Buy Trezor →</a></div>
+    <div class="card"><img src="metamask.png" alt="MetaMask" /><div class="title">MetaMask</div><div class="desc">Popular Ethereum wallet for DeFi & NFTs.</div><a href="#" class="link">Get MetaMask →</a></div>
+  </div>
 
-<h1 id="main-title">The Future of Cryptocurrencies and Tokenization</h1>
-    <p id="main-text">Bitcoin changed how we think about money. It started a revolution that enabled Ethereum, NFTs, DeFi, and more.</p>
-    
-    <div class="section">
-      <h2>Exchanges</h2>
-      <div class="card"><img src="binance.png" alt="Binance" /><div class="title">Binance</div><div class="desc"><span id="desc-binance">World's largest crypto exchange by volume.</span></div><a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_A3YU5" class="link" target="_blank">Join Binance →</a></div>
-      <div class="card"><img src="bybit.png" alt="Bybit" /><div class="title">Bybit</div><div class="desc"><span id="desc-bybit">Fast-growing crypto exchange with derivatives & spot trading.</span></div><a href="https://www.bybit.com/invite?ref=EQ69EL" class="link" target="_blank">Join Bybit →</a></div>
-      <div class="card"><img src="coinmotion.png" alt="Coinmotion" /><div class="title">Coinmotion</div><div class="desc"><span id="desc-coinmotion">Finnish crypto platform with bank-level regulation.</span></div><a href="https://app.coinmotion.com/fi/register/signup?referral_code=DAWL3TJGXHKJPUK9KPWP" class="link" target="_blank">Join Coinmotion →</a></div>
-      <div class="card"><img src="crypto.png" alt="Crypto.com" /><div class="title">Crypto.com</div><div class="desc"><span id="desc-crypto">Popular exchange and Visa card for crypto spending.</span></div><a href="https://crypto.com/app/nrmm4uzm29" class="link" target="_blank">Join Crypto.com →</a></div>
-      <div class="card"><img src="jupiter.png" alt="Jupiter Wallet" /><div class="title">Jupiter Wallet</div><div class="desc"><span id="desc-jupiter">Multi-chain wallet powered by Jupiter DEX aggregator.</span></div><a href="https://jup.ag/invite/BRvVHduEhaiG" class="link" target="_blank">Get Jupiter →</a></div>
+  <div class="section">
+    <h2>Donations</h2>
+    <p>You can support the project by donating crypto to the addresses below. Every donation helps keep the site ad-free and independent!</p>
+
+    <div class="card">
+      <div class="title">Bitcoin</div>
+      <div class="address-container">
+        <div class="address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</div>
+        <button onclick="copyToClipboard('bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd', this)" class="copy-btn">Copy</button>
+      </div>
+      <div class="qr-container"><img src="btc_qr_square.png" class="qr" alt="Bitcoin QR" /></div>
     </div>
 
-    <div class="section">
-      <h2>Wallets</h2>
-      <div class="card"><img src="ledger.png" alt="Ledger" /><div class="title">Ledger</div><div class="desc"><span id="desc-ledger">Hardware wallet for secure crypto storage.</span></div><a href="https://shop.ledger.com/?r=c97ab0683c61" class="link" target="_blank">Buy Ledger →</a></div>
-      <div class="card"><img src="trezor.png" alt="Trezor" /><div class="title">Trezor</div><div class="desc"><span id="desc-trezor">Open-source cold wallet for advanced users.</span></div><a href="https://trezor.io/?a=mchub" class="link" target="_blank">Buy Trezor →</a></div>
-      <div class="card"><img src="metamask.png" alt="MetaMask" /><div class="title">MetaMask</div><div class="desc"><span id="desc-metamask">Popular Ethereum wallet for DeFi & NFTs.</span></div><a href="https://metamask.io/" class="link" target="_blank">Get MetaMask →</a></div>
-      <div class="card"><img src="phantom.png" alt="Phantom" /><div class="title">Phantom Wallet</div><div class="desc"><span id="desc-phantom">Easy-to-use Solana wallet with staking & NFTs.</span></div><a href="https://phantom.app/" class="link" target="_blank">Get Phantom →</a></div>
-      <div class="card"><img src="solflare.png" alt="Solflare" /><div class="title">Solflare Wallet</div><div class="desc"><span id="desc-solflare">Secure Solana wallet with mobile and browser extension.</span></div><a href="https://solflare.com/" class="link" target="_blank">Get Solflare →</a></div>
+    <div class="card">
+      <div class="title">Ethereum</div>
+      <div class="address-container">
+        <div class="address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</div>
+        <button onclick="copyToClipboard('0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f', this)" class="copy-btn">Copy</button>
+      </div>
+      <div class="qr-container"><img src="eth_qr_square.png" class="qr" alt="Ethereum QR" /></div>
     </div>
 
-    <div class="section">
-      <h2>Donations</h2>
-      
-<div class="card">
-  <div class="title">Bitcoin</div>
-  <div class="address-container">
-    <div class="address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</div>
-    <button onclick="copyToClipboard('bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd', this)" class="copy-btn">Copy</button>
-  </div>
-  <div class="qr-container"><img src="btc_qr_square.png" class="qr" alt="Bitcoin QR" />
-</div>
-
-      
-<div class="card">
-  <div class="title">Ethereum</div>
-  <div class="address-container">
-    <div class="address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</div>
-    <button onclick="copyToClipboard('0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f', this)" class="copy-btn">Copy</button>
-  </div>
-  <div class="qr-container"><img src="eth_qr_square.png" class="qr" alt="Ethereum QR" />
-</div>
-
-      
-<div class="card">
-  <div class="title">Solana</div>
-  <div class="address-container">
-    <div class="address">J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</div>
-    <button onclick="copyToClipboard('J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL', this)" class="copy-btn">Copy</button>
-  </div>
-  <div class="qr-container"><img src="sol_qr_square.png" class="qr" alt="Solana QR" />
-</div>
-
+    <div class="card">
+      <div class="title">Solana</div>
+      <div class="address-container">
+        <div class="address">J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</div>
+        <button onclick="copyToClipboard('J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL', this)" class="copy-btn">Copy</button>
+      </div>
+      <div class="qr-container"><img src="sol_qr_square.png" class="qr" alt="Solana QR" /></div>
     </div>
   </div>
+</div>
+
+<!-- Chatbot -->
+<div style="position:fixed;bottom:20px;right:20px;z-index:9999;">
+  <button onclick="toggleChat()" style="background:#ffd700;border:none;padding:10px 16px;border-radius:20px;font-weight:600;">Chat</button>
+  <div id="chatbox">
+    <b>Ask me:</b><br>
+    <ul style="padding-left:20px; font-size:14px;">
+      <li>What is Bitcoin?</li>
+      <li>How do I store crypto?</li>
+      <li>Best wallet?</li>
+    </ul>
+    <input id="chatInput" type="text" placeholder="Type here..." style="width:100%;padding:8px;margin-top:10px;border-radius:6px;border:1px solid #ccc;">
+    <div id="chatReply"></div>
   </div>
 </div>
-<script>
-  
-  localStorage.setItem("lang", lang);
 
-  document.getElementById("intro-text").innerText = translations.intro[lang];
-}
-
-
-const setDescriptions = (lang) => {
-  const t = translations;
-  document.getElementById("desc-binance").innerText = t.exchanges.binance[lang];
-  document.getElementById("desc-bybit").innerText = t.exchanges.bybit[lang];
-  document.getElementById("desc-coinmotion").innerText = t.exchanges.coinmotion[lang];
-  document.getElementById("desc-crypto").innerText = t.exchanges.crypto[lang];
-  document.getElementById("desc-jupiter").innerText = t.exchanges.jupiter[lang];
-  document.getElementById("desc-ledger").innerText = t.wallets.ledger[lang];
-  document.getElementById("desc-trezor").innerText = t.wallets.trezor[lang];
-  document.getElementById("desc-metamask").innerText = t.wallets.metamask[lang];
-  document.getElementById("desc-phantom").innerText = t.wallets.phantom[lang];
-  document.getElementById("desc-solflare").innerText = t.wallets.solflare[lang];
-};
-
-
-);
-
-</script>
 <script>
 function copyToClipboard(text, button) {
   navigator.clipboard.writeText(text).then(() => {
@@ -369,82 +201,9 @@ function copyToClipboard(text, button) {
     }, 1500);
   });
 }
-
-const setDescriptions = (lang) => {
-  const t = translations;
-  document.getElementById("desc-binance").innerText = t.exchanges.binance[lang];
-  document.getElementById("desc-bybit").innerText = t.exchanges.bybit[lang];
-  document.getElementById("desc-coinmotion").innerText = t.exchanges.coinmotion[lang];
-  document.getElementById("desc-crypto").innerText = t.exchanges.crypto[lang];
-  document.getElementById("desc-jupiter").innerText = t.exchanges.jupiter[lang];
-  document.getElementById("desc-ledger").innerText = t.wallets.ledger[lang];
-  document.getElementById("desc-trezor").innerText = t.wallets.trezor[lang];
-  document.getElementById("desc-metamask").innerText = t.wallets.metamask[lang];
-  document.getElementById("desc-phantom").innerText = t.wallets.phantom[lang];
-  document.getElementById("desc-solflare").innerText = t.wallets.solflare[lang];
-};
-
-
-);
-
-</script>
-
-<div id="back-to-top" onclick="scrollToTop()">Top ↑</div>
-<script>
-  const topBtn = document.getElementById("back-to-top");
-  window.addEventListener("scroll", () => {
-    topBtn.style.display = window.scrollY > 400 ? "block" : "none";
-  });
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-);
-
-</script>
-
-<script>
-  let newsIndex = 0;
-  let newsHeadlines = [];
-
-  document.addEventListener("DOMContentLoaded", () => {
-    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss")
-      .then(response => response.json())
-      .then(data => {
-        newsHeadlines = data.items.slice(0, 10).map(item => ({ title: item.title, link: item.link }));
-        updateTicker();
-        setInterval(updateTicker, 5000);
-      });
-  });
-
-  function updateTicker() {
-    const ticker = document.getElementById("news-ticker-text");
-    if (!newsHeadlines.length) return;
-    const { title, link } = newsHeadlines[newsIndex];
-    ticker.innerHTML = `<a href="${link}" target="_blank">${title}</a>`;
-    newsIndex = (newsIndex + 1) % newsHeadlines.length;
-  }
-</script>
-
-
-<!-- Simple Chatbot -->
-<div id="chatbot-container" style="position:fixed;bottom:20px;right:20px;z-index:9999;">
-  <button onclick="toggleChat()" style="background:#ffd700;border:none;padding:10px 16px;border-radius:20px;font-weight:600;">Chat</button>
-  <div id="chatbox" style="display:none;background:rgba(0, 0, 0, 0.85);color:white;width:260px;height:320px;padding:10px;border-radius:10px;margin-top:10px;">
-    <b>Ask me:</b><br>
-    <ul style="padding-left:20px; font-size:14px;">
-      <li>What is Bitcoin?</li>
-      <li>How do I store crypto?</li>
-      <li>Best wallet?</li>
-    </ul>
-    <input id="chatInput" type="text" placeholder="Type here..." style="width:100%;padding:8px;margin-top:10px;border-radius:6px;border:1px solid #ccc;">
-    <div id="chatReply" style="font-size:14px;margin-top:10px;"></div>
-  </div>
-</div>
-<script>
 function toggleChat() {
   const box = document.getElementById('chatbox');
-  box.style.display = box.style.display === 'none' ? 'block' : 'none';
+  box.style.display = box.style.display === 'none' ? 'flex' : 'none';
 }
 document.getElementById("chatInput").addEventListener("keypress", function(e) {
   if (e.key === "Enter") {
@@ -456,30 +215,12 @@ document.getElementById("chatInput").addEventListener("keypress", function(e) {
     document.getElementById("chatReply").innerText = reply;
   }
 });
-</script>
-
-
-<!-- Chatbot -->
-<script>
-  const chatBtn = document.createElement("button");
-  chatBtn.innerText = "Chat";
-  chatBtn.style.position = "fixed";
-  chatBtn.style.bottom = "20px";
-  chatBtn.style.right = "20px";
-  chatBtn.style.zIndex = "999";
-  chatBtn.style.padding = "10px 20px";
-  chatBtn.style.background = "#ffd700";
-  chatBtn.style.color = "black";
-  chatBtn.style.border = "none";
-  chatBtn.style.borderRadius = "8px";
-  chatBtn.style.fontWeight = "bold";
-  document.body.appendChild(chatBtn);
-
-  chatBtn.onclick = () => {
-    const msg = prompt("Ask me something about crypto:");
-    if (!msg) return;
-    alert("This is a simple demo. I recommend visiting CoinMarketCap or CoinGecko for live data.");
-  };
+document.getElementById('searchInput').addEventListener('input', function () {
+  const filter = this.value.toLowerCase();
+  document.querySelectorAll('.card').forEach(card => {
+    card.style.display = card.innerText.toLowerCase().includes(filter) ? 'block' : 'none';
+  });
+});
 </script>
 
 </body>
