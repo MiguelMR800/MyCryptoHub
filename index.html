@@ -2,66 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MyCryptoHub</title>
   <style>
     body {
-      background-color: #0d0f1a;
-      font-family: Arial, sans-serif;
-      color: white;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0b0d17;
+      color: #ffffff;
     }
     header {
       background-color: #111;
-      padding: 20px;
       text-align: center;
+      padding: 1rem 0;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #fff;
+    }
+    header p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #ccc;
     }
     nav {
       display: flex;
       justify-content: center;
-      background-color: #222;
-      flex-wrap: wrap;
+      gap: 1rem;
+      background-color: #1c1c1c;
+      padding: 0.75rem 0;
     }
     nav a {
-      padding: 14px 20px;
-      text-decoration: none;
-      color: #ffc107;
+      color: gold;
       font-weight: bold;
-    }
-    nav a:hover {
-      background-color: #333;
+      text-decoration: none;
     }
     section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+      padding: 2rem;
+      background-color: #0b0d17;
     }
-    h2 {
-      color: #ffc107;
+    section h2 {
+      color: gold;
     }
-    .highlight {
-      color: #ffc107;
+    section p, section ul {
+      color: #ddd;
+    }
+    section ul {
+      padding-left: 1.2rem;
+    }
+    section ul li a {
+      color: gold;
     }
     footer {
-      background-color: #111;
-      padding: 20px;
       text-align: center;
-      color: #aaa;
-      font-size: 14px;
+      font-size: 0.8rem;
+      padding: 1rem;
+      background-color: #111;
+      color: #999;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>MyCryptoHub</h1>
     <p>Your gateway to exchanges, wallets, DEXs, meme casinos and more</p>
   </header>
-
   <nav>
     <a href="#exchanges">Exchanges</a>
-    <a href="#dexs">DEX Platforms</a>
+    <a href="#dex">DEX Platforms</a>
     <a href="#casinos">Meme Casinos</a>
     <a href="#tools">Crypto Tools</a>
     <a href="#bridges">Blockchain Bridges</a>
@@ -69,60 +78,37 @@
 
   <section id="exchanges">
     <h2>Centralized Exchanges</h2>
-    <p>
-      Centralized crypto exchanges offer fast trading, <span class="highlight">low fees</span>, and useful tools like <span class="highlight">trading bots</span>.
-      However, your private keys are managed by the platform, meaning you don’t directly control your funds.
-    </p>
+    <p>Centralized crypto exchanges offer fast trading, low fees, and useful tools like <a href="#">trading bots</a>. However, your private keys are managed by the platform, meaning you don’t directly control your funds.</p>
   </section>
 
-  <section id="dexs">
+  <section id="dex">
     <h2>Decentralized Exchanges (DEXs)</h2>
-    <p>
-      DEX platforms such as <a class="highlight" href="https://jup.ag" target="_blank">Jupiter</a>,
-      <a class="highlight" href="https://www.kamino.finance" target="_blank">Kamino</a>,
-      <a class="highlight" href="https://www.meteora.ag" target="_blank">Meteora</a>,
-      <a class="highlight" href="https://www.drift.trade" target="_blank">Drift</a> allow peer-to-peer trading without intermediaries.
-      These platforms operate on smart contracts and are supported by wallets like Phantom or MetaMask.
-    </p>
+    <p>DEX platforms such as <a href="https://jup.ag" target="_blank">Jupiter</a>, <a href="https://app.kamino.finance" target="_blank">Kamino</a>, <a href="https://meteora.ag" target="_blank">Meteora</a>, and <a href="https://app.drift.trade" target="_blank">Drift</a> allow peer-to-peer trading without intermediaries. These platforms operate on smart contracts and are supported by wallets like Phantom or MetaMask.</p>
   </section>
 
   <section id="casinos">
     <h2>Meme Casinos</h2>
-    <p>
-      Explore fun and high-risk meme-themed crypto casinos like
-      <a class="highlight" href="https://pump.fun" target="_blank">Pump.fun</a> and
-      <a class="highlight" href="https://moonshot.fun" target="_blank">Moonshot</a>.
-      These platforms combine memes, community tokens, and speculative excitement into a unique gambling experience.
-    </p>
+    <p>Explore fun and high-risk meme-themed crypto casinos like <a href="https://pump.fun" target="_blank">Pump.fun</a> and <a href="https://moonshot.bet" target="_blank">Moonshot</a>. These platforms combine memes, community tokens, and speculative excitement into a unique gambling experience.</p>
   </section>
 
   <section id="tools">
     <h2>Crypto Tools and Market Trackers</h2>
-    <p>
-      <span class="highlight">CoinMarketCap</span>, <span class="highlight">CoinGecko</span>,
-      <span class="highlight">CoinStats</span>, <span class="highlight">TradingView</span>, and
-      <span class="highlight">Banter Bubbles</span> are essential tools for following price movements,
-      discovering trending tokens, and performing technical analysis.
-    </p>
+    <p><a href="https://coinmarketcap.com" target="_blank" style="color: gold;">CoinMarketCap</a>, <a href="https://coingecko.com" target="_blank" style="color: gold;">CoinGecko</a>, <a href="https://coinstats.app" target="_blank" style="color: gold;">CoinStats</a>, <a href="https://tradingview.com" target="_blank" style="color: gold;">TradingView</a>, and <a href="https://banterbubbles.com" target="_blank" style="color: gold;">Banter Bubbles</a> are essential tools for following price movements, discovering trending tokens, and performing technical analysis.</p>
   </section>
 
   <section id="bridges">
     <h2>Blockchain Bridges</h2>
-    <p>
-      Blockchain bridges enable secure cross-chain transactions and liquidity transfers. They connect ecosystems like Ethereum, Solana, and Layer 2s.
-      Popular options include:
-      <ul>
-        <li><a class="highlight" href="https://www.portalbridge.com/" target="_blank">Wormhole</a></li>
-        <li><a class="highlight" href="https://debridge.finance/" target="_blank">deBridge</a></li>
-        <li><a class="highlight" href="https://jumper.exchange/" target="_blank">Jumper</a></li>
-        <li><a class="highlight" href="https://layerzero.network/" target="_blank">LayerZero</a></li>
-      </ul>
-    </p>
+    <p>Blockchain bridges enable secure cross-chain transactions and liquidity transfers. They connect ecosystems like Ethereum, Solana, and Layer 2s. These technologies have revolutionized how assets move between blockchains, enhancing interoperability and decentralization.</p>
+    <ul>
+      <li><a href="https://wormhole.com" target="_blank">Wormhole</a></li>
+      <li><a href="https://debridge.finance" target="_blank">deBridge</a></li>
+      <li><a href="https://jumper.exchange" target="_blank">Jumper</a></li>
+      <li><a href="https://layerzero.network" target="_blank">LayerZero</a></li>
+    </ul>
   </section>
 
   <footer>
-    <p>&copy; 2025 MyCryptoHub. All rights reserved.</p>
+    &copy; 2025 MyCryptoHub. All rights reserved.
   </footer>
-
 </body>
 </html>
