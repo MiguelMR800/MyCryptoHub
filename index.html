@@ -2,78 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MyCryptoHub</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
-    header {
-      text-align: center;
-      padding: 2rem 1rem 0;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #f2f2f2;
-    }
-    p {
-      font-size: 1.1rem;
-      color: #ccc;
-    }
-    h2 {
-      text-align: center;
-      color: gold;
-      margin-top: 2rem;
-    }
-    .card-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      padding: 1rem;
-    }
-    .card {
-      background: rgba(0, 0, 0, 0.75);
-      border-radius: 1rem;
-      padding: 1rem;
-      text-align: center;
-      width: 140px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
-    }
-    .card img {
-      width: 48px;
-      height: 48px;
-      margin-bottom: 0.5rem;
-    }
-    .card span {
-      display: block;
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      background: rgba(0, 0, 0, 0.8);
-      color: #aaa;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
-<body>
+<body style="background-image: url('background.jpg'); background-size: cover; background-attachment: fixed;">
   <header>
     <h1>MyCryptoHub</h1>
     <p>Explore exchanges, wallets, tools & more</p>
@@ -82,53 +15,78 @@
   <section>
     <h2>Exchanges</h2>
     <div class="card-grid">
-      <a href="https://partner.bybit.com/b/miguel800" target="_blank" class="card">
-        <img src="bybit.png" alt="Bybit" /><span>Bybit</span>
-      </a>
-      <a href="https://accounts.binance.com/en/register?ref=12345678" target="_blank" class="card">
-        <img src="binance.png" alt="Binance" /><span>Binance</span>
-      </a>
-      <a href="https://coinmotion.com?firef=AFFILIATE_ID" target="_blank" class="card">
-        <img src="coinmotion.png" alt="Coinmotion" /><span>Coinmotion</span>
-      </a>
-      <a href="https://crypto.com/exch/miguel800" target="_blank" class="card">
-        <img src="crypto.png" alt="Crypto.com" /><span>Crypto.com</span>
-      </a>
+      <a href="https://partner.bybit.com/b/miguel800" target="_blank" class="card"><img src="bybit.png"><span>Bybit</span></a>
+      <a href="https://accounts.binance.com/en/register?ref=12345678" target="_blank" class="card"><img src="binance.png"><span>Binance</span></a>
+      <a href="https://coinmotion.com?ref=AFFILIATE_ID" target="_blank" class="card"><img src="coinmotion.png"><span>Coinmotion</span></a>
+      <a href="https://crypto.com/exch/miguel800" target="_blank" class="card"><img src="crypto.png"><span>Crypto.com</span></a>
     </div>
   </section>
 
   <section>
     <h2>Hot Wallets</h2>
     <div class="card-grid">
-      <a href="https://phantom.app" target="_blank" class="card">
-        <img src="phantom.png" alt="Phantom" /><span>Phantom</span>
-      </a>
-      <a href="https://solflare.com" target="_blank" class="card">
-        <img src="solflare.png" alt="Solflare" /><span>Solflare</span>
-      </a>
-      <a href="https://metamask.io" target="_blank" class="card">
-        <img src="metamask.png" alt="MetaMask" /><span>MetaMask</span>
-      </a>
-      <a href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank" class="card">
-        <img src="jupiter.png" alt="Jupiter Wallet" /><span>Jupiter Wallet</span>
-      </a>
+      <a href="https://phantom.app" target="_blank" class="card"><img src="phantom.png"><span>Phantom</span></a>
+      <a href="https://solflare.com" target="_blank" class="card"><img src="solflare.png"><span>Solflare</span></a>
+      <a href="https://metamask.io" target="_blank" class="card"><img src="metamask.png"><span>MetaMask</span></a>
+      <a href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank" class="card"><img src="jupiter.png"><span>Jupiter Wallet</span></a>
     </div>
   </section>
 
   <section>
     <h2>Cold Wallets</h2>
     <div class="card-grid">
-      <a href="https://ledger.com" target="_blank" class="card">
-        <img src="ledger.png" alt="Ledger" /><span>Ledger</span>
-      </a>
-      <a href="https://trezor.io" target="_blank" class="card">
-        <img src="trezor.png" alt="Trezor" /><span>Trezor</span>
-      </a>
+      <a href="https://www.ledger.com" target="_blank" class="card"><img src="ledger.png"><span>Ledger</span></a>
+      <a href="https://trezor.io" target="_blank" class="card"><img src="trezor.png"><span>Trezor</span></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>DEX Platforms</h2>
+    <div class="card-grid">
+      <a href="https://jup.ag" target="_blank" class="card"><img src="jupiter.png"><span>Jupiter</span></a>
+      <a href="https://swap.kamino.finance/?ref=miguel800" target="_blank" class="card"><img src="kamino.png"><span>Kamino</span></a>
+      <a href="https://app.drift.trade/ref/miguel800" target="_blank" class="card"><img src="drift.png"><span>Drift</span></a>
+      <a href="https://meteora.ag" target="_blank" class="card"><img src="meteora.png"><span>Meteora</span></a>
+      <a href="https://orca.so" target="_blank" class="card"><img src="orca.png"><span>Orca</span></a>
+      <a href="https://app.marginfi.com/refer/8f3ec3ca-739a-4546-b056-efe38623dccc" target="_blank" class="card"><img src="marginfi.png"><span>Marginfi</span></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Crypto Tools</h2>
+    <div class="card-grid">
+      <a href="https://coinmarketcap.com" target="_blank" class="card"><img src="coinmarketcap.png"><span>CoinMarketCap</span></a>
+      <a href="https://coingecko.com" target="_blank" class="card"><img src="coingecko.png"><span>CoinGecko</span></a>
+      <a href="https://coinstats.app" target="_blank" class="card"><img src="coinstats.png"><span>CoinStats</span></a>
+      <a href="https://www.banterbubbles.com" target="_blank" class="card"><img src="banter.png"><span>Banter Bubbles</span></a>
+      <a href="https://www.tradingview.com" target="_blank" class="card"><img src="tradingview.png"><span>TradingView</span></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Bridging Platforms</h2>
+    <div class="card-grid">
+      <a href="https://wormhole.com" target="_blank" class="card"><img src="wormhole.png"><span>Wormhole</span></a>
+      <a href="https://layerzero.network" target="_blank" class="card"><img src="layerzero.png"><span>LayerZero</span></a>
+      <a href="https://jumper.exchange" target="_blank" class="card"><img src="jumper.png"><span>Jumper Exchange</span></a>
+      <a href="https://debridge.finance" target="_blank" class="card"><img src="debridge.png"><span>deBridge</span></a>
+      <a href="https://www.mayan.finance" target="_blank" class="card"><img src="mayan.png"><span>Mayan Bridge</span></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Support the Project</h2>
+    <div class="donate">
+      <div><img src="btc_qr_square.png"><p><strong>BTC:</strong><br>bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</p></div>
+      <div><img src="eth_qr_square.png"><p><strong>ETH:</strong><br>0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</p></div>
+      <div><img src="sol_qr_square.png"><p><strong>SOL:</strong><br>J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</p></div>
     </div>
   </section>
 
   <footer>
-    © 2025 MyCryptoHub. All rights reserved.
+    <p>© 2025 MyCryptoHub. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
