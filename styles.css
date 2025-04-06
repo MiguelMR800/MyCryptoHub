@@ -1,0 +1,14 @@
+
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  background: url('robot_background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+section { padding: 2rem; }
+.card { background: rgba(0,0,0,0.6); padding: 1rem; margin: 1rem 0; border-radius: 10px; }
+.chatbot { background: rgba(0,0,0,0.7); padding: 1rem; border-radius: 10px; }
+footer { text-align: center; padding: 2rem; background: rgba(0,0,0,0.5); }
+.ticker { background: #000; padding: 10px; color: yellow; font-weight: bold; text-align: center; }
