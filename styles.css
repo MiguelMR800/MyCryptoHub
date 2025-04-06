@@ -1,0 +1,109 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f0f0f0;
+}
+
+.section {
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 20px;
+  border-radius: 12px;
+}
+
+h2 {
+  color: #ffd700;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.card {
+  background: rgba(20, 20, 20, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  width: 160px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(40, 40, 40, 0.9);
+}
+
+.card img {
+  max-width: 60px;
+  margin-bottom: 10px;
+}
+
+.card a {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#top-bar {
+  background: rgba(10, 10, 30, 0.9);
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#news-ticker {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+#donations {
+  text-align: center;
+}
+
+.donation-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.donation-box div {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+}
+
+.donation-box img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#chatbot-bubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #111;
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ffd700;
+}
