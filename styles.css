@@ -1,14 +1,53 @@
-
 body {
-  font-family: Arial, sans-serif;
-  color: white;
+  font-family: sans-serif;
   margin: 0;
-  padding: 0;
-  background: url('robot_background.jpg') no-repeat center center fixed;
+  background: url('background.jpg') no-repeat center center fixed;
   background-size: cover;
+  color: white;
 }
-section { padding: 2rem; }
-.card { background: rgba(0,0,0,0.6); padding: 1rem; margin: 1rem 0; border-radius: 10px; }
-.chatbot { background: rgba(0,0,0,0.7); padding: 1rem; border-radius: 10px; }
-footer { text-align: center; padding: 2rem; background: rgba(0,0,0,0.5); }
-.ticker { background: #000; padding: 10px; color: yellow; font-weight: bold; text-align: center; }
+
+.ticker {
+  background-color: black;
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: bold;
+  color: yellow;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.card-section {
+  padding: 2rem;
+  background: rgba(0,0,0,0.5);
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 0.5rem 0;
+}
+
+a {
+  color: yellow;
+  text-decoration: none;
+}
+
+.chatbot {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(0,0,0,0.8);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0,0,0,0.6);
+  font-size: 0.9rem;
+}
