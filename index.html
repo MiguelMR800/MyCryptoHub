@@ -1,84 +1,99 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MyCryptoHub</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>MyCryptoHub</h1>
-    <p>Explore exchanges, wallets, tools & more</p>
-  </header>
+  <div id="top-bar">
+    <strong>Top 10 Cryptocurrencies - 24h Change</strong><br />
+    <em>Latest News from Cointelegraph...</em>
+  </div>
 
-  <section class="category">
+  <div class="section">
     <h2>Exchanges</h2>
-    <div class="card"><img src="bybit.png" alt="Bybit" /><span>Bybit</span></div>
-    <div class="card"><img src="binance.png" alt="Binance" /><span>Binance</span></div>
-    <div class="card"><img src="coinmotion.png" alt="Coinmotion" /><span>Coinmotion</span></div>
-    <div class="card"><img src="crypto.png" alt="Crypto.com" /><span>Crypto.com</span></div>
-  </section>
+    <div class="card-container">
+      <div class="card"><img src="images/bybit.png"/><a href="#">Bybit</a></div>
+      <div class="card"><img src="images/binance.png"/><a href="#">Binance</a></div>
+      <div class="card"><img src="images/coinmotion.png"/><a href="#">Coinmotion</a></div>
+      <div class="card"><img src="images/crypto.png"/><a href="#">Crypto.com</a></div>
+    </div>
+  </div>
 
-  <section class="category">
+  <div class="section">
     <h2>Hot Wallets</h2>
-    <div class="card"><img src="phantom.png" alt="Phantom" /><span>Phantom</span></div>
-    <div class="card"><img src="solflare.png" alt="Solflare" /><span>Solflare</span></div>
-    <div class="card"><img src="metamask.png" alt="MetaMask" /><span>MetaMask</span></div>
-    <div class="card"><img src="jupiter.png" alt="Jupiter Wallet" /><span>Jupiter Wallet</span></div>
-  </section>
-
-  <section class="category">
+    <div class="card-container">
+      <div class="card"><img src="images/phantom.png"/><a href="#">Phantom</a></div>
+      <div class="card"><img src="images/solflare.png"/><a href="#">Solflare</a></div>
+      <div class="card"><img src="images/metamask.png"/><a href="#">MetaMask</a></div>
+      <div class="card"><img src="images/jupiter.png"/><a href="#">Jupiter Wallet</a></div>
+    </div>
     <h2>Cold Wallets</h2>
-    <div class="card"><img src="ledger.png" alt="Ledger" /><span>Ledger</span></div>
-    <div class="card"><img src="trezor.png" alt="Trezor" /><span>Trezor</span></div>
-  </section>
+    <div class="card-container">
+      <div class="card"><img src="images/ledger.png"/><a href="#">Ledger</a></div>
+      <div class="card"><img src="images/trezor.png"/><a href="#">Trezor</a></div>
+    </div>
+  </div>
 
-  <section class="category">
+  <div class="section">
     <h2>DEX Platforms</h2>
-    <div class="card"><img src="jupiter.png" alt="Jupiter" /><span>Jupiter</span></div>
-    <div class="card"><img src="kamino.png" alt="Kamino" /><span>Kamino</span></div>
-    <div class="card"><img src="drift.png" alt="Drift" /><span>Drift</span></div>
-    <div class="card"><img src="meteora.png" alt="Meteora" /><span>Meteora</span></div>
-    <div class="card"><img src="orca.png" alt="Orca" /><span>Orca</span></div>
-  </section>
+    <div class="card-container">
+      <div class="card"><img src="images/jupiter.png"/><a href="#">Jupiter</a></div>
+      <div class="card"><img src="images/kamino.png"/><a href="#">Kamino</a></div>
+      <div class="card"><img src="images/drift.png"/><a href="#">Drift</a></div>
+      <div class="card"><img src="images/meteora.png"/><a href="#">Meteora</a></div>
+      <div class="card"><img src="images/orca.png"/><a href="#">Orca</a></div>
+    </div>
+  </div>
 
-  <section class="category">
+  <div class="section">
     <h2>Crypto Tools</h2>
-    <div class="card"><img src="coinmarketcap.png" alt="CoinMarketCap" /><span>CoinMarketCap</span></div>
-    <div class="card"><img src="coingecko.png" alt="CoinGecko" /><span>CoinGecko</span></div>
-    <div class="card"><img src="coinstats.png" alt="CoinStats" /><span>CoinStats</span></div>
-    <div class="card"><img src="banter.png" alt="Banter Bubbles" /><span>Banter Bubbles</span></div>
-    <div class="card"><img src="tradingview.png" alt="TradingView" /><span>TradingView</span></div>
-  </section>
+    <div class="card-container">
+      <div class="card"><img src="images/coinmarketcap.png"/><a href="#">CoinMarketCap</a></div>
+      <div class="card"><img src="images/coingecko.png"/><a href="#">CoinGecko</a></div>
+      <div class="card"><img src="images/coinstats.png"/><a href="#">CoinStats</a></div>
+      <div class="card"><img src="images/banter.png"/><a href="#">Banter Bubbles</a></div>
+      <div class="card"><img src="images/tradingview.png"/><a href="#">TradingView</a></div>
+    </div>
+  </div>
 
-  <section class="category">
+  <div class="section">
     <h2>Bridging Platforms</h2>
-    <div class="card"><img src="wormhole.png" alt="Wormhole" /><span>Wormhole</span></div>
-    <div class="card"><img src="layerzero.png" alt="LayerZero" /><span>LayerZero</span></div>
-    <div class="card"><img src="jumper.png" alt="Jumper Exchange" /><span>Jumper Exchange</span></div>
-    <div class="card"><img src="debridge.png" alt="deBridge" /><span>deBridge</span></div>
-    <div class="card"><img src="mayan.png" alt="Mayan Bridge" /><span>Mayan Bridge</span></div>
-  </section>
+    <div class="card-container">
+      <div class="card"><img src="images/wormhole.png"/><a href="#">Wormhole</a></div>
+      <div class="card"><img src="images/layerzero.png"/><a href="#">LayerZero</a></div>
+      <div class="card"><img src="images/jumper.png"/><a href="#">Jumper Exchange</a></div>
+      <div class="card"><img src="images/debridge.png"/><a href="#">deBridge</a></div>
+      <div class="card"><img src="images/mayan.png"/><a href="#">Mayan Bridge</a></div>
+    </div>
+  </div>
 
-  <section class="category">
+  <div class="section" id="donations">
     <h2>Support the Project</h2>
-    <div class="donation">
-      <img src="btc_qr_square.png" alt="BTC QR">
-      <p>BTC: bc1q62s4qjw3mz...</p>
+    <div class="donation-box">
+      <div>
+        <img src="images/btc_qr_square.png"/>
+        <p><strong>BTC:</strong><br/>bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</p>
+      </div>
+      <div>
+        <img src="images/eth_qr_square.png"/>
+        <p><strong>ETH:</strong><br/>0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</p>
+      </div>
+      <div>
+        <img src="images/sol_qr_square.png"/>
+        <p><strong>SOL:</strong><br/>J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</p>
+      </div>
     </div>
-    <div class="donation">
-      <img src="eth_qr_square.png" alt="ETH QR">
-      <p>ETH: 0xF4CCB63eeB...</p>
-    </div>
-    <div class="donation">
-      <img src="sol_qr_square.png" alt="SOL QR">
-      <p>SOL: J1dYiMNf1BgF...</p>
-    </div>
-  </section>
+  </div>
 
   <footer>
-    <p>&copy; 2025 MyCryptoHub. All rights reserved.</p>
+    <p>© 2025 MyCryptoHub. All rights reserved.</p>
   </footer>
+
+  <div id="chatbot-bubble">Ask me anything!</div>
+  <script src="script.js"></script>
 </body>
 </html>
