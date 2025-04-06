@@ -1,1 +1,1 @@
-console.log('Chatbot & data live');
+console.log('MyCryptoHub is ready.');
