@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0a0a23 url('background.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background: url('background.jpg') center center / contain no-repeat fixed;
+  background-color: #000;
   color: white;
 }
 header, section {
