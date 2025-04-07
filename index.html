@@ -1,23 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MyCryptoHub</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <div class="hero">
-    <h1>Welcome to<br>MyCryptoHub</h1>
+  <div id="hero">
+    <h1>Welcome to <br> MyCryptoHub</h1>
     <h2>Top 10 Cryptocurrencies</h2>
-    <div id="top-crypto">BTC, ETH, SOL, XRP, ADA, DOGE, AVAX, LINK, TON, BNB</div>
+    <p>BTC, ETH, SOL, XRP, ADA, DOGE, AVAX, LINK, TON, BNB</p>
     <h2>Latest News</h2>
-    <div id="latest-news">Loading latest news...</div>
+    <p id="news">Loading latest news...</p>
+  </div>
+
+  <div class="section" id="wallets">
+    <h2>Wallets</h2>
+    <div class="card"><img src="phantom.png"> Phantom Wallet - <a href="#">Visit</a></div>
+    <div class="card"><img src="ledger.png"> Ledger - <a href="#">Visit</a></div>
+    <div class="card"><img src="metamask.png"> MetaMask - <a href="#">Visit</a></div>
+    <div class="card"><img src="solflare.png"> Solflare - <a href="#">Visit</a></div>
+    <div class="card"><img src="trezor.png"> Trezor - <a href="#">Visit</a></div>
+    <div class="card"><img src="jupiter.png"> Jupiter Wallet - <a href="#">Visit</a></div>
+  </div>
+
+  <div class="section" id="donate">
+    <h2>Donations</h2>
+    <p>Support this project by donating Bitcoin, Ethereum, or Solana:</p>
+    <p><strong>BTC:</strong> bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd <button onclick="copyText(this)">Copy</button></p>
+    <img src="btc_qr_square.png" class="qr" alt="BTC QR"/>
+    <p><strong>ETH:</strong> 0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f <button onclick="copyText(this)">Copy</button></p>
+    <img src="eth_qr_square.png" class="qr" alt="ETH QR"/>
+    <p><strong>SOL:</strong> J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL <button onclick="copyText(this)">Copy</button></p>
+    <img src="sol_qr_square.png" class="qr" alt="SOL QR"/>
   </div>
 
   <footer>
-    <p>&copy; 2025 MyCryptoHub. All rights reserved.</p>
+    <p>© 2025 MyCryptoHub. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
