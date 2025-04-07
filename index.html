@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyCryptoHub</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="ticker-bar" id="top10-ticker">Loading Top 10...</div>
+    <div class="news-ticker" id="news-ticker">Loading news...</div>
+  </header>
+
+  <main>
+    <section class="category" id="exchanges">
+      <h2>Exchanges</h2>
+      <div class="card-grid">
+        <a href="https://partner.bybit.com/b/miguel" class="card"><img src="IMG_0451.JPG"><h3>Bybit</h3></a>
+        <a href="https://accounts.binance.com/en/register?ref=73526157" class="card"><img src="IMG_0452.PNG"><h3>Binance</h3></a>
+        <a href="https://coinmotion.com/fi?ref=92a4" class="card"><img src="IMG_0453.JPG"><h3>Coinmotion</h3></a>
+        <a href="https://crypto.com/app/kzrk2y7c8r" class="card"><img src="IMG_0454.PNG"><h3>Crypto.com</h3></a>
+      </div>
+    </section>
+
+    <section class="category" id="wallets">
+      <h2>Wallets</h2>
+      <div class="card-grid">
+        <a href="https://shop.ledger.com/?r=23c3e3baff0d" class="card"><img src="IMG_0455.JPG"><h3>Ledger</h3></a>
+        <a href="#" class="card"><img src="IMG_0456.PNG"><h3>Trezor</h3></a>
+        <a href="#" class="card"><img src="IMG_0457.WEBP"><h3>MetaMask</h3></a>
+        <a href="#" class="card"><img src="IMG_0458.JPG"><h3>Phantom</h3></a>
+        <a href="#" class="card"><img src="IMG_0459.PNG"><h3>Solflare</h3></a>
+        <a href="https://jup.ag/invite/BRvVHduEhaiG" class="card"><img src="IMG_0460.PNG"><h3>Jupiter Wallet</h3></a>
+      </div>
+    </section>
+
+    <section class="category" id="dex">
+      <h2>DEXs</h2>
+      <div class="card-grid">
+        <a href="https://jup.ag/" class="card"><h3>Jupiter DEX</h3></a>
+        <a href="#" class="card"><h3>Kamino</h3></a>
+        <a href="https://app.marginfi.com/refer/8f3ec3ca-739a-4546-b056-efe38623dccc" class="card"><h3>Marginfi</h3></a>
+        <a href="#" class="card"><h3>Meteora</h3></a>
+        <a href="#" class="card"><h3>Orca</h3></a>
+        <a href="#" class="card"><h3>Drift</h3></a>
+      </div>
+    </section>
+
+    <section class="category" id="bridging">
+      <h2>Bridging Platforms</h2>
+      <div class="card-grid">
+        <a href="#" class="card"><h3>Wormhole</h3></a>
+        <a href="#" class="card"><h3>Jumper</h3></a>
+        <a href="#" class="card"><h3>LayerZero</h3></a>
+        <a href="#" class="card"><h3>deBridge</h3></a>
+        <a href="#" class="card"><h3>Mayan Bridge</h3></a>
+      </div>
+    </section>
+
+    <section class="category" id="tools">
+      <h2>Crypto Tools</h2>
+      <div class="card-grid">
+        <a href="#" class="card"><h3>CoinMarketCap</h3></a>
+        <a href="#" class="card"><h3>CoinGecko</h3></a>
+        <a href="#" class="card"><h3>CoinStats</h3></a>
+        <a href="#" class="card"><h3>Banter Bubbles</h3></a>
+        <a href="#" class="card"><h3>TradingView</h3></a>
+      </div>
+    </section>
+
+    <section class="category" id="donations">
+      <h2>Donations</h2>
+      <p><strong>BTC:</strong> bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd <button onclick="copyToClipboard('btc')">Copy</button></p>
+      <p><strong>ETH:</strong> 0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f <button onclick="copyToClipboard('eth')">Copy</button></p>
+      <p><strong>SOL:</strong> J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL <button onclick="copyToClipboard('sol')">Copy</button></p>
+    </section>
+  </main>
+
+  <div class="chatbot-bubble" onclick="toggleChat()">Chat</div>
+  <div id="chatbot-window" class="hidden">
+    <div id="chat-log"></div>
+    <input type="text" id="chat-input" placeholder="Ask me anything..." />
+    <button onclick="sendChat()">Send</button>
+  </div>
+</body>
+</html>
