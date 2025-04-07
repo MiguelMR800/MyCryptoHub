@@ -4,47 +4,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CryptoHub</title>
+  <title>MyCryptoHub</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff9db;
+      color: #000;
+      margin: 0;
+      padding: 1rem;
+      line-height: 1.6;
+    }
+    h2 {
+      color: #000;
+      border-bottom: 2px solid #000;
+      padding-bottom: 0.3rem;
+    }
+    .section {
+      margin: 2rem 0;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 1rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .title {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+    .desc {
+      margin-top: 0.5rem;
+    }
+    .link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: #000;
+      text-decoration: underline;
+    }
+    .address {
+      background: rgba(0,0,0,0.05);
+      padding: 0.5rem;
+      border-radius: 6px;
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+    .copy-btn {
+      padding: 6px 12px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>CryptoHub</h1>
-  </header>
+  <h1>MyCryptoHub</h1>
 
-  <main>
-    <section id="exchanges">
-      <h2>Exchanges</h2>
+  <div class="section">
+    <h2>Exchanges</h2>
+    <div class="card"><div class="title">Binance</div><div class="desc">World's largest crypto exchange by volume.</div><a class="link" href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">Join Binance</a></div>
+    <div class="card"><div class="title">Bybit</div><div class="desc">Fast-growing exchange for derivatives and spot.</div><a class="link" href="https://partner.bybit.com/b/miguel" target="_blank">Join Bybit</a></div>
+    <div class="card"><div class="title">Coinmotion</div><div class="desc">Finnish crypto platform with strong regulation.</div><a class="link" href="https://coinmotion.com/fi?ref=92a4" target="_blank">Join Coinmotion</a></div>
+    <div class="card"><div class="title">Crypto.com</div><div class="desc">Popular app with Visa card and staking options.</div><a class="link" href="https://crypto.com/app/kzrk2y7c8r" target="_blank">Join Crypto.com</a></div>
+  </div>
 
-      <div class="card">
-        <h3>Binance</h3>
-        <p>World's largest crypto exchange by trading volume.</p>
-        <a class="btn" href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">Join Binance</a>
-      </div>
+  <div class="section">
+    <h2>Hot Wallets</h2>
+    <div class="card"><div class="title">MetaMask</div><div class="desc">Ethereum wallet for DeFi & NFTs.</div><a class="link" href="https://metamask.io/" target="_blank">Get MetaMask</a></div>
+    <div class="card"><div class="title">Phantom</div><div class="desc">Popular Solana wallet with NFTs and staking.</div><a class="link" href="https://phantom.app/" target="_blank">Get Phantom</a></div>
+    <div class="card"><div class="title">Solflare</div><div class="desc">Mobile and browser wallet for Solana.</div><a class="link" href="https://solflare.com/" target="_blank">Get Solflare</a></div>
+    <div class="card"><div class="title">Jupiter Wallet</div><div class="desc">Wallet integrated with Jupiter DEX aggregator.</div><a class="link" href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Get Jupiter Wallet</a></div>
+  </div>
 
-      <div class="card">
-        <h3>Bybit</h3>
-        <p>Fast-growing exchange offering derivatives and spot trading.</p>
-        <a class="btn" href="https://partner.bybit.com/b/miguel" target="_blank">Join Bybit</a>
-      </div>
+  <div class="section">
+    <h2>Cold Wallets</h2>
+    <div class="card"><div class="title">Ledger</div><div class="desc">Industry-leading hardware wallet.</div><a class="link" href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">Buy Ledger</a></div>
+    <div class="card"><div class="title">Trezor</div><div class="desc">Secure offline wallet for long-term storage.</div><a class="link" href="https://trezor.io/?a=mchub" target="_blank">Buy Trezor</a></div>
+  </div>
 
-      <div class="card">
-        <h3>Coinmotion</h3>
-        <p>Trusted Finnish crypto platform with regulated services.</p>
-        <a class="btn" href="https://coinmotion.com/fi?ref=92a4" target="_blank">Join Coinmotion</a>
-      </div>
+  <div class="section">
+    <h2>DEX Platforms</h2>
+    <div class="card"><div class="title">Jupiter</div><div class="desc">Top Solana DEX aggregator.</div><a class="link" href="https://jup.ag" target="_blank">Visit Jupiter</a></div>
+    <div class="card"><div class="title">Drift</div><div class="desc">Perpetuals trading on Solana.</div><a class="link" href="https://app.drift.trade" target="_blank">Visit Drift</a></div>
+    <div class="card"><div class="title">Marginfi</div><div class="desc">Borrow/lend protocol with margin trading.</div><a class="link" href="https://app.marginfi.com/refer/8f3ec3ca-739a-4546-b056-efe38623dccc" target="_blank">Visit Marginfi</a></div>
+    <div class="card"><div class="title">Kamino</div><div class="desc">Automated yield optimizer.</div><a class="link" href="https://app.kamino.finance" target="_blank">Visit Kamino</a></div>
+    <div class="card"><div class="title">Meteora</div><div class="desc">Dynamic liquidity vaults.</div><a class="link" href="https://meteora.ag" target="_blank">Visit Meteora</a></div>
+    <div class="card"><div class="title">Orca</div><div class="desc">Friendly Solana DEX.</div><a class="link" href="https://www.orca.so" target="_blank">Visit Orca</a></div>
+  </div>
 
-      <div class="card">
-        <h3>Crypto.com</h3>
-        <p>Popular exchange app with Visa card and staking features.</p>
-        <a class="btn" href="https://crypto.com/app/kzrk2y7c8r" target="_blank">Join Crypto.com</a>
-      </div>
-    </section>
-  </main>
+  <div class="section">
+    <h2>Crypto Tools</h2>
+    <div class="card"><div class="title">CoinMarketCap</div><div class="desc">Price tracking, market data and news.</div><a class="link" href="https://coinmarketcap.com" target="_blank">Visit CMC</a></div>
+    <div class="card"><div class="title">CoinGecko</div><div class="desc">Detailed analytics and tracking for all coins.</div><a class="link" href="https://coingecko.com" target="_blank">Visit CoinGecko</a></div>
+    <div class="card"><div class="title">CoinStats</div><div class="desc">Portfolio & performance tracking tool.</div><a class="link" href="https://invite.coinstats.app/r?i=Zb2IsJ1734804670281" target="_blank">Try CoinStats</a></div>
+    <div class="card"><div class="title">Banter Bubbles</div><div class="desc">Visual market mover bubbles.</div><a class="link" href="https://www.banterbubbles.com" target="_blank">View Bubbles</a></div>
+    <div class="card"><div class="title">TradingView</div><div class="desc">Advanced charting platform for crypto & stocks.</div><a class="link" href="https://tradingview.com" target="_blank">Open TradingView</a></div>
+  </div>
+
+  <div class="section">
+    <h2>Donations</h2>
+    <div class="card">
+      <div class="title">Bitcoin</div>
+      <div class="address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</div>
+      <button class="copy-btn" onclick="navigator.clipboard.writeText('bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd')">Copy</button>
+    </div>
+    <div class="card">
+      <div class="title">Ethereum</div>
+      <div class="address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</div>
+      <button class="copy-btn" onclick="navigator.clipboard.writeText('0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f')">Copy</button>
+    </div>
+    <div class="card">
+      <div class="title">Solana</div>
+      <div class="address">J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</div>
+      <button class="copy-btn" onclick="navigator.clipboard.writeText('J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL')">Copy</button>
+    </div>
+    <p style="margin-top: 1rem;">Thank you for supporting this project! Donations help keep the site ad-free and open for everyone.</p>
+  </div>
 
   <footer>
-    <p>&copy; 2025 CryptoHub</p>
+    <p>This site may contain affiliate links. We may earn a commission if you use them, at no extra cost to you.</p>
+    <p>For informational purposes only — not financial advice.</p>
   </footer>
 </body>
 </html>
