@@ -4,37 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MyCryptoHub</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="hero">
-    <h1>Welcome to <br> MyCryptoHub</h1>
-    <h2>Top 10 Cryptocurrencies</h2>
-    <p>BTC, ETH, SOL, XRP, ADA, DOGE, AVAX, LINK, TON, BNB</p>
-    <h2>Latest News</h2>
-    <p id="news">Loading latest news...</p>
+  <div class="background-overlay"></div>
+  <div class="top-bar">
+    <div id="crypto-prices">Loading prices...</div>
   </div>
 
-  <div class="section" id="wallets">
+  <div class="news-ticker" id="news-ticker">Loading news...</div>
+
+  <section class="intro">
+    <h1>Welcome to MyCryptoHub</h1>
+    <p>Bitcoin revolutionized digital ownership. Explore the tools and platforms that followed.</p>
+  </section>
+
+  <section class="exchanges">
+    <h2>Exchanges</h2>
+    <div class="card"><img src="binance.png" alt="Binance"/><a href="https://www.binance.com/">Binance</a></div>
+    <div class="card"><img src="bybit.png" alt="Bybit"/><a href="https://www.bybit.com/">Bybit</a></div>
+    <div class="card"><img src="coinmotion.png" alt="Coinmotion"/><a href="https://coinmotion.com/">Coinmotion</a></div>
+  </section>
+
+  <section class="wallets">
     <h2>Wallets</h2>
-    <div class="card"><img src="phantom.png"> Phantom Wallet - <a href="#">Visit</a></div>
-    <div class="card"><img src="ledger.png"> Ledger - <a href="#">Visit</a></div>
-    <div class="card"><img src="metamask.png"> MetaMask - <a href="#">Visit</a></div>
-    <div class="card"><img src="solflare.png"> Solflare - <a href="#">Visit</a></div>
-    <div class="card"><img src="trezor.png"> Trezor - <a href="#">Visit</a></div>
-    <div class="card"><img src="jupiter.png"> Jupiter Wallet - <a href="#">Visit</a></div>
-  </div>
+    <div class="card"><img src="ledger.png" alt="Ledger"/><a href="https://www.ledger.com/">Ledger</a></div>
+    <div class="card"><img src="metamask.png" alt="MetaMask"/><a href="https://metamask.io/">MetaMask</a></div>
+    <div class="card"><img src="phantom.png" alt="Phantom"/><a href="https://phantom.app/">Phantom</a></div>
+  </section>
 
-  <div class="section" id="donate">
+  <section class="donate">
     <h2>Donations</h2>
-    <p>Support this project by donating Bitcoin, Ethereum, or Solana:</p>
-    <p><strong>BTC:</strong> bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd <button onclick="copyText(this)">Copy</button></p>
-    <img src="btc_qr_square.png" class="qr" alt="BTC QR"/>
-    <p><strong>ETH:</strong> 0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f <button onclick="copyText(this)">Copy</button></p>
-    <img src="eth_qr_square.png" class="qr" alt="ETH QR"/>
-    <p><strong>SOL:</strong> J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL <button onclick="copyText(this)">Copy</button></p>
-    <img src="sol_qr_square.png" class="qr" alt="SOL QR"/>
-  </div>
+    <p>Support this site:</p>
+    <div class="wallet">
+      <img src="btc_qr_square.png" alt="BTC QR">
+      <p>BTC: bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</p>
+    </div>
+    <div class="wallet">
+      <img src="eth_qr_square.png" alt="ETH QR">
+      <p>ETH: 0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</p>
+    </div>
+    <div class="wallet">
+      <img src="sol_qr_square.png" alt="SOL QR">
+      <p>SOL: J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</p>
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 MyCryptoHub. All rights reserved.</p>
