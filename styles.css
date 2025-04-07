@@ -1,42 +1,43 @@
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url('background.jpg') center center / contain no-repeat fixed;
-  background-color: #000;
+  background-image: url('background.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-color: #0a0a23;
   color: white;
 }
-header, section {
-  padding: 20px;
-  text-align: center;
+header, section, footer {
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 1em;
+  border-radius: 12px;
 }
 .card {
-  background-color: rgba(0,0,0,0.6);
-  margin: 10px auto;
-  padding: 15px;
-  width: 80%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1em;
+  margin: 1em 0;
   border-radius: 10px;
 }
-.card img {
-  height: 32px;
+img {
+  height: 24px;
   vertical-align: middle;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 .qr img {
-  height: 150px;
-  margin: 10px;
+  max-width: 160px;
+  margin-top: 0.5em;
 }
 #chatbot-bubble {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #111;
-  padding: 10px 20px;
-  border-radius: 30px;
-  cursor: pointer;
-  border: 2px solid #fff;
-}
-footer {
-  background-color: rgba(0,0,0,0.5);
+  background-color: black;
+  color: white;
   padding: 10px;
-  font-size: 0.9em;
+  border-radius: 20px;
+  cursor: pointer;
 }
