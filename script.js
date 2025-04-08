@@ -14,10 +14,12 @@ async function sendMessage() {
   appendMessage("bot", "Typing...");
 
   try {
-    const res = await fetch("https://my-crypto-hub-iir7.vercel.app/api/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message })
+    const res = await fetch("https://my-crypto-hub.vercel.app/api/chat", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ message })
+});
+
     });
 
     const data = await res.json();
