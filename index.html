@@ -419,5 +419,22 @@ function appendMessage(sender, text) {
 }
 </style>
 
+
+<script>
+async function loadCointelegraphNews() {
+  const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss';
+  try {
+    const response = await fetch(rssUrl);
+    const data = await response.json();
+    const items = data.items.slice(0, 10); // Get latest 10 news items
+    const ticker = document.getElementById("news-ticker-text");
+    ticker.innerHTML = items.map(item => `<a href="${item.link}" target="_blank">${item.title}</a>`).join(" &nbsp;|&nbsp; ");
+  } catch (error) {
+    console.error("Failed to load Cointelegraph news:", error);
+  }
+}
+document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
+</script>
+
 </body>
 </html>
