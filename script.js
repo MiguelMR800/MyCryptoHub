@@ -1,4 +1,3 @@
-
 // Toggle chat visibility
 function toggleChat() {
   const container = document.getElementById("chatContainer");
@@ -16,7 +15,7 @@ async function sendMessage() {
   appendMessage("bot", "Typing...");
 
   try {
-    const res = await fetch("https://my-crypto-hub.vercel.app/api/chat", {
+    const res = await fetch("https://my-crypto-hub-iir7.vercel.app/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message })
@@ -25,7 +24,7 @@ async function sendMessage() {
     const data = await res.json();
     const botMessages = document.querySelectorAll(".bot");
     if (botMessages.length) {
-      botMessages[botMessages.length - 1].textContent = data.reply;
+      botMessages[botMessages.length - 1].textContent = data.reply || "No response.";
     }
   } catch (err) {
     console.error(err);
