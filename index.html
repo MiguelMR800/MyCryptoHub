@@ -7,9 +7,63 @@
   <title>MyCryptoHub</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="enhanced_card_style.css">
-  <script defer src="script.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff9db;
+      margin: 0;
+      padding: 1rem;
+      color: #000;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+    }
+    .section {
+      margin: 2rem 0;
+    }
+    .section-subtext {
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    .title {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+    .address {
+      background: rgba(0, 0, 0, 0.05);
+      padding: 0.5rem;
+      border-radius: 6px;
+      font-weight: bold;
+      overflow-x: auto;
+    }
+    .copy-btn {
+      padding: 6px 12px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #333;
+      text-align: center;
+    }
+  </style>
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text);
+      alert('Address copied to clipboard!');
+    }
+  </script>
 </head>
 <body>
+
   <h1>MyCryptoHub</h1>
 
   <section style="background: rgba(255,255,255,0.2); border-radius: 12px; padding: 1rem; margin-bottom: 2rem;">
@@ -25,35 +79,29 @@
     </p>
   </section>
 
-  <!-- Placeholder osioille – oletetaan että aiemmat korttiosiot tulevat tähän -->
   <div class="section card">
     <h2>Exchanges</h2>
     <p class="section-subtext">Buy, sell, and trade cryptocurrencies on trusted centralized platforms.</p>
-    <!-- Exchanges cardit tähän -->
   </div>
 
   <div class="section card">
     <h2>Hot Wallets</h2>
     <p class="section-subtext">Secure and user-friendly wallets connected to the internet for quick access and daily use.</p>
-    <!-- Hot wallets cardit tähän -->
   </div>
 
   <div class="section card">
     <h2>Cold Wallets</h2>
     <p class="section-subtext">Offline wallets designed for maximum security to store your crypto long-term.</p>
-    <!-- Cold wallets cardit tähän -->
   </div>
 
   <div class="section card">
     <h2>DEX Platforms</h2>
     <p class="section-subtext">Decentralized exchanges that let you swap tokens directly from your wallet.</p>
-    <!-- DEX cardit tähän -->
   </div>
 
   <div class="section card">
     <h2>Crypto Tools</h2>
     <p class="section-subtext">Real-time data, charts, analytics, and portfolio tracking for crypto users.</p>
-    <!-- Tools cardit tähän -->
   </div>
 
   <div class="section card">
@@ -80,5 +128,6 @@
     <p>This site may contain affiliate links. We may earn a commission if you use them, at no extra cost to you.</p>
     <p>For informational purposes only — not financial advice.</p>
   </footer>
+
 </body>
 </html>
