@@ -310,7 +310,11 @@ async function sendMessage() {
 
   try {
     const res = await fetch("https://my-crypto-hub.vercel.app/api/chat", {
-, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ message })
+});
+
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message })
