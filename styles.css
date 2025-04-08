@@ -1,60 +1,3 @@
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fff8dc;
-  margin: 0;
-  padding: 0;
-}
-
-.news-ticker-top {
-  background-color: #0d0d1a;
-  color: #ffd700;
-  font-weight: bold;
-  padding: 0.8rem;
-  text-align: center;
-  font-size: 0.95rem;
-  border-bottom: 2px solid #222;
-}
-
-#news-ticker-text a {
-  color: #ffd700;
-  text-decoration: none;
-}
-#news-ticker-text a:hover {
-  text-decoration: underline;
-}
-
-.crypto-ticker {
-  width: 100%;
-  background-color: #0d0d1a;
-  overflow: hidden;
-  white-space: nowrap;
-  border-bottom: 2px solid #111;
-  padding: 0.5rem 0;
-}
-
-.ticker-content {
-  display: inline-block;
-  padding-left: 100%;
-  animation: ticker-scroll 30s linear infinite;
-}
-.ticker-content span {
-  display: inline-block;
-  margin: 0 2rem;
-  color: #fff;
-  font-weight: 600;
-}
-.ticker-content span:before {
-  content: "•";
-  margin-right: 0.5rem;
-  color: #ffd700;
-}
-
-@keyframes ticker-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-
 .chat-button {
   position: fixed;
   bottom: 20px;
@@ -111,6 +54,7 @@ body {
   flex: 1;
   padding: 10px;
   border: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 .chat-input button {
@@ -131,6 +75,7 @@ body {
   align-self: flex-end;
   background: #ffd000;
 }
+
 .bot {
   align-self: flex-start;
   background: #eaeaea;
