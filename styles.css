@@ -80,3 +80,6 @@
   align-self: flex-start;
   background: #eaeaea;
 }
+body {
+  overflow-x: hidden;
+}
