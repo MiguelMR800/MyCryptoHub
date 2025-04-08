@@ -1,82 +1,93 @@
-.chat-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #ffd000;
-  color: black;
-  padding: 10px 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+body {
   font-family: 'Poppins', sans-serif;
-  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  background: url('metaverse.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #000;
+  line-height: 1.6;
 }
 
-.chat-container {
-  display: none;
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  width: 300px;
-  max-height: 400px;
-  background: #fffbea;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  overflow: hidden;
-  font-family: 'Poppins', sans-serif;
-  z-index: 1000;
-  flex-direction: column;
+h2 {
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.3rem;
 }
 
-.chat-header {
-  background: #ffe100;
-  padding: 10px;
-  text-align: center;
+.section {
+  margin: 2rem 0;
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 1.2rem;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.desc {
+  margin-top: 0.5rem;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 0.5rem;
   font-weight: bold;
-  border-bottom: 1px solid #ccc;
+  color: #000;
+  text-decoration: underline;
 }
 
-.chat-messages {
-  flex: 1;
-  padding: 10px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.address {
+  background: rgba(0,0,0,0.05);
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  word-break: break-word;
 }
 
-.chat-input {
-  display: flex;
-  border-top: 1px solid #ccc;
-}
-
-.chat-input input {
-  flex: 1;
-  padding: 10px;
+.copy-btn {
+  padding: 6px 12px;
+  background-color: #000;
+  color: #fff;
   border: none;
-  font-family: 'Poppins', sans-serif;
-}
-
-.chat-input button {
-  padding: 10px;
-  background: #ffd000;
-  border: none;
+  border-radius: 4px;
   cursor: pointer;
+  margin-top: 0.5rem;
 }
 
-.message {
-  padding: 8px 12px;
-  border-radius: 15px;
-  max-width: 80%;
-  word-wrap: break-word;
+footer {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: #333;
 }
 
-.user {
-  align-self: flex-end;
-  background: #ffd000;
+.intro {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
 }
 
-.bot {
-  align-self: flex-start;
-  background: #eaeaea;
+.card {
+  max-width: 90%;
+  margin: 1rem auto;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.2rem;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3);
+  color: #000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
 }
