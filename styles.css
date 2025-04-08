@@ -3,64 +3,37 @@ body {
   background-color: #fff8dc;
   margin: 0;
   padding: 0;
-  color: #000;
   line-height: 1.6;
 }
 
-h2 {
+h1, h2, h3 {
+  font-weight: 600;
   color: #000;
-  border-bottom: 2px solid #000;
-  padding-bottom: 0.3rem;
 }
 
 .section {
   margin: 2rem 0;
 }
 
-.title {
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-
-.desc {
-  margin-top: 0.5rem;
-}
-
-.link {
-  display: inline-block;
-  margin-top: 0.5rem;
-  font-weight: bold;
-  color: #000;
-  text-decoration: underline;
-}
-
-.address {
-  background: rgba(0,0,0,0.05);
-  padding: 0.5rem;
-  border-radius: 6px;
-  margin-top: 0.5rem;
-  font-weight: bold;
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-
-.copy-btn {
-  padding: 6px 12px;
-  background-color: #000;
+.card {
+  max-width: 90%;
+  margin: 1rem auto;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.2rem;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3);
   color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 0.5rem;
 }
 
-footer {
-  margin-top: 3rem;
-  font-size: 0.85rem;
-  color: #333;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Crypto Ticker & News */
 .news-ticker-top {
   background-color: #0d0d1a;
   color: #ffd700;
@@ -69,15 +42,6 @@ footer {
   text-align: center;
   font-size: 0.95rem;
   border-bottom: 2px solid #222;
-}
-
-#news-ticker-text a {
-  color: #ffd700;
-  text-decoration: none;
-}
-
-#news-ticker-text a:hover {
-  text-decoration: underline;
 }
 
 .crypto-ticker {
@@ -95,6 +59,11 @@ footer {
   animation: ticker-scroll 30s linear infinite;
 }
 
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
 .ticker-content span {
   display: inline-block;
   margin: 0 2rem;
@@ -108,32 +77,6 @@ footer {
   color: #ffd700;
 }
 
-@keyframes ticker-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-
-/* Glassy cards */
-.card {
-  max-width: 90%;
-  margin: 1rem auto;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(14px) saturate(120%);
-  -webkit-backdrop-filter: blur(14px) saturate(120%);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1.2rem;
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3);
-  color: #fff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
-}
-
-/* Chatbot styles */
 .chat-button {
   position: fixed;
   bottom: 20px;
