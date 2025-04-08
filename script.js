@@ -56,7 +56,7 @@ fetch(newsUrl)
     if (data.results && data.results.length > 0) {
       const newsHtml = data.results
         .slice(0, 6)
-        .map(item => `<a href="\${item.url}" target="_blank">\${item.title}</a>`)
+        .map(item => `<a href="${item.url}" target="_blank">${item.title}</a>`)
         .join(" • ");
       newsContainer.innerHTML = newsHtml;
     } else {
