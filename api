@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({ error: "Vain POST-pyynnöt sallittu" });
+    return res.status(405).json({ error: "Only POST requests are allowed" });
   }
 
   const { message } = req.body;
@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     reply = "Ethereum on alusta älysopimuksille ja sen oma token on ETH.";
   } else if (message.toLowerCase().includes("cold wallet")) {
     reply = "Cold wallet tarkoittaa offline-lompakkoa, joka on turvallinen säilytystapa.";
-  } else if (message.toLowerCase().includes("mikä on paras pörssi")) {
+  } else if (message.toLowerCase().includes("paras pörssi")) {
     reply = "Hyviä vaihtoehtoja ovat Binance, Bybit ja Crypto.com.";
   }
 
