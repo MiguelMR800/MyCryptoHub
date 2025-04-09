@@ -315,7 +315,7 @@
 <p>Bitcoin changed how we think about money. It started a revolution that enabled Ethereum, NFTs, DeFi, and more.</p>
 </div>
 <div class="news-ticker-top">
-<div id="news-ticker-text">Loading latest news...</div>
+<div id="news-ticker-text" style="text-align:center; padding: 1rem;"><div style="position:relative; max-width:600px; margin:0 auto;"><button id="prevNews" style="position:absolute; left:-60px; top:40%; background:#222; color:#fff; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&lt;</button><div id="news-rotating-item" style="transition: opacity 0.5s ease;"></div><button id="nextNews" style="position:absolute; right:-60px; top:40%; background:#222; color:#fff; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&gt;</button></div></div>
 </div>
 <h1>MyCryptoHub</h1>
 <div class="section">
@@ -537,21 +537,6 @@ function appendMessage(sender, text) {
     transform: translateY(0);
   }
 }</style>
-<script>
-async function loadCointelegraphNews() {
-  const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss';
-  try {
-    const response = await fetch(rssUrl);
-    const data = await response.json();
-    const items = data.items.slice(0, 10); // Get latest 10 news items
-    const ticker = document.getElementById("news-ticker-text");
-    ticker.innerHTML = items.map(item => `<a href="${item.link}" target="_blank">${item.title}</a>`).join(" &nbsp;|&nbsp; ");
-  } catch (error) {
-    console.error("Failed to load Cointelegraph news:", error);
-  }
-}
-document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
-</script>
 <!-- News Modal -->
 <div class="news-modal" id="newsModal">
 <div class="news-modal-content">
@@ -563,44 +548,50 @@ document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
 </div>
 </div>
 <script>
-function showNewsModal(title, image, description, link) {
-  document.getElementById("modalTitle").textContent = title;
-  document.getElementById("modalImage").src = image;
-  document.getElementById("modalDescription").textContent = description;
-  document.getElementById("modalLink").href = link;
-  document.getElementById("newsModal").style.display = "block";
-}
-
-function closeNewsModal() {
-  document.getElementById("newsModal").style.display = "none";
-}
-
-window.onclick = function(event) {
-  const modal = document.getElementById("newsModal");
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-}
-
 async function loadCointelegraphNews() {
   const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss';
   try {
     const response = await fetch(rssUrl);
     const data = await response.json();
     const items = data.items.slice(0, 10);
-    const ticker = document.getElementById("news-ticker-text");
-    ticker.innerHTML = items.map(item =>
-      `<a href="javascript:void(0);" onclick="showNewsModal(
-        \`${item.title.replace(/`/g, '\`')}\`,
-        \`${item.thumbnail}\`,
-        \`${item.description.replace(/`/g, '\`')}\`,
-        \`${item.link}\`
-      )">${item.title}</a>`).join(" &nbsp;|&nbsp; ");
+
+    let currentIndex = 0;
+    const container = document.getElementById("news-rotating-item");
+
+    function showItem(index) {
+      const item = items[index];
+      container.style.opacity = 0;
+      setTimeout(() => {
+        container.innerHTML = `
+          <div style="display:flex; flex-direction:column; align-items:center;">
+            <img src="${item.thumbnail}" alt="News image" style="max-width:100%; max-height:160px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.3);"/>
+            <h3 style="margin-top: 10px; font-size: 1rem;"><a href="${item.link}" target="_blank" style="color: #ffd700; text-decoration: none;">${item.title}</a></h3>
+          </div>
+        `;
+        container.style.opacity = 1;
+      }, 200);
+    }
+
+    showItem(currentIndex);
+
+    const interval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % items.length;
+      showItem(currentIndex);
+    }, 5000);
+
+    document.getElementById("prevNews").addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      showItem(currentIndex);
+    });
+
+    document.getElementById("nextNews").addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % items.length;
+      showItem(currentIndex);
+    });
   } catch (error) {
     console.error("Failed to load Cointelegraph news:", error);
   }
 }
 document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
-</script>
-</body>
+</script></body>
 </html>
