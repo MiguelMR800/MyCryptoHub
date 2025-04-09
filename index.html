@@ -461,8 +461,6 @@ function appendMessage(sender, text) {
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
   border: 1px solid rgba(255, 255, 255, 0.15);
-
-  animation: slideIn 0.4s ease;
 }
 
 .chat-header {
@@ -495,7 +493,7 @@ function appendMessage(sender, text) {
   border: none;
   font-family: 'Poppins', sans-serif;
   background: transparent;
-  color: #fff;
+  color: #000;
   outline: none;
 }
 
@@ -524,18 +522,8 @@ function appendMessage(sender, text) {
 
 .bot {
   align-self: flex-start;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffdd00;
 }</style>
 <!-- News Modal -->
 <div class="news-modal" id="newsModal">
