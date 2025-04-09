@@ -3,19 +3,78 @@
 
 <html lang="en">
 <head>
+<style>
+.news-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.news-modal-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  color: #000;
+}
+
+.news-close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.news-close:hover,
+.news-close:focus {
+  color: #000;
+}
+</style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>MyCryptoHub</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fff9db;
-      color: #000;
-      margin: 0;
-      padding: 1rem;
-      line-height: 1.6;
-    }
+  background: linear-gradient(120deg, rgba(120, 90, 10, 1), rgba(255, 215, 0, 0.85)),
+              radial-gradient(circle at 35% 35%, rgba(255, 255, 180, 0.35), transparent 40%),
+              radial-gradient(circle at 65% 65%, rgba(255, 245, 200, 0.25), transparent 60%);
+  background-blend-mode: screen, overlay;
+  background-size: 300% 300%;
+  animation: goldShimmer 30s ease-in-out infinite;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+@keyframes goldShimmer {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes goldPaintShift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
     h2 {
       color: #000;
       border-bottom: 2px solid #000;
@@ -61,11 +120,31 @@
     }
   
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fff8dc;
-      margin: 0;
-      padding: 0;
-    }
+  background: linear-gradient(120deg, rgba(120, 90, 10, 1), rgba(255, 215, 0, 0.85)),
+              radial-gradient(circle at 35% 35%, rgba(255, 255, 180, 0.35), transparent 40%),
+              radial-gradient(circle at 65% 65%, rgba(255, 245, 200, 0.25), transparent 60%);
+  background-blend-mode: screen, overlay;
+  background-size: 300% 300%;
+  animation: goldShimmer 30s ease-in-out infinite;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+@keyframes goldShimmer {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes goldPaintShift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
 
     .news-ticker-top {
       background-color: #0d0d1a;
@@ -178,27 +257,45 @@
 
 .card {
   max-width: 90%;
-  margin: 1rem auto;
-  background: rgba(0, 0, 0, 0.2); /* hieman tummempi lasi */
-  backdrop-filter: blur(14px) saturate(120%);
-  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1.2rem;
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
   color: #fff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+    0 6px 20px rgba(0, 0, 0, 0.4),
+    0 2px 4px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.1);
+  pointer-events: none;
 }
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    0 10px 25px rgba(0, 0, 0, 0.45),
+    0 4px 8px rgba(255, 255, 255, 0.08);
 }
 </style>
 </head>
 <body>
 <input id="chat-input" placeholder="Ask about crypto..."/>
-</div>
-</div><div class="crypto-ticker">
+
+<div class="crypto-ticker">
 <div class="ticker-content">
 <span>BTC: +2.34%</span>
 <span>ETH: -1.12%</span>
@@ -281,16 +378,15 @@
 <p>This site may contain affiliate links. We may earn a commission if you use them, at no extra cost to you.</p>
 <p>For informational purposes only — not financial advice.</p>
 </footer>
-
 <!-- New Bubble Chat -->
 <div class="chat-button" onclick="toggleChat()">Chat</div>
 <div class="chat-container" id="chatContainer">
-  <div class="chat-header">Ask CryptoBot</div>
-  <div class="chat-messages" id="chatMessages"></div>
-  <div class="chat-input">
-    <input type="text" id="userInput" placeholder="Ask something..." onkeydown="if(event.key==='Enter') sendMessage()" />
-    <button onclick="sendMessage()">Send</button>
-  </div>
+<div class="chat-header">Ask CryptoBot</div>
+<div class="chat-messages" id="chatMessages"></div>
+<div class="chat-input">
+<input id="userInput" onkeydown="if(event.key==='Enter') sendMessage()" placeholder="Ask something..." type="text"/>
+<button onclick="sendMessage()">Send</button>
+</div>
 </div>
 <script>
 function toggleChat() {
@@ -418,8 +514,6 @@ function appendMessage(sender, text) {
   background: #eaeaea;
 }
 </style>
-
-
 <script>
 async function loadCointelegraphNews() {
   const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss';
@@ -435,6 +529,55 @@ async function loadCointelegraphNews() {
 }
 document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
 </script>
+<!-- News Modal -->
+<div class="news-modal" id="newsModal">
+<div class="news-modal-content">
+<span class="news-close" onclick="closeNewsModal()">×</span>
+<h2 id="modalTitle"></h2>
+<img alt="News image" id="modalImage" src="" style="max-width:100%; border-radius:8px; margin-top:10px;"/>
+<p id="modalDescription" style="margin-top:10px;"></p>
+<a href="#" id="modalLink" style="display:inline-block; margin-top:15px; font-weight:bold;" target="_blank">Read full article</a>
+</div>
+</div>
+<script>
+function showNewsModal(title, image, description, link) {
+  document.getElementById("modalTitle").textContent = title;
+  document.getElementById("modalImage").src = image;
+  document.getElementById("modalDescription").textContent = description;
+  document.getElementById("modalLink").href = link;
+  document.getElementById("newsModal").style.display = "block";
+}
 
+function closeNewsModal() {
+  document.getElementById("newsModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("newsModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+
+async function loadCointelegraphNews() {
+  const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss';
+  try {
+    const response = await fetch(rssUrl);
+    const data = await response.json();
+    const items = data.items.slice(0, 10);
+    const ticker = document.getElementById("news-ticker-text");
+    ticker.innerHTML = items.map(item =>
+      `<a href="javascript:void(0);" onclick="showNewsModal(
+        \`${item.title.replace(/`/g, '\`')}\`,
+        \`${item.thumbnail}\`,
+        \`${item.description.replace(/`/g, '\`')}\`,
+        \`${item.link}\`
+      )">${item.title}</a>`).join(" &nbsp;|&nbsp; ");
+  } catch (error) {
+    console.error("Failed to load Cointelegraph news:", error);
+  }
+}
+document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
+</script>
 </body>
 </html>
