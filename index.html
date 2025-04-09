@@ -294,7 +294,6 @@
 </head>
 <body>
 <input id="chat-input" placeholder="Ask about crypto..."/>
-
 <div class="crypto-ticker">
 <div class="ticker-content">
 <span>BTC: +2.34%</span>
@@ -430,19 +429,19 @@ function appendMessage(sender, text) {
   chat.scrollTop = chat.scrollHeight;
 }
 </script>
-<style>
-.chat-button {
+<style>.chat-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #ffd000;
+  background: rgba(255, 215, 0, 0.85);
   color: black;
   padding: 10px 20px;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   font-family: 'Poppins', sans-serif;
   z-index: 1000;
+  backdrop-filter: blur(4px);
 }
 
 .chat-container {
@@ -450,37 +449,44 @@ function appendMessage(sender, text) {
   position: fixed;
   bottom: 80px;
   right: 20px;
-  width: 300px;
-  max-height: 400px;
-  background: #fffbea;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  width: 320px;
+  max-height: 420px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
   z-index: 1000;
   flex-direction: column;
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  animation: slideIn 0.4s ease;
 }
 
 .chat-header {
-  background: #ffe100;
-  padding: 10px;
+  background: rgba(255, 215, 0, 0.7);
+  padding: 12px;
   text-align: center;
   font-weight: bold;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: #000;
 }
 
 .chat-messages {
   flex: 1;
-  padding: 10px;
+  padding: 12px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  color: #fff;
 }
 
 .chat-input {
   display: flex;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .chat-input input {
@@ -488,13 +494,17 @@ function appendMessage(sender, text) {
   padding: 10px;
   border: none;
   font-family: 'Poppins', sans-serif;
+  background: transparent;
+  color: #fff;
+  outline: none;
 }
 
 .chat-input button {
   padding: 10px;
-  background: #ffd000;
+  background: rgba(255, 215, 0, 0.8);
   border: none;
   cursor: pointer;
+  color: #000;
 }
 
 .message {
@@ -502,18 +512,31 @@ function appendMessage(sender, text) {
   border-radius: 15px;
   max-width: 80%;
   word-wrap: break-word;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
 }
 
 .user {
   align-self: flex-end;
-  background: #ffd000;
+  background: rgba(255, 215, 0, 0.9);
+  color: #000;
 }
 
 .bot {
   align-self: flex-start;
-  background: #eaeaea;
+  background: rgba(255, 255, 255, 0.1);
 }
-</style>
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}</style>
 <script>
 async function loadCointelegraphNews() {
   const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss';
