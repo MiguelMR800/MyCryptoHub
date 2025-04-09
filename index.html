@@ -412,11 +412,17 @@ async function sendMessage() {
 
     const data = await res.json();
     const botMessages = document.querySelectorAll(".bot");
+    const reply = data.reply || "Sorry, I couldn't understand that.";
+
     if (botMessages.length) {
-      botMessages[botMessages.length - 1].textContent = data.reply;
+      botMessages[botMessages.length - 1].textContent = reply;
     }
   } catch (err) {
     console.error(err);
+    const botMessages = document.querySelectorAll(".bot");
+    if (botMessages.length) {
+      botMessages[botMessages.length - 1].textContent = "Error: Could not reach the server.";
+    }
   }
 }
 
