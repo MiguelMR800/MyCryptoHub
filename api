@@ -1,1 +1,21 @@
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Vain POST-pyynnöt sallittu" });
+  }
 
+  const { message } = req.body;
+
+  let reply = "Kysy jotain kryptovaluutoista!";
+
+  if (message.toLowerCase().includes("bitcoin")) {
+    reply = "Bitcoin on maailman ensimmäinen kryptovaluutta ja toimii hajautetusti.";
+  } else if (message.toLowerCase().includes("ethereum")) {
+    reply = "Ethereum on alusta älysopimuksille ja sen oma token on ETH.";
+  } else if (message.toLowerCase().includes("cold wallet")) {
+    reply = "Cold wallet tarkoittaa offline-lompakkoa, joka on turvallinen säilytystapa.";
+  } else if (message.toLowerCase().includes("mikä on paras pörssi")) {
+    reply = "Hyviä vaihtoehtoja ovat Binance, Bybit ja Crypto.com.";
+  }
+
+  res.status(200).json({ reply });
+}
