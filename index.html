@@ -317,7 +317,7 @@
 <div class="news-ticker-top">
 <div id="news-ticker-text" style="text-align:center; padding: 1rem; min-height: 280px; display: flex; justify-content: center; align-items: center;"><div style="position:relative; max-width:600px; margin:0 auto;"><button id="prevNews" style="position:absolute; left:-60px; top:40%; background:#222; color:#fff; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&lt;</button><div id="news-rotating-item" style="transition: opacity 0.4s ease; min-height: 240px;; width: 100%; max-width: 600px; transition: opacity 0.4s ease; min-height: 240px; display: flex; justify-content: center; align-items: center;"></div><button id="nextNews" style="position:absolute; right:-60px; top:40%; background:#222; color:#fff; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&gt;</button></div></div>
 </div>
-<h1>MyCryptoHub</h1>
+<section class="crypto-info-section" style="background-image: url('images/crypto_background_optimized.jpg'); background-size: cover; background-position: center; padding: 50px 20px; position: relative; margin-top: 2rem;"><div class="info-overlay" style="background-color: rgba(0, 0, 0, 0.7); color: #FFD700; max-width: 800px; margin: auto; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.8);"><div class="info-slide" onclick="toggleInfo()"><h2 id="info-title">What problem does Bitcoin actually solve?</h2><p class="hidden" id="info-detail">Bitcoin is a decentralized system that allows transferring value without banks, relying on scarcity and trust in code.</p></div><p class="disclaimer" style="font-size: 0.8rem; color: #bbb; margin-top: 20px;">*This is not financial advice.</p></div></section><h1>MyCryptoHub</h1>
 <div class="section">
 <h2>Exchanges</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Platforms where you can buy, sell, and trade cryptocurrencies.</p>
 <div class="card"><div class="title">Binance</div><div class="desc">World's largest crypto exchange by volume.</div><a class="link" href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">Join Binance</a></div>
@@ -589,5 +589,38 @@ async function loadCointelegraphNews() {
   }
 }
 document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
+</script><script>
+const titles = [
+  "What problem does Bitcoin actually solve?",
+  "Why do you need both hot and cold wallets?",
+  "How is a DEX different from a centralized exchange?",
+  "What are crypto tools used for?",
+  "Remember: This is not investment advice."
+];
+
+const details = [
+  "Bitcoin enables peer-to-peer money transfers without intermediaries using blockchain technology.",
+  "Hot wallets are connected to the internet for convenience, while cold wallets provide offline safety.",
+  "A DEX is decentralized and doesn’t require signups – trades happen through smart contracts.",
+  "Crypto tools help with portfolio tracking, tax reports, DeFi connections, and more.",
+  "Do your own research before making financial decisions."
+];
+
+let current = 0;
+const titleEl = document.getElementById("info-title");
+const detailEl = document.getElementById("info-detail");
+
+function rotateInfo() {
+  current = (current + 1) % titles.length;
+  titleEl.textContent = titles[current];
+  detailEl.classList.add("hidden");
+  detailEl.textContent = details[current];
+}
+
+function toggleInfo() {
+  detailEl.classList.toggle("hidden");
+}
+
+setInterval(rotateInfo, 3000);
 </script></body>
 </html>
