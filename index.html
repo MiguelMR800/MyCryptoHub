@@ -112,8 +112,15 @@
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
 }
 .card .title {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  background: linear-gradient(90deg, #FFD700, #fff8c6, #FFD700);
+  background-size: 150% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmer-title 5s linear infinite;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3), 0 2px 3px rgba(0, 0, 0, 0.4);
 }
 .card .desc {
   font-size: 1rem;
@@ -151,6 +158,13 @@
 .card .title {
   font-size: 1.6rem;
   margin-bottom: 0.8rem;
+  background: linear-gradient(90deg, #FFD700, #fff8c6, #FFD700);
+  background-size: 150% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmer-title 5s linear infinite;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3), 0 2px 3px rgba(0, 0, 0, 0.4);
 }
 
 .card .desc {
@@ -164,6 +178,65 @@
   text-decoration: underline;
   font-weight: bold;
 }
+
+.info-nav {
+  background: rgba(255, 215, 0, 0.8);
+  color: #000;
+  border: none;
+  padding: 10px 16px;
+  margin: 0 8px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.info-nav:hover {
+  background: rgba(255, 215, 0, 1);
+}
+
+
+.shimmer-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  background: linear-gradient(90deg, #FFD700, #fff8c6, #FFD700);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.card .title {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  background: linear-gradient(90deg, #FFD700, #fff8c6, #FFD700);
+  background-size: 150% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmer-title 5s linear infinite;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3), 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes shimmer-title {
+  0% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: -100% center;
+  }
+}
+
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -433,7 +506,16 @@
 <div class="news-ticker-top">
 <div id="news-ticker-text" style="text-align:center; padding: 1rem; min-height: 280px; display: flex; justify-content: center; align-items: center;"><div style="position:relative; max-width:600px; margin:0 auto;"><button id="prevNews" style="position:absolute; left:-60px; top:40%; background:#222; color:#fff; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&lt;</button><div id="news-rotating-item" style="transition: opacity 0.4s ease; min-height: 240px;; width: 100%; max-width: 600px; transition: opacity 0.4s ease; min-height: 240px; display: flex; justify-content: center; align-items: center;"></div><button id="nextNews" style="position:absolute; right:-60px; top:40%; background:#222; color:#fff; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&gt;</button></div></div>
 </div>
-<section class="crypto-info-section" style="background-image: url('images/crypto_background_optimized.jpg'); background-size: cover; background-position: center; padding: 50px 20px; position: relative; margin-top: 2rem;"><div class="info-overlay" style="background-color: rgba(0, 0, 0, 0.7); color: #FFD700; max-width: 800px; margin: auto; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.8);"><div class="info-slide" onclick="toggleInfo()"><h2 id="info-title">What problem does Bitcoin actually solve?</h2><p class="hidden" id="info-detail">Bitcoin is a decentralized system that allows transferring value without banks, relying on scarcity and trust in code.</p></div><p class="disclaimer" style="font-size: 0.8rem; color: #bbb; margin-top: 20px;">*This is not financial advice.</p></div></section><h1>MyCryptoHub</h1>
+<section class="crypto-info-section" style="background-image: url('images/crypto_background_optimized.jpg'); background-size: cover; background-position: center; padding: 50px 20px; position: relative; margin-top: 2rem;"><div class="info-overlay" style="background-color: rgba(0, 0, 0, 0.7); color: #FFD700; max-width: 800px; margin: auto; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.8);">
+<div class="info-slide">
+  <h2 id="info-title" onclick="toggleInfo()">Title here</h2>
+  <p id="info-detail" class="hidden">Detail here</p>
+  <div style="margin-top: 20px;">
+    <button onclick="prevSlide()" class="info-nav">&laquo; Prev</button>
+    <button onclick="nextSlide()" class="info-nav">Next &raquo;</button>
+  </div>
+</div>
+<p class="disclaimer" style="font-size: 0.8rem; color: #bbb; margin-top: 20px;">*This is not financial advice.</p></div></section><h1 class="shimmer-title">MyCryptoHub</h1>
 <div class="section">
 <h2>Exchanges</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Platforms where you can buy, sell, and trade cryptocurrencies.</p>
 <div class="card"><div class="title">Binance</div><div class="desc">World's largest crypto exchange by volume.</div><a class="link" href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">Join Binance</a></div>
@@ -654,48 +736,58 @@ function appendMessage(sender, text) {
 <a href="#" id="modalLink" style="display:inline-block; margin-top:15px; font-weight:bold;" target="_blank">Read full article</a>
 </div>
 </div>
+
 <script>
-const titles = [
-  "What problem does Bitcoin actually solve?",
-  "Why do you need both hot and cold wallets?",
-  "How is a DEX different from a centralized exchange?",
-  "What are crypto tools used for?",
-  "Remember: This is not investment advice."
+const infoSlides = [
+  {
+    title: "What problem does Bitcoin actually solve?",
+    detail: "Bitcoin removes the need for centralized intermediaries in transferring value. It's borderless, permissionless, and censorship-resistant — qualities traditional banking systems lack."
+  },
+  {
+    title: "Why do you need both hot and cold wallets?",
+    detail: "Hot wallets are convenient for daily use and DeFi, but they're connected to the internet and more vulnerable. Cold wallets store your assets offline, making them ideal for long-term security."
+  },
+  {
+    title: "How is a DEX different from a centralized exchange?",
+    detail: "A DEX (Decentralized Exchange) lets you trade directly from your wallet using smart contracts, without registration or giving up custody of your assets — unlike centralized platforms."
+  },
+  {
+    title: "What are crypto tools used for?",
+    detail: "Crypto tools help you track your portfolio, automate trades, calculate taxes, monitor markets, or interact with DeFi apps. They bring visibility and control to your digital finances."
+  },
+  {
+    title: "Reminder: Not financial advice",
+    detail: "Always do your own research. Crypto markets are volatile and risky — decisions should be made based on personal understanding, not automated advice."
+  }
 ];
 
-const details = [
-  "Bitcoin enables peer-to-peer money transfers without intermediaries using blockchain technology.",
-  "Hot wallets are connected to the internet for convenience, while cold wallets provide offline safety.",
-  "A DEX is decentralized and doesn’t require signups – trades happen through smart contracts.",
-  "Crypto tools help with portfolio tracking, tax reports, DeFi connections, and more.",
-  "Do your own research before making financial decisions."
-];
+let currentSlide = 0;
 
-let current = 0;
-const titleEl = document.getElementById("info-title");
-const detailEl = document.getElementById("info-detail");
-
-function rotateInfo() {
-  current = (current + 1) % titles.length;
-  titleEl.style.opacity = 0;
-  detailEl.style.opacity = 0;
-  setTimeout(() => {
-    titleEl.textContent = titles[current];
-    detailEl.textContent = details[current];
-    detailEl.classList.add("hidden");
-    titleEl.style.opacity = 1;
-  }, 400);
+function updateInfoSlide() {
+  const slide = infoSlides[currentSlide];
+  document.getElementById("info-title").textContent = slide.title;
+  document.getElementById("info-detail").textContent = slide.detail;
+  document.getElementById("info-detail").classList.add("hidden");
 }
 
 function toggleInfo() {
-  detailEl.classList.toggle("hidden");
-  if (!detailEl.classList.contains("hidden")) {
-    detailEl.style.opacity = 1;
-  }
+  const detail = document.getElementById("info-detail");
+  detail.classList.toggle("hidden");
 }
 
-setInterval(rotateInfo, 3000);
-</script><script>
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % infoSlides.length;
+  updateInfoSlide();
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + infoSlides.length) % infoSlides.length;
+  updateInfoSlide();
+}
+
+document.addEventListener("DOMContentLoaded", updateInfoSlide);
+</script>
+<script>
 async function loadCointelegraphNews() {
   console.log("✅ Dual carousel loaded: auto-top + manual-bottom");
   const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss';
