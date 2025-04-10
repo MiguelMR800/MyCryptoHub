@@ -90,6 +90,80 @@
   overflow: hidden;
   transition: opacity 0.3s ease, height 0.3s ease;
 }
+
+.card {
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  color: #000;
+  background: url('goldbar_background_horizontal.png') center/cover no-repeat;
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 160px;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+}
+.card .title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.card .desc {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 0.7rem;
+}
+.card .link {
+  color: #000;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.card {
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background: url('goldbar_card_texture.png') center/cover no-repeat;
+  border-radius: 20px;
+  color: #111;
+  font-weight: bold;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 180px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.7);
+}
+
+.card .title {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.card .desc {
+  font-size: 1.05rem;
+  font-weight: normal;
+  margin-bottom: 0.8rem;
+}
+
+.card .link {
+  color: #000;
+  text-decoration: underline;
+  font-weight: bold;
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -355,12 +429,7 @@
 <span>LINK: +1.50%</span>
 </div>
 </div>
-<div class="intro" style="max-width: 800px; margin: 2rem auto; padding: 1rem; background: rgba(0,0,0,0.05); border-radius: 12px;">
-<h2 style="margin-top:0;">The digital revolution began with Bitcoin.</h2>
-<p>It introduced decentralized money, inspired powerful blockchain platforms like Ethereum and Solana, and paved the way for the rise of AI-powered finance.</p>
-<h3>The Future of Cryptocurrencies and Tokenization</h3>
-<p>Bitcoin changed how we think about money. It started a revolution that enabled Ethereum, NFTs, DeFi, and more.</p>
-</div>
+<div class="intro" style="max-width: 800px; margin: 3rem auto; padding: 1.5rem; background: rgba(0,0,0,0.05); border-radius: 12px; font-size: 1.1rem; text-align:center;"><h2>The Digital Revolution Began with Bitcoin – The Digital Gold</h2><p>Bitcoin didn’t just introduce decentralized money. It became the foundation of a new financial era — trusted, scarce, and borderless like gold, but powered by the internet.</p><p>Its success inspired platforms like Ethereum and Solana, and paved the way for AI-powered finance, DeFi, and NFTs.</p></div>
 <div class="news-ticker-top">
 <div id="news-ticker-text" style="text-align:center; padding: 1rem; min-height: 280px; display: flex; justify-content: center; align-items: center;"><div style="position:relative; max-width:600px; margin:0 auto;"><button id="prevNews" style="position:absolute; left:-60px; top:40%; background:#222; color:#fff; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&lt;</button><div id="news-rotating-item" style="transition: opacity 0.4s ease; min-height: 240px;; width: 100%; max-width: 600px; transition: opacity 0.4s ease; min-height: 240px; display: flex; justify-content: center; align-items: center;"></div><button id="nextNews" style="position:absolute; right:-60px; top:40%; background:#222; color:#fff; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&gt;</button></div></div>
 </div>
@@ -628,121 +697,80 @@ function toggleInfo() {
 setInterval(rotateInfo, 3000);
 </script><script>
 async function loadCointelegraphNews() {
+  console.log("✅ Dual carousel loaded: auto-top + manual-bottom");
   const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss';
   try {
     const response = await fetch(rssUrl);
     const data = await response.json();
     const items = data.items.slice(0, 10);
 
-    let currentIndex = 0;
-    const container = document.getElementById("news-rotating-item");
-    let paused = false;
+    // AUTO ROTATING TOP SECTION
+    let topIndex = 0;
+    const topContainer = document.getElementById("news-rotating-item");
 
-    function showItem(index) {
+    function showTopItem(index) {
       const item = items[index];
-      const image = item.thumbnail && item.thumbnail !== '' ? item.thumbnail : 'https://via.placeholder.com/600x160?text=No+Image';
+      const image = item.thumbnail?.startsWith("http") ? item.thumbnail : "https://via.placeholder.com/600x160?text=Crypto+News";
       const content = `
         <div style="display:flex; flex-direction:column; align-items:center;">
-          <img src="${image}" alt="News image" style="max-width:100%; max-height:160px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.3);"/>
-          <h3 style="margin-top: 10px; font-size: 1rem;"><a href="${item.link}" target="_blank" style="color: #ffd700; text-decoration: none;">${item.title}</a></h3>
+          <img src="${image}" style="max-width:100%; max-height:160px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.3); margin-bottom: 12px;"/>
+          <h3 style="font-size: 1rem; text-align: center;">
+            <a href="${item.link}" target="_blank" style="color: #ffd700; text-decoration: none;">
+              ${item.title}
+            </a>
+          </h3>
         </div>
       `;
-      container.style.opacity = 0.5;
+      topContainer.style.transition = "opacity 0.6s ease";
+      topContainer.style.opacity = 0.2;
       setTimeout(() => {
-        container.innerHTML = content;
-        container.style.opacity = 1;
+        topContainer.innerHTML = content;
+        topContainer.style.opacity = 1;
       }, 200);
     }
 
-    function startRotation() {
-      setInterval(() => {
-        if (!paused) {
-          currentIndex = (currentIndex + 1) % items.length;
-          showItem(currentIndex);
-        }
-      }, 12000); // 12 seconds
-    }
+    showTopItem(topIndex);
+    setInterval(() => {
+      topIndex = (topIndex + 1) % items.length;
+      showTopItem(topIndex);
+    }, 12000);
 
-    showItem(currentIndex);
-    startRotation();
+    // MANUAL LOWER SECTION (same items reused)
+    let bottomIndex = 0;
+    const bottomContainer = document.getElementById("news-lower-carousel");
 
-    document.getElementById("prevNews").addEventListener("click", () => {
-      paused = true;
-      currentIndex = (currentIndex - 1 + items.length) % items.length;
-      showItem(currentIndex);
-    });
-
-    document.getElementById("nextNews").addEventListener("click", () => {
-      paused = true;
-      currentIndex = (currentIndex + 1) % items.length;
-      showItem(currentIndex);
-    });
-
-    document.getElementById("news-rotating-item").addEventListener("click", () => {
-      paused = true;
-    });
-
-  } catch (error) {
-    console.error("Failed to load Cointelegraph news:", error);
-  }
-}
-document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
-</script><script>
-async function loadCointelegraphNews() {
-  console.log("✅ News script loaded with 12s interval and image fallback.");
-  const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss';
-  try {
-    const response = await fetch(rssUrl);
-    const data = await response.json();
-    const items = data.items.slice(0, 10);
-
-    let currentIndex = 0;
-    const container = document.getElementById("news-rotating-item");
-    let paused = false;
-
-    function showItem(index) {
+    function showBottomItem(index) {
       const item = items[index];
-      let image = item.thumbnail && item.thumbnail.startsWith("http") ? item.thumbnail : "https://via.placeholder.com/600x160?text=Crypto+News";
+      const image = item.thumbnail?.startsWith("http") ? item.thumbnail : "https://via.placeholder.com/600x160?text=More+News";
       const content = `
         <div style="display:flex; flex-direction:column; align-items:center;">
-          <img src="${image}" alt="News image" style="max-width:100%; max-height:160px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.3);"/>
-          <h3 style="margin-top: 10px; font-size: 1rem;"><a href="${item.link}" target="_blank" style="color: #ffd700; text-decoration: none;">${item.title}</a></h3>
+          <img src="${image}" style="max-width:100%; max-height:160px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.3); margin-bottom: 12px;"/>
+          <h3 style="font-size: 1rem; text-align: center;">
+            <a href="${item.link}" target="_blank" style="color: #ffd700; text-decoration: none;">
+              ${item.title}
+            </a>
+          </h3>
         </div>
       `;
-      container.style.opacity = 0.5;
+      bottomContainer.style.transition = "opacity 0.6s ease";
+      bottomContainer.style.opacity = 0.2;
       setTimeout(() => {
-        container.innerHTML = content;
-        container.style.opacity = 1;
+        bottomContainer.innerHTML = content;
+        bottomContainer.style.opacity = 1;
       }, 200);
     }
 
-    function startRotation() {
-      setInterval(() => {
-        if (!paused) {
-          currentIndex = (currentIndex + 1) % items.length;
-          showItem(currentIndex);
-        }
-      }, 12000); // 12s interval
-    }
-
-    showItem(currentIndex);
-    startRotation();
-
     document.getElementById("prevNews").addEventListener("click", () => {
-      paused = true;
-      currentIndex = (currentIndex - 1 + items.length) % items.length;
-      showItem(currentIndex);
+      bottomIndex = (bottomIndex - 1 + items.length) % items.length;
+      showBottomItem(bottomIndex);
     });
 
     document.getElementById("nextNews").addEventListener("click", () => {
-      paused = true;
-      currentIndex = (currentIndex + 1) % items.length;
-      showItem(currentIndex);
+      bottomIndex = (bottomIndex + 1) % items.length;
+      showBottomItem(bottomIndex);
     });
 
-    document.getElementById("news-rotating-item").addEventListener("click", () => {
-      paused = true;
-    });
+    showBottomItem(bottomIndex);
 
   } catch (error) {
     console.error("❌ Failed to load Cointelegraph news:", error);
