@@ -424,7 +424,7 @@ function toggleChat() {
   container.style.display = container.style.display === "flex" ? "none" : "flex";
 }
 
-async function sendMessage() {
+function sendMessage() {
   const input = document.getElementById("userInput");
   const message = input.value.trim();
   if (!message) return;
@@ -432,28 +432,25 @@ async function sendMessage() {
   appendMessage("user", message);
   input.value = "";
 
-  appendMessage("bot", "Typing...");
+  let reply = getOfflineBotReply(message);
+  appendMessage("bot", reply);
+}
 
-  try {
-    const res = await fetch("https://my-crypto-hub-iir7.vercel.app/api/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message })
-    });
+function getOfflineBotReply(msg) {
+  const lower = msg.toLowerCase();
 
-    const data = await res.json();
-    const botMessages = document.querySelectorAll(".bot");
-    const reply = data.reply || "Sorry, I couldn't understand that.";
-
-    if (botMessages.length) {
-      botMessages[botMessages.length - 1].textContent = reply;
-    }
-  } catch (err) {
-    console.error(err);
-    const botMessages = document.querySelectorAll(".bot");
-    if (botMessages.length) {
-      botMessages[botMessages.length - 1].textContent = "Error: Could not reach the server.";
-    }
+  if (lower.includes("bitcoin")) {
+    return "Bitcoin is the first decentralized cryptocurrency. It allows peer-to-peer payments without intermediaries.";
+  } else if (lower.includes("ethereum")) {
+    return "Ethereum is a smart contract platform that enables decentralized apps and DeFi.";
+  } else if (lower.includes("wallet")) {
+    return "Hot wallets are connected to the internet. Cold wallets are offline and more secure for long-term storage.";
+  } else if (lower.includes("dex")) {
+    return "A DEX is a decentralized exchange that lets users trade crypto directly using smart contracts.";
+  } else if (lower.includes("crypto")) {
+    return "Cryptocurrencies are digital assets secured by cryptography, often using blockchain networks.";
+  } else {
+    return "Sorry, I can only answer basic crypto questions at the moment.";
   }
 }
 
