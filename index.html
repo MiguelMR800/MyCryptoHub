@@ -586,54 +586,6 @@ function appendMessage(sender, text) {
 </div>
 </div>
 <script>
-async function loadCointelegraphNews() {
-  const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss';
-  try {
-    const response = await fetch(rssUrl);
-    const data = await response.json();
-    const items = data.items.slice(0, 10);
-
-    let currentIndex = 0;
-    const container = document.getElementById("news-rotating-item");
-
-    function showItem(index) {
-      const item = items[index];
-      const image = item.thumbnail && item.thumbnail !== '' ? item.thumbnail : 'https://via.placeholder.com/600x160?text=No+Image';
-      const content = `
-        <div style="display:flex; flex-direction:column; align-items:center;">
-          <img src="${image}" alt="News image" style="max-width:100%; max-height:160px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.3);"/>
-          <h3 style="margin-top: 10px; font-size: 1rem;"><a href="${item.link}" target="_blank" style="color: #ffd700; text-decoration: none;">${item.title}</a></h3>
-        </div>
-      `;
-      container.style.opacity = 0.5;
-      setTimeout(() => {
-        container.innerHTML = content;
-        container.style.opacity = 1;
-      }, 200);
-    }
-
-    showItem(currentIndex);
-
-    const interval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % items.length;
-      showItem(currentIndex);
-    }, 5000);
-
-    document.getElementById("prevNews").addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + items.length) % items.length;
-      showItem(currentIndex);
-    });
-
-    document.getElementById("nextNews").addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % items.length;
-      showItem(currentIndex);
-    });
-  } catch (error) {
-    console.error("Failed to load Cointelegraph news:", error);
-  }
-}
-document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
-</script><script>
 const titles = [
   "What problem does Bitcoin actually solve?",
   "Why do you need both hot and cold wallets?",
@@ -674,5 +626,66 @@ function toggleInfo() {
 }
 
 setInterval(rotateInfo, 3000);
+</script><script>
+async function loadCointelegraphNews() {
+  const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss';
+  try {
+    const response = await fetch(rssUrl);
+    const data = await response.json();
+    const items = data.items.slice(0, 10);
+
+    let currentIndex = 0;
+    const container = document.getElementById("news-rotating-item");
+    let paused = false;
+
+    function showItem(index) {
+      const item = items[index];
+      const image = item.thumbnail && item.thumbnail !== '' ? item.thumbnail : 'https://via.placeholder.com/600x160?text=No+Image';
+      const content = `
+        <div style="display:flex; flex-direction:column; align-items:center;">
+          <img src="${image}" alt="News image" style="max-width:100%; max-height:160px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.3);"/>
+          <h3 style="margin-top: 10px; font-size: 1rem;"><a href="${item.link}" target="_blank" style="color: #ffd700; text-decoration: none;">${item.title}</a></h3>
+        </div>
+      `;
+      container.style.opacity = 0.5;
+      setTimeout(() => {
+        container.innerHTML = content;
+        container.style.opacity = 1;
+      }, 200);
+    }
+
+    function startRotation() {
+      setInterval(() => {
+        if (!paused) {
+          currentIndex = (currentIndex + 1) % items.length;
+          showItem(currentIndex);
+        }
+      }, 8000);
+    }
+
+    showItem(currentIndex);
+    startRotation();
+
+    document.getElementById("prevNews").addEventListener("click", () => {
+      paused = true;
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      showItem(currentIndex);
+    });
+
+    document.getElementById("nextNews").addEventListener("click", () => {
+      paused = true;
+      currentIndex = (currentIndex + 1) % items.length;
+      showItem(currentIndex);
+    });
+
+    document.getElementById("news-rotating-item").addEventListener("click", () => {
+      paused = true;
+    });
+
+  } catch (error) {
+    console.error("Failed to load Cointelegraph news:", error);
+  }
+}
+document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
 </script></body>
 </html>
