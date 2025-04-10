@@ -74,6 +74,22 @@
   color: #bbb;
   margin-top: 20px;
 }
+
+.info-slide {
+  min-height: 120px;
+  transition: opacity 0.5s ease;
+}
+
+.info-slide h2, .info-slide p {
+  transition: opacity 0.5s ease;
+}
+
+.info-slide .hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -640,13 +656,21 @@ const detailEl = document.getElementById("info-detail");
 
 function rotateInfo() {
   current = (current + 1) % titles.length;
-  titleEl.textContent = titles[current];
-  detailEl.classList.add("hidden");
-  detailEl.textContent = details[current];
+  titleEl.style.opacity = 0;
+  detailEl.style.opacity = 0;
+  setTimeout(() => {
+    titleEl.textContent = titles[current];
+    detailEl.textContent = details[current];
+    detailEl.classList.add("hidden");
+    titleEl.style.opacity = 1;
+  }, 400);
 }
 
 function toggleInfo() {
   detailEl.classList.toggle("hidden");
+  if (!detailEl.classList.contains("hidden")) {
+    detailEl.style.opacity = 1;
+  }
 }
 
 setInterval(rotateInfo, 3000);
