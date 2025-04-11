@@ -2,25 +2,22 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head> 
-  <!-- SEO & Open Graph -->
-  <title>MyCryptoHub – Your Crypto Startpage</title>
-  <meta name="description" content="MyCryptoHub on kryptosijoittajan aloitussivu. Löydä parhaat pörssit, lompakot, työkalut ja uutiset – kaikki yhdellä sivulla." />
-  <meta name="keywords" content="crypto, kryptovaluutta, bitcoin, ethereum, cold wallet, hot wallet, binance, ledger, defi, web3, crypto tools" />
-  <meta name="author" content="MyCryptoHub" />
-  
-  <meta property="og:title" content="MyCryptoHub – Your Crypto Startpage" />
-  <meta property="og:description" content="Krypto-aloitussivu: pörssit, lompakot, työkalut ja uutiset. Klikkaa ja aloita matka!" />
-  <meta property="og:image" content="https://miguelmr800.github.io/MyCryptoHub/preview.jpg" />
-  <meta property="og:url" content="https://miguelmr800.github.io/MyCryptoHub/" />
-  <meta property="og:type" content="website" />
-  
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MyCryptoHub – Your Crypto Startpage" />
-  <meta name="twitter:description" content="Löydä parhaat kryptosivustot yhdeltä sivulta: DEXit, lompakot, pörssit, työkalut ja uutiset." />
-  <meta name="twitter:image" content="https://miguelmr800.github.io/MyCryptoHub/preview.jpg" />
-
-  <style>
+<head>
+<!-- SEO & Open Graph -->
+<title>MyCryptoHub – Your Crypto Startpage</title>
+<meta content="MyCryptoHub on kryptosijoittajan aloitussivu. Löydä parhaat pörssit, lompakot, työkalut ja uutiset – kaikki yhdellä sivulla." name="description"/>
+<meta content="crypto, kryptovaluutta, bitcoin, ethereum, cold wallet, hot wallet, binance, ledger, defi, web3, crypto tools" name="keywords"/>
+<meta content="MyCryptoHub" name="author"/>
+<meta content="MyCryptoHub – Your Crypto Startpage" property="og:title"/>
+<meta content="Krypto-aloitussivu: pörssit, lompakot, työkalut ja uutiset. Klikkaa ja aloita matka!" property="og:description"/>
+<meta content="https://miguelmr800.github.io/MyCryptoHub/preview.jpg" property="og:image"/>
+<meta content="https://miguelmr800.github.io/MyCryptoHub/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="MyCryptoHub – Your Crypto Startpage" name="twitter:title"/>
+<meta content="Löydä parhaat kryptosivustot yhdeltä sivulta: DEXit, lompakot, pörssit, työkalut ja uutiset." name="twitter:description"/>
+<meta content="https://miguelmr800.github.io/MyCryptoHub/preview.jpg" name="twitter:image"/>
+<style>
     /* kaikki tyylit jatkuvat tästä... */
 <style>
 .news-close:hover,
@@ -271,6 +268,79 @@ overflow: hidden;}
 .card:nth-of-type(18)::after { animation-delay: 17s; }
 .card:nth-of-type(19)::after { animation-delay: 17s; }
 .card:nth-of-type(20)::after { animation-delay: 15s; }
+
+.gold-bar-box {
+  background: linear-gradient(145deg, #FFD700, #FFA500, #FFC107);
+  border-radius: 18px;
+  border: 2px solid #d4af37;
+  box-shadow:
+    inset 0 2px 3px rgba(255, 255, 255, 0.6),
+    inset 0 -3px 4px rgba(184, 134, 11, 0.5),
+    0 10px 30px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  margin: 40px 20px;
+  color: #111;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.gold-bar-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111;
+  text-shadow:
+    2px 2px 3px rgba(255, 255, 255, 0.4),
+    -1px -1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.crypto-ticker {
+  width: 100%;
+  background: linear-gradient(145deg, #FFD700, #FFA500, #FFC107);
+  color: #111;
+  font-weight: bold;
+  padding: 0.8rem 0;
+  text-align: center;
+  font-size: 1rem;
+  border-bottom: 2px solid #d4af37;
+  box-shadow:
+    inset 0 2px 3px rgba(255, 255, 255, 0.4),
+    inset 0 -3px 4px rgba(184, 134, 11, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ticker-content span {
+  color: #111;
+  font-weight: 600;
+}
+
+.copy-btn {
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #FFD700, #FFA500, #FFC107);
+  color: #111;
+  font-weight: bold;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    inset 0 -2px 2px rgba(184, 134, 11, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 3px rgba(184, 134, 11, 0.6),
+    0 6px 12px rgba(0, 0, 0, 0.4);
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -286,7 +356,7 @@ overflow: hidden;}
   animation: goldShimmer 30s ease-in-out infinite;
   background-attachment: fixed;
   font-family: 'Poppins', sans-serif;
-  color: #fff;
+  color: #111;
   margin: 0;
   padding: 1rem;
   line-height: 1.6;
@@ -335,7 +405,7 @@ overflow: hidden;}
     .copy-btn {
       padding: 6px 12px;
       background-color: #000;
-      color: #fff;
+      color: #111;
       border: none;
       border-radius: 4px;
       cursor: pointer;
@@ -356,7 +426,7 @@ overflow: hidden;}
   animation: goldShimmer 30s ease-in-out infinite;
   background-attachment: fixed;
   font-family: 'Poppins', sans-serif;
-  color: #fff;
+  color: #111;
   margin: 0;
   padding: 1rem;
   line-height: 1.6;
@@ -413,7 +483,7 @@ overflow: hidden;}
     .ticker-content span {
       display: inline-block;
       margin: 0 2rem;
-      color: #fff;
+      color: #111;
       font-weight: 600;
     }
 
@@ -491,7 +561,7 @@ overflow: hidden;}
   background: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 1.5rem;
-  color: #fff;
+  color: #111;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.06) inset,
@@ -543,9 +613,8 @@ overflow: hidden;}
 .card:nth-of-type(19)::after { animation-delay: 17s; }
 .card:nth-of-type(20)::after { animation-delay: 15s; }
 </style>
-<link href="favicon.png" rel="icon" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon"/><meta content="MyCryptoHub" property="og:title"/><meta content="Explore top crypto tools, wallets &amp; exchanges." property="og:description"/><meta content="preview.jpg" property="og:image"/><meta content="https://miguelmr800.github.io/MyCryptoHub/" property="og:url"/><meta content="summary_large_image" name="twitter:card"/></head>
+<link href="favicon.png" rel="icon" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon"/><meta content="MyCryptoHub" property="og:title"/><meta content="Explore top crypto tools, wallets &amp; exchanges." property="og:description"/><meta content="preview.jpg" property="og:image"/><meta content="https://miguelmr800.github.io/MyCryptoHub/" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&amp;display=swap" rel="stylesheet"/></head>
 <body>
-
 <div class="crypto-ticker">
 <div class="ticker-content">
 <span>BTC: +2.34%</span>
@@ -560,18 +629,24 @@ overflow: hidden;}
 <span>LINK: +1.50%</span>
 </div>
 </div>
-<div class="intro" style="max-width: 800px; margin: 3rem auto; padding: 1.5rem; background: rgba(0,0,0,0.05); border-radius: 12px; font-size: 1.1rem; text-align:center;"><h2>The Digital Revolution Began with Bitcoin – The Digital Gold</h2><p>Bitcoin didn’t just introduce decentralized money. It became the foundation of a new financial era — trusted, scarce, and borderless like gold, but powered by the internet.</p><p>Its success inspired platforms like Ethereum and Solana, and paved the way for AI-powered finance, DeFi, and NFTs.</p></div>
+
+<div class="gold-bar-box">
+<h2 class="gold-bar-title">The Digital Revolution Began with Bitcoin – The Digital Gold</h2>
+<p>Bitcoin didn’t just introduce decentralized money. It became the foundation of a new financial era — trusted, scarce, and borderless like gold, but powered by the internet.</p>
+<p>Its success inspired platforms like Ethereum and Solana, and paved the way for AI-powered finance, DeFi, and NFTs.</p>
+</div>
+
 <div class="news-ticker-top">
-<div id="news-ticker-text" style="text-align:center; padding: 1rem; min-height: 280px; display: flex; justify-content: center; align-items: center;"><div style="position:relative; max-width:600px; margin:0 auto;"><button id="prevNews" style="position:absolute; left:-60px; top:40%; background:#222; color:#fff; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&lt;</button><div id="news-rotating-item" style="transition: opacity 0.4s ease; min-height: 240px;; width: 100%; max-width: 600px; transition: opacity 0.4s ease; min-height: 240px; display: flex; justify-content: center; align-items: center;"></div><button id="nextNews" style="position:absolute; right:-60px; top:40%; background:#222; color:#fff; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&gt;</button></div></div>
+<div id="news-ticker-text" style="text-align:center; padding: 1rem; min-height: 280px; display: flex; justify-content: center; align-items: center;"><div style="position:relative; max-width:600px; margin:0 auto;"><button id="prevNews" style="position:absolute; left:-60px; top:40%; background:#222; color:#111; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&lt;</button><div id="news-rotating-item" style="transition: opacity 0.4s ease; min-height: 240px;; width: 100%; max-width: 600px; transition: opacity 0.4s ease; min-height: 240px; display: flex; justify-content: center; align-items: center;"></div><button id="nextNews" style="position:absolute; right:-60px; top:40%; background:#222; color:#111; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&gt;</button></div></div>
 </div>
 <section class="crypto-info-section" style="background-image: url('images/crypto_background_optimized.jpg'); background-size: cover; background-position: center; padding: 50px 20px; position: relative; margin-top: 2rem;"><div class="info-overlay" style="background-color: rgba(0, 0, 0, 0.7); color: #FFD700; max-width: 800px; margin: auto; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.8);">
 <div class="info-slide">
-  <h2 id="info-title" onclick="toggleInfo()">Title here</h2>
-  <p id="info-detail" class="hidden">Detail here</p>
-  <div style="margin-top: 20px;">
-    <button onclick="prevSlide()" class="info-nav">&laquo; Prev</button>
-    <button onclick="nextSlide()" class="info-nav">Next &raquo;</button>
-  </div>
+<h2 id="info-title" onclick="toggleInfo()">Title here</h2>
+<p class="hidden" id="info-detail">Detail here</p>
+<div style="margin-top: 20px;">
+<button class="info-nav" onclick="prevSlide()">« Prev</button>
+<button class="info-nav" onclick="nextSlide()">Next »</button>
+</div>
 </div>
 <p class="disclaimer" style="font-size: 0.8rem; color: #bbb; margin-top: 20px;">*This is not financial advice.</p></div></section><h1 class="shimmer-title">MyCryptoHub</h1>
 <div class="section">
@@ -738,7 +813,7 @@ function appendMessage(sender, text) {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: #fff;
+  color: #111;
 }
 
 .chat-input {
@@ -805,8 +880,6 @@ function appendMessage(sender, text) {
 .card:nth-of-type(19)::after { animation-delay: 17s; }
 .card:nth-of-type(20)::after { animation-delay: 15s; }
 </style>
-
-
 <script>
 const infoSlides = [
   {
