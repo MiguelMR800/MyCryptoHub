@@ -72,7 +72,23 @@
   transition: opacity 0.3s ease, height 0.3s ease;
 }
 
+.card {
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  color: #000;
+  background: url('goldbar_background_horizontal.png') center/cover no-repeat;
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 160px;
+  transition: transform 0.3s ease;
 
+overflow: hidden;}
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
@@ -100,7 +116,23 @@
   font-weight: bold;
 }
 
+.card {
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background: url('goldbar_card_texture.png') center/cover no-repeat;
+  border-radius: 20px;
+  color: #111;
+  font-weight: bold;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 180px;
 
+overflow: hidden;}
 
 .card:hover {
   transform: translateY(-6px);
@@ -236,25 +268,7 @@
 .card:nth-of-type(18)::after { animation-delay: 17s; }
 .card:nth-of-type(19)::after { animation-delay: 17s; }
 .card:nth-of-type(20)::after { animation-delay: 15s; }
-  .card {
-  max-width: 90%;
-  margin: 2rem auto;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 1.5rem;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
-    0 6px 20px rgba(0, 0, 0, 0.4),
-    0 2px 4px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px) saturate(160%);
-  -webkit-backdrop-filter: blur(12px) saturate(160%);
-  transform-style: preserve-3d;
-  transition: all 0.3s ease;
-
-overflow: hidden;}
-</style>
+  </style>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
@@ -470,7 +484,24 @@ overflow: hidden;}
   overflow-wrap: break-word;
 }
 
+.card {
+  max-width: 90%;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+    0 6px 20px rgba(0, 0, 0, 0.4),
+    0 2px 4px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
 
+overflow: hidden;}
 .card::before {
   content: "";
   position: absolute;
@@ -555,19 +586,9 @@ overflow: hidden;}
    </div>
   </div>
   <div class="plaque" style="margin-top: 3rem;">
-   <img alt="Bitcoin Revolution Plaque" src="bitcoin_gold_plaque.png" style="width: 100%; max-width: 640px; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.4);"/>
+   <img alt="Bitcoin Revolution Plaque" src="images/bitcoin_gold_plaque.png" style="width: 100%; max-width: 640px; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.4);"/>
   </div>
-  <div class="intro" style="max-width: 800px; margin: 3rem auto; padding: 1.5rem; background: rgba(0,0,0,0.05); border-radius: 12px; font-size: 1.1rem; text-align:center;">
-   <h2>
-    The Digital Revolution Began with Bitcoin &ndash; The Digital Gold
-   </h2>
-   <p>
-    Bitcoin didn&rsquo;t just introduce decentralized money. It became the foundation of a new financial era &mdash; trusted, scarce, and borderless like gold, but powered by the internet.
-   </p>
-   <p>
-    Its success inspired platforms like Ethereum and Solana, and paved the way for AI-powered finance, DeFi, and NFTs.
-   </p>
-  </div>
+  
   <div class="news-ticker-top">
    <div id="news-ticker-text" style="text-align:center; padding: 1rem; min-height: 280px; display: flex; justify-content: center; align-items: center;">
     <div style="position:relative; max-width:600px; margin:0 auto;">
@@ -606,7 +627,7 @@ overflow: hidden;}
    </div>
   </section>
   <div class="plaque" style="margin-top: 2rem;">
-   <img alt="MyCryptoHub Gold Plaque" src="mycryptohub_gold_plaque.png" style="width: 100%; max-width: 420px; border-radius: 16px; box-shadow: 0 8px 16px rgba(0,0,0,0.4);"/>
+   <img alt="MyCryptoHub Gold Plaque" src="images/mycryptohub_gold_plaque.png" style="width: 100%; max-width: 420px; border-radius: 16px; box-shadow: 0 8px 16px rgba(0,0,0,0.4);"/>
   </div>
   <div class="section">
    <h2>
