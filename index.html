@@ -341,6 +341,46 @@ overflow: hidden;}
     inset 0 -2px 3px rgba(184, 134, 11, 0.6),
     0 6px 12px rgba(0, 0, 0, 0.4);
 }
+
+.review-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .review-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .review-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.review-card {
+  background: linear-gradient(135deg, #fff8dc, #f5deb3);
+  border: 1px solid #d4af37;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: #111;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+}
+
+.review-card {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  border: 1px solid #d4af37;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: #111;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -629,13 +669,11 @@ overflow: hidden;}
 <span>LINK: +1.50%</span>
 </div>
 </div>
-
 <div class="gold-bar-box">
 <h2 class="gold-bar-title">The Digital Revolution Began with Bitcoin – The Digital Gold</h2>
 <p>Bitcoin didn’t just introduce decentralized money. It became the foundation of a new financial era — trusted, scarce, and borderless like gold, but powered by the internet.</p>
 <p>Its success inspired platforms like Ethereum and Solana, and paved the way for AI-powered finance, DeFi, and NFTs.</p>
 </div>
-
 <div class="news-ticker-top">
 <div id="news-ticker-text" style="text-align:center; padding: 1rem; min-height: 280px; display: flex; justify-content: center; align-items: center;"><div style="position:relative; max-width:600px; margin:0 auto;"><button id="prevNews" style="position:absolute; left:-60px; top:40%; background:#222; color:#111; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&lt;</button><div id="news-rotating-item" style="transition: opacity 0.4s ease; min-height: 240px;; width: 100%; max-width: 600px; transition: opacity 0.4s ease; min-height: 240px; display: flex; justify-content: center; align-items: center;"></div><button id="nextNews" style="position:absolute; right:-60px; top:40%; background:#222; color:#111; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&gt;</button></div></div>
 </div>
@@ -685,6 +723,96 @@ overflow: hidden;}
 <div class="card"><div class="title">Banter Bubbles</div><div class="desc">Visual market mover bubbles.</div><a class="link" href="https://www.banterbubbles.com" target="_blank">View Bubbles</a></div>
 <div class="card"><div class="title">TradingView</div><div class="desc">Advanced charting platform for crypto &amp; stocks.</div><a class="link" href="https://tradingview.com" target="_blank">Open TradingView</a></div>
 </div>
+<section id="reviews">
+<h2 class="gold-title" style="text-align:center;">Wallet &amp; Exchange Reviews</h2>
+<div class="review-grid">
+<div class="review-card">
+<h3>Trezor Model T</h3>
+<p><strong>Security:</strong> Open-source, PIN + passphrase</p>
+<p><strong>Supported:</strong> 1800+ coins</p>
+<p><strong>Use Case:</strong> Long-term cold storage</p>
+<p><strong>Affiliate:</strong> Not available</p>
+</div>
+<div class="review-card">
+<h3>Ledger Nano X</h3>
+<p><strong>Security:</strong> Secure Element + Ledger Live</p>
+<p><strong>Supported:</strong> 5000+ assets</p>
+<p><strong>Bluetooth:</strong> Yes</p>
+<a class="affiliate-button" href="https://shop.ledger.com/?r=23c3e3baff0d">Buy Now</a>
+</div>
+<div class="review-card">
+<h3>CoinStats Wallet</h3>
+<p><strong>Type:</strong> Hot Wallet</p>
+<p><strong>Features:</strong> Portfolio tracking + staking</p>
+<p><strong>Device:</strong> Mobile/Desktop</p>
+<a class="affiliate-button" href="https://invite.coinstats.app/r?i=Zb2IsJ1734804670281">Try CoinStats</a>
+</div>
+<div class="review-card">
+<h3>MetaMask</h3>
+<p><strong>Type:</strong> Hot Wallet (browser/mobile)</p>
+<p><strong>Chain Support:</strong> Ethereum, BSC, Polygon</p>
+<p><strong>Use:</strong> Web3 dApps &amp; DeFi</p>
+<a class="affiliate-button" href="#">MetaMask Homepage</a>
+</div>
+<div class="review-card">
+<h3>Drift Protocol</h3>
+<p><strong>Platform:</strong> DEX for Perpetuals</p>
+<p><strong>Blockchain:</strong> Solana</p>
+<p><strong>Leverage:</strong> Yes (up to 10x)</p>
+<a class="affiliate-button" href="https://app.drift.trade/ref/miguel800">Trade on Drift</a>
+</div>
+<div class="review-card">
+<h3>Jupiter Aggregator</h3>
+<p><strong>Platform:</strong> DEX Aggregator</p>
+<p><strong>Blockchain:</strong> Solana</p>
+<p><strong>Best For:</strong> Finding lowest price swap</p>
+<a class="affiliate-button" href="https://jup.ag/invite/BRvVHduEhaiG">Try Jupiter</a>
+</div>
+</div>
+</section>
+<section id="exchange-reviews">
+<h2 class="gold-title" style="text-align:center;">Crypto Exchange Reviews</h2>
+<div class="review-grid">
+<div class="review-card">
+<h3>Binance</h3>
+<p><strong>Strength:</strong> Largest coin selection</p>
+<p><strong>Fees:</strong> 0.1%</p>
+<p><strong>Regulation:</strong> Offshore</p>
+<p><strong>Ideal for:</strong> Active traders</p>
+<a class="affiliate-button" href="https://accounts.binance.com/en/register?ref=73526157">Join Binance</a>
+</div>
+<div class="review-card">
+<h3>Bybit</h3>
+<p><strong>Strength:</strong> Great for leverage &amp; futures</p>
+<p><strong>Fees:</strong> 0.1%</p>
+<p><strong>Regulation:</strong> Offshore</p>
+<p><strong>Ideal for:</strong> Derivatives &amp; active users</p>
+<a class="affiliate-button" href="https://www.bybit.com/invite?ref=EQ69EL">Join Bybit</a>
+</div>
+<div class="review-card">
+<h3>Coinmotion</h3>
+<p><strong>Strength:</strong> Finnish &amp; EU-regulated</p>
+<p><strong>Fees:</strong> 0.5%+</p>
+<p><strong>Regulation:</strong> EU</p>
+<p><strong>Ideal for:</strong> Beginners, euro users</p>
+<a class="affiliate-button" href="https://coinmotion.com/fi?ref=92a4">Join Coinmotion</a>
+</div>
+<div class="review-card">
+<h3>Northcrypto</h3>
+<p><strong>Strength:</strong> Finnish, simple and secure</p>
+<p><strong>Fees:</strong> 1%</p>
+<p><strong>Regulation:</strong> EU / FIN-FSA</p>
+<p><strong>Ideal for:</strong> Beginners, euro users</p>
+<a class="affiliate-button" href="https://northcrypto.com">Visit Northcrypto</a>
+</div><div class="review-card">
+<h3>Bitget</h3>
+<p><strong>Strength:</strong> Excellent for futures trading</p>
+<p><strong>Fees:</strong> 0.1%</p>
+<p><strong>Regulation:</strong> Offshore</p>
+<p><strong>Ideal for:</strong> Experienced traders, campaigns</p>
+<a class="affiliate-button" href="https://bitget.com">Visit Bitget</a>
+</div></div>
+</section>
 <div class="section">
 <h2>Donations</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Support the project by sending crypto directly to these wallet addresses.</p>
 <div class="card">
