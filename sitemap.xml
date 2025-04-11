@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://miguelmr800.github.io/MyCryptoHub/</loc>
-    <lastmod>2025-04-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://miguelmr800.github.io/MyCryptoHub/</loc></url>
+  <url><loc>https://miguelmr800.github.io/MyCryptoHub/#Exchanges</loc></url>
+  <url><loc>https://miguelmr800.github.io/MyCryptoHub/#Wallets</loc></url>
+  <url><loc>https://miguelmr800.github.io/MyCryptoHub/#DEX</loc></url>
+  <url><loc>https://miguelmr800.github.io/MyCryptoHub/#Tools</loc></url>
+  <url><loc>https://miguelmr800.github.io/MyCryptoHub/#Donations</loc></url>
 </urlset>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://miguelmr800.github.io/MyCryptoHub/sitemap.xml
