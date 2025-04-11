@@ -23,41 +23,6 @@
   <style>
     /* kaikki tyylit jatkuvat tästä... */
 <style>
-.news-modal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.7);
-}
-
-.news-modal-content {
-  background-color: rgba(255, 255, 255, 0.9);
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 600px;
-  font-family: 'Poppins', sans-serif;
-  position: relative;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  color: #000;
-}
-
-.news-close {
-  color: #aaa;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
 .news-close:hover,
 .news-close:focus {
   color: #000;
@@ -306,13 +271,6 @@ overflow: hidden;}
 .card:nth-of-type(18)::after { animation-delay: 17s; }
 .card:nth-of-type(19)::after { animation-delay: 17s; }
 .card:nth-of-type(20)::after { animation-delay: 15s; }
-
-.news-modal-content {
-  background-color: rgba(0, 0, 0, 0.85);
-  color: #FFD700;
-  font-weight: 500;
-}
-
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -584,13 +542,6 @@ overflow: hidden;}
 .card:nth-of-type(18)::after { animation-delay: 17s; }
 .card:nth-of-type(19)::after { animation-delay: 17s; }
 .card:nth-of-type(20)::after { animation-delay: 15s; }
-
-.news-modal-content {
-  background-color: rgba(0, 0, 0, 0.85);
-  color: #FFD700;
-  font-weight: 500;
-}
-
 </style>
 <link href="favicon.png" rel="icon" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon"/><meta content="MyCryptoHub" property="og:title"/><meta content="Explore top crypto tools, wallets &amp; exchanges." property="og:description"/><meta content="preview.jpg" property="og:image"/><meta content="https://miguelmr800.github.io/MyCryptoHub/" property="og:url"/><meta content="summary_large_image" name="twitter:card"/></head>
 <body>
@@ -853,24 +804,8 @@ function appendMessage(sender, text) {
 .card:nth-of-type(18)::after { animation-delay: 17s; }
 .card:nth-of-type(19)::after { animation-delay: 17s; }
 .card:nth-of-type(20)::after { animation-delay: 15s; }
-
-.news-modal-content {
-  background-color: rgba(0, 0, 0, 0.85);
-  color: #FFD700;
-  font-weight: 500;
-}
-
 </style>
-<!-- News Modal -->
-<div class="news-modal" id="newsModal">
-<div class="news-modal-content">
-<span class="news-close" onclick="closeNewsModal()">×</span>
-<h2 id="modalTitle"></h2>
-<img alt="News image" id="modalImage" src="" style="max-width:100%; border-radius:8px; margin-top:10px;"/>
-<p id="modalDescription" style="margin-top:10px;"></p>
-<a href="#" id="modalLink" style="display:inline-block; margin-top:15px; font-weight:bold;" target="_blank">Read full article</a>
-</div>
-</div>
+
 
 <script>
 const infoSlides = [
@@ -937,7 +872,7 @@ async function loadCointelegraphNews() {
 
     function showTopItem(index) {
       const item = items[index];
-      const image = item.thumbnail && item.thumbnail.startsWith("http") ? item.thumbnail : "https://via.placeholder.com/600x160?text=Crypto+News";
+      const image = item.thumbnail?.startsWith("http") ? item.thumbnail : "https://via.placeholder.com/600x160?text=Crypto+News";
       const content = `
         <div style="display:flex; flex-direction:column; align-items:center;">
           <img src="${image}" style="max-width:100%; max-height:160px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.3); margin-bottom: 12px;"/>
