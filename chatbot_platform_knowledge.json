@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Binance",
+    "category": "Exchange",
+    "description": "Binance is one of the largest cryptocurrency exchanges globally, offering spot, futures, staking, and a wide range of digital assets.",
+    "url": "https://www.binance.com"
+  },
+  {
+    "name": "Bybit",
+    "category": "Exchange",
+    "description": "Bybit is a popular crypto derivatives exchange with spot trading, leverage, copy trading, and regular trading competitions.",
+    "url": "https://www.bybit.com"
+  },
+  {
+    "name": "Bitget",
+    "category": "Exchange",
+    "description": "Bitget is a futures and spot trading exchange known for copy trading features and promotional campaigns.",
+    "url": "https://www.bitget.com"
+  },
+  {
+    "name": "Crypto.com",
+    "category": "Exchange",
+    "description": "Crypto.com is an exchange with its own app, Visa card, and wide asset support, focusing on usability and crypto payments.",
+    "url": "https://crypto.com"
+  },
+  {
+    "name": "Coinmotion",
+    "category": "Exchange",
+    "description": "Coinmotion is a Finnish crypto exchange providing euro deposits, bank transfers, and simple investing tools.",
+    "url": "https://www.coinmotion.com"
+  },
+  {
+    "name": "Northcrypto",
+    "category": "Exchange",
+    "description": "Northcrypto is a Finnish exchange that supports euro payments and is known for its local compliance and user-friendliness.",
+    "url": "https://www.northcrypto.com/fi"
+  },
+  {
+    "name": "Phantom",
+    "category": "Hot Wallet",
+    "description": "Phantom is a non-custodial wallet for Solana, allowing users to store, swap, and stake SOL and SPL tokens.",
+    "url": "https://phantom.app"
+  },
+  {
+    "name": "MetaMask",
+    "category": "Hot Wallet",
+    "description": "MetaMask is the most used Ethereum wallet browser extension, supporting DeFi and Web3 apps.",
+    "url": "https://metamask.io"
+  },
+  {
+    "name": "Solflare",
+    "category": "Hot Wallet",
+    "description": "Solflare is a secure wallet built for the Solana ecosystem, available as a browser extension and mobile app.",
+    "url": "https://solflare.com"
+  },
+  {
+    "name": "Rabby Wallet",
+    "category": "Hot Wallet",
+    "description": "Rabby is a browser-based wallet for Ethereum and EVM chains, focusing on security and usability in DeFi.",
+    "url": "https://rabby.io"
+  },
+  {
+    "name": "Jupiter Wallet",
+    "category": "Hot Wallet",
+    "description": "Jupiter Wallet integrates with the Jupiter DEX aggregator on Solana and supports native token interactions.",
+    "url": "https://jup.ag"
+  },
+  {
+    "name": "Ledger Nano X",
+    "category": "Gold Wallet",
+    "description": "Ledger Nano X is a hardware wallet with Bluetooth support, mobile compatibility, and high-end secure chip.",
+    "url": "https://www.ledger.com"
+  },
+  {
+    "name": "Trezor Model T",
+    "category": "Gold Wallet",
+    "description": "Trezor Model T is a hardware wallet featuring a touchscreen and open-source firmware for advanced security.",
+    "url": "https://trezor.io"
+  },
+  {
+    "name": "Wormhole",
+    "category": "Bridge Platform",
+    "description": "Wormhole is a cross-chain messaging protocol that facilitates asset transfers between major blockchains.",
+    "url": "https://wormhole.com"
+  },
+  {
+    "name": "Portal Bridge",
+    "category": "Bridge Platform",
+    "description": "Portal Bridge is built on Wormhole to allow cross-chain asset transfers across multiple blockchains.",
+    "url": "https://portalbridge.com"
+  },
+  {
+    "name": "Mayan Bridge",
+    "category": "Bridge Platform",
+    "description": "Mayan is a Solana-focused bridge allowing token swaps and cross-chain transfers with low fees.",
+    "url": "https://swap.mayan.finance"
+  },
+  {
+    "name": "Jumper",
+    "category": "Bridge Platform",
+    "description": "Jumper is a bridge aggregator that routes your transfers through the best available cross-chain options.",
+    "url": "https://jumper.exchange"
+  },
+  {
+    "name": "LayerZero",
+    "category": "Bridge Platform",
+    "description": "LayerZero is an omnichain protocol that provides cross-chain messaging and interoperability.",
+    "url": "https://layerzero.network"
+  },
+  {
+    "name": "deBridge",
+    "category": "Bridge Platform",
+    "description": "deBridge is a decentralized cross-chain protocol designed for secure interoperability across blockchains.",
+    "url": "https://debridge.finance"
+  }
+]
