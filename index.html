@@ -341,6 +341,37 @@ overflow: hidden;}
     inset 0 -2px 3px rgba(184, 134, 11, 0.6),
     0 6px 12px rgba(0, 0, 0, 0.4);
 }
+
+.comparison-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: linear-gradient(135deg, #fff8dc, #f5deb3);
+  border-collapse: collapse;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+.comparison-table th, .comparison-table td {
+  padding: 1rem;
+  border: 1px solid #d4af37;
+  text-align: center;
+  color: #111;
+}
+.comparison-table tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.comparison-table tr:hover {
+  background-color: rgba(255, 215, 0, 0.15);
+}
+
+.comparison-table {
+  max-width: 900px;
+  font-size: 0.9rem;
+  table-layout: fixed;
+  word-wrap: break-word;
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -629,13 +660,11 @@ overflow: hidden;}
 <span>LINK: +1.50%</span>
 </div>
 </div>
-
 <div class="gold-bar-box">
 <h2 class="gold-bar-title">The Digital Revolution Began with Bitcoin – The Digital Gold</h2>
 <p>Bitcoin didn’t just introduce decentralized money. It became the foundation of a new financial era — trusted, scarce, and borderless like gold, but powered by the internet.</p>
 <p>Its success inspired platforms like Ethereum and Solana, and paved the way for AI-powered finance, DeFi, and NFTs.</p>
 </div>
-
 <div class="news-ticker-top">
 <div id="news-ticker-text" style="text-align:center; padding: 1rem; min-height: 280px; display: flex; justify-content: center; align-items: center;"><div style="position:relative; max-width:600px; margin:0 auto;"><button id="prevNews" style="position:absolute; left:-60px; top:40%; background:#222; color:#111; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&lt;</button><div id="news-rotating-item" style="transition: opacity 0.4s ease; min-height: 240px;; width: 100%; max-width: 600px; transition: opacity 0.4s ease; min-height: 240px; display: flex; justify-content: center; align-items: center;"></div><button id="nextNews" style="position:absolute; right:-60px; top:40%; background:#222; color:#111; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&gt;</button></div></div>
 </div>
@@ -653,12 +682,29 @@ overflow: hidden;}
 <h2>Exchanges</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Platforms where you can buy, sell, and trade cryptocurrencies.</p>
 <div class="card"><div class="title">Binance</div><div class="desc">World's largest crypto exchange by volume.</div><a class="link" href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">Join Binance</a></div>
 <div class="card"><div class="title">Bybit</div><div class="desc">Fast-growing exchange for derivatives and spot.</div><a class="link" href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Join Bybit</a></div>
+<div class="card">
+<div class="title">Bitget</div>
+<div class="desc">Futures, spot, and copy trading platform.</div>
+<a class="link" href="https://www.bitget.com/referral/register?clacCode=B0US0BU8&amp;from=%2Fevents%2Freferral-all-program&amp;source=events&amp;utmSource=PremierInviter" target="_blank">Join Bitget</a>
+</div>
+
+<div class="card">
+<div class="title">Northcrypto</div>
+<div class="desc">Finnish crypto exchange with euro support and bank transfers.</div>
+<a class="link" href="https://www.northcrypto.com/fi" target="_blank">Visit Northcrypto</a>
+</div>
 <div class="card"><div class="title">Coinmotion</div><div class="desc">Finnish crypto platform with strong regulation.</div><a class="link" href="https://coinmotion.com/fi?ref=92a4" target="_blank">Join Coinmotion</a></div>
 <div class="card"><div class="title">Crypto.com</div><div class="desc">Popular app with Visa card and staking options.</div><a class="link" href="https://crypto.com/app/nrmm4uzm29" target="_blank">Join Crypto.com</a></div>
 </div>
 <div class="section">
 <h2>Hot Wallets</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Digital wallets connected to the internet – easy to use, best for daily access.</p>
 <div class="card"><div class="title">MetaMask</div><div class="desc">Ethereum wallet for DeFi &amp; NFTs.</div><a class="link" href="https://metamask.io/" target="_blank">Get MetaMask</a></div>
+<div class="card">
+<div class="title">Rabby Wallet</div>
+<div class="desc">Browser-based wallet optimized for DeFi safety and ease.</div>
+<a class="link" href="https://rabby.io" target="_blank">Get Rabby Wallet</a>
+</div>
+
 <div class="card"><div class="title">Phantom</div><div class="desc">Popular Solana wallet with NFTs and staking.</div><a class="link" href="https://phantom.app/" target="_blank">Get Phantom</a></div>
 <div class="card"><div class="title">Solflare</div><div class="desc">Mobile and browser wallet for Solana.</div><a class="link" href="https://solflare.com/" target="_blank">Get Solflare</a></div>
 <div class="card"><div class="title">Jupiter Wallet</div><div class="desc">Wallet integrated with Jupiter DEX aggregator.</div><a class="link" href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Get Jupiter Wallet</a></div>
@@ -685,6 +731,38 @@ overflow: hidden;}
 <div class="card"><div class="title">Banter Bubbles</div><div class="desc">Visual market mover bubbles.</div><a class="link" href="https://www.banterbubbles.com" target="_blank">View Bubbles</a></div>
 <div class="card"><div class="title">TradingView</div><div class="desc">Advanced charting platform for crypto &amp; stocks.</div><a class="link" href="https://tradingview.com" target="_blank">Open TradingView</a></div>
 </div>
+<section id="comparisons">
+<h2 class="gold-title" style="text-align:center;">Comparisons: Exchanges, Wallets &amp; DEXs</h2>
+<h3 style="color:#FFD700; text-align:center;">Exchange Comparison</h3>
+<table class="comparison-table">
+<tr><th>Name</th><th>Fees</th><th>Regulation</th><th>Best for</th><th>Link</th></tr>
+<tr><td>Binance</td><td>0.1%</td><td>Offshore</td><td>Advanced traders</td><td><a href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">Visit</a></td></tr>
+<tr><td>Bybit</td><td>0.1%</td><td>Offshore</td><td>Leverage &amp; futures</td><td><a href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Visit</a></td></tr>
+<tr><td>Bitget</td><td>0.1%</td><td>Offshore</td><td>Derivatives &amp; campaigns</td><td><a href="https://bitget.com" target="_blank">Visit</a></td></tr>
+<tr><td>Crypto.com</td><td>0.4%</td><td>Global</td><td>Mobile-first users</td><td><a href="https://crypto.com/app/nrmm4uzm29" target="_blank">Visit</a></td></tr>
+<tr><td>Coinmotion</td><td>0.5%+</td><td>EU / Finland</td><td>Beginners, euro deposits</td><td><a href="https://coinmotion.com/fi?ref=92a4" target="_blank">Visit</a></td></tr>
+<tr><td>Northcrypto</td><td>1%</td><td>EU / FIN-FSA</td><td>Simple Finnish option</td><td><a href="https://northcrypto.com" target="_blank">Visit</a></td></tr>
+</table>
+<h3 style="color:#FFD700; text-align:center;">Hot Wallet Comparison</h3>
+<table class="comparison-table">
+<tr><th>Name</th><th>Type</th><th>Chains</th><th>Best for</th><th>Link</th></tr>
+<tr><td>Phantom</td><td>Hot</td><td>Solana</td><td>NFTs &amp; DeFi on Solana</td><td><a href="https://phantom.app" target="_blank">Visit</a></td></tr>
+<tr><td>MetaMask</td><td>Hot</td><td>Ethereum, EVM</td><td>Web3 dApps</td><td><a href="https://metamask.io" target="_blank">Visit</a></td></tr>
+<tr><td>Solflare</td><td>Hot</td><td>Solana</td><td>Mobile + staking</td><td><a href="https://solflare.com" target="_blank">Visit</a></td></tr>
+<tr><td>Rabby Wallet</td><td>Hot</td><td>EVM</td><td>DeFi browser extension</td><td><a href="https://rabby.io" target="_blank">Visit</a></td></tr>
+<tr><td>Jupiter Wallet</td><td>Hot</td><td>Solana</td><td>Integrated with Jupiter DEX</td><td><a href="https://jup.ag/wallet" target="_blank">Visit</a></td></tr>
+</table>
+<h3 style="color:#FFD700; text-align:center;">DEX Platform Comparison</h3>
+<table class="comparison-table">
+<tr><th>Name</th><th>Type</th><th>Chain</th><th>Focus</th><th>Link</th></tr>
+<tr><td>Jupiter</td><td>Aggregator</td><td>Solana</td><td>Best routing</td><td><a href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Visit</a></td></tr>
+<tr><td>Kamino</td><td>Yield Optimizer</td><td>Solana</td><td>Automated strategies</td><td><a href="https://kamino.finance" target="_blank">Visit</a></td></tr>
+<tr><td>Meteora</td><td>AMM</td><td>Solana</td><td>Liquidity pools</td><td><a href="https://meteora.ag" target="_blank">Visit</a></td></tr>
+<tr><td>Drift</td><td>Perpetuals</td><td>Solana</td><td>Leverage trading</td><td><a href="https://app.drift.trade/ref/miguel800" target="_blank">Visit</a></td></tr>
+<tr><td>MarginFi</td><td>Lending &amp; Margin</td><td>Solana</td><td>Borrowing &amp; leverage</td><td><a href="https://marginfi.com" target="_blank">Visit</a></td></tr>
+<tr><td>Orca</td><td>AMM</td><td>Solana</td><td>Simple swaps</td><td><a href="https://orca.so" target="_blank">Visit</a></td></tr>
+</table>
+</section>
 <div class="section">
 <h2>Donations</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Support the project by sending crypto directly to these wallet addresses.</p>
 <div class="card">
