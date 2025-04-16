@@ -394,6 +394,27 @@ overflow: hidden;}
   background: linear-gradient(145deg, #FFD700, #FFA500, #FFC107) !important;
   padding: 0.8rem 1rem !important;
 }
+
+.intro-image {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+.intro-image:hover {
+  transform: scale(1.02);
+}
+@media (max-width: 768px) {
+  .intro-image {
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  }
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -671,7 +692,7 @@ overflow: hidden;}
 <h1 class="shimmer-title">MyCryptoHub</h1>
 <section class="intro-section">
 <div class="intro-container">
-<img alt="MyCryptoHub Guardian" class="intro-image" src="https://miguelmr800.github.io/MyCryptoHub/images/lady_mycryptohub.png"/><div class="ticker-card" style="width: 95%; max-width: 500px; overflow: hidden; display: flex; justify-content: center; margin: -30px auto 1rem auto; border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 10; position: relative;">
+<img alt="MyCryptoHub Guardian" class="intro-image" src="mycryptohub_intro.png"/><div class="ticker-card" style="width: 95%; max-width: 500px; overflow: hidden; display: flex; justify-content: center; margin: -30px auto 1rem auto; border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 10; position: relative;">
 <div class="crypto-ticker">
 <div class="ticker-content">
 <span>BTC +2.45%</span>
@@ -687,9 +708,7 @@ overflow: hidden;}
 </div>
 </div>
 </div>
-
-
-<img alt="The Digital Revolution" class="intro-text-image" src="https://miguelmr800.github.io/MyCryptoHub/images/goldpanel_bitcoin.png" style="width: 100%; max-width: 640px; display: block; margin: 0 auto; padding-top: 1rem;"/>
+<img alt="The Digital Revolution" class="intro-text-image" src="https://miguelmr800.github.io/MyCryptoHub/images/goldpanel_bitcoin.png" style="width: 100%; max-width: 720px; display: block; margin: 2rem auto; border-radius: 18px; box-shadow: 0 8px 28px rgba(0,0,0,0.4);"/>
 </div>
 </section>
 <div class="news-ticker-top">
