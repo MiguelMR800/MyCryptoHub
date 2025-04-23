@@ -1,10 +1,11 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+<head><head>
 <!-- SEO & Open Graph -->
-<title>MyCryptoHub – Your Crypto Startpage</title>
+<title>
+   MyCryptoHub – Your Crypto Startpage
+  </title>
 <meta content="MyCryptoHub on kryptosijoittajan aloitussivu. Löydä parhaat pörssit, lompakot, työkalut ja uutiset – kaikki yhdellä sivulla." name="description"/>
 <meta content="crypto, kryptovaluutta, bitcoin, ethereum, cold wallet, hot wallet, binance, ledger, defi, web3, crypto tools" name="keywords"/>
 <meta content="MyCryptoHub" name="author"/>
@@ -18,7 +19,7 @@
 <meta content="Löydä parhaat kryptosivustot yhdeltä sivulta: DEXit, lompakot, pörssit, työkalut ja uutiset." name="twitter:description"/>
 <meta content="https://miguelmr800.github.io/MyCryptoHub/preview.jpg" name="twitter:image"/>
 <style>
-    /* kaikki tyylit jatkuvat tästä... */
+   /* kaikki tyylit jatkuvat tästä... */
 <style>
 .news-close:hover,
 .news-close:focus {
@@ -429,13 +430,119 @@ overflow: hidden;}
 .intro-image {
   animation: fadeSlideIn 1.6s ease-out;
 }
+  
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  flex: 1 1 280px;
+  max-width: 340px;
+  min-width: 240px;
+}
+
+/* Näyttökohtaiset responsiivisuudet */
+@media (min-width: 1200px) {
+  .card {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card {
+    flex: 1 1 90%;
+    max-width: 95%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .card {
+    flex: 1 1 45%;
+  }
+}
+
+/* Estetään yksittäisen kortin venyminen koko rivin levyiseksi */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card {
+  flex: 1 1 280px;
+  max-width: 320px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 90%;
+    max-width: 95%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .card {
+    flex: 1 1 45%;
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  flex: 1 1 280px;
+  max-width: 320px;
+  min-width: 260px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 90%;
+    max-width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .comparison-table {
+    font-size: 0.75rem;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>MyCryptoHub</title>
+<title>
+   MyCryptoHub
+  </title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <style>
-    body {
+   body {
   background: linear-gradient(120deg, rgba(120, 90, 10, 1), rgba(255, 215, 0, 0.85)),
               radial-gradient(circle at 35% 35%, rgba(255, 255, 180, 0.35), transparent 40%),
               radial-gradient(circle at 65% 65%, rgba(255, 245, 200, 0.25), transparent 60%);
@@ -700,25 +807,59 @@ overflow: hidden;}
 .card:nth-of-type(18)::after { animation-delay: 17s; }
 .card:nth-of-type(19)::after { animation-delay: 17s; }
 .card:nth-of-type(20)::after { animation-delay: 15s; }
-</style>
-<link href="favicon.png" rel="icon" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon"/><meta content="MyCryptoHub" property="og:title"/><meta content="Explore top crypto tools, wallets &amp; exchanges." property="og:description"/><meta content="preview.jpg" property="og:image"/><meta content="https://miguelmr800.github.io/MyCryptoHub/" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&amp;display=swap" rel="stylesheet"/></head>
-<body>
-<h1 class="shimmer-title">MyCryptoHub</h1>
+  </style>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="MyCryptoHub" property="og:title"/>
+<meta content="Explore top crypto tools, wallets &amp; exchanges." property="og:description"/>
+<meta content="preview.jpg" property="og:image"/>
+<meta content="https://miguelmr800.github.io/MyCryptoHub/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+</head><style>
+.card {
+    font-size: 0.70rem !important;
+}
+</style></head><body><body>
+<h1 class="shimmer-title">
+   MyCryptoHub
+  </h1>
 <section class="intro-section">
 <div class="intro-container">
-<img alt="MyCryptoHub Guardian" class="intro-image" src="images/mycryptohub_intro.png"/><div class="ticker-card" style="width: 95%; max-width: 500px; overflow: hidden; display: flex; justify-content: center; margin: -30px auto 1rem auto; border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 10; position: relative;">
+<img alt="MyCryptoHub Guardian" class="intro-image" src="images/mycryptohub_intro.png"/>
+<div class="ticker-card" style="width: 95%; max-width: 500px; overflow: hidden; display: flex; justify-content: center; margin: -30px auto 1rem auto; border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 10; position: relative;">
 <div class="crypto-ticker">
 <div class="ticker-content">
-<span>BTC +2.45%</span>
-<span>ETH -1.20%</span>
-<span>SOL +4.80%</span>
-<span>XRP +0.95%</span>
-<span>BNB -0.67%</span>
-<span>AVAX +3.22%</span>
-<span>ADA -0.89%</span>
-<span>MATIC +1.10%</span>
-<span>DOT +2.30%</span>
-<span>LINK +4.50%</span>
+<span>
+        BTC +2.45%
+       </span>
+<span>
+        ETH -1.20%
+       </span>
+<span>
+        SOL +4.80%
+       </span>
+<span>
+        XRP +0.95%
+       </span>
+<span>
+        BNB -0.67%
+       </span>
+<span>
+        AVAX +3.22%
+       </span>
+<span>
+        ADA -0.89%
+       </span>
+<span>
+        MATIC +1.10%
+       </span>
+<span>
+        DOT +2.30%
+       </span>
+<span>
+        LINK +4.50%
+       </span>
 </div>
 </div>
 </div>
@@ -726,200 +867,696 @@ overflow: hidden;}
 </div>
 </section>
 <div class="news-ticker-top">
-<div id="news-ticker-text" style="text-align:center; padding: 1rem; min-height: 280px; display: flex; justify-content: center; align-items: center;"><div style="position:relative; max-width:600px; margin:0 auto;"><button id="prevNews" style="position:absolute; left:-60px; top:40%; background:#222; color:#111; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&lt;</button><div id="news-rotating-item" style="transition: opacity 0.4s ease; min-height: 240px;; width: 100%; max-width: 600px; transition: opacity 0.4s ease; min-height: 240px; display: flex; justify-content: center; align-items: center;"></div><button id="nextNews" style="position:absolute; right:-60px; top:40%; background:#222; color:#111; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&gt;</button></div></div>
+<div id="news-ticker-text" style="text-align:center; padding: 1rem; min-height: 280px; display: flex; justify-content: center; align-items: center;">
+<div style="position:relative; max-width:600px; margin:0 auto;">
+<button id="prevNews" style="position:absolute; left:-60px; top:40%; background:#222; color:#111; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">
+      &lt;
+     </button>
+<div id="news-rotating-item" style="transition: opacity 0.4s ease; min-height: 240px;; width: 100%; max-width: 600px; transition: opacity 0.4s ease; min-height: 240px; display: flex; justify-content: center; align-items: center;">
 </div>
-<section class="crypto-info-section" style="background-image: url('images/crypto_background_optimized.jpg'); background-size: cover; background-position: center; padding: 50px 20px; position: relative; margin-top: 2rem;"><div class="info-overlay" style="background-color: rgba(0, 0, 0, 0.7); color: #FFD700; max-width: 800px; margin: auto; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.8);">
+<button id="nextNews" style="position:absolute; right:-60px; top:40%; background:#222; color:#111; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">
+      &gt;
+     </button>
+</div>
+</div>
+</div>
+<section class="crypto-info-section" style="background-image: url('images/crypto_background_optimized.jpg'); background-size: cover; background-position: center; padding: 50px 20px; position: relative; margin-top: 2rem;">
+<div class="info-overlay" style="background-color: rgba(0, 0, 0, 0.7); color: #FFD700; max-width: 800px; margin: auto; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.8);">
 <div class="info-slide">
-<h2 id="info-title" onclick="toggleInfo()">Title here</h2>
-<p class="hidden" id="info-detail">Detail here</p>
+<h2 id="info-title" onclick="toggleInfo()">
+      Title here
+     </h2>
+<p class="hidden" id="info-detail">
+      Detail here
+     </p>
 <div style="margin-top: 20px;">
-<button class="info-nav" onclick="prevSlide()">« Prev</button>
-<button class="info-nav" onclick="nextSlide()">Next »</button>
+<button class="info-nav" onclick="prevSlide()">
+       « Prev
+      </button>
+<button class="info-nav" onclick="nextSlide()">
+       Next »
+      </button>
 </div>
 </div>
-<p class="disclaimer" style="font-size: 0.8rem; color: #bbb; margin-top: 20px;">*This is not financial advice.</p></div></section>
-<div class="section">
-<h2>Exchanges</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Platforms where you can buy, sell, and trade cryptocurrencies.</p>
-<div class="card"><div class="title">Binance</div><div class="desc">World's largest crypto exchange by volume.</div><a class="link" href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">Join Binance</a></div>
-<div class="card"><div class="title">Bybit</div><div class="desc">Fast-growing exchange for derivatives and spot.</div><a class="link" href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Join Bybit</a></div>
-<div class="card">
-<div class="title">Bitget</div>
-<div class="desc">Futures, spot, and copy trading platform.</div>
-<a class="link" href="https://www.bitget.com/referral/register?clacCode=B0US0BU8&amp;from=%2Fevents%2Freferral-all-program&amp;source=events&amp;utmSource=PremierInviter" target="_blank">Join Bitget</a>
+<p class="disclaimer" style="font-size: 0.8rem; color: #bbb; margin-top: 20px;">
+     *This is not financial advice.
+    </p>
 </div>
-<div class="card">
-<div class="title">Northcrypto</div>
-<div class="desc">Finnish crypto exchange with euro support and bank transfers.</div>
-<a class="link" href="https://www.northcrypto.com/fi" target="_blank">Visit Northcrypto</a>
-</div>
-<div class="card"><div class="title">Coinmotion</div><div class="desc">Finnish crypto platform with strong regulation.</div><a class="link" href="https://coinmotion.com/fi?ref=92a4" target="_blank">Join Coinmotion</a></div>
-<div class="card"><div class="title">Crypto.com</div><div class="desc">Popular app with Visa card and staking options.</div><a class="link" href="https://crypto.com/app/nrmm4uzm29" target="_blank">Join Crypto.com</a></div>
-</div>
-<div class="section">
-<h2>Hot Wallets</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Digital wallets connected to the internet – easy to use, best for daily access.</p>
-<div class="card"><div class="title">MetaMask</div><div class="desc">Ethereum wallet for DeFi &amp; NFTs.</div><a class="link" href="https://metamask.io/" target="_blank">Get MetaMask</a></div>
-<div class="card">
-<div class="title">Rabby Wallet</div>
-<div class="desc">Browser-based wallet optimized for DeFi safety and ease.</div>
-<a class="link" href="https://rabby.io" target="_blank">Get Rabby Wallet</a>
-</div>
-
-<div class="card">
-  <div class="title">Moonshot Wallet</div>
-  <div class="desc">A hot wallet tailored for meme coins and moonshot tokens. Simple, fast, and meme-ready.</div>
-  <a class="link" href="https://moonshot.com?ref=kyCmNLJnYS" target="_blank">Get Moonshot</a>
-</div>
-
-<div class="card"><div class="title">Phantom</div><div class="desc">Popular Solana wallet with NFTs and staking.</div><a class="link" href="https://phantom.app/" target="_blank">Get Phantom</a></div>
-<div class="card"><div class="title">Solflare</div><div class="desc">Mobile and browser wallet for Solana.</div><a class="link" href="https://solflare.com/" target="_blank">Get Solflare</a></div>
-<div class="card"><div class="title">Jupiter Wallet</div><div class="desc">Wallet integrated with Jupiter DEX aggregator.</div><a class="link" href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Get Jupiter Wallet</a></div>
-</div>
-<div class="section">
-<h2>Cold Wallets</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Offline wallets – ideal for long-term, secure storage.</p>
-<div class="card"><div class="title">Ledger</div><div class="desc">Industry-leading hardware wallet.</div><a class="link" href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">Buy Ledger</a></div>
-<div class="card"><div class="title">Trezor</div><div class="desc">Secure offline wallet for long-term storage.</div><a class="link" href="https://affil.trezor.io/aff_c?offer_id=239&amp;aff_id=35816" target="_blank">Buy via Trezor (Affiliate)</a></div>
-
-
-<h3 style="color:#FFD700; text-align:center;">Cold Wallet Comparison</h3>
-<table class="comparison-table">
-<tr><th>Name</th><th>Type</th><th>Features</th><th>Best for</th><th>Link</th></tr>
-<tr>
-  <td>Ledger</td>
-  <td>Hardware</td>
-  <td>Bluetooth, Mobile App, Secure Element</td>
-  <td>Modern & mobile users</td>
-  <td><a href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">Visit</a></td>
-</tr>
-<tr>
-  <td>Trezor</td>
-  <td>Hardware</td>
-  <td>Open-source, Transparent, Durable</td>
-  <td>Security-focused users</td>
-  <td><a href="https://affil.trezor.io/aff_c?offer_id=239&aff_id=35816" target="_blank">Visit</a></td>
-</tr>
-</table>
-
-</div>
-<div class="section">
-<h2>DEX Platforms</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Decentralized exchanges let you trade crypto without an intermediary.</p>
-
-<div class="card"><div class="title">Raydium</div><div class="desc">Solana AMM with fast swaps and liquidity pools.</div><a class="link" href="https://raydium.io" target="_blank">Visit Raydium</a></div>
-
-<div class="card"><div class="title">Jupiter</div><div class="desc">Top Solana DEX aggregator.</div><a class="link" href="https://jup.ag" target="_blank">Visit Jupiter</a></div>
-<div class="card"><div class="title">Drift</div><div class="desc">Perpetuals trading on Solana.</div><a class="link" href="https://app.drift.trade" target="_blank">Visit Drift</a></div>
-<div class="card"><div class="title">Marginfi</div><div class="desc">Borrow/lend protocol with margin trading.</div><a class="link" href="https://app.marginfi.com/refer/8f3ec3ca-739a-4546-b056-efe38623dccc" target="_blank">Visit Marginfi</a></div>
-<div class="card"><div class="title">Kamino</div><div class="desc">Automated yield optimizer.</div><a class="link" href="https://app.kamino.finance" target="_blank">Visit Kamino</a></div>
-<div class="card"><div class="title">Meteora</div><div class="desc">Dynamic liquidity vaults.</div><a class="link" href="https://meteora.ag" target="_blank">Visit Meteora</a></div>
-<div class="card"><div class="title">Orca</div><div class="desc">Friendly Solana DEX.</div><a class="link" href="https://www.orca.so" target="_blank">Visit Orca</a></div>
-</div>
-<div class="section">
-<h2>Crypto Tools</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Useful apps and platforms for tracking prices, portfolios, and market trends.</p>
-<div class="card"><div class="title">CoinMarketCap</div><div class="desc">Price tracking, market data and news.</div><a class="link" href="https://coinmarketcap.com" target="_blank">Visit CMC</a></div>
-<div class="card"><div class="title">CoinGecko</div><div class="desc">Detailed analytics and tracking for all coins.</div><a class="link" href="https://coingecko.com" target="_blank">Visit CoinGecko</a></div>
-<div class="card"><div class="title">CoinStats</div><div class="desc">Portfolio &amp; performance tracking tool.</div><a class="link" href="https://invite.coinstats.app/r?i=Zb2IsJ1734804670281" target="_blank">Try CoinStats</a></div>
-<div class="card"><div class="title">Banter Bubbles</div><div class="desc">Visual market mover bubbles.</div><a class="link" href="https://www.banterbubbles.com" target="_blank">View Bubbles</a></div>
-<div class="card"><div class="title">TradingView</div><div class="desc">Advanced charting platform for crypto &amp; stocks.</div><a class="link" href="https://tradingview.com" target="_blank">Open TradingView</a></div>
-</div>
-<section id="comparisons">
-<h2 class="gold-title" style="text-align:center;">Comparisons: Exchanges, Wallets &amp; DEXs</h2>
-<h3 style="color:#FFD700; text-align:center;">Exchange Comparison</h3>
-<table class="comparison-table">
-<tr><th>Name</th><th>Fees</th><th>Regulation</th><th>Best for</th><th>Link</th></tr>
-<tr><td>Binance</td><td>0.1%</td><td>Offshore</td><td>Advanced traders</td><td><a href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">Visit</a></td></tr>
-<tr><td>Bybit</td><td>0.1%</td><td>Offshore</td><td>Leverage &amp; futures</td><td><a href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Visit</a></td></tr>
-<tr><td>Bitget</td><td>0.1%</td><td>Offshore</td><td>Derivatives &amp; campaigns</td><td><a href="https://bitget.com" target="_blank">Visit</a></td></tr>
-<tr><td>Crypto.com</td><td>0.4%</td><td>Global</td><td>Mobile-first users</td><td><a href="https://crypto.com/app/nrmm4uzm29" target="_blank">Visit</a></td></tr>
-<tr><td>Coinmotion</td><td>0.5%+</td><td>EU / Finland</td><td>Beginners, euro deposits</td><td><a href="https://coinmotion.com/fi?ref=92a4" target="_blank">Visit</a></td></tr>
-<tr><td>Northcrypto</td><td>1%</td><td>EU / FIN-FSA</td><td>Simple Finnish option</td><td><a href="https://northcrypto.com" target="_blank">Visit</a></td></tr>
-</table>
-<h3 style="color:#FFD700; text-align:center;">Hot Wallet Comparison</h3>
-<table class="comparison-table">
-<tr><th>Name</th><th>Type</th><th>Chains</th><th>Best for</th><th>Link</th></tr>
-<tr><td>Phantom</td><td>Hot</td><td>Solana</td><td>NFTs &amp; DeFi on Solana</td><td><a href="https://phantom.app" target="_blank">Visit</a></td></tr>
-<tr><td>MetaMask</td><td>Hot</td><td>Ethereum, EVM</td><td>Web3 dApps</td><td><a href="https://metamask.io" target="_blank">Visit</a></td></tr>
-<tr><td>Solflare</td><td>Hot</td><td>Solana</td><td>Mobile + staking</td><td><a href="https://solflare.com" target="_blank">Visit</a></td></tr>
-<tr><td>Rabby Wallet</td><td>Hot</td><td>EVM</td><td>DeFi browser extension</td><td><a href="https://rabby.io" target="_blank">Visit</a></td></tr>
-<tr><td>Jupiter Wallet</td><td>Hot</td><td>Solana</td><td>Integrated with Jupiter DEX</td><td><a href="https://jup.ag/wallet" target="_blank">Visit</a></td></tr>
-
-<tr>
-  <td>Moonshot</td>
-  <td>Hot</td>
-  <td>EVM</td>
-  <td>Meme coins & referrals</td>
-  <td><a href="https://moonshot.com?ref=kyCmNLJnYS" target="_blank">Visit</a></td>
-</tr>
-
-</table>
-<h3 style="color:#FFD700; text-align:center;">DEX Platform Comparison</h3>
-<table class="comparison-table">
-<tr><th>Name</th><th>Type</th><th>Chain</th><th>Focus</th><th>Link</th></tr>
-
-<tr><td>Raydium</td><td>AMM</td><td>Solana</td><td>Liquidity & Trading</td><td><a href="https://raydium.io" target="_blank">Visit</a></td></tr>
-
-<tr><td>Jupiter</td><td>Aggregator</td><td>Solana</td><td>Best routing</td><td><a href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Visit</a></td></tr>
-<tr><td>Kamino</td><td>Yield Optimizer</td><td>Solana</td><td>Automated strategies</td><td><a href="https://kamino.finance" target="_blank">Visit</a></td></tr>
-<tr><td>Meteora</td><td>AMM</td><td>Solana</td><td>Liquidity pools</td><td><a href="https://meteora.ag" target="_blank">Visit</a></td></tr>
-<tr><td>Drift</td><td>Perpetuals</td><td>Solana</td><td>Leverage trading</td><td><a href="https://app.drift.trade/ref/miguel800" target="_blank">Visit</a></td></tr>
-<tr><td>MarginFi</td><td>Lending &amp; Margin</td><td>Solana</td><td>Borrowing &amp; leverage</td><td><a href="https://marginfi.com" target="_blank">Visit</a></td></tr>
-<tr><td>Orca</td><td>AMM</td><td>Solana</td><td>Simple swaps</td><td><a href="https://orca.so" target="_blank">Visit</a></td></tr>
-</table>
 </section>
 <div class="section">
-<h2>Bridge Platforms – What Are They?</h2>
+<h2>
+    Exchanges
+   </h2>
 <p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">
-        Platforms that allow you to move assets between different blockchains.
-      </p>
-<div class="card"><div class="title">Wormhole</div><div class="desc">Cross-chain messaging &amp; transfers</div><a class="link" href="https://wormhole.com" target="_blank">Visit Wormhole</a></div>
-<div class="card"><div class="title">Portal Bridge</div><div class="desc">Multi-chain token bridge by Wormhole</div><a class="link" href="https://portalbridge.com" target="_blank">Visit Portal</a></div>
-<div class="card"><div class="title">Mayan Bridge</div><div class="desc">Token bridge &amp; swaps for Solana</div><a class="link" href="https://swap.mayan.finance" target="_blank">Visit Mayan</a></div>
-<div class="card"><div class="title">Jumper</div><div class="desc">Bridge aggregator for multi-chain assets</div><a class="link" href="https://jumper.exchange" target="_blank">Visit Jumper</a></div>
-<div class="card"><div class="title">LayerZero</div><div class="desc">Omnichain protocol for messaging</div><a class="link" href="https://layerzero.network" target="_blank">Visit LayerZero</a></div>
-<div class="card"><div class="title">deBridge</div><div class="desc">Secure cross-chain transfers</div><a class="link" href="https://debridge.finance" target="_blank">Visit deBridge</a></div>
-</div>
-<table class="comparison-table">
-<tr><th>Name</th><th>Function</th><th>Chains</th><th>Link</th></tr>
-<tr><td>Wormhole</td><td>Cross-chain messaging</td><td>Ethereum, Solana, BNB</td><td><a href="https://wormhole.com" target="_blank">Visit</a></td></tr>
-<tr><td>Portal Bridge</td><td>Token bridge (Wormhole)</td><td>Multiple blockchains</td><td><a href="https://portalbridge.com" target="_blank">Visit</a></td></tr>
-<tr><td>Mayan Bridge</td><td>Solana &amp; cross-chain swaps</td><td>Solana, Ethereum, etc.</td><td><a href="https://swap.mayan.finance" target="_blank">Visit</a></td></tr>
-<tr><td>Jumper</td><td>Multi-chain bridge aggregator</td><td>Various chains</td><td><a href="https://jumper.exchange" target="_blank">Visit</a></td></tr>
-<tr><td>LayerZero</td><td>Omnichain protocol</td><td>Universal chains</td><td><a href="https://layerzero.network" target="_blank">Visit</a></td></tr>
-<tr><td>deBridge</td><td>Secure cross-chain transfers</td><td>Ethereum, BNB, Polygon</td><td><a href="https://debridge.finance" target="_blank">Visit</a></td></tr>
-</table>
+    Platforms where you can buy, sell, and trade cryptocurrencies.
+   </p>
+<div class="cards-container"><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Binance
+    </div>
+<div class="desc">
+     World's largest crypto exchange by volume.
+    </div>
+<a class="link" href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">
+     Join Binance
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Bybit
+    </div>
+<div class="desc">
+     Fast-growing exchange for derivatives and spot.
+    </div>
+<a class="link" href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">
+     Join Bybit
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Bitget
+    </div>
+<div class="desc">
+     Futures, spot, and copy trading platform.
+    </div>
+<a class="link" href="https://www.bitget.com/referral/register?clacCode=B0US0BU8&amp;from=%2Fevents%2Freferral-all-program&amp;source=events&amp;utmSource=PremierInviter" target="_blank">
+     Join Bitget
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Northcrypto
+    </div>
+<div class="desc">
+     Finnish crypto exchange with euro support and bank transfers.
+    </div>
+<a class="link" href="https://www.northcrypto.com/fi" target="_blank">
+     Visit Northcrypto
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Coinmotion
+    </div>
+<div class="desc">
+     Finnish crypto platform with strong regulation.
+    </div>
+<a class="link" href="https://coinmotion.com/fi?ref=92a4" target="_blank">
+     Join Coinmotion
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Crypto.com
+    </div>
+<div class="desc">
+     Popular app with Visa card and staking options.
+    </div>
+<a class="link" href="https://crypto.com/app/nrmm4uzm29" target="_blank">
+     Join Crypto.com
+    </a>
+</div></div><h3 style="margin-top: 2rem;">
+    Exchange Comparison
+   </h3><table class="comparison-table">
+<tr>
+<th>
+      Name
+     </th>
+<th>
+      Fees
+     </th>
+<th>
+      Regulation
+     </th>
+<th>
+      Best for
+     </th>
+<th>
+      Link
+     </th>
+</tr>
+<tr>
+<td>
+      Binance
+     </td>
+<td>
+      0.1%
+     </td>
+<td>
+      Offshore
+     </td>
+<td>
+      Advanced traders
+     </td>
+<td>
+<a href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">
+       Visit
+      </a>
+</td>
+</tr>
+<tr>
+<td>
+      Bybit
+     </td>
+<td>
+      0.1%
+     </td>
+<td>
+      Offshore
+     </td>
+<td>
+      Leverage &amp; futures
+     </td>
+<td>
+<a href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">
+       Visit
+      </a>
+</td>
+</tr>
+<tr>
+<td>
+      Bitget
+     </td>
+<td>
+      0.1%
+     </td>
+<td>
+      Offshore
+     </td>
+<td>
+      Derivatives &amp; campaigns
+     </td>
+<td>
+<a href="https://bitget.com" target="_blank">
+       Visit
+      </a>
+</td>
+</tr>
+<tr>
+<td>
+      Crypto.com
+     </td>
+<td>
+      0.4%
+     </td>
+<td>
+      Global
+     </td>
+<td>
+      Mobile-first users
+     </td>
+<td>
+<a href="https://crypto.com/app/nrmm4uzm29" target="_blank">
+       Visit
+      </a>
+</td>
+</tr>
+<tr>
+<td>
+      Coinmotion
+     </td>
+<td>
+      0.5%+
+     </td>
+<td>
+      EU / Finland
+     </td>
+<td>
+      Beginners, euro deposits
+     </td>
+<td>
+<a href="https://coinmotion.com/fi?ref=92a4" target="_blank">
+       Visit
+      </a>
+</td>
+</tr>
+<tr>
+<td>
+      Northcrypto
+     </td>
+<td>
+      1%
+     </td>
+<td>
+      EU / FIN-FSA
+     </td>
+<td>
+      Simple Finnish option
+     </td>
+<td>
+<a href="https://northcrypto.com" target="_blank">
+       Visit
+      </a>
+</td>
+</tr>
+</table></div>
 <div class="section">
-<h2>Donations</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Support the project by sending crypto directly to these wallet addresses.</p>
-<div class="card">
-<div class="title">Bitcoin</div>
-<div class="address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd</div>
-<button class="copy-btn" onclick="navigator.clipboard.writeText('bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd')">Copy</button>
-</div>
-<div class="card">
-<div class="title">Ethereum</div>
-<div class="address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</div>
-<button class="copy-btn" onclick="navigator.clipboard.writeText('0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f')">Copy</button>
-</div>
-<div class="card">
-<div class="title">Solana</div>
-<div class="address">J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL</div>
-<button class="copy-btn" onclick="navigator.clipboard.writeText('J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL')">Copy</button>
-</div>
-<p style="margin-top: 1rem;">Thank you for supporting this project! Donations help keep the site ad-free and open for everyone.</p>
-</div>
-<footer>
-<p>This site may contain affiliate links. We may earn a commission if you use them, at no extra cost to you.</p>
-<p>For informational purposes only — not financial advice.</p>
-</footer>
+<h2>
+    Hot Wallets
+   </h2>
+<p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">
+    Digital wallets connected to the internet – easy to use, best for daily access.
+   </p>
+<div class="cards-container"><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     MetaMask
+    </div>
+<div class="desc">
+     Ethereum wallet for DeFi &amp; NFTs.
+    </div>
+<a class="link" href="https://metamask.io/" target="_blank">
+     Get MetaMask
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Rabby Wallet
+    </div>
+<div class="desc">
+     Browser-based wallet optimized for DeFi safety and ease.
+    </div>
+<a class="link" href="https://rabby.io" target="_blank">
+     Get Rabby Wallet
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Moonshot Wallet
+    </div>
+<div class="desc">
+     A hot wallet tailored for meme coins and moonshot tokens. Simple, fast, and meme-ready.
+    </div>
+<a class="link" href="https://moonshot.com?ref=kyCmNLJnYS" target="_blank">
+     Get Moonshot
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Phantom
+    </div>
+<div class="desc">
+     Popular Solana wallet with NFTs and staking.
+    </div>
+<a class="link" href="https://phantom.app/" target="_blank">
+     Get Phantom
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Solflare
+    </div>
+<div class="desc">
+     Mobile and browser wallet for Solana.
+    </div>
+<a class="link" href="https://solflare.com/" target="_blank">
+     Get Solflare
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Jupiter Wallet
+    </div>
+<div class="desc">
+     Wallet integrated with Jupiter DEX aggregator.
+    </div>
+<a class="link" href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">
+     Get Jupiter Wallet
+    </a>
+</div></div><h3 style="margin-top: 2rem;">
+    Hot Wallet Comparison
+   </h3><table class="comparison-table">
+<tr>
+<th>
+      Name
+     </th>
+<th>
+      Type
+     </th>
+<th>
+      Chains
+     </th>
+<th>
+      Best for
+     </th>
+<th>
+      Link
+     </th>
+</tr>
+<tr>
+<td>
+      Phantom
+     </td>
+<td>
+      Hot
+     </td>
+<td>
+      Solana
+     </td>
+<td>
+      NFTs &amp; DeFi on Solana
+     </td>
+<td>
+<a href="https://phantom.app" target="_blank">
+       Visit
+      </a>
+</td>
+</tr>
+<tr>
+<td>
+      MetaMask
+     </td>
+<td>
+      Hot
+     </td>
+<td>
+      Ethereum, EVM
+     </td>
+<td>
+      Web3 dApps
+     </td>
+<td>
+<a href="https://metamask.io" target="_blank">
+       Visit
+      </a>
+</td>
+</tr>
+<tr>
+<td>
+      Solflare
+     </td>
+<td>
+      Hot
+     </td>
+<td>
+      Solana
+     </td>
+<td>
+      Mobile + staking
+     </td>
+<td>
+<a href="https://solflare.com" target="_blank">
+       Visit
+      </a>
+</td>
+</tr>
+<tr>
+<td>
+      Rabby Wallet
+     </td>
+<td>
+      Hot
+     </td>
+<td>
+      EVM
+     </td>
+<td>
+      DeFi browser extension
+     </td>
+<td>
+<a href="https://rabby.io" target="_blank">
+       Visit
+      </a>
+</td>
+</tr>
+<tr>
+<td>
+      Jupiter Wallet
+     </td>
+<td>
+      Hot
+     </td>
+<td>
+      Solana
+     </td>
+<td>
+      Integrated with Jupiter DEX
+     </td>
+<td>
+<a href="https://jup.ag/wallet" target="_blank">
+       Visit
+      </a>
+</td>
+</tr>
+<tr>
+<td>Moonshot Wallet</td>
+<td>Hot</td>
+<td>EVM</td>
+<td>Meme-coin trading</td>
+<td><a href="https://moonshot.com?ref=kyCmNLJnYS" target="_blank">Visit</a></td>
+</tr></table></div>
+<div class="section">
+<h2>
+    Cold Wallets
+   </h2>
+<p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">
+    Offline wallets – ideal for long-term, secure storage.
+   </p>
+<div class="cards-container"><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Ledger
+    </div>
+<div class="desc">
+     Industry-leading hardware wallet.
+    </div>
+<a class="link" href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">
+     Buy Ledger
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Trezor
+    </div>
+<div class="desc">
+     Secure offline wallet for long-term storage.
+    </div>
+<a class="link" href="https://affil.trezor.io/aff_c?offer_id=239&amp;aff_id=35816" target="_blank">
+     Buy via Trezor (Affiliate)
+    </a>
+</div></div>
+<h3 style="color:#FFD700; text-align:center;">Cold Wallet Comparison</h3>
+<table class="comparison-table">
+<tr>
+<th>
+      Name
+     </th>
+<th>
+      Type
+     </th>
+<th>
+      Features
+     </th>
+<th>
+      Best for
+     </th>
+<th>
+      Link
+     </th>
+</tr>
+<tr>
+<td>
+      Ledger
+     </td>
+<td>
+      Hardware
+     </td>
+<td>
+      Bluetooth, Mobile App, Secure Element
+     </td>
+<td>
+      Modern &amp; mobile users
+     </td>
+<td>
+<a href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">
+       Visit
+      </a>
+</td>
+</tr>
+<tr>
+<td>
+      Trezor
+     </td>
+<td>
+      Hardware
+     </td>
+<td>
+      Open-source, Transparent, Durable
+     </td>
+<td>
+      Security-focused users
+     </td>
+<td>
+<a href="https://affil.trezor.io/aff_c?offer_id=239&amp;aff_id=35816" target="_blank">
+       Visit
+      </a>
+</td>
+</tr>
+</table></div>
+<div class="section">
+<h2>
+    DEX Platforms
+   </h2>
+<p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">
+    Decentralized exchanges let you trade crypto without an intermediary.
+   </p>
+<div class="cards-container"><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Raydium
+    </div>
+<div class="desc">
+     Solana AMM with fast swaps and liquidity pools.
+    </div>
+<a class="link" href="https://raydium.io" target="_blank">
+     Visit Raydium
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Jupiter
+    </div>
+<div class="desc">
+     Top Solana DEX aggregator.
+    </div>
+<a class="link" href="https://jup.ag" target="_blank">
+     Visit Jupiter
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Drift
+    </div>
+<div class="desc">
+     Perpetuals trading on Solana.
+    </div>
+<a class="link" href="https://app.drift.trade" target="_blank">
+     Visit Drift
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Marginfi
+    </div>
+<div class="desc">
+     Borrow/lend protocol with margin trading.
+    </div>
+<a class="link" href="https://app.marginfi.com/refer/8f3ec3ca-739a-4546-b056-efe38623dccc" target="_blank">
+     Visit Marginfi
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Kamino
+    </div>
+<div class="desc">
+     Automated yield optimizer.
+    </div>
+<a class="link" href="https://app.kamino.finance" target="_blank">
+     Visit Kamino
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Meteora
+    </div>
+<div class="desc">
+     Dynamic liquidity vaults.
+    </div>
+<a class="link" href="https://meteora.ag" target="_blank">
+     Visit Meteora
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Orca
+    </div>
+<div class="desc">
+     Friendly Solana DEX.
+    </div>
+<a class="link" href="https://www.orca.so" target="_blank">
+     Visit Orca
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Jito
+    </div>
+<div class="desc">
+     MEV staking &amp; liquid staking on Solana – boosting yield and decentralization.
+    </div>
+<a class="link" href="https://jito.network" target="_blank">
+     Visit Jito
+    </a>
+</div></div></div>
+<section id="comparisons">
+</section>
+<div class="section">
+<h2>
+    Bridge Platforms – What Are They?
+   </h2>
+<p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">
+    Platforms that allow you to move assets between different blockchains.
+   </p>
+<div class="cards-container"><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Wormhole
+    </div>
+<div class="desc">
+     Cross-chain messaging &amp; transfers
+    </div>
+<a class="link" href="https://wormhole.com" target="_blank">
+     Visit Wormhole
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Portal Bridge
+    </div>
+<div class="desc">
+     Multi-chain token bridge by Wormhole
+    </div>
+<a class="link" href="https://portalbridge.com" target="_blank">
+     Visit Portal
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Mayan Bridge
+    </div>
+<div class="desc">
+     Token bridge &amp; swaps for Solana
+    </div>
+<a class="link" href="https://swap.mayan.finance" target="_blank">
+     Visit Mayan
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Jumper
+    </div>
+<div class="desc">
+     Bridge aggregator for multi-chain assets
+    </div>
+<a class="link" href="https://jumper.exchange" target="_blank">
+     Visit Jumper
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     LayerZero
+    </div>
+<div class="desc">
+     Omnichain protocol for messaging
+    </div>
+<a class="link" href="https://layerzero.network" target="_blank">
+     Visit LayerZero
+    </a>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     deBridge
+    </div>
+<div class="desc">
+     Secure cross-chain transfers
+    </div>
+<a class="link" href="https://debridge.finance" target="_blank">
+     Visit deBridge
+    </a>
+</div></div></div>
 <!-- New Bubble Chat -->
-<div class="chat-button" onclick="toggleChat()">Chat</div>
+<div class="chat-button" onclick="toggleChat()">
+   Chat
+  </div>
 <div class="chat-container" id="chatContainer">
-<div class="chat-header">Ask CryptoBot</div>
-<div class="chat-messages" id="chatMessages"></div>
+<div class="chat-header">
+    Ask CryptoBot
+   </div>
+<div class="chat-messages" id="chatMessages">
+</div>
 <div class="chat-input">
 <input id="userInput" onkeydown="if(event.key==='Enter') sendMessage()" placeholder="Ask something..." type="text"/>
-<button onclick="sendMessage()">Send</button>
+<button onclick="sendMessage()">
+     Send
+    </button>
 </div>
 </div>
 <script>
-function toggleChat() {
+   function toggleChat() {
   const container = document.getElementById("chatContainer");
   container.style.display = container.style.display === "flex" ? "none" : "flex";
 }
@@ -962,8 +1599,9 @@ function appendMessage(sender, text) {
   chat.appendChild(msg);
   chat.scrollTop = chat.scrollHeight;
 }
-</script>
-<style>.chat-button {
+  </script>
+<style>
+   .chat-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -1079,9 +1717,9 @@ function appendMessage(sender, text) {
 .card:nth-of-type(18)::after { animation-delay: 17s; }
 .card:nth-of-type(19)::after { animation-delay: 17s; }
 .card:nth-of-type(20)::after { animation-delay: 15s; }
-</style>
+  </style>
 <script>
-const infoSlides = [
+   const infoSlides = [
   {
     title: "What problem does Bitcoin actually solve?",
     detail: "Bitcoin removes the need for centralized intermediaries in transferring value. It's borderless, permissionless, and censorship-resistant — qualities traditional banking systems lack."
@@ -1129,9 +1767,9 @@ function prevSlide() {
 }
 
 document.addEventListener("DOMContentLoaded", updateInfoSlide);
-</script>
+  </script>
 <script>
-async function loadCointelegraphNews() {
+   async function loadCointelegraphNews() {
   console.log("✅ Dual carousel loaded: auto-top + manual-bottom");
   const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss';
   try {
@@ -1212,5 +1850,164 @@ async function loadCointelegraphNews() {
   }
 }
 document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
-</script></body>
-</html>
+  </script>
+<section class="section">
+<h2 style="color: #000; border-bottom: 2px solid #000;">
+    Meme Coins &amp; Degen Tools
+   </h2>
+<p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">
+    Explore the wild frontier of crypto: Solana meme tokens, degen launchpads, and low-cap moonshots – all in one place.
+   </p>
+<div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Pump.fun
+    </div>
+<div class="desc">
+     Where memes are born. Solana's degen launchpad that brings tokens to life, no VCs, just vibes.
+    </div>
+<a class="link" href="https://pump.fun" target="_blank">
+     Visit Pump.fun
+    </a>
+</div>
+<div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     DexScreener
+    </div>
+<div class="desc">
+     Where memes trend. Track real-time price action, volumes and top gainers across chains.
+    </div>
+<a class="link" href="https://dexscreener.com" target="_blank">
+     Explore DexScreener
+    </a>
+</div>
+<div style="margin-top: 2rem;">
+<iframe frameborder="0" height="600" src="https://dexscreener.com/widgets/trending/solana?theme=dark" style="border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.4);" width="100%">
+</iframe>
+</div>
+</section>
+<section class="section">
+<h2 style="color: #000; border-bottom: 2px solid #000;">
+    DeFi Infrastructure
+   </h2>
+<p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">
+    The invisible backbone of DeFi. Explore the protocols powering real-time data and automation.
+   </p>
+<div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Pyth Network
+    </div>
+<div class="desc">
+     Real-time price oracles for smart contracts – fast and decentralized.
+    </div>
+<a class="link" href="https://pyth.network" target="_blank">
+     Visit Pyth
+    </a>
+</div>
+</section>
+<div class="section"><h2>Solana Infra &amp; Analytics</h2><p>Explore Solana-native analytics &amp; cross-chain infrastructure.</p><div class="cards-container"><div class="card" style="  font-size: 0.70rem;"><div class="title">Birdeye</div><div class="desc">Real-time Solana token data &amp; charts.</div><a class="link" href="https://birdeye.so" target="_blank">Visit Birdeye</a></div><div class="card" style="  font-size: 0.70rem;"><div class="title">Zeus Network</div><div class="desc">Infrastructure layer for Solana cross-chain connectivity.</div><a class="link" href="https://zeus.network" target="_blank">Visit Zeus</a></div></div></div><div class="section">
+<h2>
+    Crypto Tools
+   </h2>
+<p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">
+    Useful apps and platforms for tracking prices, portfolios, and market trends.
+   </p>
+<div class="cards-container"><div class="card" style="max-width: 260px; padding: 1rem;  min-height: 140px; font-size: 0.70rem;">
+<div class="title">
+     CoinMarketCap
+    </div>
+<div class="desc">
+     Price tracking, market data and news.
+    </div>
+<a class="link" href="https://coinmarketcap.com" target="_blank">
+     Visit CMC
+    </a>
+</div><div class="card" style="max-width: 260px; padding: 1rem;  min-height: 140px; font-size: 0.70rem;">
+<div class="title">
+     CoinGecko
+    </div>
+<div class="desc">
+     Detailed analytics and tracking for all coins.
+    </div>
+<a class="link" href="https://coingecko.com" target="_blank">
+     Visit CoinGecko
+    </a>
+</div><div class="card" style="max-width: 260px; padding: 1rem;  min-height: 140px; font-size: 0.70rem;">
+<div class="title">
+     CoinStats
+    </div>
+<div class="desc">
+     Portfolio &amp; performance tracking tool.
+    </div>
+<a class="link" href="https://invite.coinstats.app/r?i=Zb2IsJ1734804670281" target="_blank">
+     Try CoinStats
+    </a>
+</div><div class="card" style="max-width: 260px; padding: 1rem;  min-height: 140px; font-size: 0.70rem;">
+<div class="title">
+     Banter Bubbles
+    </div>
+<div class="desc">
+     Visual market mover bubbles.
+    </div>
+<a class="link" href="https://www.banterbubbles.com" target="_blank">
+     View Bubbles
+    </a>
+</div><div class="card" style="max-width: 260px; padding: 1rem;  min-height: 140px; font-size: 0.70rem;">
+<div class="title">
+     TradingView
+    </div>
+<div class="desc">
+     Advanced charting platform for crypto &amp; stocks.
+    </div>
+<a class="link" href="https://tradingview.com" target="_blank">
+     Open TradingView
+    </a>
+</div></div></div><div class="section">
+<h2>
+    Donations
+   </h2>
+<p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">
+    Support the project by sending crypto directly to these wallet addresses.
+   </p>
+<p style="margin-top: 1rem;">
+    Thank you for supporting this project! Donations help keep the site ad-free and open for everyone.
+   </p>
+<div class="cards-container"><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Bitcoin
+    </div>
+<div class="address">
+     bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd
+    </div>
+<button class="copy-btn" onclick="navigator.clipboard.writeText('bc1q62s4qjw3mzrgu3qn6dgrxnft3ysautl02akazd')">
+     Copy
+    </button>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Ethereum
+    </div>
+<div class="address">
+     0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f
+    </div>
+<button class="copy-btn" onclick="navigator.clipboard.writeText('0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f')">
+     Copy
+    </button>
+</div><div class="card" style="  font-size: 0.70rem;">
+<div class="title">
+     Solana
+    </div>
+<div class="address">
+     J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL
+    </div>
+<button class="copy-btn" onclick="navigator.clipboard.writeText('J1dYiMNf1BgFwpcDiaDUP218vPbWX4o6a5qq8TCQ7oQL')">
+     Copy
+    </button>
+</div></div></div>
+<footer>
+<p>
+    This site may contain affiliate links. We may earn a commission if you use them, at no extra cost to you.
+   </p>
+<p>
+    For informational purposes only — not financial advice.
+   </p>
+</footer>
+</body></body></html>
