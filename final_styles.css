@@ -1,0 +1,77 @@
+
+/* Global styles */
+body {
+    background: linear-gradient(to bottom, #000000, #1a1a1a);
+    color: gold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card styles */
+.card {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    padding: 20px;
+    color: gold;
+    box-shadow: 0 0 15px 2px rgba(255, 215, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px 4px rgba(255, 215, 0, 0.6);
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: linear-gradient(to bottom, #fdf5e6, #fbeec1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    color: goldenrod;
+    font-weight: 500;
+}
+th {
+    background-color: transparent;
+    font-weight: bold;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    color: gold;
+    font-weight: 600;
+}
+
+/* Buttons (carousel etc.) */
+button, .carousel-button {
+    background: transparent;
+    border: 2px solid gold;
+    color: gold;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+button:hover, .carousel-button:hover {
+    background: gold;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* Footer and external content text */
+footer, .footer-text, .disclaimer, .note {
+    color: gold !important;
+}
+
+/* Links */
+a {
+    color: gold;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
