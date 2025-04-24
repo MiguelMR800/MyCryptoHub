@@ -1,3 +1,4 @@
+/* Chatbot styles säilytetty */
 .chat-button {
   position: fixed;
   bottom: 20px;
@@ -80,6 +81,52 @@
   align-self: flex-start;
   background: #eaeaea;
 }
+
+/* Responsiivinen Grid-korttiasettelu */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+/* Yleiset korttityylit */
+.card {
+  background: #fff8e1;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  color: #111;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+}
+
+.card .title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card .desc {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.card .link {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 body {
   overflow-x: hidden;
 }
