@@ -541,6 +541,273 @@ overflow: hidden;}
    MyCryptoHub
   </title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+   body {
+  background: linear-gradient(120deg, rgba(120, 90, 10, 1), rgba(255, 215, 0, 0.85)),
+              radial-gradient(circle at 35% 35%, rgba(255, 255, 180, 0.35), transparent 40%),
+              radial-gradient(circle at 65% 65%, rgba(255, 245, 200, 0.25), transparent 60%);
+  background-blend-mode: screen, overlay;
+  background-size: 300% 300%;
+  animation: goldShimmer 30s ease-in-out infinite;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  color: #111;
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+@keyframes goldShimmer {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes goldPaintShift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+    h2 {
+      color: #000;
+      border-bottom: 2px solid #000;
+      padding-bottom: 0.3rem;
+    }
+    .section {
+      margin: 2rem 0;
+    }
+    .title {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+    .desc {
+      margin-top: 0.5rem;
+    }
+    .link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: #000;
+      text-decoration: underline;
+    }
+    .address {
+      background: rgba(0,0,0,0.05);
+      padding: 0.5rem;
+      border-radius: 6px;
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+    .copy-btn {
+      padding: 6px 12px;
+      background-color: #000;
+      color: #111;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #333;
+    }
+  
+    body {
+  background: linear-gradient(120deg, rgba(120, 90, 10, 1), rgba(255, 215, 0, 0.85)),
+              radial-gradient(circle at 35% 35%, rgba(255, 255, 180, 0.35), transparent 40%),
+              radial-gradient(circle at 65% 65%, rgba(255, 245, 200, 0.25), transparent 60%);
+  background-blend-mode: screen, overlay;
+  background-size: 300% 300%;
+  animation: goldShimmer 30s ease-in-out infinite;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  color: #111;
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+@keyframes goldShimmer {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes goldPaintShift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+    .news-ticker-top {
+      background-color: #0d0d1a;
+      color: #ffd700;
+      font-weight: bold;
+      padding: 0.8rem;
+      text-align: center;
+      font-size: 0.95rem;
+      border-bottom: 2px solid #222;
+    }
+
+    #news-ticker-text a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    #news-ticker-text a:hover {
+      text-decoration: underline;
+    }
+
+    .crypto-ticker {
+  width: 100%;
+  background-color: rgba(13, 13, 26, 0.7);
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 2px solid #111;
+  padding: 0.5rem 0;
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+}
+
+    .ticker-content {
+      display: inline-block;
+      padding-left: 100%;
+      animation: ticker-scroll 30s linear infinite;
+    }
+
+    .ticker-content span {
+      display: inline-block;
+      margin: 0 2rem;
+      color: #111;
+      font-weight: 600;
+    }
+
+    .ticker-content span:before {
+      content: "•";
+      margin-right: 0.5rem;
+      color: #ffd700;
+    }
+
+    @keyframes ticker-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Chatbot */
+    #chatbot-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    #chatbox {
+      display: none;
+      background: white;
+      color: black;
+      width: 300px;
+      height: 400px;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      overflow-y: auto;
+    }
+
+    .chat-bubble {
+      background: #f1f1f1;
+      padding: 8px 12px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+      max-width: 80%;
+    }
+
+    .bot {
+      background: #ffd700;
+      align-self: flex-start;
+    }
+
+    .user {
+      background: #c1e1c1;
+      align-self: flex-end;
+      text-align: right;
+    }
+
+    #chat-input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+  
+.address {
+  background: rgba(0,0,0,0.05);
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+.card {
+  max-width: 90%;
+  margin: 2rem auto;
+  background: url('goldbar_card_texture.png') center/cover no-repeat;
+  border-radius: 16px;
+  padding: 1.5rem;
+  color: #111;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+    0 6px 20px rgba(0, 0, 0, 0.4),
+    0 2px 4px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+
+overflow: hidden;}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    0 10px 25px rgba(0, 0, 0, 0.45),
+    0 4px 8px rgba(255, 255, 255, 0.08);
+}
+
+.card:nth-of-type(1)::after { animation-delay: 6s; }
+.card:nth-of-type(2)::after { animation-delay: 9s; }
+.card:nth-of-type(3)::after { animation-delay: 7s; }
+.card:nth-of-type(4)::after { animation-delay: 12s; }
+.card:nth-of-type(5)::after { animation-delay: 8s; }
+.card:nth-of-type(6)::after { animation-delay: 16s; }
+.card:nth-of-type(7)::after { animation-delay: 18s; }
+.card:nth-of-type(8)::after { animation-delay: 14s; }
+.card:nth-of-type(9)::after { animation-delay: 16s; }
+.card:nth-of-type(10)::after { animation-delay: 16s; }
+.card:nth-of-type(11)::after { animation-delay: 6s; }
+.card:nth-of-type(12)::after { animation-delay: 20s; }
+.card:nth-of-type(13)::after { animation-delay: 9s; }
+.card:nth-of-type(14)::after { animation-delay: 11s; }
+.card:nth-of-type(15)::after { animation-delay: 20s; }
+.card:nth-of-type(16)::after { animation-delay: 13s; }
+.card:nth-of-type(17)::after { animation-delay: 9s; }
+.card:nth-of-type(18)::after { animation-delay: 17s; }
+.card:nth-of-type(19)::after { animation-delay: 17s; }
+.card:nth-of-type(20)::after { animation-delay: 15s; }
+  </style>
 <link href="favicon.png" rel="icon" type="image/png"/>
 <link href="apple-touch-icon.png" rel="apple-touch-icon"/>
 <meta content="MyCryptoHub" property="og:title"/>
@@ -551,24 +818,7 @@ overflow: hidden;}
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 </head><style>
 .card {
-  flex: 1 1 280px;
-  max-width: 320px;
-  min-width: 260px;
-  min-height: 220px;
-  padding: 1.5rem;
-  margin: 0 auto;
-  font-size: 0.85rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: url('goldbar_card_texture.png') center/cover no-repeat;
-  color: #111;
-  font-weight: bold;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-  text-shadow: 0 1px 0 rgba(255,255,255,0.15);
-  font-family: 'Poppins', sans-serif;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 0.70rem !important;
 }
 </style></head><body><body>
 <h1 class="shimmer-title">
@@ -1350,6 +1600,124 @@ function appendMessage(sender, text) {
   chat.scrollTop = chat.scrollHeight;
 }
   </script>
+<style>
+   .chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 215, 0, 0.85);
+  color: black;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  font-family: 'Poppins', sans-serif;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.chat-container {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 320px;
+  max-height: 420px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  z-index: 1000;
+  flex-direction: column;
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.chat-header {
+  background: rgba(255, 215, 0, 0.7);
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: #000;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #111;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  background: transparent;
+  color: #000;
+  outline: none;
+}
+
+.chat-input button {
+  padding: 10px;
+  background: rgba(255, 215, 0, 0.8);
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.message {
+  padding: 8px 12px;
+  border-radius: 15px;
+  max-width: 80%;
+  word-wrap: break-word;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+.user {
+  align-self: flex-end;
+  background: rgba(255, 215, 0, 0.9);
+  color: #000;
+}
+
+.bot {
+  align-self: flex-start;
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffdd00;
+}
+.card:nth-of-type(1)::after { animation-delay: 6s; }
+.card:nth-of-type(2)::after { animation-delay: 9s; }
+.card:nth-of-type(3)::after { animation-delay: 7s; }
+.card:nth-of-type(4)::after { animation-delay: 12s; }
+.card:nth-of-type(5)::after { animation-delay: 8s; }
+.card:nth-of-type(6)::after { animation-delay: 16s; }
+.card:nth-of-type(7)::after { animation-delay: 18s; }
+.card:nth-of-type(8)::after { animation-delay: 14s; }
+.card:nth-of-type(9)::after { animation-delay: 16s; }
+.card:nth-of-type(10)::after { animation-delay: 16s; }
+.card:nth-of-type(11)::after { animation-delay: 6s; }
+.card:nth-of-type(12)::after { animation-delay: 20s; }
+.card:nth-of-type(13)::after { animation-delay: 9s; }
+.card:nth-of-type(14)::after { animation-delay: 11s; }
+.card:nth-of-type(15)::after { animation-delay: 20s; }
+.card:nth-of-type(16)::after { animation-delay: 13s; }
+.card:nth-of-type(17)::after { animation-delay: 9s; }
+.card:nth-of-type(18)::after { animation-delay: 17s; }
+.card:nth-of-type(19)::after { animation-delay: 17s; }
+.card:nth-of-type(20)::after { animation-delay: 15s; }
+  </style>
 <script>
    const infoSlides = [
   {
@@ -1484,6 +1852,7 @@ document.addEventListener("DOMContentLoaded", updateInfoSlide);
 document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
   </script>
 <section class="section">
+
 <!-- Solana-meme-kuva lisätään tähän -->
 <img alt="Solana Meme Girl" class="intro-image" src="images/meemikuva-solana.png" style="max-width: 600px; margin: 2rem auto; display: block; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.3);"/>
 <section class="section">
