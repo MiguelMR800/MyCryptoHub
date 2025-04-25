@@ -593,7 +593,11 @@ h1.shimmer-title {
 }
 
 body {
-  background: linear-gradient(160deg, #1a1a1a, #2c2c2c, #dcdcdc);
+  background-image: url('A_digital_rendering_presents_a_close-up_profile_vi.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .card:empty {
@@ -2063,4 +2067,24 @@ document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
     For informational purposes only — not financial advice.
    </p>
 </footer>
-</section></body></body></html>
+</section></body><script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Poista oikeasti tyhjät kortit
+  document.querySelectorAll('.card').forEach(card => {
+    const hasTitle = card.querySelector('.title');
+    const hasDesc = card.querySelector('.desc');
+    const hasLink = card.querySelector('a');
+
+    if (!hasTitle && !hasDesc && !hasLink && card.innerText.trim() === '') {
+      card.remove();
+    }
+  });
+
+  // Poista korttikontit jotka ovat tyhjiä (eivät sisällä yhtään korttia)
+  document.querySelectorAll('.cards-container').forEach(container => {
+    if (container.querySelectorAll('.card').length === 0) {
+      container.remove();
+    }
+  });
+});
+</script></body></html>
