@@ -534,6 +534,56 @@ overflow: hidden;}
     white-space: nowrap;
   }
 }
+
+
+.defi-intro-card {
+    background: transparent;
+    box-shadow: 0 0 25px 6px rgba(255, 215, 0, 0.4);
+    margin-bottom: 20px;
+    padding: 0;
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+.carousel-news {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.news-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: rgba(0,0,0,0.6);
+    color: gold;
+    border-radius: 12px;
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    border: 2px solid gold;
+    color: gold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 2;
+}
+.carousel-button:hover {
+    background: gold;
+    color: black;
+}
+.carousel-button.prev {
+    left: 10px;
+}
+.carousel-button.next {
+    right: 10px;
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -831,34 +881,34 @@ overflow: hidden;}
 <div class="ticker-card" style="width: 95%; max-width: 500px; overflow: hidden; display: flex; justify-content: center; margin: -30px auto 1rem auto; border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 10; position: relative;">
 <div class="crypto-ticker">
 <div class="ticker-content">
-<span>
+<span style="color: black; font-weight: bold;">
         BTC +2.45%
        </span>
-<span>
+<span style="color: black; font-weight: bold;">
         ETH -1.20%
        </span>
-<span>
+<span style="color: black; font-weight: bold;">
         SOL +4.80%
        </span>
-<span>
+<span style="color: black; font-weight: bold;">
         XRP +0.95%
        </span>
-<span>
+<span style="color: black; font-weight: bold;">
         BNB -0.67%
        </span>
-<span>
+<span style="color: black; font-weight: bold;">
         AVAX +3.22%
        </span>
-<span>
+<span style="color: black; font-weight: bold;">
         ADA -0.89%
        </span>
-<span>
+<span style="color: black; font-weight: bold;">
         MATIC +1.10%
        </span>
-<span>
+<span style="color: black; font-weight: bold;">
         DOT +2.30%
        </span>
-<span>
+<span style="color: black; font-weight: bold;">
         LINK +4.50%
        </span>
 </div>
@@ -915,7 +965,7 @@ overflow: hidden;}
 <div class="title">
      Binance
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      World's largest crypto exchange by volume.
     </div>
 <a class="link" href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">
@@ -925,7 +975,7 @@ overflow: hidden;}
 <div class="title">
      Bybit
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Fast-growing exchange for derivatives and spot.
     </div>
 <a class="link" href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">
@@ -935,7 +985,7 @@ overflow: hidden;}
 <div class="title">
      Bitget
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Futures, spot, and copy trading platform.
     </div>
 <a class="link" href="https://www.bitget.com/referral/register?clacCode=B0US0BU8&amp;from=%2Fevents%2Freferral-all-program&amp;source=events&amp;utmSource=PremierInviter" target="_blank">
@@ -945,7 +995,7 @@ overflow: hidden;}
 <div class="title">
      Northcrypto
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Finnish crypto exchange with euro support and bank transfers.
     </div>
 <a class="link" href="https://www.northcrypto.com/fi" target="_blank">
@@ -955,7 +1005,7 @@ overflow: hidden;}
 <div class="title">
      Coinmotion
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Finnish crypto platform with strong regulation.
     </div>
 <a class="link" href="https://coinmotion.com/fi?ref=92a4" target="_blank">
@@ -965,7 +1015,7 @@ overflow: hidden;}
 <div class="title">
      Crypto.com
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Popular app with Visa card and staking options.
     </div>
 <a class="link" href="https://crypto.com/app/nrmm4uzm29" target="_blank">
@@ -975,131 +1025,131 @@ overflow: hidden;}
     Exchange Comparison
    </h3><table class="comparison-table">
 <tr>
-<th>
+<th style="color: black;">
       Name
      </th>
-<th>
+<th style="color: black;">
       Fees
      </th>
-<th>
+<th style="color: black;">
       Regulation
      </th>
-<th>
+<th style="color: black;">
       Best for
      </th>
-<th>
+<th style="color: black;">
       Link
      </th>
 </tr>
 <tr>
-<td>
+<td style="color: black;">
       Binance
      </td>
-<td>
+<td style="color: black;">
       0.1%
      </td>
-<td>
+<td style="color: black;">
       Offshore
      </td>
-<td>
+<td style="color: black;">
       Advanced traders
      </td>
-<td>
+<td style="color: black;">
 <a href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">
        Visit
       </a>
 </td>
 </tr>
 <tr>
-<td>
+<td style="color: black;">
       Bybit
      </td>
-<td>
+<td style="color: black;">
       0.1%
      </td>
-<td>
+<td style="color: black;">
       Offshore
      </td>
-<td>
+<td style="color: black;">
       Leverage &amp; futures
      </td>
-<td>
+<td style="color: black;">
 <a href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">
        Visit
       </a>
 </td>
 </tr>
 <tr>
-<td>
+<td style="color: black;">
       Bitget
      </td>
-<td>
+<td style="color: black;">
       0.1%
      </td>
-<td>
+<td style="color: black;">
       Offshore
      </td>
-<td>
+<td style="color: black;">
       Derivatives &amp; campaigns
      </td>
-<td>
+<td style="color: black;">
 <a href="https://bitget.com" target="_blank">
        Visit
       </a>
 </td>
 </tr>
 <tr>
-<td>
+<td style="color: black;">
       Crypto.com
      </td>
-<td>
+<td style="color: black;">
       0.4%
      </td>
-<td>
+<td style="color: black;">
       Global
      </td>
-<td>
+<td style="color: black;">
       Mobile-first users
      </td>
-<td>
+<td style="color: black;">
 <a href="https://crypto.com/app/nrmm4uzm29" target="_blank">
        Visit
       </a>
 </td>
 </tr>
 <tr>
-<td>
+<td style="color: black;">
       Coinmotion
      </td>
-<td>
+<td style="color: black;">
       0.5%+
      </td>
-<td>
+<td style="color: black;">
       EU / Finland
      </td>
-<td>
+<td style="color: black;">
       Beginners, euro deposits
      </td>
-<td>
+<td style="color: black;">
 <a href="https://coinmotion.com/fi?ref=92a4" target="_blank">
        Visit
       </a>
 </td>
 </tr>
 <tr>
-<td>
+<td style="color: black;">
       Northcrypto
      </td>
-<td>
+<td style="color: black;">
       1%
      </td>
-<td>
+<td style="color: black;">
       EU / FIN-FSA
      </td>
-<td>
+<td style="color: black;">
       Simple Finnish option
      </td>
-<td>
+<td style="color: black;">
 <a href="https://northcrypto.com" target="_blank">
        Visit
       </a>
@@ -1117,7 +1167,7 @@ overflow: hidden;}
 <div class="title">
      MetaMask
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Ethereum wallet for DeFi &amp; NFTs.
     </div>
 <a class="link" href="https://metamask.io/" target="_blank">
@@ -1127,7 +1177,7 @@ overflow: hidden;}
 <div class="title">
      Rabby Wallet
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Browser-based wallet optimized for DeFi safety and ease.
     </div>
 <a class="link" href="https://rabby.io" target="_blank">
@@ -1137,7 +1187,7 @@ overflow: hidden;}
 <div class="title">
      Moonshot Wallet
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      A hot wallet tailored for meme coins and moonshot tokens. Simple, fast, and meme-ready.
     </div>
 <a class="link" href="https://moonshot.com?ref=kyCmNLJnYS" target="_blank">
@@ -1147,7 +1197,7 @@ overflow: hidden;}
 <div class="title">
      Phantom
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Popular Solana wallet with NFTs and staking.
     </div>
 <a class="link" href="https://phantom.app/" target="_blank">
@@ -1157,7 +1207,7 @@ overflow: hidden;}
 <div class="title">
      Solflare
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Mobile and browser wallet for Solana.
     </div>
 <a class="link" href="https://solflare.com/" target="_blank">
@@ -1167,7 +1217,7 @@ overflow: hidden;}
 <div class="title">
      Jupiter Wallet
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Wallet integrated with Jupiter DEX aggregator.
     </div>
 <a class="link" href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">
@@ -1177,123 +1227,123 @@ overflow: hidden;}
     Hot Wallet Comparison
    </h3><table class="comparison-table">
 <tr>
-<th>
+<th style="color: black;">
       Name
      </th>
-<th>
+<th style="color: black;">
       Type
      </th>
-<th>
+<th style="color: black;">
       Chains
      </th>
-<th>
+<th style="color: black;">
       Best for
      </th>
-<th>
+<th style="color: black;">
       Link
      </th>
 </tr>
 <tr>
-<td>
+<td style="color: black;">
       Phantom
      </td>
-<td>
+<td style="color: black;">
       Hot
      </td>
-<td>
+<td style="color: black;">
       Solana
      </td>
-<td>
+<td style="color: black;">
       NFTs &amp; DeFi on Solana
      </td>
-<td>
+<td style="color: black;">
 <a href="https://phantom.app" target="_blank">
        Visit
       </a>
 </td>
 </tr>
 <tr>
-<td>
+<td style="color: black;">
       MetaMask
      </td>
-<td>
+<td style="color: black;">
       Hot
      </td>
-<td>
+<td style="color: black;">
       Ethereum, EVM
      </td>
-<td>
+<td style="color: black;">
       Web3 dApps
      </td>
-<td>
+<td style="color: black;">
 <a href="https://metamask.io" target="_blank">
        Visit
       </a>
 </td>
 </tr>
 <tr>
-<td>
+<td style="color: black;">
       Solflare
      </td>
-<td>
+<td style="color: black;">
       Hot
      </td>
-<td>
+<td style="color: black;">
       Solana
      </td>
-<td>
+<td style="color: black;">
       Mobile + staking
      </td>
-<td>
+<td style="color: black;">
 <a href="https://solflare.com" target="_blank">
        Visit
       </a>
 </td>
 </tr>
 <tr>
-<td>
+<td style="color: black;">
       Rabby Wallet
      </td>
-<td>
+<td style="color: black;">
       Hot
      </td>
-<td>
+<td style="color: black;">
       EVM
      </td>
-<td>
+<td style="color: black;">
       DeFi browser extension
      </td>
-<td>
+<td style="color: black;">
 <a href="https://rabby.io" target="_blank">
        Visit
       </a>
 </td>
 </tr>
 <tr>
-<td>
+<td style="color: black;">
       Jupiter Wallet
      </td>
-<td>
+<td style="color: black;">
       Hot
      </td>
-<td>
+<td style="color: black;">
       Solana
      </td>
-<td>
+<td style="color: black;">
       Integrated with Jupiter DEX
      </td>
-<td>
+<td style="color: black;">
 <a href="https://jup.ag/wallet" target="_blank">
        Visit
       </a>
 </td>
 </tr>
 <tr>
-<td>Moonshot Wallet</td>
-<td>Hot</td>
-<td>EVM</td>
-<td>Meme-coin trading</td>
-<td><a href="https://moonshot.com?ref=kyCmNLJnYS" target="_blank">Visit</a></td>
+<td style="color: black;">Moonshot Wallet</td>
+<td style="color: black;">Hot</td>
+<td style="color: black;">EVM</td>
+<td style="color: black;">Meme-coin trading</td>
+<td style="color: black;"><a href="https://moonshot.com?ref=kyCmNLJnYS" target="_blank">Visit</a></td>
 </tr></table></div>
 <div class="section">
 <h2>
@@ -1306,7 +1356,7 @@ overflow: hidden;}
 <div class="title">
      Ledger
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Industry-leading hardware wallet.
     </div>
 <a class="link" href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">
@@ -1316,7 +1366,7 @@ overflow: hidden;}
 <div class="title">
      Trezor
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Secure offline wallet for long-term storage.
     </div>
 <a class="link" href="https://affil.trezor.io/aff_c?offer_id=239&amp;aff_id=35816" target="_blank">
@@ -1326,55 +1376,55 @@ overflow: hidden;}
 <h3 style="color:#FFD700; text-align:center;">Cold Wallet Comparison</h3>
 <table class="comparison-table">
 <tr>
-<th>
+<th style="color: black;">
       Name
      </th>
-<th>
+<th style="color: black;">
       Type
      </th>
-<th>
+<th style="color: black;">
       Features
      </th>
-<th>
+<th style="color: black;">
       Best for
      </th>
-<th>
+<th style="color: black;">
       Link
      </th>
 </tr>
 <tr>
-<td>
+<td style="color: black;">
       Ledger
      </td>
-<td>
+<td style="color: black;">
       Hardware
      </td>
-<td>
+<td style="color: black;">
       Bluetooth, Mobile App, Secure Element
      </td>
-<td>
+<td style="color: black;">
       Modern &amp; mobile users
      </td>
-<td>
+<td style="color: black;">
 <a href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">
        Visit
       </a>
 </td>
 </tr>
 <tr>
-<td>
+<td style="color: black;">
       Trezor
      </td>
-<td>
+<td style="color: black;">
       Hardware
      </td>
-<td>
+<td style="color: black;">
       Open-source, Transparent, Durable
      </td>
-<td>
+<td style="color: black;">
       Security-focused users
      </td>
-<td>
+<td style="color: black;">
 <a href="https://affil.trezor.io/aff_c?offer_id=239&amp;aff_id=35816" target="_blank">
        Visit
       </a>
@@ -1392,7 +1442,7 @@ overflow: hidden;}
 <div class="title">
      Raydium
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Solana AMM with fast swaps and liquidity pools.
     </div>
 <a class="link" href="https://raydium.io" target="_blank">
@@ -1402,7 +1452,7 @@ overflow: hidden;}
 <div class="title">
      Jupiter
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Top Solana DEX aggregator.
     </div>
 <a class="link" href="https://jup.ag" target="_blank">
@@ -1412,7 +1462,7 @@ overflow: hidden;}
 <div class="title">
      Drift
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Perpetuals trading on Solana.
     </div>
 <a class="link" href="https://app.drift.trade" target="_blank">
@@ -1422,7 +1472,7 @@ overflow: hidden;}
 <div class="title">
      Marginfi
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Borrow/lend protocol with margin trading.
     </div>
 <a class="link" href="https://app.marginfi.com/refer/8f3ec3ca-739a-4546-b056-efe38623dccc" target="_blank">
@@ -1432,7 +1482,7 @@ overflow: hidden;}
 <div class="title">
      Kamino
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Automated yield optimizer.
     </div>
 <a class="link" href="https://app.kamino.finance" target="_blank">
@@ -1442,7 +1492,7 @@ overflow: hidden;}
 <div class="title">
      Meteora
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Dynamic liquidity vaults.
     </div>
 <a class="link" href="https://meteora.ag" target="_blank">
@@ -1452,7 +1502,7 @@ overflow: hidden;}
 <div class="title">
      Orca
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Friendly Solana DEX.
     </div>
 <a class="link" href="https://www.orca.so" target="_blank">
@@ -1462,7 +1512,7 @@ overflow: hidden;}
 <div class="title">
      Jito
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      MEV staking &amp; liquid staking on Solana – boosting yield and decentralization.
     </div>
 <a class="link" href="https://jito.network" target="_blank">
@@ -1482,7 +1532,7 @@ overflow: hidden;}
 <div class="title">
      Wormhole
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Cross-chain messaging &amp; transfers
     </div>
 <a class="link" href="https://wormhole.com" target="_blank">
@@ -1492,7 +1542,7 @@ overflow: hidden;}
 <div class="title">
      Portal Bridge
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Multi-chain token bridge by Wormhole
     </div>
 <a class="link" href="https://portalbridge.com" target="_blank">
@@ -1502,7 +1552,7 @@ overflow: hidden;}
 <div class="title">
      Mayan Bridge
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Token bridge &amp; swaps for Solana
     </div>
 <a class="link" href="https://swap.mayan.finance" target="_blank">
@@ -1512,7 +1562,7 @@ overflow: hidden;}
 <div class="title">
      Jumper
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Bridge aggregator for multi-chain assets
     </div>
 <a class="link" href="https://jumper.exchange" target="_blank">
@@ -1522,7 +1572,7 @@ overflow: hidden;}
 <div class="title">
      LayerZero
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Omnichain protocol for messaging
     </div>
 <a class="link" href="https://layerzero.network" target="_blank">
@@ -1532,7 +1582,7 @@ overflow: hidden;}
 <div class="title">
      deBridge
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Secure cross-chain transfers
     </div>
 <a class="link" href="https://debridge.finance" target="_blank">
@@ -1557,50 +1607,27 @@ overflow: hidden;}
 </div>
 </div>
 <script>
-   function toggleChat() {
-  const container = document.getElementById("chatContainer");
-  container.style.display = container.style.display === "flex" ? "none" : "flex";
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.carousel-news');
+    const items = document.querySelectorAll('.news-item');
+    const total = items.length;
+    let index = 0;
 
-function sendMessage() {
-  const input = document.getElementById("userInput");
-  const message = input.value.trim();
-  if (!message) return;
+    function updateCarousel() {
+        carousel.style.transform = 'translateX(' + (-index * 100) + '%)';
+    }
 
-  appendMessage("user", message);
-  input.value = "";
+    document.querySelector('.carousel-button.next')?.addEventListener('click', () => {
+        index = (index + 1) % total;
+        updateCarousel();
+    });
 
-  let reply = getOfflineBotReply(message);
-  appendMessage("bot", reply);
-}
-
-function getOfflineBotReply(msg) {
-  const lower = msg.toLowerCase();
-
-  if (lower.includes("bitcoin")) {
-    return "Bitcoin is the first decentralized cryptocurrency. It allows peer-to-peer payments without intermediaries.";
-  } else if (lower.includes("ethereum")) {
-    return "Ethereum is a smart contract platform that enables decentralized apps and DeFi.";
-  } else if (lower.includes("wallet")) {
-    return "Hot wallets are connected to the internet. Cold wallets are offline and more secure for long-term storage.";
-  } else if (lower.includes("dex")) {
-    return "A DEX is a decentralized exchange that lets users trade crypto directly using smart contracts.";
-  } else if (lower.includes("crypto")) {
-    return "Cryptocurrencies are digital assets secured by cryptography, often using blockchain networks.";
-  } else {
-    return "Sorry, I can only answer basic crypto questions at the moment.";
-  }
-}
-
-function appendMessage(sender, text) {
-  const chat = document.getElementById("chatMessages");
-  const msg = document.createElement("div");
-  msg.className = `message ${sender}`;
-  msg.textContent = text;
-  chat.appendChild(msg);
-  chat.scrollTop = chat.scrollHeight;
-}
-  </script>
+    document.querySelector('.carousel-button.prev')?.addEventListener('click', () => {
+        index = (index - 1 + total) % total;
+        updateCarousel();
+    });
+});
+</script>
 <style>
    .chat-button {
   position: fixed;
@@ -1865,7 +1892,7 @@ document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
 <div class="title">
      Pump.fun
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Where memes are born. Solana's degen launchpad that brings tokens to life, no VCs, just vibes.
     </div>
 <a class="link" href="https://pump.fun" target="_blank">
@@ -1875,7 +1902,7 @@ document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
 <div class="title">
      DexScreener
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Where memes trend. Track real-time price action, volumes and top gainers across chains.
     </div>
 <a class="link" href="https://dexscreener.com" target="_blank">
@@ -1888,7 +1915,7 @@ document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
 </div>
 </section>
 <section class="section">
-<h2 style="color: #FFD700; border-bottom: 2px solid #000;">
+<div class="card defi-intro-card"><img alt="DeFi Introduction" src="images/defi_intro_gold_card.png" style="width: 100%; border-radius: 12px;"/></div><h2 style="color: #FFD700; border-bottom: 2px solid #000;">
     DeFi Infrastructure
    </h2>
 <p style="font-size: 0.9rem; color: #FFD700; margin-top: -0.5rem; margin-bottom: 1rem;">
@@ -1898,7 +1925,7 @@ document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
 <div class="title">
      Pyth Network
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Real-time price oracles for smart contracts – fast and decentralized.
     </div>
 <a class="link" href="https://pyth.network" target="_blank">
@@ -1906,25 +1933,24 @@ document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
     </a>
 </div>
 <div class="card" style="font-size: 0.70rem;">
-  <div class="title">Ether.fi</div>
-  <div class="desc" style="color: #111;">Decentralized liquid staking platform – earn ETH rewards while holding custody of your keys.</div>
-  <a class="link" href="https://app.ether.fi/weeth?address=0x87c5393736D3cE4a9fCb6E1D6893bd032edDcd65" target="_blank">Visit Ether.fi</a>
+<div class="title">Ether.fi</div>
+<div class="desc">Decentralized liquid staking platform – earn ETH rewards while holding custody of your keys.</div>
+<a class="link" href="https://app.ether.fi/weeth?address=0x87c5393736D3cE4a9fCb6E1D6893bd032edDcd65" target="_blank">Visit Ether.fi</a>
 </div>
-
 <div class="cards-container"><div class="card" style="font-size: 0.70rem;">
 <div class="title">Zeta Markets</div>
-<div class="desc" style="color: #111;">Decentralized options and futures trading on Solana.</div>
+<div class="desc">Decentralized options and futures trading on Solana.</div>
 <a class="link" href="https://zeta.markets" target="_blank">Visit Zeta</a>
-</div><div class="card" style="  font-size: 0.70rem;"><div class="title">Zeus Network</div><div class="desc" style="color: #111;">Infrastructure layer for Solana cross-chain connectivity.</div><a class="link" href="https://zeus.network" target="_blank">Visit Zeus</a></div></div></section>
+</div><div class="card" style="  font-size: 0.70rem;"><div class="title">Zeus Network</div><div class="desc">Infrastructure layer for Solana cross-chain connectivity.</div><a class="link" href="https://zeus.network" target="_blank">Visit Zeus</a></div></div></section>
 <div class="section"><h2>Solana Infra &amp; Analytics</h2><p>Explore Solana-native analytics &amp; cross-chain infrastructure.</p><div class="cards-container"><div class="card" style="font-size: 0.70rem;">
 <div class="title">Birdeye</div>
-<div class="desc" style="color: #111;">Real-time Solana token data &amp; charts.</div>
+<div class="desc">Real-time Solana token data &amp; charts.</div>
 <a class="link" href="https://birdeye.so" target="_blank">Visit Birdeye</a>
 </div>
 <div class="card" style="font-size: 0.70rem;">
-  <div class="title">Chainlink</div>
-  <div class="desc" style="color: #111;">Leading oracle network for secure real-world data on-chain. Powering DeFi, gaming, and more.</div>
-  <a class="link" href="https://chain.link" target="_blank">Visit Chainlink</a>
+<div class="title">Chainlink</div>
+<div class="desc">Leading oracle network for secure real-world data on-chain. Powering DeFi, gaming, and more.</div>
+<a class="link" href="https://chain.link" target="_blank">Visit Chainlink</a>
 </div>
 </div></div><div class="section">
 <h2>
@@ -1937,7 +1963,7 @@ document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
 <div class="title">
      CoinMarketCap
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Price tracking, market data and news.
     </div>
 <a class="link" href="https://coinmarketcap.com" target="_blank">
@@ -1947,7 +1973,7 @@ document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
 <div class="title">
      CoinGecko
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Detailed analytics and tracking for all coins.
     </div>
 <a class="link" href="https://coingecko.com" target="_blank">
@@ -1957,7 +1983,7 @@ document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
 <div class="title">
      CoinStats
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Portfolio &amp; performance tracking tool.
     </div>
 <a class="link" href="https://invite.coinstats.app/r?i=Zb2IsJ1734804670281" target="_blank">
@@ -1967,7 +1993,7 @@ document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
 <div class="title">
      Banter Bubbles
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Visual market mover bubbles.
     </div>
 <a class="link" href="https://www.banterbubbles.com" target="_blank">
@@ -1977,7 +2003,7 @@ document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
 <div class="title">
      TradingView
     </div>
-<div class="desc" style="color: #111;">
+<div class="desc">
      Advanced charting platform for crypto &amp; stocks.
     </div>
 <a class="link" href="https://tradingview.com" target="_blank">
