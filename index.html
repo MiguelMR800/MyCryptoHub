@@ -121,7 +121,7 @@ overflow: hidden;}
   max-width: 90%;
   margin: 2rem auto;
   padding: 2rem 1.5rem;
-  background: url('goldbar_card_texture.png') center/cover no-repeat;
+  background: linear-gradient(135deg, #000000, #c0c0c0);
   border-radius: 20px;
   color: #FFD700;
   font-weight: bold;
@@ -591,6 +591,14 @@ h1.shimmer-title {
   margin: 0 auto;
   word-break: break-word;
 }
+
+body {
+  background: linear-gradient(160deg, #1a1a1a, #2c2c2c, #dcdcdc);
+}
+
+.card:empty {
+  display: none !important;
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -810,7 +818,7 @@ h1.shimmer-title {
 .card {
   max-width: 90%;
   margin: 2rem auto;
-  background: url('goldbar_card_texture.png') center/cover no-repeat;
+  background: linear-gradient(135deg, #000000, #c0c0c0);
   border-radius: 16px;
   padding: 1.5rem;
   color: #FFD700;
