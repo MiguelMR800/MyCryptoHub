@@ -2111,8 +2111,16 @@ function sendMessage() {
 
   input.value = '';
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  // Käyttäjän viesti
+const userMessage = document.createElement('div');
+userMessage.className = 'message user';
+userMessage.style.color = '#000000'; // Väri mustaksi
+userMessage.textContent = message;
+messagesContainer.appendChild(userMessage);
 
-  // Botin "Typing..." viesti
+input.value = '';
+messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
   const typingMessage = document.createElement('div');
   typingMessage.className = 'message bot';
   typingMessage.textContent = 'Typing...';
