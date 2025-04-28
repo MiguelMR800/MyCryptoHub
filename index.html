@@ -2086,8 +2086,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script></script> <!-- tämä päättää sinun nykyisen korttien tyhjennysskriptin -->
 
+<!-- Tässä alkaa sivun loppuosa -->
+
+<!-- Vanha korttien siivousskripti päättyy tähän -->
+</script>
+
+<!-- BOTIN KOKO KOODI -->
 <script>
-// TÄSSÄ botti-chatin koodi alkaa:
+// TÄSSÄ botti-chatin koodi alkaa
+
 function sendMessage() {
   const input = document.getElementById('userInput');
   const message = input.value.trim();
@@ -2096,6 +2103,7 @@ function sendMessage() {
 
   const messagesContainer = document.getElementById('chatMessages');
 
+  // Käyttäjän viesti
   const userMessage = document.createElement('div');
   userMessage.className = 'message user';
   userMessage.textContent = message;
@@ -2104,6 +2112,7 @@ function sendMessage() {
   input.value = '';
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
+  // Botin "Typing..." viesti
   const typingMessage = document.createElement('div');
   typingMessage.className = 'message bot';
   typingMessage.textContent = 'Typing...';
@@ -2132,29 +2141,41 @@ function generateBotReply(userText) {
   }
 
   if (text.includes('wallet')) {
-    return "Use hot wallets for daily use and cold wallets for long-term safe storage! 🔒";
+    return "Use hot wallets for daily access and cold wallets for secure storage! 🔐";
   }
 
   if (text.includes('cold storage')) {
-    return "Cold storage keeps crypto assets offline — Ledger and Trezor are popular options.";
+    return "Cold storage keeps your crypto offline and secure — Ledger and Trezor are popular choices.";
   }
 
   if (text.includes('solana')) {
-    return "Solana is a high-speed blockchain known for low fees and fast transaction times.";
+    return "Solana is a fast, low-fee blockchain perfect for DeFi and NFTs!";
   }
 
   const defaultReplies = [
-    "Interesting! Tell me more. 🤔",
+    "Interesting! Tell me more. 🧐",
     "I'm here to help with your crypto questions!",
     "Could you clarify that?",
     "Crypto can be complex — always research before investing! 📚",
-    "Not sure about that one. You might want to check CoinMarketCap or DeFiLlama!"
+    "Not sure about that one. Check CoinMarketCap or DeFiLlama!"
   ];
 
   return defaultReplies[Math.floor(Math.random() * defaultReplies.length)];
 }
 </script>
 
+<!-- CHATIN AVAUS / SULKU -TOIMINTO -->
+<script>
+function toggleChat() {
+  const chatContainer = document.getElementById('chatContainer');
+  if (chatContainer.style.display === 'flex') {
+    chatContainer.style.display = 'none';
+  } else {
+    chatContainer.style.display = 'flex';
+  }
+}
+</script>
+
+<!-- Lopetus: body ja html suljetaan -->
 </body>
 </html>
-</body></html>
