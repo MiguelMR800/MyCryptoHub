@@ -2094,85 +2094,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- BOTIN KOKO KOODI -->
 <script>
 // TÄSSÄ botti-chatin koodi alkaa
-
-function sendMessage() {
-  const input = document.getElementById('userInput');
-  const message = input.value.trim();
-
-  if (message === '') return;
-
-  const messagesContainer = document.getElementById('chatMessages');
-
-  // Käyttäjän viesti
-  const userMessage = document.createElement('div');
-  userMessage.className = 'message user';
-  userMessage.textContent = message;
-  messagesContainer.appendChild(userMessage);
-
-  input.value = '';
-  messagesContainer.scrollTop = messagesContainer.scrollHeight;
-  // Käyttäjän viesti
-const userMessage = document.createElement('div');
-userMessage.className = 'message user';
-userMessage.style.color = '#000000'; // Väri mustaksi
-userMessage.textContent = message;
-messagesContainer.appendChild(userMessage);
-
-input.value = '';
-messagesContainer.scrollTop = messagesContainer.scrollHeight;
-
-  const typingMessage = document.createElement('div');
-  typingMessage.className = 'message bot';
-  typingMessage.textContent = 'Typing...';
-  messagesContainer.appendChild(typingMessage);
-  messagesContainer.scrollTop = messagesContainer.scrollHeight;
-
-  setTimeout(() => {
-    typingMessage.textContent = generateBotReply(message);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
-  }, 1500);
-}
-
-function generateBotReply(userText) {
-  const text = userText.toLowerCase();
-
-  if (text.includes('bitcoin price') || text.includes('btc price')) {
-    return "Bitcoin price changes constantly. Check live data on CoinMarketCap or CoinGecko! 📈";
-  }
-
-  if (text.includes('ethereum') || text.includes('eth')) {
-    return "Ethereum is a smart contract platform enabling decentralized applications. 🔥";
-  }
-
-  if (text.includes('defi')) {
-    return "DeFi (Decentralized Finance) offers financial services without intermediaries, using smart contracts.";
-  }
-
-  if (text.includes('wallet')) {
-    return "Use hot wallets for daily access and cold wallets for secure storage! 🔐";
-  }
-
-  if (text.includes('cold storage')) {
-    return "Cold storage keeps your crypto offline and secure — Ledger and Trezor are popular choices.";
-  }
-
-  if (text.includes('solana')) {
-    return "Solana is a fast, low-fee blockchain perfect for DeFi and NFTs!";
-  }
-
-  const defaultReplies = [
-    "Interesting! Tell me more. 🧐",
-    "I'm here to help with your crypto questions!",
-    "Could you clarify that?",
-    "Crypto can be complex — always research before investing! 📚",
-    "Not sure about that one. Check CoinMarketCap or DeFiLlama!"
-  ];
-
-  return defaultReplies[Math.floor(Math.random() * defaultReplies.length)];
-}
-</script>
-
-<!-- CHATIN AVAUS / SULKU -TOIMINTO -->
+<!-- CHATBOT + CHATIN ASETUKSET -->
 <script>
 function toggleChat() {
   const chatContainer = document.getElementById('chatContainer');
@@ -2182,8 +2104,72 @@ function toggleChat() {
     chatContainer.style.display = 'flex';
   }
 }
+
+function sendMessage() {
+  const input = document.getElementById("userInput");
+  const message = input.value.trim();
+  if (!message) return;
+
+  const chatMessages = document.getElementById("chatMessages");
+
+  const userMessage = document.createElement("div");
+  userMessage.className = "message user";
+  userMessage.innerText = message;
+  chatMessages.appendChild(userMessage);
+
+  const botMessage = document.createElement("div");
+  botMessage.className = "message bot";
+  botMessage.innerText = "";
+  chatMessages.appendChild(botMessage);
+
+  typeBotReply(botMessage, getBotReply(message));
+
+  input.value = "";
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function getBotReply(text) {
+  text = text.toLowerCase();
+  if (text.includes("bitcoin")) {
+    return "Bitcoin is the original cryptocurrency!";
+  }
+  if (text.includes("wallet")) {
+    return "Wallets help you store crypto safely.";
+  }
+  if (text.includes("dex")) {
+    return "DEXs let you trade crypto without intermediaries.";
+  }
+  if (text.includes("solana")) {
+    return "Solana is a fast, low-fee blockchain perfect for DeFi and NFTs!";
+  }
+
+  const defaultReplies = [
+    "Interesting! Tell me more. 🤔",
+    "I'm here to help with your crypto questions!",
+    "Could you clarify that?",
+    "Crypto can be complex – always research before investing! 📚",
+    "Not sure about that one. Check CoinMarketCap or DeFiLlama!"
+  ];
+
+  return defaultReplies[Math.floor(Math.random() * defaultReplies.length)];
+}
+
+function typeBotReply(element, text) {
+  let index = 0;
+  const speed = 30; // milliseconds per character
+  function type() {
+    if (index < text.length) {
+      element.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(type, speed);
+    }
+  }
+  type();
+}
 </script>
 
-<!-- Lopetus: body ja html suljetaan -->
+<!-- BODY JA HTML SULJETTAVAT -->
 </body>
 </html>
+
+
