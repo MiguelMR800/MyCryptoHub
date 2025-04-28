@@ -2072,29 +2072,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const hasDesc = card.querySelector('.desc');
     const hasLink = card.querySelector('a');
 
-    if (!hasTitle && !hasDesc && !hasLink && card.innerText.trim() === '') {
-      card.remove();
-    }
-  });
-
-  // Poista korttikontit jotka ovat tyhjiä (eivät sisällä yhtään korttia)
-  document.querySelectorAll('.cards-container').forEach(container => {
-    if (container.querySelectorAll('.card').length === 0) {
-      container.remove();
-    }
-  });
-});
-</script></script> <!-- tämä päättää sinun nykyisen korttien tyhjennysskriptin -->
-
-<!-- Tässä alkaa sivun loppuosa -->
-
-<!-- Vanha korttien siivousskripti päättyy tähän -->
-</script>
-
-<!-- BOTIN KOKO KOODI -->
-<script>
-// TÄSSÄ botti-chatin koodi alkaa
-<!-- CHATBOT + CHATIN ASETUKSET -->
+ <!-- BOTTI-CHAT KOODI ALKAA -->
 <script>
 function toggleChat() {
   const chatContainer = document.getElementById('chatContainer');
@@ -2167,9 +2145,10 @@ function typeBotReply(element, text) {
   type();
 }
 </script>
+<!-- BOTTI-CHAT KOODI LOPPUU -->
 
-<!-- BODY JA HTML SULJETTAVAT -->
 </body>
 </html>
+  
 
 
