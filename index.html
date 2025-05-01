@@ -415,6 +415,48 @@ overflow: hidden;}
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
   }
 }
+
+.news-glass-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 700px;
+  margin: auto;
+  padding: 1rem;
+  position: relative;
+}
+
+.news-card-glass {
+  flex: 1;
+  backdrop-filter: blur(14px) saturate(160%);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 20px;
+  color: #fff;
+  min-height: 260px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transition: opacity 0.6s ease;
+}
+
+.news-nav-btn {
+  background: linear-gradient(135deg, #FFD700, #FFA500, #FFC107);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
+}
+
+.news-nav-btn:hover {
+  transform: scale(1.1);
+}
+
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -686,6 +728,48 @@ overflow: hidden;}
 .card:nth-of-type(18)::after { animation-delay: 17s; }
 .card:nth-of-type(19)::after { animation-delay: 17s; }
 .card:nth-of-type(20)::after { animation-delay: 15s; }
+
+.news-glass-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 700px;
+  margin: auto;
+  padding: 1rem;
+  position: relative;
+}
+
+.news-card-glass {
+  flex: 1;
+  backdrop-filter: blur(14px) saturate(160%);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 20px;
+  color: #fff;
+  min-height: 260px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transition: opacity 0.6s ease;
+}
+
+.news-nav-btn {
+  background: linear-gradient(135deg, #FFD700, #FFA500, #FFC107);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
+}
+
+.news-nav-btn:hover {
+  transform: scale(1.1);
+}
+
 </style>
 <link href="favicon.png" rel="icon" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon"/><meta content="MyCryptoHub" property="og:title"/><meta content="Explore top crypto tools, wallets &amp; exchanges." property="og:description"/><meta content="preview.jpg" property="og:image"/><meta content="https://miguelmr800.github.io/MyCryptoHub/" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&amp;display=swap" rel="stylesheet"/></head>
 <body>
@@ -712,7 +796,13 @@ overflow: hidden;}
 </div>
 </section>
 <div class="news-ticker-top">
-<div id="news-ticker-text" style="text-align:center; padding: 1rem; min-height: 280px; display: flex; justify-content: center; align-items: center;"><div style="position:relative; max-width:600px; margin:0 auto;"><button id="prevNews" style="position:absolute; left:-60px; top:40%; background:#222; color:#111; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&lt;</button><div id="news-rotating-item" style="transition: opacity 0.4s ease; min-height: 240px;; width: 100%; max-width: 600px; transition: opacity 0.4s ease; min-height: 240px; display: flex; justify-content: center; align-items: center;"></div><button id="nextNews" style="position:absolute; right:-60px; top:40%; background:#222; color:#111; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;">&gt;</button></div></div>
+
+<div class="news-glass-container">
+  <button id="prevNews" class="news-nav-btn">&lt;</button>
+  <div id="news-rotating-item" class="news-card-glass"></div>
+  <button id="nextNews" class="news-nav-btn">&gt;</button>
+</div>
+
 </div>
 <section class="crypto-info-section" style="background-image: url('images/crypto_background_optimized.jpg'); background-size: cover; background-position: center; padding: 50px 20px; position: relative; margin-top: 2rem;"><div class="info-overlay" style="background-color: rgba(0, 0, 0, 0.7); color: #FFD700; max-width: 800px; margin: auto; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.8);">
 <div class="info-slide">
@@ -888,6 +978,48 @@ Support the project by sending crypto directly to these wallet addresses.
 .copy-btn:hover {
   opacity: 0.9;
 }
+
+.news-glass-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 700px;
+  margin: auto;
+  padding: 1rem;
+  position: relative;
+}
+
+.news-card-glass {
+  flex: 1;
+  backdrop-filter: blur(14px) saturate(160%);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 20px;
+  color: #fff;
+  min-height: 260px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transition: opacity 0.6s ease;
+}
+
+.news-nav-btn {
+  background: linear-gradient(135deg, #FFD700, #FFA500, #FFC107);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
+}
+
+.news-nav-btn:hover {
+  transform: scale(1.1);
+}
+
 </style>
 
 <div class="donation-cards">
@@ -950,6 +1082,48 @@ function copyAddress(id) {
 .copy-btn:hover {
   background: linear-gradient(to right, #ffe066, #ffad33);
 }
+
+.news-glass-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 700px;
+  margin: auto;
+  padding: 1rem;
+  position: relative;
+}
+
+.news-card-glass {
+  flex: 1;
+  backdrop-filter: blur(14px) saturate(160%);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 20px;
+  color: #fff;
+  min-height: 260px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transition: opacity 0.6s ease;
+}
+
+.news-nav-btn {
+  background: linear-gradient(135deg, #FFD700, #FFA500, #FFC107);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
+}
+
+.news-nav-btn:hover {
+  transform: scale(1.1);
+}
+
 </style>
    
 <p style="margin-top: 1rem;">Thank you for supporting this project! Donations help keep the site ad-free and open for everyone.</p>
@@ -1129,6 +1303,48 @@ function appendMessage(sender, text) {
 .card:nth-of-type(18)::after { animation-delay: 17s; }
 .card:nth-of-type(19)::after { animation-delay: 17s; }
 .card:nth-of-type(20)::after { animation-delay: 15s; }
+
+.news-glass-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 700px;
+  margin: auto;
+  padding: 1rem;
+  position: relative;
+}
+
+.news-card-glass {
+  flex: 1;
+  backdrop-filter: blur(14px) saturate(160%);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 20px;
+  color: #fff;
+  min-height: 260px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transition: opacity 0.6s ease;
+}
+
+.news-nav-btn {
+  background: linear-gradient(135deg, #FFD700, #FFA500, #FFC107);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
+}
+
+.news-nav-btn:hover {
+  transform: scale(1.1);
+}
+
 </style>
 <script>
 const infoSlides = [
@@ -1218,7 +1434,7 @@ async function loadCointelegraphNews() {
     setInterval(() => {
       topIndex = (topIndex + 1) % items.length;
       showTopItem(topIndex);
-    }, 12000);
+    }, 5000);
 
     // MANUAL LOWER SECTION (same items reused)
     let bottomIndex = 0;
