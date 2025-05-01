@@ -942,16 +942,20 @@ Support the project by sending crypto directly to these wallet addresses.
   min-height: 200px;
 }
 
+
 .donation-card img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
+  width: 120%;
   height: auto;
-  opacity: 0.08;
+  opacity: 0.15;
   transform: translate(-50%, -50%);
   pointer-events: none;
+  filter: saturate(150%) blur(0.4px) drop-shadow(0 0 12px rgba(255, 215, 0, 0.3));
+  mix-blend-mode: screen;
 }
+
 
 .donation-card h3, .donation-card p, .donation-card button {
   position: relative;
