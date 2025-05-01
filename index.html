@@ -473,24 +473,6 @@ overflow: hidden;}
   box-shadow: 0 0 16px rgba(0,0,0,0.85);
 }
 
-
-#news-rotating-auto {
-  min-height: 220px;
-  padding: 1rem;
-  text-align: center;
-  color: #FFD700;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  transition: opacity 0.5s ease;
-}
-#news-rotating-auto a {
-  color: #FFD700;
-  text-decoration: none;
-  font-weight: bold;
-}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -849,7 +831,7 @@ overflow: hidden;}
 <div class="news-overlay">
 <div class="news-glass-container">
 <button class="news-nav-btn" id="prevNews">&lt;</button>
-<div class="news-card-glass" id="news-rotating-auto">Loading latest crypto news...</div>
+<div class="news-card-glass" id="news-rotating-auto"></div>
 <button class="news-nav-btn" id="nextNews">&gt;</button>
 </div>
 </div>
@@ -1094,25 +1076,25 @@ Support the project by sending crypto directly to these wallet addresses.
 </style>
 <div class="donation-cards">
 <div class="donation-card">
-<img alt="Bitcoin logo" src="images/bitcoin-logo.png"/>
+<img alt="Bitcoin logo" src="btc-icon.png"/>
 <h3>Bitcoin</h3>
 <p id="btc-address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysaut102akazd</p>
 <button class="copy-btn" onclick="copyAddress('btc-address')">Copy</button>
 </div>
 <div class="donation-card">
-<img alt="Ethereum logo" src="images/ethereum-logo.png"/>
+<img alt="Ethereum logo" src="eth-icon.png"/>
 <h3>Ethereum</h3>
 <p id="eth-address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</p>
 <button class="copy-btn" onclick="copyAddress('eth-address')">Copy</button>
 </div>
 <div class="donation-card">
-<img alt="Solana logo" src="images/solana-logo.jpeg"/>
+<img alt="Solana logo" src="sol-icon.png"/>
 <h3>Solana</h3>
 <p id="sol-address">5iZj5VEgELw9wumUukXxjYNXWCbbiTnkGFuQddLX775e</p>
 <button class="copy-btn" onclick="copyAddress('sol-address')">Copy</button>
 </div>
 <div class="donation-card">
-<img alt="Sui logo" src="images/sui-logo.png"/>
+<img alt="Sui logo" src="IMG_2237.JPG"/>
 <h3>Sui</h3>
 <p id="sui-address">0x0e1b7f1da6ccce7627329f738821355dd42fe5c013b4570a8bd11b9728269c2c</p>
 <button class="copy-btn" onclick="copyAddress('sui-address')">Copy</button>
