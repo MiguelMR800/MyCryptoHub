@@ -473,6 +473,17 @@ overflow: hidden;}
   box-shadow: 0 0 16px rgba(0,0,0,0.85);
 }
 
+
+.donation-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px) saturate(180%);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  overflow: hidden;
+  color: #fff;
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -827,18 +838,16 @@ overflow: hidden;}
 <img alt="The Digital Revolution" class="intro-text-image" src="https://miguelmr800.github.io/MyCryptoHub/images/goldpanel_bitcoin.png" style="width: 100%; max-width: 720px; display: block; margin: 2rem auto; border-radius: 18px; box-shadow: 0 8px 28px rgba(0,0,0,0.4);"/>
 </div>
 </section>
-
 <section class="news-section" style="margin-top: 2rem;">
-  <div class="news-overlay">
-    <div class="news-glass-container">
-      <button id="prevNews" class="news-nav-btn">&lt;</button>
-      <div id="news-rotating-auto" class="news-card-glass"></div>
-      <button id="nextNews" class="news-nav-btn">&gt;</button>
-    </div>
-  </div>
+<div class="news-overlay">
+<div class="news-glass-container">
+<button class="news-nav-btn" id="prevNews">&lt;</button>
+<div class="news-card-glass" id="news-rotating-auto"></div>
+<button class="news-nav-btn" id="nextNews">&gt;</button>
+</div>
+</div>
 </section>
-<section class="crypto-info-section"
- style="background-image: url('images/crypto_background_optimized.jpg'); background-size: cover; background-position: center; padding: 50px 20px; position: relative; margin-top: 2rem;"><div class="info-overlay" style="background-color: rgba(0, 0, 0, 0.7); color: #FFD700; max-width: 800px; margin: auto; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.8);">
+<section class="crypto-info-section" style="background-image: url('images/crypto_background_optimized.jpg'); background-size: cover; background-position: center; padding: 50px 20px; position: relative; margin-top: 2rem;"><div class="info-overlay" style="background-color: rgba(0, 0, 0, 0.7); color: #FFD700; max-width: 800px; margin: auto; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.8);">
 <div class="info-slide">
 <h2 id="info-title" onclick="toggleInfo()">Title here</h2>
 <p class="hidden" id="info-detail">Detail here</p>
@@ -957,7 +966,6 @@ overflow: hidden;}
 <p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">
 Support the project by sending crypto directly to these wallet addresses.
 </p>
-
 <style>
 .donation-cards {
   display: grid;
@@ -1077,39 +1085,32 @@ Support the project by sending crypto directly to these wallet addresses.
 }
 
 </style>
-
 <div class="donation-cards">
-
-  <div class="donation-card">
-    <img src="images/bitcoin-logo.png" alt="Bitcoin logo">
-    <h3>Bitcoin</h3>
-    <p id="btc-address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysaut102akazd</p>
-    <button onclick="copyAddress('btc-address')" class="copy-btn">Copy</button>
-  </div>
-
-  <div class="donation-card">
-    <img src="images/ethereum-logo.png" alt="Ethereum logo">
-    <h3>Ethereum</h3>
-    <p id="eth-address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</p>
-    <button onclick="copyAddress('eth-address')" class="copy-btn">Copy</button>
-  </div>
-
-  <div class="donation-card">
-    <img src="images/solana-logo.jpeg" alt="Solana logo">
-    <h3>Solana</h3>
-    <p id="sol-address">5iZj5VEgELw9wumUukXxjYNXWCbbiTnkGFuQddLX775e</p>
-    <button onclick="copyAddress('sol-address')" class="copy-btn">Copy</button>
-  </div>
-
-  <div class="donation-card">
-    <img src="images/sui-logo.png" alt="Sui logo">
-    <h3>Sui</h3>
-    <p id="sui-address">0x0e1b7f1da6ccce7627329f738821355dd42fe5c013b4570a8bd11b9728269c2c</p>
-    <button onclick="copyAddress('sui-address')" class="copy-btn">Copy</button>
-  </div>
-
+<div class="donation-card">
+<img alt="Bitcoin logo" src="images/bitcoin-logo.png"/>
+<h3>Bitcoin</h3>
+<p id="btc-address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysaut102akazd</p>
+<button class="copy-btn" onclick="copyAddress('btc-address')">Copy</button>
 </div>
-
+<div class="donation-card">
+<img alt="Ethereum logo" src="images/ethereum-logo.png"/>
+<h3>Ethereum</h3>
+<p id="eth-address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</p>
+<button class="copy-btn" onclick="copyAddress('eth-address')">Copy</button>
+</div>
+<div class="donation-card">
+<img alt="Solana logo" src="images/solana-logo.jpeg"/>
+<h3>Solana</h3>
+<p id="sol-address">5iZj5VEgELw9wumUukXxjYNXWCbbiTnkGFuQddLX775e</p>
+<button class="copy-btn" onclick="copyAddress('sol-address')">Copy</button>
+</div>
+<div class="donation-card">
+<img alt="Sui logo" src="images/sui-logo.png"/>
+<h3>Sui</h3>
+<p id="sui-address">0x0e1b7f1da6ccce7627329f738821355dd42fe5c013b4570a8bd11b9728269c2c</p>
+<button class="copy-btn" onclick="copyAddress('sui-address')">Copy</button>
+</div>
+</div>
 <script>
 function copyAddress(id) {
   const address = document.getElementById(id).innerText;
@@ -1118,10 +1119,7 @@ function copyAddress(id) {
   });
 }
 </script>
-
 </div>
-
-</script>
 
 <style>
 .copy-btn {
@@ -1197,9 +1195,8 @@ function copyAddress(id) {
 }
 
 </style>
-   
 <p style="margin-top: 1rem;">Thank you for supporting this project! Donations help keep the site ad-free and open for everyone.</p>
-</div>
+
 <footer>
 <p>This site may contain affiliate links. We may earn a commission if you use them, at no extra cost to you.</p>
 <p>For informational purposes only — not financial advice.</p>
@@ -1495,21 +1492,31 @@ async function loadCointelegraphNews() {
 
     // AUTO ROTATING TOP SECTION
     let topIndex = 0;
-    const topContainer = document.getElementById("news-rotating-item");
+    const topContainer = document.getElementById("news-rotating-auto");
 
+    
     function showTopItem(index) {
       const item = items[index];
-      
-const image = item.thumbnail && item.thumbnail.startsWith("http") 
-  ? item.thumbnail 
-  : "https://cointelegraph.com/img/ct_logo.svg";
-
+      const image = item.thumbnail && item.thumbnail.startsWith("http")
+        ? item.thumbnail
+        : "https://cointelegraph.com/img/ct_logo.svg";
       const content = `
         <div style="display:flex; flex-direction:column; align-items:center;">
           <img src="${image}" style="max-width:100%; max-height:160px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.3); margin-bottom: 12px;"/>
           <h3 style="font-size: 1rem; text-align: center;">
-            <a href="${item.link}" target="_blank" style="color: #ffd700; text-decoration: none;">
+            <a href="${item.link}" target="_blank" style="color: #FFD700; text-decoration: none;">
               ${item.title}
+            </a>
+          </h3>
+        </div>
+      `;
+      topContainer.style.transition = "opacity 0.6s ease";
+      topContainer.style.opacity = 0.2;
+      setTimeout(() => {
+        topContainer.innerHTML = content;
+        topContainer.style.opacity = 1;
+      }, 200);
+    }
             </a>
           </h3>
         </div>
