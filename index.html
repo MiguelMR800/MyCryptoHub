@@ -474,19 +474,22 @@ overflow: hidden;}
 }
 
 
-.donation-card {
-  position: relative;
-  border-radius: 16px;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(14px) saturate(180%);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-  overflow: hidden;
-  color: #fff;
-  transition: transform 0.3s ease;
+#news-rotating-auto {
+  min-height: 220px;
+  padding: 1rem;
+  text-align: center;
+  color: #FFD700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.5s ease;
 }
-.donation-card:hover {
-  transform: scale(1.015);
+#news-rotating-auto a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
 }
 </style>
 <meta charset="utf-8"/>
@@ -846,7 +849,7 @@ overflow: hidden;}
 <div class="news-overlay">
 <div class="news-glass-container">
 <button class="news-nav-btn" id="prevNews">&lt;</button>
-<div class="news-card-glass" id="news-rotating-auto"></div>
+<div class="news-card-glass" id="news-rotating-auto">Loading latest crypto news...</div>
 <button class="news-nav-btn" id="nextNews">&gt;</button>
 </div>
 </div>
