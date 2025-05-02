@@ -557,6 +557,29 @@ h1, h2, h3, h4, h5, h6, p, span, li, a, label, strong, div, button {
   border-radius: 10px 10px 0 0;
   margin-bottom: 10px;
 }
+
+.card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: yellow;
+  min-height: 240px;
+}
+.card img {
+  display: none !important;
+}
+.card .title, .card .desc, .card .link, .card .address, .card button {
+  position: relative;
+  z-index: 1;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
+  z-index: 0;
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
