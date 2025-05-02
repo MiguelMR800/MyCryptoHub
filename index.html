@@ -72,6 +72,23 @@
   transition: opacity 0.3s ease, height 0.3s ease;
 }
 
+.card {
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  color: #000;
+  background: url('goldbar_background_horizontal.png') center/cover no-repeat;
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 160px;
+  transition: transform 0.3s ease;
+
+overflow: hidden;}
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
@@ -99,6 +116,23 @@
   font-weight: bold;
 }
 
+.card {
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background: url('goldbar_card_texture.png') center/cover no-repeat;
+  border-radius: 20px;
+  color: black !important;
+  font-weight: bold;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 180px;
+
+overflow: hidden;}
 
 .card:hover {
   transform: translateY(-6px);
@@ -506,6 +540,10 @@ h1, h2, h3, h4, h5, h6, p, span, li, a, label, strong, div, button {
   opacity: 0.2;
   border-radius: inherit;
 }
+.card {
+  position: relative;
+  overflow: hidden;
+}
 .card > *:not(img) {
   position: relative;
   z-index: 1;
@@ -518,67 +556,6 @@ h1, h2, h3, h4, h5, h6, p, span, li, a, label, strong, div, button {
   display: block;
   border-radius: 10px 10px 0 0;
   margin-bottom: 10px;
-}
-
-.card img {
-  display: none !important;
-}
-.card .title, .card .desc, .card .link, .card .address, .card button {
-  position: relative;
-  z-index: 1;
-}
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
-  z-index: 0;
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 16px;
-  z-index: 0;
-}
-.card > * {
-  position: relative;
-  z-index: 1;
-}
-.card img {
-  display: none !important;
-}
-
-
-.donation-card {
-  position: relative;
-  background-size: cover !important;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 16px;
-  min-height: 240px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-}
-.donation-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 16px;
-  z-index: 0;
-}
-.donation-card > * {
-  position: relative;
-  z-index: 1;
-}
-.donation-card img {
-  display: none !important;
 }
 </style>
 <meta charset="utf-8"/>
