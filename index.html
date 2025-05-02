@@ -557,6 +557,59 @@ h1, h2, h3, h4, h5, h6, p, span, li, a, label, strong, div, button {
   border-radius: 10px 10px 0 0;
   margin-bottom: 10px;
 }
+
+.chat-container .chat-messages .message.bot {
+  background: rgba(0, 0, 0, 0.85);
+  color: #FFD700 !important;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 12px;
+  border-radius: 12px;
+}
+.chat-container .chat-messages .message.user {
+  background: #FFD700 !important;
+  color: #000 !important;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.donation-card {
+  background-size: cover !important;
+  background-position: center !important;
+  position: relative;
+  color: #FFD700;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.donation-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.chat-container {
+  backdrop-filter: blur(12px) brightness(0.5);
+  background: rgba(255, 215, 0, 0.15); /* translucent gold */
+  border-radius: 16px;
+  color: #fff;
+}
+.chat-container .chat-messages .message.bot {
+  background: rgba(0, 0, 0, 0.8);
+  color: #FFD700 !important;
+}
+.chat-container .chat-messages .message.user {
+  background: #FFD700;
+  color: #000 !important;
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -1142,29 +1195,25 @@ Support the project by sending crypto directly to these wallet addresses.
 
 </style>
 <div class="donation-cards">
-<div class="donation-card">
-<img alt="Bitcoin logo" src="images/btc-icon.png" style="opacity: 0.8; max-height: 100px;"/>
-<h3>Bitcoin</h3>
-<p id="btc-address">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysaut102akazd</p>
-<button class="copy-btn" onclick="copyAddress('btc-address')">Copy</button>
+<div class="donation-card" style="background-image: url('images/btc-icon.png'); background-size: cover; background-position: center;">
+<h3 style="position: relative; z-index: 2;">Bitcoin</h3>
+<p id="btc-address" style="position: relative; z-index: 2;">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysaut102akazd</p>
+<button class="copy-btn" onclick="copyAddress('btc-address')" style="position: relative; z-index: 2;">Copy</button>
 </div>
-<div class="donation-card">
-<img alt="Ethereum logo" src="images/eth-icon.png" style="opacity: 0.8; max-height: 100px;"/>
-<h3>Ethereum</h3>
-<p id="eth-address">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</p>
-<button class="copy-btn" onclick="copyAddress('eth-address')">Copy</button>
+<div class="donation-card" style="background-image: url('images/eth-icon.png'); background-size: cover; background-position: center;">
+<h3 style="position: relative; z-index: 2;">Ethereum</h3>
+<p id="eth-address" style="position: relative; z-index: 2;">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</p>
+<button class="copy-btn" onclick="copyAddress('eth-address')" style="position: relative; z-index: 2;">Copy</button>
 </div>
-<div class="donation-card">
-<img alt="Solana logo" src="images/sol-icon.png" style="opacity: 0.8; max-height: 100px;"/>
-<h3>Solana</h3>
-<p id="sol-address">5iZj5VEgELw9wumUukXxjYNXWCbbiTnkGFuQddLX775e</p>
-<button class="copy-btn" onclick="copyAddress('sol-address')">Copy</button>
+<div class="donation-card" style="background-image: url('images/sol-icon.png'); background-size: cover; background-position: center;">
+<h3 style="position: relative; z-index: 2;">Solana</h3>
+<p id="sol-address" style="position: relative; z-index: 2;">5iZj5VEgELw9wumUukXxjYNXWCbbiTnkGFuQddLX775e</p>
+<button class="copy-btn" onclick="copyAddress('sol-address')" style="position: relative; z-index: 2;">Copy</button>
 </div>
-<div class="donation-card">
-<img alt="Sui logo" src="images/sui-logo.png" style="opacity: 0.8; max-height: 100px;"/>
-<h3>Sui</h3>
-<p id="sui-address">0x0e1b7f1da6ccce7627329f738821355dd42fe5c013b4570a8bd11b9728269c2c</p>
-<button class="copy-btn" onclick="copyAddress('sui-address')">Copy</button>
+<div class="donation-card" style="background-image: url('images/sui-logo.png'); background-size: cover; background-position: center;">
+<h3 style="position: relative; z-index: 2;">Sui</h3>
+<p id="sui-address" style="position: relative; z-index: 2;">0x0e1b7f1da6ccce7627329f738821355dd42fe5c013b4570a8bd11b9728269c2c</p>
+<button class="copy-btn" onclick="copyAddress('sui-address')" style="position: relative; z-index: 2;">Copy</button>
 </div>
 </div>
 <script>
