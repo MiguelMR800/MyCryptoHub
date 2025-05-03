@@ -3,6 +3,7 @@
 
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="final_styles.css">
 <!-- SEO & Open Graph -->
 <title>MyCryptoHub – Your Crypto Startpage (v1.0)</title>
 <meta content="MyCryptoHub on kryptosijoittajan aloitussivu. Löydä parhaat pörssit, lompakot, työkalut ja uutiset – kaikki yhdellä sivulla." name="description"/>
@@ -974,18 +975,7 @@ overflow: hidden;}
 <div class="intro-container">
 <img alt="MyCryptoHub Guardian" class="intro-image" src="images/mycryptohub_intro.png"/><div class="ticker-card" style="width: 95%; max-width: 500px; overflow: hidden; display: flex; justify-content: center; margin: -30px auto 1rem auto; border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 10; position: relative;">
 <div class="crypto-ticker">
-<div class="ticker-content">
-<span>BTC +2.45%</span>
-<span>ETH -1.20%</span>
-<span>SOL +4.80%</span>
-<span>XRP +0.95%</span>
-<span>BNB -0.67%</span>
-<span>AVAX +3.22%</span>
-<span>ADA -0.89%</span>
-<span>MATIC +1.10%</span>
-<span>DOT +2.30%</span>
-<span>LINK +4.50%</span>
-</div>
+<div class="ticker-content" id="ticker-content-js">Loading data...</div>
 </div>
 </div>
 <img alt="The Digital Revolution" class="intro-text-image" src="https://miguelmr800.github.io/MyCryptoHub/images/goldpanel_bitcoin.png" style="width: 100%; max-width: 720px; display: block; margin: 2rem auto; border-radius: 18px; box-shadow: 0 8px 28px rgba(0,0,0,0.4);"/>
@@ -1010,20 +1000,43 @@ overflow: hidden;}
 <p class="disclaimer" style="font-size: 0.8rem; color: #bbb; margin-top: 20px;">*This is not financial advice.</p></div></section>
 <div class="section">
 <h2>Exchanges</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Platforms where you can buy, sell, and trade cryptocurrencies.</p>
-<div class="card"><div class="title">Binance</div><div class="desc">World's largest crypto exchange by volume.</div><a class="link" href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">Join Binance</a></div>
-<div class="card"><div class="title">Bybit</div><div class="desc">Fast-growing exchange for derivatives and spot.</div><a class="link" href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Join Bybit</a></div>
+
 <div class="card">
-<div class="title">Bitget</div>
-<div class="desc">Futures, spot, and copy trading platform.</div>
-<a class="link" href="https://www.bitget.com/referral/register?clacCode=B0US0BU8&amp;from=%2Fevents%2Freferral-all-program&amp;source=events&amp;utmSource=PremierInviter" target="_blank">Join Bitget</a>
+  <div class="title">Binance</div>
+  <div class="desc">World's largest crypto exchange by volume.</div>
+  <a class="link" href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">Join Binance</a>
 </div>
 <div class="card">
-<div class="title">Northcrypto</div>
-<div class="desc">Finnish crypto exchange with euro support and bank transfers.</div>
-<a class="link" href="https://www.northcrypto.com/fi" target="_blank">Visit Northcrypto</a>
+  <div class="title">Bybit</div>
+  <div class="desc">Fast-growing exchange for derivatives and spot.</div>
+  <a class="link" href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Join Bybit</a>
 </div>
-<div class="card"><div class="title">Coinmotion</div><div class="desc">Finnish crypto platform with strong regulation.</div><a class="link" href="https://coinmotion.com/fi?ref=92a4" target="_blank">Join Coinmotion</a></div>
-<div class="card"><div class="title">Crypto.com</div><div class="desc">Popular app with Visa card and staking options.</div><a class="link" href="https://crypto.com/app/nrmm4uzm29" target="_blank">Join Crypto.com</a></div>
+<div class="card">
+  <div class="title">Bitget</div>
+  <div class="desc">Futures, spot, and copy trading platform.</div>
+  <a class="link" href="https://www.bitget.com/referral/register?clacCode=B0US0BU8&from=%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank">Join Bitget</a>
+</div>
+<div class="card">
+  <div class="title">MEXC</div>
+  <div class="desc">Popular exchange with wide altcoin selection.</div>
+  <a class="link" href="https://www.mexc.com/register?inviteCode=1GvVa" target="_blank">Join MEXC</a>
+</div>
+<div class="card">
+  <div class="title">Northcrypto</div>
+  <div class="desc">Finnish crypto exchange with euro support and bank transfers.</div>
+  <a class="link" href="https://www.northcrypto.com/fi" target="_blank">Visit Northcrypto</a>
+</div>
+<div class="card">
+  <div class="title">Coinmotion</div>
+  <div class="desc">Finnish crypto platform with strong regulation.</div>
+  <a class="link" href="https://coinmotion.com/fi?ref=92a4" target="_blank">Join Coinmotion</a>
+</div>
+<div class="card">
+  <div class="title">Crypto.com</div>
+  <div class="desc">Popular app with Visa card and staking options.</div>
+  <a class="link" href="https://crypto.com/app/nrmm4uzm29" target="_blank">Join Crypto.com</a>
+</div>
+
 </div>
 <div class="section">
 <h2>Hot Wallets</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Digital wallets connected to the internet – easy to use, best for daily access.</p>
@@ -1081,6 +1094,15 @@ overflow: hidden;}
 <tr><td>Crypto.com</td><td>0.4%</td><td>Global</td><td>Mobile-first users</td><td><a href="https://crypto.com/app/nrmm4uzm29" style="; color: black !important;" target="_blank">Visit</a></td></tr>
 <tr><td>Coinmotion</td><td>0.5%+</td><td>EU / Finland</td><td>Beginners, euro deposits</td><td><a href="https://coinmotion.com/fi?ref=92a4" style="; color: black !important;" target="_blank">Visit</a></td></tr>
 <tr><td>Northcrypto</td><td>1%</td><td>EU / FIN-FSA</td><td>Simple Finnish option</td><td><a href="https://northcrypto.com" style="; color: black !important;" target="_blank">Visit</a></td></tr>
+
+<tr>
+  <td>MEXC</td>
+  <td>0.2%</td>
+  <td>Offshore</td>
+  <td>Altcoin variety</td>
+  <td><a href="https://www.mexc.com/register?inviteCode=1GvVa" style="color: black !important;" target="_blank">Visit</a></td>
+</tr>
+
 </table>
 <h3 style="color:#FFD700; text-align:center;">Hot Wallet Comparison</h3>
 <table class="comparison-table">
@@ -1727,5 +1749,39 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-</script></body>
+</script>
+<script>
+async function updateTicker() {
+  try {
+    const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin,ripple,cardano,polkadot,chainlink,polygon,avalanche&vs_currencies=usd&include_24hr_change=true');
+    const data = await res.json();
+    const symbols = {
+      bitcoin: "BTC",
+      ethereum: "ETH",
+      solana: "SOL",
+      binancecoin: "BNB",
+      ripple: "XRP",
+      cardano: "ADA",
+      polkadot: "DOT",
+      chainlink: "LINK",
+      polygon: "MATIC",
+      avalanche: "AVAX"
+    };
+    let html = '';
+    for (const key in data) {
+      const symbol = symbols[key];
+      const change = data[key].usd_24h_change.toFixed(2);
+      const sign = change > 0 ? '+' : '';
+      html += `<span>${symbol} ${sign}${change}%</span>`;
+    }
+    document.getElementById('ticker-content-js').innerHTML = html;
+  } catch (err) {
+    document.getElementById('ticker-content-js').innerHTML = '<span>Error loading data</span>';
+  }
+}
+updateTicker();
+setInterval(updateTicker, 300000);
+</script>
+</body>
+
 </html>
