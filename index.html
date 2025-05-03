@@ -706,6 +706,10 @@ h1, h2, h3, h4, h5, h6, p, span, li, a, label, strong, div, button {
   padding: 10px;
   border-radius: 12px;
 }
+
+.chat-container input[type="text"] {
+  color: black !important;
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -1388,7 +1392,7 @@ function copyAddress(id) {
 <div class="chat-button" onclick="toggleChat()">Chat</div>
 <div class="chat-container" id="chatContainer">
 <div class="chat-header">Ask CryptoBot</div>
-<div class="chat-messages" id="chatMessages"></div>
+<div class="chat-messages" id="chatMessages"><div class="message bot">Hi! Welcome to MyCryptoHub Bot. Ask me anything crypto-related.</div></div>
 <div class="chat-input">
 <input id="userInput" onkeydown="if(event.key==='Enter') sendMessage()" placeholder="Ask something..." type="text"/>
 <button onclick="sendMessage()">Send</button>
