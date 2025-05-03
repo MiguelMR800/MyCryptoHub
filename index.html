@@ -710,6 +710,10 @@ h1, h2, h3, h4, h5, h6, p, span, li, a, label, strong, div, button {
 .chat-container input[type="text"] {
   color: black !important;
 }
+
+.chat-input input {
+  color: black !important;
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -1753,5 +1757,26 @@ document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
     chat.style.display = (chat.style.display === "none") ? "block" : "none";
   });
 </script>
-</body>
+<script>
+async function loadCryptoTicker() {
+  const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false";
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    const ticker = document.getElementById("cryptoTicker");
+    data.forEach(coin => {
+      const span = document.createElement("span");
+      const change = coin.price_change_percentage_24h.toFixed(2);
+      const color = change > 0 ? "lime" : "red";
+      span.textContent = `${coin.name}: ${change}% `;
+      span.style.color = "black";
+      span.style.marginRight = "24px";
+      ticker.appendChild(span);
+    });
+  } catch (e) {
+    console.error("Failed to fetch CoinGecko data", e);
+  }
+}
+document.addEventListener("DOMContentLoaded", loadCryptoTicker);
+</script></body>
 </html>
