@@ -3,7 +3,7 @@
 
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="final_styles.css">
+<link href="final_styles.css" rel="stylesheet"/>
 <!-- SEO & Open Graph -->
 <title>MyCryptoHub – Your Crypto Startpage (v1.0)</title>
 <meta content="MyCryptoHub on kryptosijoittajan aloitussivu. Löydä parhaat pörssit, lompakot, työkalut ja uutiset – kaikki yhdellä sivulla." name="description"/>
@@ -968,7 +968,7 @@ overflow: hidden;}
 }
 
 </style>
-<link href="favicon.png" rel="icon" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon"/><meta content="MyCryptoHub" property="og:title"/><meta content="Explore top crypto tools, wallets &amp; exchanges." property="og:description"/><meta content="preview.jpg" property="og:image"/><meta content="https://miguelmr800.github.io/MyCryptoHub/" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&amp;display=swap" rel="stylesheet"/><meta content="MyCryptoHub v1.0 - Integrated Fix 2025-05-02" name="version"/></head>
+<link href="favicon.png" rel="icon" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon"><meta content="MyCryptoHub" property="og:title"/><meta content="Explore top crypto tools, wallets &amp; exchanges." property="og:description"/><meta content="preview.jpg" property="og:image"/><meta content="https://miguelmr800.github.io/MyCryptoHub/" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&amp;display=swap" rel="stylesheet"/><meta content="MyCryptoHub v1.0 - Integrated Fix 2025-05-02" name="version"/></link></head>
 <body>
 <h1 class="shimmer-title">MyCryptoHub</h1>
 <section class="intro-section">
@@ -984,7 +984,14 @@ overflow: hidden;}
 <div class="news-ticker-top">
 <div class="news-glass-container">
 <button class="news-nav-btn" id="prevNews">&lt;</button>
-<div class="news-card-glass" id="news-rotating-item"></div>
+<div class="news-card-glass" id="news-rotating-item">
+<div class="news-item visible">
+<a href="#" style="text-decoration:none;color:gold;" target="_blank">
+<img class="news-img" src="https://coindesk.com/pf/resources/images/default-thumb.png"/>
+<div class="news-title">Loading latest Coindesk news...</div>
+</a>
+</div>
+</div>
 <button class="news-nav-btn" id="nextNews">&gt;</button>
 </div>
 </div>
@@ -1000,43 +1007,41 @@ overflow: hidden;}
 <p class="disclaimer" style="font-size: 0.8rem; color: #bbb; margin-top: 20px;">*This is not financial advice.</p></div></section>
 <div class="section">
 <h2>Exchanges</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Platforms where you can buy, sell, and trade cryptocurrencies.</p>
-
 <div class="card">
-  <div class="title">Binance</div>
-  <div class="desc">World's largest crypto exchange by volume.</div>
-  <a class="link" href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">Join Binance</a>
+<div class="title">Binance</div>
+<div class="desc">World's largest crypto exchange by volume.</div>
+<a class="link" href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">Join Binance</a>
 </div>
 <div class="card">
-  <div class="title">Bybit</div>
-  <div class="desc">Fast-growing exchange for derivatives and spot.</div>
-  <a class="link" href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Join Bybit</a>
+<div class="title">Bybit</div>
+<div class="desc">Fast-growing exchange for derivatives and spot.</div>
+<a class="link" href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Join Bybit</a>
 </div>
 <div class="card">
-  <div class="title">Bitget</div>
-  <div class="desc">Futures, spot, and copy trading platform.</div>
-  <a class="link" href="https://www.bitget.com/referral/register?clacCode=B0US0BU8&from=%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank">Join Bitget</a>
+<div class="title">Bitget</div>
+<div class="desc">Futures, spot, and copy trading platform.</div>
+<a class="link" href="https://www.bitget.com/referral/register?clacCode=B0US0BU8&amp;from=%2Fevents%2Freferral-all-program&amp;source=events&amp;utmSource=PremierInviter" target="_blank">Join Bitget</a>
 </div>
 <div class="card">
-  <div class="title">MEXC</div>
-  <div class="desc">Popular exchange with wide altcoin selection.</div>
-  <a class="link" href="https://www.mexc.com/register?inviteCode=1GvVa" target="_blank">Join MEXC</a>
+<div class="title">MEXC</div>
+<div class="desc">Popular exchange with wide altcoin selection.</div>
+<a class="link" href="https://www.mexc.com/register?inviteCode=1GvVa" target="_blank">Join MEXC</a>
 </div>
 <div class="card">
-  <div class="title">Northcrypto</div>
-  <div class="desc">Finnish crypto exchange with euro support and bank transfers.</div>
-  <a class="link" href="https://www.northcrypto.com/fi" target="_blank">Visit Northcrypto</a>
+<div class="title">Northcrypto</div>
+<div class="desc">Finnish crypto exchange with euro support and bank transfers.</div>
+<a class="link" href="https://www.northcrypto.com/fi" target="_blank">Visit Northcrypto</a>
 </div>
 <div class="card">
-  <div class="title">Coinmotion</div>
-  <div class="desc">Finnish crypto platform with strong regulation.</div>
-  <a class="link" href="https://coinmotion.com/fi?ref=92a4" target="_blank">Join Coinmotion</a>
+<div class="title">Coinmotion</div>
+<div class="desc">Finnish crypto platform with strong regulation.</div>
+<a class="link" href="https://coinmotion.com/fi?ref=92a4" target="_blank">Join Coinmotion</a>
 </div>
 <div class="card">
-  <div class="title">Crypto.com</div>
-  <div class="desc">Popular app with Visa card and staking options.</div>
-  <a class="link" href="https://crypto.com/app/nrmm4uzm29" target="_blank">Join Crypto.com</a>
+<div class="title">Crypto.com</div>
+<div class="desc">Popular app with Visa card and staking options.</div>
+<a class="link" href="https://crypto.com/app/nrmm4uzm29" target="_blank">Join Crypto.com</a>
 </div>
-
 </div>
 <div class="section">
 <h2>Hot Wallets</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Digital wallets connected to the internet – easy to use, best for daily access.</p>
@@ -1094,15 +1099,13 @@ overflow: hidden;}
 <tr><td>Crypto.com</td><td>0.4%</td><td>Global</td><td>Mobile-first users</td><td><a href="https://crypto.com/app/nrmm4uzm29" style="; color: black !important;" target="_blank">Visit</a></td></tr>
 <tr><td>Coinmotion</td><td>0.5%+</td><td>EU / Finland</td><td>Beginners, euro deposits</td><td><a href="https://coinmotion.com/fi?ref=92a4" style="; color: black !important;" target="_blank">Visit</a></td></tr>
 <tr><td>Northcrypto</td><td>1%</td><td>EU / FIN-FSA</td><td>Simple Finnish option</td><td><a href="https://northcrypto.com" style="; color: black !important;" target="_blank">Visit</a></td></tr>
-
 <tr>
-  <td>MEXC</td>
-  <td>0.2%</td>
-  <td>Offshore</td>
-  <td>Altcoin variety</td>
-  <td><a href="https://www.mexc.com/register?inviteCode=1GvVa" style="color: black !important;" target="_blank">Visit</a></td>
+<td>MEXC</td>
+<td>0.2%</td>
+<td>Offshore</td>
+<td>Altcoin variety</td>
+<td><a href="https://www.mexc.com/register?inviteCode=1GvVa" style="color: black !important;" target="_blank">Visit</a></td>
 </tr>
-
 </table>
 <h3 style="color:#FFD700; text-align:center;">Hot Wallet Comparison</h3>
 <table class="comparison-table">
@@ -1660,52 +1663,7 @@ function prevSlide() {
 
 document.addEventListener("DOMContentLoaded", updateInfoSlide);
 </script>
-<script>
-async function loadCointelegraphNews() {
-  const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss';
-  try {
-    const response = await fetch(rssUrl);
-    const data = await response.json();
-    const items = data.items.slice(0, 10);
-
-    let currentIndex = 0;
-    const newsContainer = document.getElementById("news-rotating-item");
-
-    function renderNews(index) {
-      const item = items[index];
-      const image = item.thumbnail?.startsWith("http") ? item.thumbnail : "https://via.placeholder.com/600x160?text=Crypto+News";
-      newsContainer.innerHTML = `
-        <div style="display:flex; flex-direction:column; align-items:center;">
-          <img src="${image}" style="max-width:100%; max-height:160px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.3); margin-bottom: 12px;"/>
-          <h3 style="font-size: 1rem; text-align: center;">
-            <a href="${item.link}" target="_blank" style="color: #ffd700; text-decoration: none;">
-              ${item.title}
-            </a>
-          </h3>
-        </div>`;
-    }
-
-    function showNextNews() {
-      currentIndex = (currentIndex + 1) % items.length;
-      renderNews(currentIndex);
-    }
-
-    function showPrevNews() {
-      currentIndex = (currentIndex - 1 + items.length) % items.length;
-      renderNews(currentIndex);
-    }
-
-    document.getElementById("nextNews").addEventListener("click", showNextNews);
-    document.getElementById("prevNews").addEventListener("click", showPrevNews);
-
-    renderNews(currentIndex);
-    setInterval(showNextNews, 5000);
-  } catch (error) {
-    console.error("Failed to load news:", error);
-  }
-}
-document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
-</script>
+<script></script>
 <!-- Chat Widget -->
 <div id="chat-widget" style="position: fixed; bottom: 90px; right: 20px; background: #111; color: gold; padding: 20px; border-radius: 10px; display: none; box-shadow: 0 0 15px gold; z-index: 9999;">
 <strong>Ask us anything!</strong><br/><br/>
@@ -1782,6 +1740,109 @@ async function updateTicker() {
 updateTicker();
 setInterval(updateTicker, 300000);
 </script>
-</body>
+<script>
+fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h")
+  .then(res => res.json())
+  .then(data => {
+    const ticker = document.getElementById("ticker-content-js");
+    ticker.innerHTML = data.map(coin => {
+      const change = coin.price_change_percentage_24h?.toFixed(2) ?? 0;
+      return `<span style='margin-right: 20px;'>${coin.symbol.toUpperCase()}: ${change}%</span>`;
+    }).join(" ");
+  })
+  .catch(err => {
+    document.getElementById("ticker-content-js").innerText = "Unable to load data";
+  });
+</script>
+<style>
+.news-item {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.news-item.visible {
+  opacity: 1;
+  position: relative;
+}
+.news-img {
+  width: 100%;
+  border-radius: 12px;
+  max-height: 200px;
+  object-fit: cover;
+}
+.news-title {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+</style>
+<script>
+async function fetchCoindeskRSS() {
+  const proxyUrl = "https://api.allorigins.win/get?url=";
+  const feedUrl = encodeURIComponent("https://www.coindesk.com/arc/outboundfeeds/rss/");
+  const carousel = document.getElementById("news-rotating-item");
 
+  try {
+    const res = await fetch(proxyUrl + feedUrl);
+    const data = await res.json();
+    const parser = new DOMParser();
+    const rss = parser.parseFromString(data.contents, "text/xml");
+    const items = rss.querySelectorAll("item");
+
+    const newsSlides = Array.from(items).slice(0, 5).map((item, index) => {
+      const title = item.querySelector("title").textContent;
+      const link = item.querySelector("link").textContent;
+      const enclosure = item.querySelector("enclosure");
+      const image = enclosure ? enclosure.getAttribute("url") : "https://coindesk.com/pf/resources/images/default-thumb.png";
+
+      return `
+        <div class="news-item${index === 0 ? ' visible' : ''}">
+          <a href="${link}" target="_blank" style="text-decoration:none;color:gold;">
+            <img src="${image}" class="news-img" />
+            <div class="news-title">${title}</div>
+          </a>
+        </div>`;
+    });
+
+    carousel.innerHTML = newsSlides.join("");
+
+    let index = 0;
+    const itemsDOM = carousel.querySelectorAll(".news-item");
+    setInterval(() => {
+      itemsDOM[index].classList.remove("visible");
+      index = (index + 1) % itemsDOM.length;
+      itemsDOM[index].classList.add("visible");
+    }, 7000);
+  } catch (error) {
+    console.error("News load error:", error);
+    carousel.innerHTML = "<div class='news-title'>Failed to load news from Coindesk.</div>";
+  }
+}
+fetchCoindeskRSS();
+</script>
+<style>
+.news-item {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.news-item.visible {
+  opacity: 1;
+  position: relative;
+}
+.news-img {
+  width: 100%;
+  border-radius: 12px;
+  max-height: 200px;
+  object-fit: cover;
+}
+.news-title {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+</style>
+</body>
 </html>
