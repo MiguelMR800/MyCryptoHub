@@ -1782,6 +1782,64 @@ async function updateTicker() {
 updateTicker();
 setInterval(updateTicker, 300000);
 </script>
+
+<script>
+async function fetchNews() {
+  const response = await fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.coindesk.com/arc/outboundfeeds/rss/");
+  const data = await response.json();
+  return data.items.slice(0, 6).map(item => ({
+    title: item.title,
+    link: item.link
+  }));
+}
+
+let currentNewsIndex = 0;
+let newsItems = [];
+
+function showNews(index) {
+  const container = document.getElementById("news-rotating-item");
+  container.style.opacity = 0;
+  setTimeout(() => {
+    container.innerHTML = '<a href="' + newsItems[index].link + '" target="_blank" style="color: #FFD700; text-decoration: none;">' + newsItems[index].title + '</a>';
+    container.style.opacity = 1;
+  }, 300);
+}
+
+function nextNews() {
+  if (newsItems.length === 0) return;
+  currentNewsIndex = (currentNewsIndex + 1) % newsItems.length;
+  showNews(currentNewsIndex);
+}
+
+function prevNews() {
+  if (newsItems.length === 0) return;
+  currentNewsIndex = (currentNewsIndex - 1 + newsItems.length) % newsItems.length;
+  showNews(currentNewsIndex);
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  newsItems = await fetchNews();
+  if (newsItems.length > 0) {
+    showNews(currentNewsIndex);
+    setInterval(nextNews, 5000);
+  }
+  document.getElementById("nextNews").addEventListener("click", nextNews);
+  document.getElementById("prevNews").addEventListener("click", prevNews);
+});
+</script>
+<style>
+#news-rotating-item {
+  transition: opacity 0.6s ease;
+  opacity: 1;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+</style>
 </body>
 
 </html>
