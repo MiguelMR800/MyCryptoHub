@@ -1005,11 +1005,22 @@ overflow: hidden;}
   position: relative;
 }
 
+.news-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .news-slide h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 20px;
   transition: opacity 0.6s ease;
-  min-height: 60px;
+  height: 96px; /* lukitaan korkeus noin 3 riville */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .news-nav {
