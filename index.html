@@ -471,10 +471,17 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(135deg, #000000, #1a0e00, #FFD700, #1a0e00, #000000);
-  background-size: 800% 800%;
+  background: linear-gradient(135deg, #000000, #4a3b0b, #000000); /* musta - tumma kulta - musta */
+  background-size: 400% 400%;
   animation: animatedDarkGold 40s ease infinite;
   opacity: 1;
+}
+
+@keyframes animatedDarkGold {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 }
 
 @keyframes animatedDarkGold {
