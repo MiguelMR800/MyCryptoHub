@@ -1,16 +1,47 @@
-
 .card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
-  padding: 1rem;
-  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.3),
+    inset 0 0 4px rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  color: #FFD700; /* Kultainen teksti */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
+
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.4),
+    inset 0 0 6px rgba(255, 255, 255, 0.2);
+}
+
+/* Sisäiset elementit, jos haluat vielä selkeämmän kontrastin */
+.card .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #ffde59;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.card .desc {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #ffe680;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.card .link {
+  color: #fff8a6;
+  text-decoration: underline;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
