@@ -467,14 +467,23 @@ body {
 body::before {
   content: "";
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(135deg, #000000, #b0b0b0, #0a0a0a, #888888, #000000);
-  background-size: 600% 600%;
-  animation: animatedDarkSilver 40s ease infinite;
+  background: linear-gradient(135deg, #111111, #333333);
+  background-size: 200% 200%;
+  animation: animatedDarkGradient 20s ease infinite;
   opacity: 1;
+}
+
+@keyframes animatedDarkGradient {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
 }
 @keyframes animatedDarkSilver {
   0% { background-position: 0% 50%; }
