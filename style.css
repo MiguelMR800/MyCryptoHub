@@ -1,4 +1,4 @@
-/* MyCryptoHub Complete CSS - Optimized and Updated */
+/* MyCryptoHub Optimized CSS - Complete */
 
 /* Body Styling */
 body {
@@ -24,31 +24,27 @@ body {
 
 /* News Section */
 .news-wrapper {
-  background-image: url('images/crypto_background_optimized.jpg');
-  background-size: cover;
-  background-position: center;
+  background: url('images/crypto_background_optimized.jpg') center/cover no-repeat;
   padding: 60px 20px;
   position: relative;
+  text-align: center;
 }
 
 .news-overlay {
   background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px 30px;
+  border-radius: 20px;
+  color: #FFD700;
   max-width: 800px;
   margin: auto;
-  border-radius: 20px;
-  padding: 40px 30px;
-  text-align: center;
   box-shadow: 0 0 15px rgba(0,0,0,0.6);
-  backdrop-filter: blur(12px);
-  color: #FFD700;
-  font-family: 'Poppins', sans-serif;
 }
 
 .news-slide {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .news-slide h2 {
@@ -56,7 +52,6 @@ body {
   margin-bottom: 20px;
   transition: opacity 0.6s ease;
   height: 96px;
-  text-align: center;
 }
 
 .news-slide h2 a {
