@@ -27,16 +27,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1400px;
+    max-width: 1600px; /* Suurempi leveys */
     margin: 0 auto;
     padding: 20px;
 }
 
 .intro-image {
-    max-width: 100%;
+    width: 100%;
+    max-width: 1600px; /* Kasvatettu leveys */
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
     transition: transform 0.3s ease;
 }
 
@@ -46,7 +47,7 @@ body {
 
 @media (min-width: 768px) {
     .intro-image {
-        height: 600px;
+        height: 700px; /* Suurempi korkeus pöytäkoneilla */
         object-fit: cover;
     }
 }
