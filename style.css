@@ -85,3 +85,37 @@ body {
   color: #bbb;
   margin-top: 20px;
 }
+
+
+
+/* Optimized Blog Styling */
+#blog .blog-post {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  color: #FFD700;
+}
+
+#blog .blog-post h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #FFD700;
+}
+
+#blog .blog-post p {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+#blog .blog-post a {
+  color: #FFD700;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+#blog .blog-post a:hover {
+  color: #ffcc00;
+}
