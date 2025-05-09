@@ -1,26 +1,28 @@
-/* Optimized Image Styling for Desktop and Mobile */
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
 .intro-image {
-  width: 100%;
-  max-width: 1400px; /* Säädä tätä tarpeen mukaan */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-  transition: transform 0.3s ease;
-  object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    transition: transform 0.3s ease;
 }
 
 .intro-image:hover {
-  transform: scale(1.02);
+    transform: scale(1.05);
 }
 
-/* Mobile Optimization */
-@media (max-width: 768px) {
-  .intro-image {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
+/* Säätää kuvien korkeutta eri laitteilla */
+@media (min-width: 768px) {
+    .intro-image {
+        height: 500px;
+        object-fit: cover;
+    }
 }
