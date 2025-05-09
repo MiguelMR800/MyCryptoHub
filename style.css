@@ -24,30 +24,130 @@ body {
 
 /* Intro Image Styling */
 .intro-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1600px; /* Suurempi leveys */
-    margin: 0 auto;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .intro-image {
-    width: 100%;
-    max-width: 1600px; /* Kasvatettu leveys */
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
-    transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 1600px; /* Suurempi leveys */
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+  transition: transform 0.3s ease;
 }
 
 .intro-image:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-@media (min-width: 768px) {
-    .intro-image {
-        height: 700px; /* Suurempi korkeus pöytäkoneilla */
-        object-fit: cover;
-    }
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .intro-image {
+    max-width: 100%; /* Täysi leveys mobiilissa */
+    height: auto;
+  }
+}
+
+/* News Section */
+.news-wrapper {
+  background: url('images/crypto_background_optimized.jpg') center/cover no-repeat;
+  padding: 60px 20px;
+  position: relative;
+  text-align: center;
+}
+
+.news-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px 30px;
+  border-radius: 20px;
+  color: #FFD700;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.news-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-slide h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  transition: opacity 0.6s ease;
+  height: 96px;
+}
+
+.news-slide h2 a {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+.news-slide h2 a:hover {
+  text-decoration: underline;
+}
+
+.news-nav {
+  background: rgba(255, 215, 0, 0.9);
+  color: #000;
+  border: none;
+  padding: 10px 18px;
+  margin: 0 10px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.news-nav:hover {
+  background: rgba(255, 215, 0, 1);
+}
+
+.news-disclaimer {
+  font-size: 0.8rem;
+  color: #bbb;
+  margin-top: 20px;
+}
+
+/* Blogisivujen erityinen tyyli */
+.blog-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.blog-container h1,
+.blog-container h2,
+.blog-container h3 {
+  color: #FFD700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.blog-container p,
+.blog-container li {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.blog-container a {
+  color: #FFD700;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.blog-container a:hover {
+  color: #ffcc00;
 }
