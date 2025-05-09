@@ -1,9 +1,34 @@
+/* MyCryptoHub Optimized CSS - Complete */
+
+/* Body Styling */
+body {
+  background: linear-gradient(120deg, rgba(120, 90, 10, 1), rgba(255, 215, 0, 0.85)),
+              radial-gradient(circle at 35% 35%, rgba(255, 255, 180, 0.35), transparent 40%),
+              radial-gradient(circle at 65% 65%, rgba(255, 245, 200, 0.25), transparent 60%);
+  background-blend-mode: screen, overlay;
+  background-size: 300% 300%;
+  animation: goldShimmer 30s ease-in-out infinite;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  color: black !important;
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+@keyframes goldShimmer {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Intro Image Styling */
 .intro-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    margin: auto;
+    max-width: 1400px;
+    margin: 0 auto;
     padding: 20px;
 }
 
@@ -11,7 +36,7 @@
     max-width: 100%;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
     transition: transform 0.3s ease;
 }
 
@@ -19,10 +44,9 @@
     transform: scale(1.05);
 }
 
-/* Säätää kuvien korkeutta eri laitteilla */
 @media (min-width: 768px) {
     .intro-image {
-        height: 500px;
+        height: 600px;
         object-fit: cover;
     }
 }
