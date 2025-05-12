@@ -988,12 +988,47 @@ overflow: hidden;}
 }
 
 </style>
-<link href="favicon.png" rel="icon" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon"/><meta content="MyCryptoHub" property="og:title"/><meta content="Explore top crypto tools, wallets &amp; exchanges." property="og:description"/><meta content="preview.jpg" property="og:image"/><meta content="https://miguelmr800.github.io/MyCryptoHub/" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&amp;display=swap" rel="stylesheet"/><meta content="MyCryptoHub v1.0 - Integrated Fix 2025-05-02" name="version"/></head>
+<link href="favicon.png" rel="icon" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon"/><meta content="MyCryptoHub" property="og:title"/><meta content="Explore top crypto tools, wallets &amp; exchanges." property="og:description"/><meta content="preview.jpg" property="og:image"/><meta content="https://miguelmr800.github.io/MyCryptoHub/" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&amp;display=swap" rel="stylesheet"/><meta content="MyCryptoHub v1.0 - Integrated Fix 2025-05-02" name="version"/><style>
+/* Korttien joustava flexbox-asettelu - kuten lahjoituskorteissa */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    min-height: 200px;
+    flex: 1 1 calc(100% - 40px);
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex: 1 1 calc(48% - 40px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        flex: 1 1 calc(32% - 40px);
+    }
+}
+</style></head>
 <body>
-<h1 class="shimmer-title">MyCryptoHub</h1>
 <section class="intro-section">
 <div class="intro-container">
-<img alt="MyCryptoHub Guardian" class="intro-image" src="images/mycryptohub_intro.png"/><div class="ticker-card" style="width: 95%; max-width: 500px; overflow: hidden; display: flex; justify-content: center; margin: -30px auto 1rem auto; border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 10; position: relative;">
+<img alt="MyCryptoHub Guardian" class="intro-image" src="images/mycryptohub_intro.png" style="
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    "/><div class="ticker-card" style="width: 95%; max-width: 500px; overflow: hidden; display: flex; justify-content: center; margin: -30px auto 1rem auto; border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 10; position: relative;">
 <div class="crypto-ticker">
 <div class="ticker-content" id="ticker-content-js">Loading data...</div>
 </div>
@@ -1073,7 +1108,14 @@ overflow: hidden;}
   transition: opacity 0.6s ease;
 }
 </style>
-<div class="container">
+<div class="container" style="
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    color: #FFD700;
+    ">
 <h1>MyCryptoHub - Crypto Blog</h1>
 <div class="blog-post">
 <h2>Understanding Bitcoin: The Basics</h2>
@@ -1090,8 +1132,8 @@ overflow: hidden;}
 <div class="news-slide">
 <h2 id="news-title">Loading latest crypto news...</h2>
 <div style="margin-top: 20px;">
-<button class="news-nav" onclick="prevNews()">« Prev</button>
-<button class="news-nav" onclick="nextNews()">Next »</button>
+<button class="news-nav" onclick="prevNews()" style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;">« Prev</button>
+<button class="news-nav" onclick="nextNews()" style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;">Next »</button>
 </div>
 </div>
 <p class="news-disclaimer">*This is not financial advice.</p>
@@ -1146,113 +1188,51 @@ document.addEventListener("DOMContentLoaded", async () => {
 <h2 id="info-title" onclick="toggleInfo()">Title here</h2>
 <p class="hidden" id="info-detail">Detail here</p>
 <div style="margin-top: 20px;">
-<button class="info-nav" onclick="prevSlide()">« Prev</button>
-<button class="info-nav" onclick="nextSlide()">Next »</button>
+<button class="info-nav" onclick="prevSlide()" style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;">« Prev</button>
+<button class="info-nav" onclick="nextSlide()" style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;">Next »</button>
 </div>
 </div>
 <p class="disclaimer" style="font-size: 0.8rem; color: #bbb; margin-top: 20px;">*This is not financial advice.</p></div></section>
-<div class="section">
-<h2 class="section-title">Exchanges</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Platforms where you can buy, sell, and trade cryptocurrencies.</p>
-<div class="card">
-<div class="title">Binance</div>
-<div class="desc">World's largest crypto exchange by volume.</div>
-<a class="link" href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">Join Binance</a>
+<div class="section"><h2>Exchanges</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Platforms where you can buy, sell, and trade cryptocurrencies.</p>
+<div class="card-container"><div class="card"><div class="title">Binance</div><div class="desc">Fees: 0.1%, Regulation: Offshore</div><a class="link" href="#" target="_blank">Visit Binance</a></div><div class="card"><div class="title">Bybit</div><div class="desc">Fees: 0.1%, Regulation: Offshore</div><a class="link" href="#" target="_blank">Visit Bybit</a></div><div class="card"><div class="title">Bitget</div><div class="desc">Fees: 0.1%, Regulation: Offshore</div><a class="link" href="#" target="_blank">Visit Bitget</a></div><div class="card"><div class="title">MEXC</div><div class="desc">Fees: 0.2%, Regulation: Offshore</div><a class="link" href="#" target="_blank">Visit MEXC</a></div><div class="card"><div class="title">Crypto.com</div><div class="desc">Fees: 0.4%, Regulation: Global</div><a class="link" href="#" target="_blank">Visit Crypto.com</a></div><div class="card"><div class="title">Coinmotion</div><div class="desc">Fees: 0.5%, Regulation: EU / Finland</div><a class="link" href="#" target="_blank">Visit Coinmotion</a></div><div class="card"><div class="title">Northcrypto</div><div class="desc">Fees: 1.0%, Regulation: EU / FIN-FSA</div><a class="link" href="#" target="_blank">Visit Northcrypto</a></div></div>
 </div>
-<div class="card">
-<div class="title">Bybit</div>
-<div class="desc">Fast-growing exchange for derivatives and spot.</div>
-<a class="link" href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Join Bybit</a>
-</div>
-<div class="card">
-<div class="title">Bitget</div>
-<div class="desc">Futures, spot, and copy trading platform.</div>
-<a class="link" href="https://www.bitget.com/referral/register?clacCode=B0US0BU8&amp;from=%2Fevents%2Freferral-all-program&amp;source=events&amp;utmSource=PremierInviter" target="_blank">Join Bitget</a>
-</div>
-<div class="card">
-<div class="title">MEXC</div>
-<div class="desc">Popular exchange with wide altcoin selection.</div>
-<a class="link" href="https://www.mexc.com/register?inviteCode=1GvVa" target="_blank">Join MEXC</a>
-</div>
-<div class="card">
-<div class="title">Northcrypto</div>
-<div class="desc">Finnish crypto exchange with euro support and bank transfers.</div>
-<a class="link" href="https://www.northcrypto.com/fi" target="_blank">Visit Northcrypto</a>
-</div>
-<div class="card">
-<div class="title">Coinmotion</div>
-<div class="desc">Finnish crypto platform with strong regulation.</div>
-<a class="link" href="https://coinmotion.com/fi?ref=92a4" target="_blank">Join Coinmotion</a>
-</div>
-<div class="card">
-<div class="title">Crypto.com</div>
-<div class="desc">Popular app with Visa card and staking options.</div>
-<a class="link" href="https://crypto.com/app/nrmm4uzm29" target="_blank">Join Crypto.com</a>
-</div>
-</div>
-<div class="section">
-<h2 class="section-title">Hot Wallets</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Digital wallets connected to the internet – easy to use, best for daily access.</p>
-<div class="card"><div class="title">MetaMask</div><div class="desc">Ethereum wallet for DeFi &amp; NFTs.</div><a class="link" href="https://metamask.io/" target="_blank">Get MetaMask</a></div>
-<div class="card">
-<div class="title">Rabby Wallet</div>
+<div class="section"><h2>Hot Wallets</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Digital wallets connected to the internet – easy to use, best for daily access.</p>
+<div class="card-container"><div class="card"><div class="title">MetaMask</div><div class="desc">Ethereum wallet for DeFi &amp; NFTs.</div><a class="link" href="https://metamask.io/" target="_blank">Get MetaMask</a></div><div class="card"><div class="title">Rabby Wallet</div>
 <div class="desc">Browser-based wallet optimized for DeFi safety and ease.</div>
 <a class="link" href="https://rabby.io" target="_blank">Get Rabby Wallet</a>
-</div>
-<div class="card"><div class="title">Phantom</div><div class="desc">Popular Solana wallet with NFTs and staking.</div><a class="link" href="https://phantom.app/" target="_blank">Get Phantom</a></div>
-<div class="card"><div class="title">Solflare</div><div class="desc">Mobile and browser wallet for Solana.</div><a class="link" href="https://solflare.com/" target="_blank">Get Solflare</a></div>
-<div class="card"><div class="title">Jupiter Wallet</div><div class="desc">Wallet integrated with Jupiter DEX aggregator.</div><a class="link" href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Get Jupiter Wallet</a>
+</div><div class="card"><div class="title">Phantom</div><div class="desc">Popular Solana wallet with NFTs and staking.</div><a class="link" href="https://phantom.app/" target="_blank">Get Phantom</a></div><div class="card"><div class="title">Solflare</div><div class="desc">Mobile and browser wallet for Solana.</div><a class="link" href="https://solflare.com/" target="_blank">Get Solflare</a></div><div class="card"><div class="title">Jupiter Wallet</div><div class="desc">Wallet integrated with Jupiter DEX aggregator.</div><a class="link" href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Get Jupiter Wallet</a>
 <p style="margin-top: 10px;">
 <a href="https://jup.ag/invite/BRvVHduEhaiG" style="color:#FFD700; text-decoration: underline;" target="_blank">
                 Claim 0.04 SOL Gift with Code: BRvVHduEhaiG
             </a>
 </p>
-</div>
-<div class="card">
-<div class="title">Sui Wallet</div>
+</div><div class="card"><div class="title">Sui Wallet</div>
 <div class="desc">Wallet for Sui network and apps</div>
 <a class="link" href="https://suiet.app" target="_blank">Get Sui Wallet</a>
+</div></div>
 </div>
+<div class="section"><h2>Cold Wallets</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Offline wallets – ideal for long-term, secure storage.</p>
+<div class="card-container"><div class="card"><div class="title">Ledger</div><div class="desc">Industry-leading hardware wallet.</div><a class="link" href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">Buy Ledger</a></div><div class="card"><div class="title">Trezor</div><div class="desc">Secure offline wallet for long-term storage.</div><a class="link" href="https://affil.trezor.io/aff_c?offer_id=239&amp;aff_id=35816" target="_blank">Buy via Trezor (Affiliate)</a></div></div>
 </div>
-<div class="section">
-<h2 class="section-title">Cold Wallets</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Offline wallets – ideal for long-term, secure storage.</p>
-<div class="card"><div class="title">Ledger</div><div class="desc">Industry-leading hardware wallet.</div><a class="link" href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">Buy Ledger</a></div>
-<div class="card"><div class="title">Trezor</div><div class="desc">Secure offline wallet for long-term storage.</div><a class="link" href="https://affil.trezor.io/aff_c?offer_id=239&amp;aff_id=35816" target="_blank">Buy via Trezor (Affiliate)</a></div>
+<div class="section"><h2>DEX Platforms</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Decentralized exchanges let you trade crypto without an intermediary.</p>
+<div class="card-container"><div class="card"><div class="title">Jupiter</div><div class="desc">Top Solana DEX aggregator.</div><a class="link" href="https://jup.ag" target="_blank">Visit Jupiter</a></div><div class="card"><div class="title">Drift</div><div class="desc">Perpetuals trading on Solana.</div><a class="link" href="https://app.drift.trade" target="_blank">Visit Drift</a></div><div class="card"><div class="title">Marginfi</div><div class="desc">Borrow/lend protocol with margin trading.</div><a class="link" href="https://app.marginfi.com/refer/8f3ec3ca-739a-4546-b056-efe38623dccc" target="_blank">Visit Marginfi</a></div><div class="card"><div class="title">Kamino</div><div class="desc">Automated yield optimizer.</div><a class="link" href="https://app.kamino.finance" target="_blank">Visit Kamino</a></div><div class="card"><div class="title">Meteora</div><div class="desc">Dynamic liquidity vaults.</div><a class="link" href="https://meteora.ag" target="_blank">Visit Meteora</a></div><div class="card"><div class="title">Orca</div><div class="desc">Friendly Solana DEX.</div><a class="link" href="https://www.orca.so" target="_blank">Visit Orca</a></div></div>
 </div>
-<div class="section">
-<h2 class="section-title">DEX Platforms</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Decentralized exchanges let you trade crypto without an intermediary.</p>
-<div class="card"><div class="title">Jupiter</div><div class="desc">Top Solana DEX aggregator.</div><a class="link" href="https://jup.ag" target="_blank">Visit Jupiter</a></div>
-<div class="card"><div class="title">Drift</div><div class="desc">Perpetuals trading on Solana.</div><a class="link" href="https://app.drift.trade" target="_blank">Visit Drift</a></div>
-<div class="card"><div class="title">Marginfi</div><div class="desc">Borrow/lend protocol with margin trading.</div><a class="link" href="https://app.marginfi.com/refer/8f3ec3ca-739a-4546-b056-efe38623dccc" target="_blank">Visit Marginfi</a></div>
-<div class="card"><div class="title">Kamino</div><div class="desc">Automated yield optimizer.</div><a class="link" href="https://app.kamino.finance" target="_blank">Visit Kamino</a></div>
-<div class="card"><div class="title">Meteora</div><div class="desc">Dynamic liquidity vaults.</div><a class="link" href="https://meteora.ag" target="_blank">Visit Meteora</a></div>
-<div class="card"><div class="title">Orca</div><div class="desc">Friendly Solana DEX.</div><a class="link" href="https://www.orca.so" target="_blank">Visit Orca</a></div>
-</div>
-<div class="section">
-<h2 class="section-title">Crypto Tools</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Useful apps and platforms for tracking prices, portfolios, and market trends.</p>
-<div class="card"><div class="title">CoinMarketCap</div><div class="desc">Price tracking, market data and news.</div><a class="link" href="https://coinmarketcap.com" target="_blank">Visit CMC</a></div>
-<div class="card"><div class="title">CoinGecko</div><div class="desc">Detailed analytics and tracking for all coins.</div><a class="link" href="https://coingecko.com" target="_blank">Visit CoinGecko</a></div>
-<div class="card"><div class="title">CoinStats</div><div class="desc">Portfolio &amp; performance tracking tool.</div><a class="link" href="https://invite.coinstats.app/r?i=Zb2IsJ1734804670281" target="_blank">Try CoinStats</a></div>
-<div class="card"><div class="title">Banter Bubbles</div><div class="desc">Visual market mover bubbles.</div><a class="link" href="https://www.banterbubbles.com" target="_blank">View Bubbles</a></div>
-<div class="card"><div class="title">TradingView</div><div class="desc">Advanced charting platform for crypto &amp; stocks.</div><a class="link" href="https://tradingview.com" target="_blank">Open TradingView</a></div>
+<div class="section"><h2>Crypto Tools</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Useful apps and platforms for tracking prices, portfolios, and market trends.</p>
+<div class="card-container"><div class="card"><div class="title">CoinMarketCap</div><div class="desc">Price tracking, market data and news.</div><a class="link" href="https://coinmarketcap.com" target="_blank">Visit CMC</a></div><div class="card"><div class="title">CoinGecko</div><div class="desc">Detailed analytics and tracking for all coins.</div><a class="link" href="https://coingecko.com" target="_blank">Visit CoinGecko</a></div><div class="card"><div class="title">CoinStats</div><div class="desc">Portfolio &amp; performance tracking tool.</div><a class="link" href="https://invite.coinstats.app/r?i=Zb2IsJ1734804670281" target="_blank">Try CoinStats</a></div><div class="card"><div class="title">Banter Bubbles</div><div class="desc">Visual market mover bubbles.</div><a class="link" href="https://www.banterbubbles.com" target="_blank">View Bubbles</a></div><div class="card"><div class="title">TradingView</div><div class="desc">Advanced charting platform for crypto &amp; stocks.</div><a class="link" href="https://tradingview.com" target="_blank">Open TradingView</a></div></div>
 </div>
 <section id="comparisons">
 <h2 class="gold-title" style="text-align:center;">Comparisons: Exchanges, Wallets &amp; DEXs</h2>
 <h3 style="color:#FFD700; text-align:center;">Exchange Comparison</h3>
 <div class="comparison-table-wrapper"><table class="comparison-table">
 <tr><th>Name</th><th>Fees</th><th>Regulation</th><th>Best for</th><th>Link</th></tr>
-<tr><td>Binance</td><td>0.1%</td><td>Offshore</td><td>Advanced traders</td><td><a href="https://accounts.binance.com/en/register?ref=73526157" style="; color: black !important;" target="_blank">Visit</a></td></tr>
-<tr><td>Bybit</td><td>0.1%</td><td>Offshore</td><td>Leverage &amp; futures</td><td><a href="https://www.bybit.com/invite?ref=EQ69EL" style="; color: black !important;" target="_blank">Visit</a></td></tr>
-<tr><td>Bitget</td><td>0.1%</td><td>Offshore</td><td>Derivatives &amp; campaigns</td><td><a href="https://bitget.com" style="; color: black !important;" target="_blank">Visit</a></td></tr>
-<tr><td>Crypto.com</td><td>0.4%</td><td>Global</td><td>Mobile-first users</td><td><a href="https://crypto.com/app/nrmm4uzm29" style="; color: black !important;" target="_blank">Visit</a></td></tr>
-<tr><td>Coinmotion</td><td>0.5%+</td><td>EU / Finland</td><td>Beginners, euro deposits</td><td><a href="https://coinmotion.com/fi?ref=92a4" style="; color: black !important;" target="_blank">Visit</a></td></tr>
-<tr><td>Northcrypto</td><td>1%</td><td>EU / FIN-FSA</td><td>Simple Finnish option</td><td><a href="https://northcrypto.com" style="; color: black !important;" target="_blank">Visit</a></td></tr>
-<tr>
-<td>MEXC</td>
-<td>0.2%</td>
-<td>Offshore</td>
-<td>Altcoin variety</td>
-<td><a href="https://www.mexc.com/register?inviteCode=1GvVa" style="color: black !important;" target="_blank">Visit</a></td>
-</tr>
-</table></div>
+
+
+
+
+
+
+
+<tr><td>Binance</td><td>0.1%</td><td>Offshore</td><td><a href="#" target="_blank">Visit</a></td></tr><tr><td>Bybit</td><td>0.1%</td><td>Offshore</td><td><a href="#" target="_blank">Visit</a></td></tr><tr><td>Bitget</td><td>0.1%</td><td>Offshore</td><td><a href="#" target="_blank">Visit</a></td></tr><tr><td>MEXC</td><td>0.2%</td><td>Offshore</td><td><a href="#" target="_blank">Visit</a></td></tr><tr><td>Crypto.com</td><td>0.4%</td><td>Global</td><td><a href="#" target="_blank">Visit</a></td></tr><tr><td>Coinmotion</td><td>0.5%</td><td>EU / Finland</td><td><a href="#" target="_blank">Visit</a></td></tr><tr><td>Northcrypto</td><td>1.0%</td><td>EU / FIN-FSA</td><td><a href="#" target="_blank">Visit</a></td></tr></table></div>
 <h3 style="color:#FFD700; text-align:center;">Hot Wallet Comparison</h3>
 <div class="comparison-table-wrapper"><table class="comparison-table">
 <tr><th>Name</th><th>Type</th><th>Chains</th><th>Best for</th><th>Link</th></tr>
@@ -1285,17 +1265,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 <tr><td>Orca</td><td>AMM</td><td>Solana</td><td>Simple swaps</td><td><a href="https://orca.so" style="; color: black !important;" target="_blank">Visit</a></td></tr>
 </table></div>
 </section>
-<div class="section">
-<h2 class="section-title">Bridge Platforms – What Are They?</h2>
-<p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">
+<div class="section"><h2>Bridge Platforms – What Are They?</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">
         Platforms that allow you to move assets between different blockchains.
       </p>
-<div class="card"><div class="title">Wormhole</div><div class="desc">Cross-chain messaging &amp; transfers</div><a class="link" href="https://wormhole.com" target="_blank">Visit Wormhole</a></div>
-<div class="card"><div class="title">Portal Bridge</div><div class="desc">Multi-chain token bridge by Wormhole</div><a class="link" href="https://portalbridge.com" target="_blank">Visit Portal</a></div>
-<div class="card"><div class="title">Mayan Bridge</div><div class="desc">Token bridge &amp; swaps for Solana</div><a class="link" href="https://swap.mayan.finance" target="_blank">Visit Mayan</a></div>
-<div class="card"><div class="title">Jumper</div><div class="desc">Bridge aggregator for multi-chain assets</div><a class="link" href="https://jumper.exchange" target="_blank">Visit Jumper</a></div>
-<div class="card"><div class="title">LayerZero</div><div class="desc">Omnichain protocol for messaging</div><a class="link" href="https://layerzero.network" target="_blank">Visit LayerZero</a></div>
-<div class="card"><div class="title">deBridge</div><div class="desc">Secure cross-chain transfers</div><a class="link" href="https://debridge.finance" target="_blank">Visit deBridge</a></div>
+<div class="card-container"><div class="card"><div class="title">Wormhole</div><div class="desc">Cross-chain messaging &amp; transfers</div><a class="link" href="https://wormhole.com" target="_blank">Visit Wormhole</a></div><div class="card"><div class="title">Portal Bridge</div><div class="desc">Multi-chain token bridge by Wormhole</div><a class="link" href="https://portalbridge.com" target="_blank">Visit Portal</a></div><div class="card"><div class="title">Mayan Bridge</div><div class="desc">Token bridge &amp; swaps for Solana</div><a class="link" href="https://swap.mayan.finance" target="_blank">Visit Mayan</a></div><div class="card"><div class="title">Jumper</div><div class="desc">Bridge aggregator for multi-chain assets</div><a class="link" href="https://jumper.exchange" target="_blank">Visit Jumper</a></div><div class="card"><div class="title">LayerZero</div><div class="desc">Omnichain protocol for messaging</div><a class="link" href="https://layerzero.network" target="_blank">Visit LayerZero</a></div><div class="card"><div class="title">deBridge</div><div class="desc">Secure cross-chain transfers</div><a class="link" href="https://debridge.finance" target="_blank">Visit deBridge</a></div></div>
 </div>
 <div class="comparison-table-wrapper"><table class="comparison-table">
 <tr><th>Name</th><th>Function</th><th>Chains</th><th>Link</th></tr>
@@ -1306,9 +1279,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 <tr><td>LayerZero</td><td>Omnichain protocol</td><td>Universal chains</td><td><a href="https://layerzero.network" style="; color: black !important;" target="_blank">Visit</a></td></tr>
 <tr><td>deBridge</td><td>Secure cross-chain transfers</td><td>Ethereum, BNB, Polygon</td><td><a href="https://debridge.finance" style="; color: black !important;" target="_blank">Visit</a></td></tr>
 </table></div>
-<div class="section">
-<h2>Donations</h2>
-<p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">
+<div class="section"><h2>Donations</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">
 Support the project by sending crypto directly to these wallet addresses.
 </p>
 <style>
@@ -1412,22 +1383,22 @@ Support the project by sending crypto directly to these wallet addresses.
 <div class="donation-card" style="background-image: url('images/btc-icon.png'); background-size: cover; background-position: center;">
 <h3 style="position: relative; z-index: 2;">Bitcoin</h3>
 <p id="btc-address" style="position: relative; z-index: 2;">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysaut102akazd</p>
-<button class="copy-btn" onclick="copyAddress('btc-address')" style="position: relative; z-index: 2;">Copy</button>
+<button class="copy-btn" onclick="copyAddress('btc-address')" style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;">Copy</button>
 </div>
 <div class="donation-card" style="background-image: url('images/eth-icon.png'); background-size: cover; background-position: center;">
 <h3 style="position: relative; z-index: 2;">Ethereum</h3>
 <p id="eth-address" style="position: relative; z-index: 2;">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</p>
-<button class="copy-btn" onclick="copyAddress('eth-address')" style="position: relative; z-index: 2;">Copy</button>
+<button class="copy-btn" onclick="copyAddress('eth-address')" style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;">Copy</button>
 </div>
 <div class="donation-card" style="background-image: url('images/sol-icon.png'); background-size: cover; background-position: center;">
 <h3 style="position: relative; z-index: 2;">Solana</h3>
 <p id="sol-address" style="position: relative; z-index: 2;">5iZj5VEgELw9wumUukXxjYNXWCbbiTnkGFuQddLX775e</p>
-<button class="copy-btn" onclick="copyAddress('sol-address')" style="position: relative; z-index: 2;">Copy</button>
+<button class="copy-btn" onclick="copyAddress('sol-address')" style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;">Copy</button>
 </div>
 <div class="donation-card" style="background-image: url('images/sui-logo.png'); background-size: cover; background-position: center;">
 <h3 style="position: relative; z-index: 2;">Sui</h3>
 <p id="sui-address" style="position: relative; z-index: 2;">0x0e1b7f1da6ccce7627329f738821355dd42fe5c013b4570a8bd11b9728269c2c</p>
-<button class="copy-btn" onclick="copyAddress('sui-address')" style="position: relative; z-index: 2;">Copy</button>
+<button class="copy-btn" onclick="copyAddress('sui-address')" style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;">Copy</button>
 </div>
 </div>
 <script>
@@ -1508,7 +1479,7 @@ function copyAddress(id) {
 <div class="chat-messages" id="chatMessages"></div>
 <div class="chat-input">
 <input id="userInput" onkeydown="if(event.key==='Enter') sendMessage()" placeholder="Ask something..." type="text"/>
-<button onclick="sendMessage()">Send</button>
+<button onclick="sendMessage()" style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;">Send</button>
 </div>
 </div>
 <script>
@@ -1858,7 +1829,7 @@ document.addEventListener("DOMContentLoaded", loadCointelegraphNews);
 <div id="chat-widget" style="position: fixed; bottom: 90px; right: 20px; background: #111; color: gold; padding: 20px; border-radius: 10px; display: none; box-shadow: 0 0 15px gold; z-index: 9999;">
 <strong>Ask us anything!</strong><br/><br/>
 <textarea style="width: 100%; height: 60px; border-radius: 5px;"></textarea>
-<button style="margin-top: 10px; padding: 5px 10px; background: gold; border: none; color: black; border-radius: 5px;">Send</button>
+<button style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;">Send</button>
 </div>
 <script>
   document.getElementById("chat-toggle").addEventListener("click", function() {
