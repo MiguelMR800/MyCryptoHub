@@ -467,22 +467,10 @@ body {
   position: relative;
   z-index: 0;
 }
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: linear-gradient(135deg, #000000, #b0b0b0, #0a0a0a, #888888, #000000);
-  background-size: 600% 600%;
-  animation: animatedDarkSilver 40s ease infinite;
-  opacity: 1;
-}
-@keyframes animatedDarkSilver {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+body {
+  background-color: #121212; /* Pysyvä hyvin tumma harmaa */
+  color: #FFD700; /* Tekstiväri */
+  font-family: 'Poppins', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p, span, li, a, label, strong, div, button {
