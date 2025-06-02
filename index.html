@@ -662,6 +662,47 @@ h1, h2, h3, h4, h5, h6, p, span, li, a, label, strong, div, button {
 .carousel-controls button {
   color: black !important;
 }
+
+.blog-post {
+  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+.blog-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+.ticker-card {
+  background-color: #1a1a1a;
+  overflow: hidden;
+  padding: 10px 0;
+  border-top: 1px solid #FFD70022;
+  border-bottom: 1px solid #FFD70022;
+}
+.crypto-ticker {
+  width: 100%;
+  overflow: hidden;
+}
+.ticker-content {
+  display: flex;
+  gap: 40px;
+  white-space: nowrap;
+  animation: scroll-left 30s linear infinite;
+  padding-left: 100%;
+}
+.ticker-item {
+  display: inline-block;
+  font-weight: bold;
+  color: #FFD700;
+  font-size: 1rem;
+}
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -977,76 +1018,6 @@ overflow: hidden;}
 }
 </style></head>
 <body>
-<section class="intro-section">
-<div class="intro-container">
-<img alt="MyCryptoHub Guardian" class="intro-image" src="images/mycryptohub_intro.png" style="
-    width: 100%;
-    max-width: 1600px; /* Suurempi max-leveys */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    transition: transform 0.3s ease;
-
-    "/><div class="ticker-card" style="width: 95%; max-width: 500px; overflow: hidden; display: flex; justify-content: center; margin: -30px auto 1rem auto; border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 10; position: relative;">
-<div class="crypto-ticker">
-<div class="ticker-content" id="ticker-content-js">Loading data...</div>
-</div>
-</div>
-</div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const tickerContainer = document.getElementById("ticker-container");
-    const tickerItems = [
-      "Welcome to mycryptohub — where smart money moves.",
-      "BTC +2.4%",
-      "ETH +1.8%",
-      "SOL +3.2%",
-      "BNB +0.5%",
-      "TON +2.1%",
-      "DOGE -1.4%",
-      "ADA +0.9%",
-      "AVAX +4.6%",
-      "LINK +1.2%",
-      "MATIC +0.8%"
-    ];
-
-    tickerItems.forEach(item => {
-      const div = document.createElement("div");
-      div.className = "ticker-item";
-      div.textContent = item;
-      tickerContainer.appendChild(div);
-    });
-
-    tickerContainer.style.display = "flex";
-    tickerContainer.style.gap = "40px";
-    tickerContainer.style.animation = "scroll-left 30s linear infinite";
-  });
-</script>
-<style>
-  .ticker-content {
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  .ticker-item {
-    display: inline-block;
-    padding: 0 20px;
-    font-weight: bold;
-    color: #FFD700;
-    font-size: 1rem;
-  }
-
-  @keyframes scroll-left {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-  }
-
-  #ticker-container {
-    animation: scroll-left 30s linear infinite;
-  }
-</style>
-</section>
 <style>
 .news-wrapper {
   background-image: url('images/crypto_background_optimized.jpg');
@@ -1119,6 +1090,23 @@ overflow: hidden;}
   transition: opacity 0.6s ease;
 }
 </style>
+
+<div class="ticker-card">
+<div class="crypto-ticker">
+<div class="ticker-content" id="ticker-container">
+<div class="ticker-item">Welcome to MyCryptoHub – BTC +2.4%</div>
+<div class="ticker-item">ETH +1.8%</div>
+<div class="ticker-item">SOL +3.2%</div>
+<div class="ticker-item">BNB +0.5%</div>
+<div class="ticker-item">TON +2.1%</div>
+<div class="ticker-item">DOGE -1.4%</div>
+<div class="ticker-item">ADA +0.9%</div>
+<div class="ticker-item">AVAX +4.6%</div>
+<div class="ticker-item">LINK +1.2%</div>
+<div class="ticker-item">MATIC +0.8%</div>
+</div>
+</div>
+</div>
 <div class="container" style="
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(12px);
