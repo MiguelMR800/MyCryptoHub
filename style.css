@@ -7,3 +7,11 @@ body {
   padding: 1rem;
   line-height: 1.6;
 }
+
+
+.blog-post {
+  background: linear-gradient(145deg, #222, #000);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+  border-radius: 20px;
+  padding: 1.5rem;
+}
