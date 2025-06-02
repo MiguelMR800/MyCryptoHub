@@ -12,12 +12,3 @@
     transform: scale(1.02);
     box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
 }
-
-
-body {
-    background-image: url('images/mycryptohub_background.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
