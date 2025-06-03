@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 1rem;
   line-height: 1.6;
-  color: #FFD700; /* default dark text color */
+  color: #FFD700;
   position: relative;
 }
 
@@ -15,31 +15,33 @@ body::before {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+  background: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
 
-/* Light theme overrides */
+/* Light theme adjustments */
 body[data-theme="light"] {
   color: #111;
+  background-color: transparent;
 }
 
 body[data-theme="light"]::before {
-  background: rgba(255, 215, 0, 0.25); /* golden overlay */
+  background: rgba(255, 235, 180, 0.15); /* soft gold overlay */
 }
 
 body[data-theme="light"] a {
-  color: #b8860b;
+  color: #8b6f00;
 }
 
-body[data-theme="light"] .blog-post {
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid gold;
+body[data-theme="light"] .blog-post,
+body[data-theme="light"] .exchange-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #d4af37;
   color: #111;
 }
 
-/* Dark theme blog-post styling (if used) */
-.blog-post {
+.blog-post,
+.exchange-card {
   background: rgba(18, 18, 18, 0.75);
   border: 1px solid #FFD700;
   color: #FFD700;
@@ -48,7 +50,7 @@ body[data-theme="light"] .blog-post {
   margin-bottom: 1rem;
 }
 
-/* Button for toggle (optional extra styling) */
+/* Toggle button */
 .theme-toggle {
   position: fixed;
   top: 1rem;
