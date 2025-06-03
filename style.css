@@ -25,3 +25,15 @@ body::before {
   border-radius: 20px;
   padding: 1.5rem;
 }
+
+body[data-theme="light"] {
+  color: #111;
+}
+body[data-theme="light"]::before {
+  background: rgba(255, 255, 255, 0.6);
+}
+body[data-theme="light"] .blog-post {
+  background: #ffffff;
+  border: 1px solid gold;
+  color: #111;
+}

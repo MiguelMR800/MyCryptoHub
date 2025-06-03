@@ -6,7 +6,7 @@
 E html-->
 <html lang="en">
 <head>
-<link href="mycryptohub_combined_style.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
 <!-- SEO & Open Graph -->
 <title>MyCryptoHub – Your Crypto Startpage (v1.0)</title>
 <meta content="MyCryptoHub on kryptosijoittajan aloitussivu. Löydä parhaat pörssit, lompakot, työkalut ja uutiset – kaikki yhdellä sivulla." name="description"/>
@@ -976,7 +976,8 @@ overflow: hidden;}
     }
 }
 </style></head>
-<body>
+<body onload="initTheme()">
+<button onclick="toggleTheme()" style="position: fixed; top: 1rem; right: 1rem; z-index: 10; background: none; border: none; font-size: 1.5rem; cursor: pointer;">☀️ / 🌙</button>
 <section class="intro-section">
 <div class="intro-container">
 <img alt="MyCryptoHub Guardian" class="intro-image" src="images/mycryptohub_intro.png" style="
@@ -2091,5 +2092,19 @@ document.addEventListener("DOMContentLoaded", async () => {
   transform: scale(1.1);
 }
 </style>
-</footer></body>
+</footer>
+<script>
+function toggleTheme() {
+  const current = document.body.getAttribute("data-theme");
+  const next = current === "light" ? "dark" : "light";
+  document.body.setAttribute("data-theme", next);
+  localStorage.setItem("theme", next);
+}
+function initTheme() {
+  const saved = localStorage.getItem("theme") || "dark";
+  document.body.setAttribute("data-theme", saved);
+}
+</script>
+</body>
+
 </html>
