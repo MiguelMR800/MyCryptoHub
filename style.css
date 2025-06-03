@@ -1,25 +1,26 @@
 
-body {
-  background: none;
-  font-family: 'Poppins', sans-serif;
+html, body {
   margin: 0;
-  padding: 1rem;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: #FFD700;
   position: relative;
-  overflow-x: hidden;
 }
 
 body::before {
   content: "";
   position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: url('images/mycryptohub_background.jpg') no-repeat center center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-size: cover;
   z-index: -1;
+  pointer-events: none;
 }
 
 /* Light theme */
@@ -29,20 +30,11 @@ body[data-theme="light"] {
 
 body[data-theme="light"]::before {
   background: url('images/mycryptohub_background.jpg') no-repeat center center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: #fff;
+  background-size: cover;
+  filter: brightness(1.1);
 }
 
-/* Card styles */
-body[data-theme="light"] .blog-post,
-body[data-theme="light"] .exchange-card {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid #d4af37;
-  color: #111;
-}
-
+/* Cards */
 .blog-post,
 .exchange-card {
   background: rgba(18, 18, 18, 0.75);
@@ -51,4 +43,11 @@ body[data-theme="light"] .exchange-card {
   padding: 1rem;
   border-radius: 10px;
   margin-bottom: 1rem;
+}
+
+body[data-theme="light"] .blog-post,
+body[data-theme="light"] .exchange-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #d4af37;
+  color: #111;
 }
