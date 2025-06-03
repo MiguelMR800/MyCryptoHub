@@ -1,17 +1,14 @@
 
 body {
-  background: url('images/mycryptohub_background.jpg') no-repeat center center fixed;
-  background-size: 100% auto;
+  background: url('images/mycryptohub_background.jpg') no-repeat center top fixed;
+  background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: top center;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 1rem;
   line-height: 1.6;
   color: #FFD700;
   position: relative;
-  overflow-x: hidden;
 }
 
 body::before {
@@ -23,14 +20,14 @@ body::before {
   z-index: -1;
 }
 
-/* Light theme adjustments */
+/* Light theme */
 body[data-theme="light"] {
   color: #111;
   background-color: transparent;
 }
 
 body[data-theme="light"]::before {
-  background: rgba(255, 235, 180, 0.12); /* pehmeämpi overlay */
+  background: rgba(255, 235, 180, 0.12);
 }
 
 body[data-theme="light"] .blog-post,
@@ -40,6 +37,7 @@ body[data-theme="light"] .exchange-card {
   color: #111;
 }
 
+/* Dark theme cards */
 .blog-post,
 .exchange-card {
   background: rgba(18, 18, 18, 0.75);
