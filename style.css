@@ -1,21 +1,25 @@
 
 body {
-  background: url('images/mycryptohub_background.jpg') no-repeat center top fixed;
-  background-size: cover;
+  background: url('images/mycryptohub_background.jpg') no-repeat center center fixed;
+  background-size: 100% 100%;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 1rem;
   line-height: 1.6;
   color: #FFD700;
   position: relative;
+  overflow-x: hidden;
 }
 
 body::before {
   content: "";
   position: fixed;
   top: 0; left: 0;
-  width: 100%; height: 100%;
+  width: 100vw; height: 100vh;
   background: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
