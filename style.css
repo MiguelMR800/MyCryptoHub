@@ -59,3 +59,8 @@ body[data-theme="light"] .exchange-card {
   border-radius: 6px;
   display: inline-block;
 }
+
+
+.card h2 {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
