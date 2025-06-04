@@ -51,3 +51,11 @@ body[data-theme="light"] .exchange-card {
   border: 1px solid #d4af37;
   color: #111;
 }
+
+
+.card .title {
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  display: inline-block;
+}
