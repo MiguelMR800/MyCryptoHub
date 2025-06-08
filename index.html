@@ -975,7 +975,21 @@ overflow: hidden;}
         flex: 1 1 calc(32% - 40px);
     }
 }
-</style></head>
+</style>
+<style>
+.frosted-card {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 1.5em;
+  margin: 2em auto;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.85);
+}
+</style>
+</head>
 <body onload="initTheme()">
 <!-- Teemanvaihto (☀️ / 🌙) poistettu toistaiseksi -->
 <section class="intro-section">
@@ -994,7 +1008,6 @@ overflow: hidden;}
 </div>
 </div>
 </div>
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const tickerContainer = document.getElementById("ticker-container");
@@ -1128,15 +1141,15 @@ overflow: hidden;}
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
     color: #FFD700;
     ">
-<h1>MyCryptoHub - Crypto Blog</h1>
+<div class="frosted-card"><h1>MyCryptoHub - Crypto Blog</h1></div>
 <div class="blog-post">
-<h2>Understanding Bitcoin: The Basics</h2>
-<p>Bitcoin is a decentralized digital currency that allows for peer-to-peer transactions without the need for a central authority...</p>
+<div class="frosted-card"><h2>Understanding Bitcoin: The Basics</h2></div>
+<div class="frosted-card"><p>Bitcoin is a decentralized digital currency that allows for peer-to-peer transactions without the need for a central authority...</p></div>
 <a href="https://mycryptohub.pro/understanding-bitcoin.html" target="_blank">Read More</a>
 </div>
 <div class="blog-post">
-<h2>How to Secure Your Crypto: Best Practices</h2>
-<p>Security is crucial in the world of cryptocurrencies. In this guide, we cover the best practices for keeping your assets safe...</p>
+<div class="frosted-card"><h2>How to Secure Your Crypto: Best Practices</h2></div>
+<div class="frosted-card"><p>Security is crucial in the world of cryptocurrencies. In this guide, we cover the best practices for keeping your assets safe...</p></div>
 <a href="https://mycryptohub.pro/secure-your-crypto.html" target="_blank">Read More</a>
 </div>
 </div><section class="news-wrapper">
@@ -2105,6 +2118,19 @@ function initTheme() {
   document.body.setAttribute("data-theme", saved);
 }
 </script>
+<div class="section">
+<h2>🔗 Recommended Tools</h2>
+<ul style="line-height: 1.8;">
+<li>🔐 <a href="https://shop.ledger.com/?r=c97ab0683c61" target="_blank">Ledger – Secure cold wallet</a></li>
+<li>🛡️ <a href="https://affil.trezor.io/aff_c?offer_id=239&amp;aff_id=35816" target="_blank">Trezor – Open-source hardware wallet</a></li>
+<li>📊 <a href="https://accounts.binance.com/en/register?ref=73526157" target="_blank">Binance – World's largest exchange</a></li>
+<li>📉 <a href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Bybit – Fast transactions, no KYC</a></li>
+<li>🌍 <a href="https://www.mexc.com/register?inviteCode=1GvVa" target="_blank">MEXC – Wide selection of tokens</a></li>
+<li>📱 <a href="https://crypto.com/app/nrmm4uzm29" target="_blank">Crypto.com – User-friendly mobile platform</a></li>
+</ul>
+<p class="disclaimer" style="font-size: 0.85rem; margin-top: 1.5rem; color: #bbb;">
+    Disclaimer: This page includes affiliate links. We may receive a commission at no extra cost to you. This content is provided for informational purposes only — not financial advice.
+  </p>
+</div>
 </body>
-
 </html>
