@@ -1,66 +1,60 @@
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  color: #FFD700;
-  position: relative;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #ffd700;
+    background-color: #000;
 }
 
 body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: url('images/mycryptohub_background.jpg') no-repeat center center;
-  background-size: cover;
-  z-index: -1;
-  pointer-events: none;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)
+    ), url('images/mycryptohub_background.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    pointer-events: none;
 }
 
-/* Light theme */
-body[data-theme="light"] {
-  color: #111;
+header {
+    text-align: center;
+    padding: 20px;
 }
 
-body[data-theme="light"]::before {
-  background: url('images/mycryptohub_background.jpg') no-repeat center center;
-  background-size: cover;
-  filter: brightness(1.1);
+.header-logo {
+    max-width: 100%;
+    height: auto;
 }
 
-/* Cards */
-.blog-post,
-.exchange-card {
-  background: rgba(18, 18, 18, 0.75);
-  border: 1px solid #FFD700;
-  color: #FFD700;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+.blog-preview {
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.85);
+    max-width: 800px;
+    margin: auto;
+    border-radius: 10px;
+    color: #ffd700;
 }
 
-body[data-theme="light"] .blog-post,
-body[data-theme="light"] .exchange-card {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid #d4af37;
-  color: #111;
+.blog-preview h1 {
+    color: #ffd700;
 }
 
-
-.card .title {
-  background-color: rgba(0, 0, 0, 0.55);
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  display: inline-block;
+article {
+    margin-bottom: 40px;
 }
 
+a {
+    color: #00ffff;
+}
 
-.card h2 {
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
 }
