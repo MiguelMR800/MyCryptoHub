@@ -1,95 +1,45 @@
 
+/* RESPONSIVE GRID FOR .card CONTAINER */
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 0 16px;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* CARD STYLING */
+
+.card {
+  background: rgba(0, 0, 0, 0.4);
+  color: #FFD700;
+  padding: 16px;
+  border-radius: 14px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Responsive images */
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Optional - fix for layout overflow */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #ffd700;
-    background-color: #000;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.75),
-        rgba(0, 0, 0, 0.75)
-    ), url('images/mycryptohub_background.jpg') no-repeat center center;
-    background-size: cover;
-    z-index: -1;
-    pointer-events: none;
-}
-
-header {
-    text-align: center;
-    padding: 20px;
-}
-
-.header-logo {
-    max-width: 100%;
-    height: auto;
-}
-
-.blog-preview {
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.85);
-    max-width: 800px;
-    margin: auto;
-    border-radius: 10px;
-    color: #ffd700;
-}
-
-.blog-preview h1 {
-    color: #ffd700;
-}
-
-article {
-    margin-bottom: 40px;
-}
-
-a {
-    color: #00ffff;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #aaa;
-}
-
-
-/* Tumma taustakerros blogiosioon */
-
-.blog-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-    z-index: 0;
-    pointer-events: none;
-}
-.blog-section {
-    position: relative;
-    background-image: url('images/blog_background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #f5f5f5;
-    z-index: 1;
-}
-
-.feedback-box input,
-.feedback-box textarea {
-    max-width: 600px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.blog-card {
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(8px);
+  overflow-x: hidden;
 }
