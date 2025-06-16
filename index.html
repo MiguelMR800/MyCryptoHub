@@ -989,42 +989,6 @@ overflow: hidden;}
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.85);
 }
 </style>
-
-<style>
-.feedback-container {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 30px;
-  border-radius: 18px;
-  max-width: 700px;
-  margin: 50px auto;
-  backdrop-filter: blur(6px);
-  text-align: center;
-}
-.feedback-container textarea,
-.feedback-container input[type="email"] {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  margin-bottom: 14px;
-  border-radius: 10px;
-  border: none;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-}
-.feedback-button {
-  background-color: #FFD700;
-  color: black;
-  border: none;
-  padding: 10px 24px;
-  font-weight: bold;
-  border-radius: 8px;
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
-}
-.feedback-button:hover {
-  background-color: #e6be00;
-}
-</style>
 </head>
 <body onload="initTheme()">
 <!-- Teemanvaihto (☀️ / 🌙) poistettu toistaiseksi -->
@@ -1427,22 +1391,22 @@ Support the project by sending crypto directly to these wallet addresses.
 
 </style>
 <div class="donation-cards">
-<div class="donation-card" style="background-image: url('images/btc-icon.png'); background-size: cover; background-position: center;">
+<div class="donation-card" style="background-image: url('images/btc-icon.png'); background-size: cover; background-position: center; padding: 16px;">
 <h3 style="position: relative; z-index: 2;">Bitcoin</h3>
 <p id="btc-address" style="position: relative; z-index: 2;">bc1q62s4qjw3mzrgu3qn6dgrxnft3ysaut102akazd</p>
 <button class="copy-btn" onclick="copyAddress('btc-address')" style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;background-color: #000 !important; color: #FFD700 !important;">Copy</button>
 </div>
-<div class="donation-card" style="background-image: url('images/eth-icon.png'); background-size: cover; background-position: center;">
+<div class="donation-card" style="background-image: url('images/eth-icon.png'); background-size: cover; background-position: center; padding: 16px;">
 <h3 style="position: relative; z-index: 2;">Ethereum</h3>
 <p id="eth-address" style="position: relative; z-index: 2;">0xF4CCB63eeBa308C98B2440A3f4933BC389E6822f</p>
 <button class="copy-btn" onclick="copyAddress('eth-address')" style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;background-color: #000 !important; color: #FFD700 !important;">Copy</button>
 </div>
-<div class="donation-card" style="background-image: url('images/sol-icon.png'); background-size: cover; background-position: center;">
+<div class="donation-card" style="background-image: url('images/sol-icon.png'); background-size: cover; background-position: center; padding: 16px;">
 <h3 style="position: relative; z-index: 2;">Solana</h3>
 <p id="sol-address" style="position: relative; z-index: 2;">5iZj5VEgELw9wumUukXxjYNXWCbbiTnkGFuQddLX775e</p>
 <button class="copy-btn" onclick="copyAddress('sol-address')" style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;background-color: #000 !important; color: #FFD700 !important;">Copy</button>
 </div>
-<div class="donation-card" style="background-image: url('images/sui-logo.png'); background-size: cover; background-position: center;">
+<div class="donation-card" style="background-image: url('images/sui-logo.png'); background-size: cover; background-position: center; padding: 16px;">
 <h3 style="position: relative; z-index: 2;">Sui</h3>
 <p id="sui-address" style="position: relative; z-index: 2;">0x0e1b7f1da6ccce7627329f738821355dd42fe5c013b4570a8bd11b9728269c2c</p>
 <button class="copy-btn" onclick="copyAddress('sui-address')" style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;background-color: #000 !important; color: #FFD700 !important;">Copy</button>
@@ -1524,7 +1488,7 @@ function copyAddress(id) {
 <div class="chat-messages" id="chatMessages"></div>
 <div class="chat-input">
 <input id="userInput" onkeydown="if(event.key==='Enter') sendMessage()" placeholder="Ask something..." type="text"/>
-<button onclick="sendMessage()" style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;background-color: #000 !important; color: #FFD700 !important;">Send</button>
+<button onclick="sendMessage()" style="background-color: #FFD700; color: #000; font-weight: bold; padding: 12px 24px; border: none; border-radius: 12px; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 1rem;">Send</button>
 </div>
 </div>
 <script>
@@ -2145,23 +2109,17 @@ function initTheme() {
 }
 </script>
 <div class="section">
-
-<p>Disclaimer: This page includes affiliate links. We may receive a commission at no extra cost to you. This content is provided for informational purposes only — not financial advice.</p>
-<section class="feedback-section">
-<div class="feedback-container">
-<h2>💬 <span style="color: #FFD700;">Give Us Feedback</span></h2>
-<p style="color: #ccc; font-size: 0.95rem;">We’d love to hear your thoughts on MyCryptoHub. Your feedback helps us improve!</p>
-<form action="https://formsubmit.io/send" method="POST">
-<input name="_formsubmit_id" style="display:none" type="text"/>
-<input name="_redirect" type="hidden" value="https://mycryptohub.pro/thank-you.html"/>
-<input name="_formsubmit_token" type="hidden" value="YOUR_UNIQUE_TOKEN_HERE"/>
-<textarea class="feedback-textarea" name="message" placeholder="Write your feedback here..." required=""></textarea>
-<input class="feedback-email" name="email" placeholder="Your email (optional)" type="email">
-<button class="feedback-button" type="submit">Submit Feedback</button>
-</input></form>
+<div class="feedback-box" style="margin: 2rem auto; max-width: 1000px; padding: 1rem; background: rgba(0, 0, 0, 0.6); border-radius: 14px; backdrop-filter: blur(6px);">
+<h2 style="color: #FFD700;"><span style="font-size: 1.3rem;">💬</span> Send Feedback</h2>
+<form action="https://formsubmit.co/ajax/mycryptohub@proton.me" data-form="" method="POST">
+<input name="_captcha" type="hidden" value="false"/>
+<input name="email" placeholder="Your email (optional)" style="width: 100%; padding: 10px; border-radius: 8px; border: none; margin-bottom: 0.5rem; font-family: 'Poppins', sans-serif;" type="email"/>
+<textarea name="message" placeholder="Your message..." required="" style="width: 100%; padding: 10px; border-radius: 8px; border: none; margin-bottom: 0.5rem; font-family: 'Poppins', sans-serif;"></textarea>
+<button style="background-color: #FFD700; color: #000; font-weight: bold; padding: 8px 16px; border: none; border-radius: 8px; cursor: pointer; font-family: 'Poppins', sans-serif;" type="submit">Send</button>
+</form>
+<p style="font-size: 0.85rem; color: #bbb; margin-top: 0.5rem;">*We never store your email. This form is anonymous by design.</p>
 </div>
-</section>
-<h2>🔗 Recommended Tools</h2>
+<p>Disclaimer: This page includes affiliate links. We may receive a commission at no extra cost to you. This content is provided for informational purposes only — not financial advice.</p><h2>🔗 Recommended Tools</h2>
 <ul style="line-height: 1.8;">
 <li>🔐 <a href="https://shop.ledger.com/?r=c97ab0683c61" target="_blank">Ledger – Secure cold wallet</a></li>
 <li>🛡️ <a href="https://affil.trezor.io/aff_c?offer_id=239&amp;aff_id=35816" target="_blank">Trezor – Open-source hardware wallet</a></li>
