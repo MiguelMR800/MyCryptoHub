@@ -1142,16 +1142,8 @@ overflow: hidden;}
     color: #FFD700;
     ">
 <div class="frosted-card"><h1>MyCryptoHub - Crypto Blog</h1></div>
-<div class="blog-post">
-<div class="frosted-card"><h2>Understanding Bitcoin: The Basics</h2></div>
-<div class="frosted-card"><p>Bitcoin is a decentralized digital currency that allows for peer-to-peer transactions without the need for a central authority...</p></div>
-<a href="https://mycryptohub.pro/understanding-bitcoin.html" target="_blank">Read More</a>
-</div>
-<div class="blog-post">
-<div class="frosted-card"><h2>How to Secure Your Crypto: Best Practices</h2></div>
-<div class="frosted-card"><p>Security is crucial in the world of cryptocurrencies. In this guide, we cover the best practices for keeping your assets safe...</p></div>
-<a href="https://mycryptohub.pro/secure-your-crypto.html" target="_blank">Read More</a>
-</div>
+<div class="card"><div class="title">Understanding Bitcoin: The Basics</div><div class="desc">Bitcoin is a decentralized digital currency that allows for peer-to-peer transactions without the need for a central authority...</div><a class="link" href="https://mycryptohub.pro/understanding-bitcoin.html" target="_blank">Read More</a></div>
+<div class="card"><div class="title">How to Secure Your Crypto: Best Practices</div><div class="desc">Security is crucial in the world of cryptocurrencies. In this guide, we cover the best practices for keeping your assets safe...</div><a class="link" href="https://mycryptohub.pro/secure-your-crypto.html" target="_blank">Read More</a></div>
 </div><section class="news-wrapper">
 <div class="news-overlay">
 <div class="news-slide">
@@ -1489,8 +1481,7 @@ function copyAddress(id) {
 </style>
 <p style="margin-top: 1rem;">Thank you for supporting this project! Donations help keep the site ad-free and open for everyone.</p>
 <footer>
-<p>This site may contain affiliate links. We may earn a commission if you use them, at no extra cost to you.</p>
-<p>For informational purposes only — not financial advice.</p>
+
 <!-- New Bubble Chat -->
 <div class="chat-button" onclick="toggleChat()">Chat</div>
 <div class="chat-container" id="chatContainer">
@@ -2119,7 +2110,21 @@ function initTheme() {
 }
 </script>
 <div class="section">
-<h2>🔗 Recommended Tools</h2>
+<section class="feedback-section">
+<div class="feedback-box">
+<h2>💬 Send Feedback</h2>
+<form action="https://formsubmit.io/send" method="POST">
+<input name="_formsubmit_id" style="display:none" type="text"/>
+<input name="_redirect" type="hidden" value="https://mycryptohub.pro/thank-you.html"/>
+<input name="_formsubmit_token" type="hidden" value="YOUR_UNIQUE_TOKEN_HERE"/>
+<input name="email" placeholder="Your email (optional)" style="width: 100%;" type="email"/>
+<textarea name="message" placeholder="Your message..." required=""></textarea>
+<button type="submit">Send</button>
+</form>
+<p class="disclaimer">*We never store your email. This form is anonymous by design.</p>
+</div>
+</section>
+<p>Disclaimer: This page includes affiliate links. We may receive a commission at no extra cost to you. This content is provided for informational purposes only — not financial advice.</p><h2>🔗 Recommended Tools</h2>
 <ul style="line-height: 1.8;">
 <li>🔐 <a href="https://shop.ledger.com/?r=c97ab0683c61" target="_blank">Ledger – Secure cold wallet</a></li>
 <li>🛡️ <a href="https://affil.trezor.io/aff_c?offer_id=239&amp;aff_id=35816" target="_blank">Trezor – Open-source hardware wallet</a></li>
@@ -2128,9 +2133,6 @@ function initTheme() {
 <li>🌍 <a href="https://www.mexc.com/register?inviteCode=1GvVa" target="_blank">MEXC – Wide selection of tokens</a></li>
 <li>📱 <a href="https://crypto.com/app/nrmm4uzm29" target="_blank">Crypto.com – User-friendly mobile platform</a></li>
 </ul>
-<p class="disclaimer" style="font-size: 0.85rem; margin-top: 1.5rem; color: #bbb;">
-    Disclaimer: This page includes affiliate links. We may receive a commission at no extra cost to you. This content is provided for informational purposes only — not financial advice.
-  </p>
 </div>
 </body>
 </html>
