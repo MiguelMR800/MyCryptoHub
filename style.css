@@ -81,3 +81,17 @@ footer {
     color: #f5f5f5;
     z-index: 1;
 }
+
+
+.feedback-box input,
+.feedback-box textarea {
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Läpinäkyvämmäksi blogikorttien tausta */
+.card {
+    background: rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(8px);
+}
