@@ -1,12 +1,26 @@
 
-/* RESPONSIVE GRID FOR .card CONTAINER */
+/* Fontti */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #FFD700;
+  overflow-x: hidden;
+}
+
+/* Korttien säiliö */
 .card-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
   padding: 0 16px;
   justify-items: center;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -21,25 +35,51 @@
   }
 }
 
-/* CARD STYLING */
-
+/* Korttien ulkoasu */
 .card {
   background: rgba(0, 0, 0, 0.4);
   color: #FFD700;
   padding: 16px;
   border-radius: 14px;
   box-sizing: border-box;
-  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
 }
 
-/* Responsive images */
+/* Responsiiviset kuvat */
 .card img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
-/* Optional - fix for layout overflow */
-body {
-  overflow-x: hidden;
+/* Otsikot */
+h1, h2, h3 {
+  color: #FFD700;
+  margin-top: 1.5rem;
+}
+
+/* Painikkeet ja chat */
+button, .chat-button {
+  background-color: #FFD700;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+/* Lomakekentät */
+input, textarea {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  box-sizing: border-box;
 }
