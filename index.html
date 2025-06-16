@@ -989,6 +989,42 @@ overflow: hidden;}
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.85);
 }
 </style>
+
+<style>
+.feedback-container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 18px;
+  max-width: 700px;
+  margin: 50px auto;
+  backdrop-filter: blur(6px);
+  text-align: center;
+}
+.feedback-container textarea,
+.feedback-container input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+.feedback-button {
+  background-color: #FFD700;
+  color: black;
+  border: none;
+  padding: 10px 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+.feedback-button:hover {
+  background-color: #e6be00;
+}
+</style>
 </head>
 <body onload="initTheme()">
 <!-- Teemanvaihto (☀️ / 🌙) poistettu toistaiseksi -->
@@ -1142,8 +1178,8 @@ overflow: hidden;}
     color: #FFD700;
     ">
 <div class="frosted-card"><h1>MyCryptoHub - Crypto Blog</h1></div>
-<div class="card"><div class="title">Understanding Bitcoin: The Basics</div><div class="desc">Bitcoin is a decentralized digital currency that allows for peer-to-peer transactions without the need for a central authority...</div><a class="link" href="https://mycryptohub.pro/understanding-bitcoin.html" target="_blank">Read More</a></div>
-<div class="card"><div class="title">How to Secure Your Crypto: Best Practices</div><div class="desc">Security is crucial in the world of cryptocurrencies. In this guide, we cover the best practices for keeping your assets safe...</div><a class="link" href="https://mycryptohub.pro/secure-your-crypto.html" target="_blank">Read More</a></div>
+<div class="card blog-card"><div class="title">Understanding Bitcoin: The Basics</div><div class="desc">Bitcoin is a decentralized digital currency that allows for peer-to-peer transactions without the need for a central authority...</div><a class="link" href="https://mycryptohub.pro/understanding-bitcoin.html" target="_blank">Read More</a></div>
+<div class="card blog-card"><div class="title">How to Secure Your Crypto: Best Practices</div><div class="desc">Security is crucial in the world of cryptocurrencies. In this guide, we cover the best practices for keeping your assets safe...</div><a class="link" href="https://mycryptohub.pro/secure-your-crypto.html" target="_blank">Read More</a></div>
 </div><section class="news-wrapper">
 <div class="news-overlay">
 <div class="news-slide">
@@ -1211,32 +1247,32 @@ document.addEventListener("DOMContentLoaded", async () => {
 </div>
 <p class="disclaimer" style="font-size: 0.8rem; color: #bbb; margin-top: 20px;">*This is not financial advice.</p></div></section>
 <div class="section"><h2>Exchanges</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Platforms where you can buy, sell, and trade cryptocurrencies.</p>
-<div class="card-container"><div class="card"><div class="title">Binance</div><div class="desc">Fees: 0.1% | Regulation: Global</div><a class="link" href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_006KQGC05T" target="_blank">Register a Binance account via this link to explore up to 2,000 USDC in tokens!</a>
-</div><div class="card"><div class="title">Coinbase</div><div class="desc">Fees: 0.5% | Regulation: Global</div><a class="link" href="https://www.coinbase.com/join" target="_blank">Visit Coinbase</a></div><div class="card"><div class="title">Bybit</div><div class="desc">Fees: 0.1% | Regulation: Offshore</div><a class="link" href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Visit Bybit</a></div><div class="card"><div class="title">Bitget</div><div class="desc">Fees: 0.1% | Regulation: Offshore</div><a class="link" href="https://www.bitget.com/referral/register?clacCode=B0US0BU8" target="_blank">Visit Bitget</a></div><div class="card"><div class="title">Crypto.com</div><div class="desc">Fees: 0.4% | Regulation: Global</div><a class="link" href="https://crypto.com/app/nrmm4uzm29" target="_blank">Visit Crypto.com</a></div><div class="card"><div class="title">MEXC</div><div class="desc">Fees: 0.2% | Regulation: Offshore</div><a class="link" href="https://www.mexc.com/register?inviteCode=1GvVa" target="_blank">Visit MEXC</a></div><div class="card"><div class="title">Coinmotion</div><div class="desc">Fees: 0.5%+ | Regulation: EU / Finland</div><a class="link" href="https://coinmotion.com/fi?ref=92a4" target="_blank">Visit Coinmotion</a></div><div class="card"><div class="title">Northcrypto</div><div class="desc">Fees: 1% | Regulation: EU / FIN-FSA</div><a class="link" href="https://northcrypto.com/fi" target="_blank">Visit Northcrypto</a></div></div>
+<div class="card-container"><div class="card blog-card"><div class="title">Binance</div><div class="desc">Fees: 0.1% | Regulation: Global</div><a class="link" href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_006KQGC05T" target="_blank">Register a Binance account via this link to explore up to 2,000 USDC in tokens!</a>
+</div><div class="card blog-card"><div class="title">Coinbase</div><div class="desc">Fees: 0.5% | Regulation: Global</div><a class="link" href="https://www.coinbase.com/join" target="_blank">Visit Coinbase</a></div><div class="card blog-card"><div class="title">Bybit</div><div class="desc">Fees: 0.1% | Regulation: Offshore</div><a class="link" href="https://www.bybit.com/invite?ref=EQ69EL" target="_blank">Visit Bybit</a></div><div class="card blog-card"><div class="title">Bitget</div><div class="desc">Fees: 0.1% | Regulation: Offshore</div><a class="link" href="https://www.bitget.com/referral/register?clacCode=B0US0BU8" target="_blank">Visit Bitget</a></div><div class="card blog-card"><div class="title">Crypto.com</div><div class="desc">Fees: 0.4% | Regulation: Global</div><a class="link" href="https://crypto.com/app/nrmm4uzm29" target="_blank">Visit Crypto.com</a></div><div class="card blog-card"><div class="title">MEXC</div><div class="desc">Fees: 0.2% | Regulation: Offshore</div><a class="link" href="https://www.mexc.com/register?inviteCode=1GvVa" target="_blank">Visit MEXC</a></div><div class="card blog-card"><div class="title">Coinmotion</div><div class="desc">Fees: 0.5%+ | Regulation: EU / Finland</div><a class="link" href="https://coinmotion.com/fi?ref=92a4" target="_blank">Visit Coinmotion</a></div><div class="card blog-card"><div class="title">Northcrypto</div><div class="desc">Fees: 1% | Regulation: EU / FIN-FSA</div><a class="link" href="https://northcrypto.com/fi" target="_blank">Visit Northcrypto</a></div></div>
 </div>
 <div class="section"><h2>Hot Wallets</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Digital wallets connected to the internet – easy to use, best for daily access.</p>
-<div class="card-container"><div class="card"><div class="title">MetaMask</div><div class="desc">Ethereum wallet for DeFi &amp; NFTs.</div><a class="link" href="https://metamask.io/" target="_blank">Get MetaMask</a></div><div class="card"><div class="title">Rabby Wallet</div>
+<div class="card-container"><div class="card blog-card"><div class="title">MetaMask</div><div class="desc">Ethereum wallet for DeFi &amp; NFTs.</div><a class="link" href="https://metamask.io/" target="_blank">Get MetaMask</a></div><div class="card blog-card"><div class="title">Rabby Wallet</div>
 <div class="desc">Browser-based wallet optimized for DeFi safety and ease.</div>
 <a class="link" href="https://rabby.io" target="_blank">Get Rabby Wallet</a>
-</div><div class="card"><div class="title">Phantom</div><div class="desc">Popular Solana wallet with NFTs and staking.</div><a class="link" href="https://phantom.app/" target="_blank">Get Phantom</a></div><div class="card"><div class="title">Solflare</div><div class="desc">Mobile and browser wallet for Solana.</div><a class="link" href="https://solflare.com/" target="_blank">Get Solflare</a></div><div class="card"><div class="title">Jupiter Wallet</div><div class="desc">Wallet integrated with Jupiter DEX aggregator.</div><a class="link" href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Get Jupiter Wallet</a>
+</div><div class="card blog-card"><div class="title">Phantom</div><div class="desc">Popular Solana wallet with NFTs and staking.</div><a class="link" href="https://phantom.app/" target="_blank">Get Phantom</a></div><div class="card blog-card"><div class="title">Solflare</div><div class="desc">Mobile and browser wallet for Solana.</div><a class="link" href="https://solflare.com/" target="_blank">Get Solflare</a></div><div class="card blog-card"><div class="title">Jupiter Wallet</div><div class="desc">Wallet integrated with Jupiter DEX aggregator.</div><a class="link" href="https://jup.ag/invite/BRvVHduEhaiG" target="_blank">Get Jupiter Wallet</a>
 <p style="margin-top: 10px;">
 <a href="https://jup.ag/invite/BRvVHduEhaiG" style="color:#FFD700; text-decoration: underline;" target="_blank">
                 Claim 0.04 SOL Gift with Code: BRvVHduEhaiG
             </a>
 </p>
-</div><div class="card"><div class="title">Sui Wallet</div>
+</div><div class="card blog-card"><div class="title">Sui Wallet</div>
 <div class="desc">Wallet for Sui network and apps</div>
 <a class="link" href="https://suiet.app" target="_blank">Get Sui Wallet</a>
 </div></div>
 </div>
 <div class="section"><h2>Cold Wallets</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Offline wallets – ideal for long-term, secure storage.</p>
-<div class="card-container"><div class="card"><div class="title">Ledger</div><div class="desc">Industry-leading hardware wallet.</div><a class="link" href="https://shop.ledger.com/?r=c97ab0683c61" target="_blank">Buy Ledger</a></div><div class="card"><div class="title">Trezor</div><div class="desc">Secure offline wallet for long-term storage.</div><a class="link" href="https://affil.trezor.io/aff_c?offer_id=239&amp;aff_id=35816" target="_blank">Buy via Trezor (Affiliate)</a></div></div>
+<div class="card-container"><div class="card blog-card"><div class="title">Ledger</div><div class="desc">Industry-leading hardware wallet.</div><a class="link" href="https://shop.ledger.com/?r=c97ab0683c61" target="_blank">Buy Ledger</a></div><div class="card blog-card"><div class="title">Trezor</div><div class="desc">Secure offline wallet for long-term storage.</div><a class="link" href="https://affil.trezor.io/aff_c?offer_id=239&amp;aff_id=35816" target="_blank">Buy via Trezor (Affiliate)</a></div></div>
 </div>
 <div class="section"><h2>DEX Platforms</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Decentralized exchanges let you trade crypto without an intermediary.</p>
-<div class="card-container"><div class="card"><div class="title">Jupiter</div><div class="desc">Top Solana DEX aggregator.</div><a class="link" href="https://jup.ag" target="_blank">Visit Jupiter</a></div><div class="card"><div class="title">Drift</div><div class="desc">Perpetuals trading on Solana.</div><a class="link" href="https://app.drift.trade" target="_blank">Visit Drift</a></div><div class="card"><div class="title">Marginfi</div><div class="desc">Borrow/lend protocol with margin trading.</div><a class="link" href="https://app.marginfi.com/refer/8f3ec3ca-739a-4546-b056-efe38623dccc" target="_blank">Visit Marginfi</a></div><div class="card"><div class="title">Kamino</div><div class="desc">Automated yield optimizer.</div><a class="link" href="https://app.kamino.finance" target="_blank">Visit Kamino</a></div><div class="card"><div class="title">Meteora</div><div class="desc">Dynamic liquidity vaults.</div><a class="link" href="https://meteora.ag" target="_blank">Visit Meteora</a></div><div class="card"><div class="title">Orca</div><div class="desc">Friendly Solana DEX.</div><a class="link" href="https://www.orca.so" target="_blank">Visit Orca</a></div></div>
+<div class="card-container"><div class="card blog-card"><div class="title">Jupiter</div><div class="desc">Top Solana DEX aggregator.</div><a class="link" href="https://jup.ag" target="_blank">Visit Jupiter</a></div><div class="card blog-card"><div class="title">Drift</div><div class="desc">Perpetuals trading on Solana.</div><a class="link" href="https://app.drift.trade" target="_blank">Visit Drift</a></div><div class="card blog-card"><div class="title">Marginfi</div><div class="desc">Borrow/lend protocol with margin trading.</div><a class="link" href="https://app.marginfi.com/refer/8f3ec3ca-739a-4546-b056-efe38623dccc" target="_blank">Visit Marginfi</a></div><div class="card blog-card"><div class="title">Kamino</div><div class="desc">Automated yield optimizer.</div><a class="link" href="https://app.kamino.finance" target="_blank">Visit Kamino</a></div><div class="card blog-card"><div class="title">Meteora</div><div class="desc">Dynamic liquidity vaults.</div><a class="link" href="https://meteora.ag" target="_blank">Visit Meteora</a></div><div class="card blog-card"><div class="title">Orca</div><div class="desc">Friendly Solana DEX.</div><a class="link" href="https://www.orca.so" target="_blank">Visit Orca</a></div></div>
 </div>
 <div class="section"><h2>Crypto Tools</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">Useful apps and platforms for tracking prices, portfolios, and market trends.</p>
-<div class="card-container"><div class="card"><div class="title">CoinMarketCap</div><div class="desc">Price tracking, market data and news.</div><a class="link" href="https://coinmarketcap.com" target="_blank">Visit CMC</a></div><div class="card"><div class="title">CoinGecko</div><div class="desc">Detailed analytics and tracking for all coins.</div><a class="link" href="https://coingecko.com" target="_blank">Visit CoinGecko</a></div><div class="card"><div class="title">CoinStats</div><div class="desc">Portfolio &amp; performance tracking tool.</div><a class="link" href="https://invite.coinstats.app/r?i=Zb2IsJ1734804670281" target="_blank">Try CoinStats</a></div><div class="card"><div class="title">Banter Bubbles</div><div class="desc">Visual market mover bubbles.</div><a class="link" href="https://www.banterbubbles.com" target="_blank">View Bubbles</a></div><div class="card"><div class="title">TradingView</div><div class="desc">Advanced charting platform for crypto &amp; stocks.</div><a class="link" href="https://tradingview.com" target="_blank">Open TradingView</a></div></div>
+<div class="card-container"><div class="card blog-card"><div class="title">CoinMarketCap</div><div class="desc">Price tracking, market data and news.</div><a class="link" href="https://coinmarketcap.com" target="_blank">Visit CMC</a></div><div class="card blog-card"><div class="title">CoinGecko</div><div class="desc">Detailed analytics and tracking for all coins.</div><a class="link" href="https://coingecko.com" target="_blank">Visit CoinGecko</a></div><div class="card blog-card"><div class="title">CoinStats</div><div class="desc">Portfolio &amp; performance tracking tool.</div><a class="link" href="https://invite.coinstats.app/r?i=Zb2IsJ1734804670281" target="_blank">Try CoinStats</a></div><div class="card blog-card"><div class="title">Banter Bubbles</div><div class="desc">Visual market mover bubbles.</div><a class="link" href="https://www.banterbubbles.com" target="_blank">View Bubbles</a></div><div class="card blog-card"><div class="title">TradingView</div><div class="desc">Advanced charting platform for crypto &amp; stocks.</div><a class="link" href="https://tradingview.com" target="_blank">Open TradingView</a></div></div>
 </div>
 <section id="comparisons">
 <h2 class="gold-title" style="text-align:center;">Comparisons: Exchanges, Wallets &amp; DEXs</h2>
@@ -1279,7 +1315,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 <div class="section"><h2>Bridge Platforms – What Are They?</h2><p style="font-size: 0.9rem; color: #000; margin-top: -0.5rem; margin-bottom: 1rem;">
         Platforms that allow you to move assets between different blockchains.
       </p>
-<div class="card-container"><div class="card"><div class="title">Wormhole</div><div class="desc">Cross-chain messaging &amp; transfers</div><a class="link" href="https://wormhole.com" target="_blank">Visit Wormhole</a></div><div class="card"><div class="title">Portal Bridge</div><div class="desc">Multi-chain token bridge by Wormhole</div><a class="link" href="https://portalbridge.com" target="_blank">Visit Portal</a></div><div class="card"><div class="title">Mayan Bridge</div><div class="desc">Token bridge &amp; swaps for Solana</div><a class="link" href="https://swap.mayan.finance" target="_blank">Visit Mayan</a></div><div class="card"><div class="title">Jumper</div><div class="desc">Bridge aggregator for multi-chain assets</div><a class="link" href="https://jumper.exchange" target="_blank">Visit Jumper</a></div><div class="card"><div class="title">LayerZero</div><div class="desc">Omnichain protocol for messaging</div><a class="link" href="https://layerzero.network" target="_blank">Visit LayerZero</a></div><div class="card"><div class="title">deBridge</div><div class="desc">Secure cross-chain transfers</div><a class="link" href="https://debridge.finance" target="_blank">Visit deBridge</a></div></div>
+<div class="card-container"><div class="card blog-card"><div class="title">Wormhole</div><div class="desc">Cross-chain messaging &amp; transfers</div><a class="link" href="https://wormhole.com" target="_blank">Visit Wormhole</a></div><div class="card blog-card"><div class="title">Portal Bridge</div><div class="desc">Multi-chain token bridge by Wormhole</div><a class="link" href="https://portalbridge.com" target="_blank">Visit Portal</a></div><div class="card blog-card"><div class="title">Mayan Bridge</div><div class="desc">Token bridge &amp; swaps for Solana</div><a class="link" href="https://swap.mayan.finance" target="_blank">Visit Mayan</a></div><div class="card blog-card"><div class="title">Jumper</div><div class="desc">Bridge aggregator for multi-chain assets</div><a class="link" href="https://jumper.exchange" target="_blank">Visit Jumper</a></div><div class="card blog-card"><div class="title">LayerZero</div><div class="desc">Omnichain protocol for messaging</div><a class="link" href="https://layerzero.network" target="_blank">Visit LayerZero</a></div><div class="card blog-card"><div class="title">deBridge</div><div class="desc">Secure cross-chain transfers</div><a class="link" href="https://debridge.finance" target="_blank">Visit deBridge</a></div></div>
 </div>
 <div class="comparison-table-wrapper"><table class="comparison-table">
 <tr><th>Name</th><th>Function</th><th>Chains</th><th>Link</th></tr>
@@ -1481,7 +1517,6 @@ function copyAddress(id) {
 </style>
 <p style="margin-top: 1rem;">Thank you for supporting this project! Donations help keep the site ad-free and open for everyone.</p>
 <footer>
-
 <!-- New Bubble Chat -->
 <div class="chat-button" onclick="toggleChat()">Chat</div>
 <div class="chat-container" id="chatContainer">
@@ -2110,21 +2145,23 @@ function initTheme() {
 }
 </script>
 <div class="section">
+
+<p>Disclaimer: This page includes affiliate links. We may receive a commission at no extra cost to you. This content is provided for informational purposes only — not financial advice.</p>
 <section class="feedback-section">
-<div class="feedback-box">
-<h2>💬 Send Feedback</h2>
+<div class="feedback-container">
+<h2>💬 <span style="color: #FFD700;">Give Us Feedback</span></h2>
+<p style="color: #ccc; font-size: 0.95rem;">We’d love to hear your thoughts on MyCryptoHub. Your feedback helps us improve!</p>
 <form action="https://formsubmit.io/send" method="POST">
 <input name="_formsubmit_id" style="display:none" type="text"/>
 <input name="_redirect" type="hidden" value="https://mycryptohub.pro/thank-you.html"/>
 <input name="_formsubmit_token" type="hidden" value="YOUR_UNIQUE_TOKEN_HERE"/>
-<input name="email" placeholder="Your email (optional)" style="width: 100%;" type="email"/>
-<textarea name="message" placeholder="Your message..." required=""></textarea>
-<button type="submit">Send</button>
-</form>
-<p class="disclaimer">*We never store your email. This form is anonymous by design.</p>
+<textarea class="feedback-textarea" name="message" placeholder="Write your feedback here..." required=""></textarea>
+<input class="feedback-email" name="email" placeholder="Your email (optional)" type="email">
+<button class="feedback-button" type="submit">Submit Feedback</button>
+</input></form>
 </div>
 </section>
-<p>Disclaimer: This page includes affiliate links. We may receive a commission at no extra cost to you. This content is provided for informational purposes only — not financial advice.</p><h2>🔗 Recommended Tools</h2>
+<h2>🔗 Recommended Tools</h2>
 <ul style="line-height: 1.8;">
 <li>🔐 <a href="https://shop.ledger.com/?r=c97ab0683c61" target="_blank">Ledger – Secure cold wallet</a></li>
 <li>🛡️ <a href="https://affil.trezor.io/aff_c?offer_id=239&amp;aff_id=35816" target="_blank">Trezor – Open-source hardware wallet</a></li>
