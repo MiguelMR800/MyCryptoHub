@@ -1,9 +1,10 @@
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #ffd700;
     background-color: #000;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 body::before {
@@ -20,6 +21,15 @@ body::before {
     background-size: cover;
     z-index: -1;
     pointer-events: none;
+}
+
+main, .container, .section, .card-container, .blog-preview, .frosted-card, .news-overlay {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 header {
@@ -59,9 +69,6 @@ footer {
     color: #aaa;
 }
 
-
-/* Tumma taustakerros blogiosioon */
-
 .blog-section::before {
     content: "";
     position: absolute;
@@ -73,6 +80,7 @@ footer {
     z-index: 0;
     pointer-events: none;
 }
+
 .blog-section {
     position: relative;
     background-image: url('images/blog_background.jpg');
