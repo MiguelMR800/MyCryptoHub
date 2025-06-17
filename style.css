@@ -107,3 +107,18 @@ body {
   background-attachment: fixed;
   background-position: center;
 }
+
+
+
+/* Korttien skaalautuminen ja rinnakkain toimiminen */
+.card-grid > *,
+.exchange-grid > *,
+.dex-grid > *,
+.bridge-grid > *,
+.tools-grid > *,
+.wallets-grid > * {
+    flex: 1 1 300px;
+    max-width: 400px;
+    min-width: 280px;
+    box-sizing: border-box;
+}
