@@ -662,6 +662,17 @@ h1, h2, h3, h4, h5, h6, p, span, li, a, label, strong, div, button {
 .carousel-controls button {
   color: black !important;
 }
+
+button[type="submit"] {
+    background: linear-gradient(to bottom, #444, #222);
+    color: #FFD700;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    font-family: 'Poppins', sans-serif;
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -1153,7 +1164,7 @@ overflow: hidden;}
 <button class="news-nav" onclick="nextNews()" style="background: rgba(255, 215, 0, 0.9); color: #000; font-weight: bold; border: none; padding: 10px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;background-color: #000 !important; color: #FFD700 !important;">Next »</button>
 </div>
 </div>
-<p class="news-disclaimer">*This is not financial advice.</p>
+
 </div>
 </section>
 <script>
@@ -2095,7 +2106,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   transform: scale(1.1);
 }
 </style>
-</footer>
+<small style="display:block; text-align:center; font-size:0.75rem; color:#999; margin-top:2rem;">*This is not financial advice.</small></footer>
 <script>
 function toggleTheme() {
   const current = document.body.getAttribute("data-theme");
@@ -2111,7 +2122,6 @@ function initTheme() {
 <div class="section">
 <div class="feedback-box" style="margin: 2rem auto; max-width: 1000px; padding: 1rem; background: rgba(0, 0, 0, 0.6); border-radius: 14px; backdrop-filter: blur(6px);">
 <h2 style="color: #FFD700;"><span style="font-size: 1.3rem;">💬</span> Send Feedback</h2>
-
 <form action="https://formsubmit.co/migumiguelmr@gmail.com" method="POST">
 <input name="_captcha" type="hidden" value="false"/>
 <input name="_next" type="hidden" value="https://mycryptohub.pro/thankyou.html"/>
@@ -2121,7 +2131,6 @@ function initTheme() {
     📩 Send Feedback
   </button>
 </form>
-
 <p style="font-size: 0.85rem; color: #bbb; margin-top: 0.5rem;">*We never store your email. This form is anonymous by design.</p>
 </div>
 <p>Disclaimer: This page includes affiliate links. We may receive a commission at no extra cost to you. This content is provided for informational purposes only — not financial advice.</p><h2>🔗 Recommended Tools</h2>
