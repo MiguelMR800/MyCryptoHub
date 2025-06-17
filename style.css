@@ -89,3 +89,12 @@ footer {
     color: #f5f5f5;
     z-index: 1;
 }
+
+
+.card-grid, .exchange-grid, .dex-grid, .bridge-grid, .tools-grid, .wallets-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
